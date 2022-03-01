@@ -1,1 +1,4 @@
 7z1 has already logged in 
+
+OK it seems that I have push the text successfully.
+Now, I will try to write some code to exercise the github use
