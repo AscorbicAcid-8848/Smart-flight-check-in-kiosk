@@ -14,6 +14,7 @@ import service.imp.PassengerServiceImp;
  * @description: 操控乘客
  * @date 2022/3/16 17:16
  */
+//这是我的登机牌controller
 public class BoardingPassController {
 
     private FlightService flightService = new FlightServiceImp();
