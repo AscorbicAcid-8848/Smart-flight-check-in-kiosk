@@ -5,6 +5,10 @@ package model;
  * @description: User model
  * @date 2022/3/16 16:27
  */
+
+/**
+ * just try to use github desktop (yzh)
+ */
 public class Passenger {
     private Integer bookingNumber;//与航班挂钩
     private Integer flightId;
