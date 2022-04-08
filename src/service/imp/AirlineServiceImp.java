@@ -11,6 +11,7 @@ import service.AirlineService;
 public class AirlineServiceImp implements AirlineService {
     @Override
     public Airline update(String airlineName) {
+        //对Airline进行数据交互
         return null;
     }
 }
