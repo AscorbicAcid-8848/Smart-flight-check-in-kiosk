@@ -16,7 +16,7 @@ public class PassengerController {
     
     //更改自选
     public Passenger customChoices(Passenger passenger,Integer meal,Integer seatNumber,String seatLevel){
-        passengerService.update(passenger,seatLevel,meal,seatNumber);
+        passenger = passengerService.update(passenger,seatLevel,meal,seatNumber);
         return passenger;
     }
 }
