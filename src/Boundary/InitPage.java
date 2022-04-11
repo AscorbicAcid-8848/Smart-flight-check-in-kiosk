@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 public class InitPage extends JFrame implements ActionListener {
     //此次登录的用户对象
@@ -114,7 +115,7 @@ public class InitPage extends JFrame implements ActionListener {
 
             passenger.setSurname(panel_LoginByNameIdPage.getSurname());
 
-            if(passenger.getSurname()==""){
+            if(Objects.equals(passenger.getSurname(), "")){
                 isValid = false;
                 panel_LoginByNameIdPage.nameWarning();
             }
