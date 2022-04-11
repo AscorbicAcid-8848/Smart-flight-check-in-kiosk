@@ -104,21 +104,35 @@ public class InitPage extends JFrame implements ActionListener {
         //属于LoginByNameId,返回到最高级
         if(e.getSource()==button_LoginByNameId_backToInit){
             pageChange(panel_InitPage);
+            refresh();
         }
         //属于LoginByNameId,确定登录,之后进入UserInfoPage
         //在前往userInfoPage之前，渲染界面。
+        //to be added: 检查数据库里面有没有这个人，如果没有，不能通过。
         if(e.getSource()==button_LoginByNameId_confirm){
+            boolean isValid = true;
+
             passenger.setSurname(panel_LoginByNameIdPage.getSurname());
-            passenger.setPassengerId(Integer.parseInt(panel_LoginByNameIdPage.getId()));
-//            try{
-//                passenger.setPassengerId(Integer.parseInt(panel_LoginByNameIdPage.getId()));
-//            }
-//            catch (NumberFormatException exception){
-//
-//            }
-            panel_UserInfoPage.render(passenger);
-            pageChange(panel_UserInfoPage);
+
+            if(passenger.getSurname()==""){
+                isValid = false;
+                panel_LoginByNameIdPage.nameWarning();
+            }
+
+            try{
+                passenger.setPassengerId(Integer.parseInt(panel_LoginByNameIdPage.getId()));
+                panel_UserInfoPage.render(passenger);
+            }
+            catch(NumberFormatException exception){
+                isValid = false;
+                panel_LoginByNameIdPage.IdWarning();
+            }
+            if(isValid)
+                pageChange(panel_UserInfoPage);
+            else
+                pageChange(panel_LoginByNameIdPage);
         }
+
         ////////////////////////////去往 扫描界面
         if(e.getSource()==button_Scan){
             pageChange(panel_LoginByIdDocPage);
@@ -126,10 +140,12 @@ public class InitPage extends JFrame implements ActionListener {
         //属于LoginByIdDocPage,返回最高级
         if(e.getSource()==button_LoginByIdDocPage_backToInit){
             pageChange(panel_InitPage);
+            refresh();
         }
         //属于UserInfoPage,返回最高级
         if(e.getSource() == button_userinfo_backToInit){
             pageChange(panel_InitPage);
+            refresh();
         }
     }
 
@@ -138,6 +154,18 @@ public class InitPage extends JFrame implements ActionListener {
         framePanel.repaint();
         framePanel.add(page);
         framePanel.validate();
+    }
+
+    //在返回到最高级之后，将所有带有输入框的页面refresh
+    //并且将用户，航空公司等对象信息全部清零
+    public void refresh(){
+        panel_LoginByNameIdPage.refresh();
+
+        passenger = new Passenger();
+        airline = new Airline();
+        boardingPass = new BoardingPass();
+        idDocument = new IdDocument();
+        flight = new Flight();
     }
 
 }
