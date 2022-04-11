@@ -9,6 +9,13 @@ import java.awt.event.ActionListener;
 
 public class UserInfoPage extends JPanel{
 
+    private JPanel panelTop;
+    private JPanel panelMid;
+    private JPanel panelBot;
+
+    private JPanel panel_name;
+    private JPanel panel_id;
+
     private JLabel label_overall;
 
     private JLabel label_name;
@@ -22,6 +29,12 @@ public class UserInfoPage extends JPanel{
     private JButton button_next;
 
     public UserInfoPage(){
+        panelTop = new JPanel();
+        panelMid = new JPanel();
+        panelBot = new JPanel();
+
+        panel_name = new JPanel();
+        panel_id = new JPanel();
         label_overall = new JLabel("Account Information");
 
         label_name = new JLabel("Name:");
@@ -34,13 +47,26 @@ public class UserInfoPage extends JPanel{
         button_next = new JButton("Next");
 
 
-        this.setLayout(new GridLayout(4,1));
-        add(label_overall);
-        add(label_name);
-        add(passengerName);
-        add(label_IdNum);
-        add(passengerId);
-        add(button_backToInit);
+        this.setLayout(new GridLayout(3,1,0,50));
+        panelMid.setLayout(new GridLayout(2,1,0,20));
+
+
+
+        add(panelTop);
+        add(panelMid);
+        add(panelBot);
+
+        panelTop.add(label_overall);
+
+        panelMid.add(panel_name);
+        panelMid.add(panel_id);
+
+        panel_name.add(label_name);
+        panel_name.add(passengerName);
+        panel_id.add(label_IdNum);
+        panel_id.add(passengerId);
+
+        panelBot.add(button_backToInit);
     }
 
     public JButton getButton_backToInit() {
