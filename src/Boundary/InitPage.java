@@ -9,15 +9,15 @@ import java.awt.event.ActionListener;
 
 public class InitPage extends JFrame implements ActionListener {
     //此次登录的用户对象
-    Passenger passenger =new Passenger();
+    private static Passenger passenger =new Passenger();
     //此次登录的航空公司对象
-    Airline airline = new Airline();
+    private Airline airline = new Airline();
     //此次登录的登机牌对象
-    BoardingPass boardingPass = new BoardingPass();
+    private BoardingPass boardingPass = new BoardingPass();
     //此次登录的航班对象
-    Flight flight = new Flight();
+    private Flight flight = new Flight();
     //此次登录的Id doc
-    IdDocument idDocument = new IdDocument();
+    private IdDocument idDocument = new IdDocument();
 
     //最高级panel：所有页面的容器
     private JPanel framePanel;
@@ -105,13 +105,20 @@ public class InitPage extends JFrame implements ActionListener {
         if(e.getSource()==button_LoginByNameId_backToInit){
             pageChange(panel_InitPage);
         }
-        //属于LoginByNameId,确定登录
+        //属于LoginByNameId,确定登录,之后进入UserInfoPage
+        //在前往userInfoPage之前，渲染界面。
         if(e.getSource()==button_LoginByNameId_confirm){
-            pageChange(panel_UserInfoPage);
             passenger.setSurname(panel_LoginByNameIdPage.getSurname());
             passenger.setPassengerId(Integer.parseInt(panel_LoginByNameIdPage.getId()));
+//            try{
+//                passenger.setPassengerId(Integer.parseInt(panel_LoginByNameIdPage.getId()));
+//            }
+//            catch (NumberFormatException exception){
+//
+//            }
+            panel_UserInfoPage.render(passenger);
+            pageChange(panel_UserInfoPage);
         }
-
         ////////////////////////////去往 扫描界面
         if(e.getSource()==button_Scan){
             pageChange(panel_LoginByIdDocPage);
@@ -132,4 +139,5 @@ public class InitPage extends JFrame implements ActionListener {
         framePanel.add(page);
         framePanel.validate();
     }
+
 }

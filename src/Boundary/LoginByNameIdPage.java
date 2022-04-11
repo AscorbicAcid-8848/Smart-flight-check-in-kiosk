@@ -108,4 +108,13 @@ public class LoginByNameIdPage extends JPanel {
 		return textField_1.getText();
 	}
 
+	//用户输入错误情况：1.没有输入姓名,此操作不会抛出exception
+	//2.没有输入id或者输入id含有特殊字符，抛出NumberFormatException
+	public void nameWarning(){
+
+	}
+
+	public void IdWarning(){
+
+	}
 }
