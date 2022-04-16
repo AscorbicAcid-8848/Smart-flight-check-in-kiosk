@@ -28,6 +28,11 @@ public class InitPage extends JFrame implements ActionListener {
     private JButton button_UserInfo;
     private JButton button_Scan;
     private JPanel panel_InitPage;
+    private JPanel panel_top;
+    private JPanel panel_bot;
+    private ImageIcon heathrowImage;
+    private JLabel heathrowLabel;
+
 
     //LoginByNameIdPage
     private LoginByNameIdPage panel_LoginByNameIdPage;
@@ -54,21 +59,36 @@ public class InitPage extends JFrame implements ActionListener {
     }
     public void setPanelInitPage(){
 
-        JLabel label_Login = new JLabel("Welcome, Choose a way to login!");
+        JLabel label_Login = new JLabel("Welcome to London Heathrow, Choose a way to login!");
         button_bookNum = new JButton("Booking Number");
         button_UserInfo = new JButton("User info");
         button_Scan = new JButton("Scan ID document");
         panel_InitPage = new JPanel();
+        panel_bot = new JPanel();
+        panel_top = new JPanel();
+        heathrowImage = new ImageIcon("Boundary/images/HeathrowAirport.jpg");
+        heathrowLabel = new JLabel(heathrowImage);
+
+        label_Login.setFont(new Font("SimSun", Font.PLAIN, 20));
+        button_bookNum.setFont(new Font("Serif", Font.PLAIN, 15));
+        button_UserInfo.setFont(new Font("Serif", Font.PLAIN, 15));
+        button_Scan.setFont(new Font("Serif", Font.PLAIN, 15));
 
         button_bookNum.addActionListener(this);
         button_UserInfo.addActionListener(this);
         button_Scan.addActionListener(this);
 
-        panel_InitPage.setLayout(new GridLayout(4,1));
-        panel_InitPage.add(label_Login);
-        panel_InitPage.add(button_bookNum);
-        panel_InitPage.add(button_UserInfo);
-        panel_InitPage.add(button_Scan);
+//        panel_InitPage.add(heathrowLabel);
+        heathrowLabel.setBounds(0,0,977,717);
+
+        panel_InitPage.setLayout(new GridLayout(2,1,0,50));
+        panel_bot.setLayout(new GridLayout(3,1,0,30));
+        panel_InitPage.add(panel_top);
+        panel_InitPage.add(panel_bot);
+        panel_top.add(label_Login);
+        panel_bot.add(button_bookNum);
+        panel_bot.add(button_UserInfo);
+        panel_bot.add(button_Scan);
 
     }
     public void showInitPage(){
