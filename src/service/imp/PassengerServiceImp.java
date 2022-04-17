@@ -9,6 +9,7 @@ import service.PassengerService;
  * @date 2022/3/16 16:26
  */
 public class PassengerServiceImp implements PassengerService {
+
     @Override
     public Passenger searchByBookingNumber(Integer bookingNumber) {
         Passenger passenger = new Passenger();
