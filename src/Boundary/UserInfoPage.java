@@ -35,7 +35,7 @@ public class UserInfoPage extends JPanel{
 
         panel_name = new JPanel();
         panel_id = new JPanel();
-        label_overall = new JLabel("Account Information");
+        label_overall = new JLabel("Here is your account information");
 
         label_name = new JLabel("Name:");
 
@@ -44,12 +44,12 @@ public class UserInfoPage extends JPanel{
 
         label_IdNum = new JLabel("ID Number:");
         button_backToInit = new JButton("Go Back");
-        button_next = new JButton("Next");
+        button_next = new JButton("Check My Flights");
 
 
         this.setLayout(new GridLayout(3,1,0,50));
         panelMid.setLayout(new GridLayout(2,1,0,20));
-
+        panelBot.setLayout(new GridLayout(1,2,100,0));
 
 
         add(panelTop);
@@ -67,6 +67,7 @@ public class UserInfoPage extends JPanel{
         panel_id.add(passengerId);
 
         panelBot.add(button_backToInit);
+        panelBot.add(button_next);
     }
 
     public JButton getButton_backToInit() {
@@ -77,6 +78,7 @@ public class UserInfoPage extends JPanel{
         return button_next;
     }
 
+    //所有需要显示数据库信息的页面都应该有render方法
     public void render(Passenger passenger){
         passengerName.setText(passenger.getSurname());
         passengerId.setText(passenger.getPassengerId().toString());

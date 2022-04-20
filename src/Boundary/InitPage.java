@@ -16,7 +16,7 @@ public class InitPage extends JFrame implements ActionListener {
     //此次登录的登机牌对象
     private BoardingPass boardingPass = new BoardingPass();
     //此次登录的航班对象
-    private Flight flight = new Flight();
+    private Flight flight = null;
     //此次登录的Id doc
     private IdDocument idDocument = new IdDocument();
 
@@ -46,6 +46,11 @@ public class InitPage extends JFrame implements ActionListener {
     //UserInfoPage
     private UserInfoPage panel_UserInfoPage;
     private JButton button_userinfo_backToInit;
+
+    //FlightDetailPage
+    private FlightDetailPage flightDetailPage;
+    private JButton button_flightDetail_back;
+    private JButton button_flightDetail_confirm;
 
     public InitPage(){//此方法作用：初始化Frame 及framePanel，不作对于panel的修改
 
@@ -109,6 +114,8 @@ public class InitPage extends JFrame implements ActionListener {
         panel_LoginByIdDocPage = new LoginByIdDocPage();
         button_LoginByIdDocPage_backToInit = panel_LoginByIdDocPage.getButton_backToInit();
         button_LoginByIdDocPage_backToInit.addActionListener(this);
+
+
     }
 
 

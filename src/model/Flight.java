@@ -13,6 +13,16 @@ public class Flight {
     private String flightName;
     private Date departureTime;
     private Date fallTime;
+    private boolean isDelayed;
+    private Integer departureGate;
+    private String destWeather;
+    private String destCOVIDPolicy;
+    private String arrivalAirport;
+    private Integer arrivalTerminal;
+
+
+
+
 
     @Override
     public String toString() {
@@ -27,8 +37,53 @@ public class Flight {
 
 
     //setter and getter
+    public void setDelayed(boolean delayed) {
+        isDelayed = delayed;
+    }
+
+    public boolean isDelayed() {
+        return isDelayed;
+    }
+    public Integer getDepartureGate() {
+        return departureGate;
+    }
+
+    public void setDepartureGate(Integer departureGate) {
+        this.departureGate = departureGate;
+    }
 
 
+    public String getDestWeather() {
+        return destWeather;
+    }
+
+    public void setDestWeather(String destWeather) {
+        this.destWeather = destWeather;
+    }
+
+    public String getDestCOVIDPolicy() {
+        return destCOVIDPolicy;
+    }
+
+    public void setDestCOVIDPolicy(String destCOVIDPolicy) {
+        this.destCOVIDPolicy = destCOVIDPolicy;
+    }
+
+
+    public String getArrivalAirport() {
+        return arrivalAirport;
+    }
+
+    public void setArrivalAirport(String arrivalAirport) {
+        this.arrivalAirport = arrivalAirport;
+    }
+    public Integer getArrivalTerminal() {
+        return arrivalTerminal;
+    }
+
+    public void setArrivalTerminal(Integer arrivalTerminal) {
+        this.arrivalTerminal = arrivalTerminal;
+    }
     public Date getFallTime() {
         return fallTime;
     }
