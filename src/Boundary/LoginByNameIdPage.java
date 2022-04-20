@@ -96,8 +96,8 @@ public class LoginByNameIdPage extends JPanel {
 		// set the button without decorator
 		see.setContentAreaFilled(false);
 		see.setText("                                                ");
-		see.setIcon(eye_fillIcon);
-		see.setSelectedIcon(eye_slashIcon);
+		see.setIcon(eye_slashIcon);
+		see.setSelectedIcon(eye_fillIcon);
 		see.setBorderPainted(false);
 		see.setFocusPainted(false);
 		IDInput.add(textField_1);
