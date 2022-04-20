@@ -2,6 +2,7 @@ package Boundary;
 
 import javax.swing.*;
 import java.awt.*;
+import java.net.URL;
 
 public class LoginByNameIdPage extends JPanel {
 
@@ -12,9 +13,10 @@ public class LoginByNameIdPage extends JPanel {
 	private static final long serialVersionUID = 8463888530175832824L;
 	private JPanel contentPane;
 	private JTextField textField;
-	private JTextField textField_1;
+	private JPasswordField textField_1;
 	private JButton BTOBut;
 	private JButton CertBut;
+	private JToggleButton see;
 	/**
 	 * Create the panel.
 	 */
@@ -59,28 +61,52 @@ public class LoginByNameIdPage extends JPanel {
 		
 		JPanel SurnInput = new JPanel();
 		InputArea.add(SurnInput);
-		SurnInput.setLayout(new GridLayout(0, 2, -100, 5));
+		SurnInput.setLayout(new GridLayout(0, 3, 0, 0));
 		
 		JLabel lblNewLabel = new JLabel("Surname:");
 		lblNewLabel.setFont(new Font("SimSun", Font.PLAIN, 16));
 		SurnInput.add(lblNewLabel);
 		
 		textField = new JTextField();
-		textField.setColumns(10);
+		textField.setColumns(16);
 		SurnInput.add(textField);
 		
 		JPanel IDInput = new JPanel();
 		InputArea.add(IDInput);
-		IDInput.setLayout(new GridLayout(0, 2, -100, 0));
+		IDInput.setLayout(new GridLayout(0, 3, 0, 0));
 		
 		JLabel lblNewLabel_1 = new JLabel("ID number:");
 		lblNewLabel_1.setFont(new Font("SimSun", Font.PLAIN, 16));
 		IDInput.add(lblNewLabel_1);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
+		textField_1 = new JPasswordField();
+		textField_1.setColumns(16);
+		textField_1.setEchoChar('*');
+		see = new JToggleButton();
+		see.setBounds(0,0,20,16);
+		URL resource = LoginByNameIdPage.class.getResource("images//eye-fill.png");
+		ImageIcon eye_fillIcon = new ImageIcon(resource);
+		Image temp = eye_fillIcon.getImage().getScaledInstance(see.getWidth(), see.getHeight(), eye_fillIcon.getImage().SCALE_DEFAULT);
+		eye_fillIcon = new ImageIcon(temp);
+
+		URL resource1 = LoginByNameIdPage.class.getResource("images//eye slash-fill.png");
+		ImageIcon eye_slashIcon = new ImageIcon(resource1);
+		Image temp1 = eye_slashIcon.getImage().getScaledInstance(see.getWidth(), see.getHeight(), eye_slashIcon.getImage().SCALE_DEFAULT);
+		eye_slashIcon = new ImageIcon(temp1);
+		// set the button without decorator
+		see.setContentAreaFilled(false);
+		see.setText("                                                ");
+		see.setIcon(eye_fillIcon);
+		see.setSelectedIcon(eye_slashIcon);
+		see.setBorderPainted(false);
+		see.setFocusPainted(false);
 		IDInput.add(textField_1);
+		IDInput.add(see);
 		
+
+
+
+
 		JPanel WestEdge = new JPanel();
 		FlowLayout fl_WestEdge = (FlowLayout) WestEdge.getLayout();
 		fl_WestEdge.setHgap(40);
@@ -99,6 +125,10 @@ public class LoginByNameIdPage extends JPanel {
 	public JButton getButton_confirm() {
 		return CertBut;
 	}
+	
+	public JToggleButton getButton_see(){
+		return see;
+	}
 
 	//获取用户输入的名字,initPage调用这个方法以获取用户输入
 	public String getSurname(){
@@ -106,6 +136,9 @@ public class LoginByNameIdPage extends JPanel {
 	}
 	public String getId(){
 		return textField_1.getText();
+	}
+	public JPasswordField setId(){
+		return textField_1;
 	}
 
 	//用户输入错误情况：1.没有输入姓名,此操作不会抛出exception

@@ -3,6 +3,8 @@ package Boundary;
 import model.*;
 
 import javax.swing.*;
+import javax.swing.plaf.PanelUI;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,7 +18,7 @@ public class InitPage extends JFrame implements ActionListener {
     //此次登录的登机牌对象
     private BoardingPass boardingPass = new BoardingPass();
     //此次登录的航班对象
-    private Flight flight = null;
+    private Flight flight = new Flight();
     //此次登录的Id doc
     private IdDocument idDocument = new IdDocument();
 
@@ -38,6 +40,8 @@ public class InitPage extends JFrame implements ActionListener {
     private LoginByNameIdPage panel_LoginByNameIdPage;
     private JButton button_LoginByNameId_backToInit;
     private JButton button_LoginByNameId_confirm;
+    private JToggleButton button_LoginByNameId_see;
+    private int see_type =1;
 
     //LoginByIdDocPage
     private LoginByIdDocPage panel_LoginByIdDocPage;
@@ -46,11 +50,6 @@ public class InitPage extends JFrame implements ActionListener {
     //UserInfoPage
     private UserInfoPage panel_UserInfoPage;
     private JButton button_userinfo_backToInit;
-
-    //FlightDetailPage
-    private FlightDetailPage flightDetailPage;
-    private JButton button_flightDetail_back;
-    private JButton button_flightDetail_confirm;
 
     public InitPage(){//此方法作用：初始化Frame 及framePanel，不作对于panel的修改
 
@@ -64,7 +63,7 @@ public class InitPage extends JFrame implements ActionListener {
     }
     public void setPanelInitPage(){
 
-        JLabel label_Login = new JLabel("Welcome to London Heathrow, Choose a way to login!");
+        JLabel label_Login = new JLabel("Welcome to London Heathrow, Choose a way login!");
         button_bookNum = new JButton("Booking Number");
         button_UserInfo = new JButton("User info");
         button_Scan = new JButton("Scan ID document");
@@ -108,19 +107,25 @@ public class InitPage extends JFrame implements ActionListener {
         panel_LoginByNameIdPage = new LoginByNameIdPage();
         button_LoginByNameId_backToInit = panel_LoginByNameIdPage.getButton_backToInit();
         button_LoginByNameId_confirm = panel_LoginByNameIdPage.getButton_confirm();
+        button_LoginByNameId_see = panel_LoginByNameIdPage.getButton_see();
         button_LoginByNameId_backToInit.addActionListener(this);
         button_LoginByNameId_confirm.addActionListener(this);
-
+        button_LoginByNameId_see.addActionListener(this);
+        
         panel_LoginByIdDocPage = new LoginByIdDocPage();
         button_LoginByIdDocPage_backToInit = panel_LoginByIdDocPage.getButton_backToInit();
         button_LoginByIdDocPage_backToInit.addActionListener(this);
-
-
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == button_LoginByNameId_see){
+            see_type = -see_type;
+            if(see_type==-1)
+            panel_LoginByNameIdPage.setId().setEchoChar('\0');
+            else if(see_type ==1)
+            panel_LoginByNameIdPage.setId().setEchoChar('*');
+        }
         if(e.getSource() == button_bookNum){
             //测试：点击此按钮进入userinfo界面
             pageChange(panel_UserInfoPage);
