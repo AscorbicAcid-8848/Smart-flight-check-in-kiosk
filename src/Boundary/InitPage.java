@@ -41,7 +41,9 @@ public class InitPage extends JFrame implements ActionListener {
     private JButton button_LoginByNameId_backToInit;
     private JButton button_LoginByNameId_confirm;
     private JToggleButton button_LoginByNameId_see;
+    private JToggleButton button_UserInfoPageId_see;
     private int see_type =1;
+    private int see_type1 =1;
 
     //LoginByIdDocPage
     private LoginByIdDocPage panel_LoginByIdDocPage;
@@ -103,14 +105,16 @@ public class InitPage extends JFrame implements ActionListener {
         panel_UserInfoPage = new UserInfoPage();
         button_userinfo_backToInit = panel_UserInfoPage.getButton_backToInit();
         button_userinfo_backToInit.addActionListener(this);
-
+        button_UserInfoPageId_see = panel_UserInfoPage.getButton_see();
+        button_UserInfoPageId_see.addActionListener(this);
+        
         panel_LoginByNameIdPage = new LoginByNameIdPage();
         button_LoginByNameId_backToInit = panel_LoginByNameIdPage.getButton_backToInit();
         button_LoginByNameId_confirm = panel_LoginByNameIdPage.getButton_confirm();
         button_LoginByNameId_see = panel_LoginByNameIdPage.getButton_see();
         button_LoginByNameId_backToInit.addActionListener(this);
         button_LoginByNameId_confirm.addActionListener(this);
-        button_LoginByNameId_see.addActionListener(this);
+        button_LoginByNameId_see.addActionListener(this); 
         
         panel_LoginByIdDocPage = new LoginByIdDocPage();
         button_LoginByIdDocPage_backToInit = panel_LoginByIdDocPage.getButton_backToInit();
@@ -125,6 +129,13 @@ public class InitPage extends JFrame implements ActionListener {
             panel_LoginByNameIdPage.setId().setEchoChar('\0');
             else if(see_type ==1)
             panel_LoginByNameIdPage.setId().setEchoChar('*');
+        }
+        if(e.getSource() == button_UserInfoPageId_see){
+            see_type1 = -see_type1;
+            if(see_type1==-1)
+            panel_UserInfoPage.setId1().setEchoChar('\0');
+            else if(see_type1 ==1)
+            panel_UserInfoPage.setId1().setEchoChar('*');
         }
         if(e.getSource() == button_bookNum){
             //测试：点击此按钮进入userinfo界面

@@ -2,6 +2,7 @@ package Boundary;
 
 import model.Passenger;
 
+import java.net.URL;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -23,10 +24,12 @@ public class UserInfoPage extends JPanel{
 
 
     private JLabel label_IdNum;
-    private JLabel passengerId;
+    private JPasswordField passengerId;
 
     private JButton button_backToInit;
     private JButton button_next;
+
+    private JToggleButton see;
 
     public UserInfoPage(){
         panelTop = new JPanel();
@@ -34,22 +37,23 @@ public class UserInfoPage extends JPanel{
         panelBot = new JPanel();
 
         panel_name = new JPanel();
+        panel_name.setLayout(new GridLayout(0,3,0,0));
         panel_id = new JPanel();
-        label_overall = new JLabel("Here is your account information");
-
-        label_name = new JLabel("Name:");
+        label_overall = new JLabel("Account Information");
+        panel_id.setLayout(new GridLayout(0,3,0,0));
+        label_name = new JLabel("                              Name:");
 
         passengerName = new JLabel();
-        passengerId = new JLabel();
+        passengerId = new JPasswordField();
 
-        label_IdNum = new JLabel("ID Number:");
+        label_IdNum = new JLabel("                             ID Number:");
         button_backToInit = new JButton("Go Back");
-        button_next = new JButton("Check My Flights");
+        button_next = new JButton("Next");
 
 
         this.setLayout(new GridLayout(3,1,0,50));
-        panelMid.setLayout(new GridLayout(2,1,0,20));
-        panelBot.setLayout(new GridLayout(1,2,100,0));
+        panelMid.setLayout(new GridLayout(2,1,30,20));
+
 
 
         add(panelTop);
@@ -65,9 +69,29 @@ public class UserInfoPage extends JPanel{
         panel_name.add(passengerName);
         panel_id.add(label_IdNum);
         panel_id.add(passengerId);
-
         panelBot.add(button_backToInit);
-        panelBot.add(button_next);
+
+		passengerId.setColumns(10);
+		passengerId.setEchoChar('*');
+		see = new JToggleButton();
+		see.setBounds(0,0,20,16);
+		URL resource = UserInfoPage.class.getResource("images//eye-fill.png");
+		ImageIcon eye_fillIcon = new ImageIcon(resource);
+		Image temp = eye_fillIcon.getImage().getScaledInstance(see.getWidth(), see.getHeight(), eye_fillIcon.getImage().SCALE_DEFAULT);
+		eye_fillIcon = new ImageIcon(temp);
+
+		URL resource1 = UserInfoPage.class.getResource("images//eye slash-fill.png");
+		ImageIcon eye_slashIcon = new ImageIcon(resource1);
+		Image temp1 = eye_slashIcon.getImage().getScaledInstance(see.getWidth(), see.getHeight(), eye_slashIcon.getImage().SCALE_DEFAULT);
+		eye_slashIcon = new ImageIcon(temp1);
+		// set the button without decorator
+		see.setContentAreaFilled(false);
+		see.setText("                                                ");
+		see.setIcon(eye_slashIcon);
+		see.setSelectedIcon(eye_fillIcon);
+		see.setBorderPainted(false);
+		see.setFocusPainted(false);
+		panel_id.add(see);
     }
 
     public JButton getButton_backToInit() {
@@ -78,10 +102,20 @@ public class UserInfoPage extends JPanel{
         return button_next;
     }
 
-    //所有需要显示数据库信息的页面都应该有render方法
     public void render(Passenger passenger){
         passengerName.setText(passenger.getSurname());
         passengerId.setText(passenger.getPassengerId().toString());
     }
+
+    public JToggleButton getButton_see(){
+		return see;
+	}
+
+    public String getId1(){
+		return passengerId.getText();
+	}
+	public JPasswordField setId1(){
+		return passengerId;
+	}
 
 }
