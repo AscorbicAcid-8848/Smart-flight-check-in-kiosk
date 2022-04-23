@@ -8,7 +8,12 @@ import service.PassengerService;
  * @description: User Service entity
  * @date 2022/3/16 16:26
  */
+
 public class PassengerServiceImp implements PassengerService {
+    private int bookingNumber;
+    private String surname;
+    private int passengerId;
+
     @Override
     public Passenger searchByBookingNumber(Integer bookingNumber) {
         Passenger passenger = new Passenger();
