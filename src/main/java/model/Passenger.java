@@ -1,5 +1,7 @@
 package model;
 
+import java.util.List;
+
 /**
  * @author YichenLiu
  * @description: User model
