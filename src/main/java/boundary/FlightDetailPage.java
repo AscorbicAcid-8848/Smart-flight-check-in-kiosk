@@ -1,4 +1,4 @@
-package Boundary;
+package boundary;
 
 import model.Flight;
 import model.Passenger;
