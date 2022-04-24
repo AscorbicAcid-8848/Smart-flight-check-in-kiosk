@@ -1,9 +1,7 @@
 package controller;
 
 import model.Passenger;
-import service.FlightService;
 import service.PassengerService;
-import service.imp.FlightServiceImp;
 import service.imp.PassengerServiceImp;
 
 /**
