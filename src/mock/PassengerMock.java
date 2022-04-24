@@ -81,7 +81,7 @@ public class PassengerMock {
     }
 
     public void toJSON(){
-        ObjectMapper
+
     }
 
 }
