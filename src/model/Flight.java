@@ -21,9 +21,6 @@ public class Flight {
     private Integer arrivalTerminal;
 
 
-
-
-
     @Override
     public String toString() {
         return "Flight{" +
@@ -32,6 +29,12 @@ public class Flight {
                 ", flightName='" + flightName + '\'' +
                 ", departureTime=" + departureTime +
                 ", fallTime=" + fallTime +
+                ", isDelayed=" + isDelayed +
+                ", departureGate=" + departureGate +
+                ", destWeather='" + destWeather + '\'' +
+                ", destCOVIDPolicy='" + destCOVIDPolicy + '\'' +
+                ", arrivalAirport='" + arrivalAirport + '\'' +
+                ", arrivalTerminal=" + arrivalTerminal +
                 '}';
     }
 
