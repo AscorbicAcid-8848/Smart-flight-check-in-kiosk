@@ -1,15 +1,18 @@
 package model;
 
-import java.util.List;
-
 /**
- * @author YichenLiu
+ * @author YichenLiu ZihaoYe
  * @description: 航空公司
  * @date 2022/3/16 16:34
  */
 public class Airline {
     private Integer airlineId;
     private String airlineName;
+
+    @Override
+    public String toString(){
+        return "ID:" + airlineId.toString() +", Name:" + this.airlineName;
+    }
 
     public Integer getAirlineId() {
         return airlineId;

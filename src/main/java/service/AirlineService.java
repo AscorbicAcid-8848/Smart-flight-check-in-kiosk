@@ -9,5 +9,6 @@ import model.Airline;
  */
 public interface AirlineService {
     //更改该值机对应的航空公司(后期可以做改logo和颜色)
-    Airline update(String airlineName);
+
+    Airline update(Airline airline);
 }

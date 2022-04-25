@@ -1,42 +1,150 @@
 package service.imp;
 
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import mock.PassengerMock;
 import model.Passenger;
 import service.PassengerService;
 
+import java.beans.ConstructorProperties;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * @author YichenLiu
+ * @author YichenLiu ZihaoYe
  * @description: User Service entity
  * @date 2022/3/16 16:26
  */
 public class PassengerServiceImp implements PassengerService {
+
+
+    private List<Passenger> passengers = new ArrayList<Passenger>();
+
+    @ConstructorProperties({})
+    public PassengerServiceImp(){
+        ObjectMapper objectMapper = new ObjectMapper();
+        File passengerList = new File("data\\passengerList.json");
+
+        try {
+            JavaType type = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Passenger.class);
+            passengers = objectMapper.readValue(passengerList, type);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+
     @Override
     public Passenger searchByBookingNumber(Integer bookingNumber) {
-        Passenger passenger = new Passenger();
-        //根据IdDocument查找文件中的json数据，并返回给passenger
-        return passenger;
+        int result = -1;
+
+        //search in passenger list
+        for(int i=0; i< passengers.size(); i++){
+            //if booking numbers match
+            if(passengers.get(i).getBookingNumber().equals(bookingNumber)){
+                //and if there is only one result
+                if(result == -1){
+                    result = i;
+                }else{ //is there are more than one result: print alarm and show the first result
+                    System.out.println("There are more than one result!");
+                }
+            }
+        }
+
+        //if there is result return it
+        if(result != -1) {
+            return passengers.get(result);
+        }else {//if there is no result, return an empty passenger
+            System.out.println("No result");
+            return null;
+        }
     }
 
     @Override
     public Passenger searchBySurnameAndPassengerId(String surname, Integer passengerId) {
-        Passenger passenger = new Passenger();
-        //根据IdDocument查找文件中的json数据，并返回给passenger
-        return passenger;
+        int result = -1;
+
+        //search in passenger list
+        for(int i=0; i<passengers.size(); i++){
+            //if match
+            if( (passengers.get(i).getSurname().equals(surname) && (passengers.get(i).getPassengerId().equals(passengerId)) )){
+                //and if there is only one result
+                if(result == -1){
+                    result = i;
+                }else{ //is there are more than one result: print alarm and show the first result
+                    System.out.println("There are more than one result!");
+                }
+            }
+        }
+
+        //if there is result return it
+        if(result != -1) {
+            return passengers.get(result);
+        }else {//if there is no result, return an empty passenger
+            System.out.println("No result");
+            return null;
+        }
     }
 
     @Override
     public Passenger searchByIdDocument(Integer idDocument) {
-        Passenger passenger = new Passenger();
-        //根据IdDocument查找文件中的json数据，并返回给passenger
-        return passenger;
+        int result = -1;
+
+        //search in passenger list
+        for(int i=0; i< passengers.size(); i++){
+            //if match
+            if( passengers.get(i).getIdDocument().equals(idDocument)){
+                //and if there is only one result
+                if(result == -1){
+                    result = i;
+                }else{ //is there are more than one result: print alarm and show the first result
+                    System.out.println("There are more than one result!");
+                }
+            }
+        }
+
+        //if there is result return it
+        if(result != -1) {
+            return passengers.get(result);
+        }else {//if there is no result, return an empty passenger
+            System.out.println("No result");
+            return null;
+        }
     }
 
     @Override
     public Passenger update(Passenger passenger, String seatLevel, Integer meal, Integer seatNumber) {
-        passenger.setSeatLevel(seatLevel);
-        passenger.setSeatNumber(seatNumber);
-        passenger.setMeal(meal);
-        //在这里对txt里Json进行操作
-        //根据passenger的bookingNumber查找文件内的数据，并且将新的数据替换文件中的数据
-        return passenger;
+
+        int result = -1;
+
+        for (int i = 0; i < passengers.size(); i++) {
+            if (passengers.get(i).getIdDocument().equals(passenger.getIdDocument())) {
+                //update
+                passengers.get(i).setSeatLevel(seatLevel);
+                passengers.get(i).setMeal(meal);
+                passengers.get(i).setSeatNumber(seatNumber);
+
+                result = i;
+            }
+        }
+
+        if (result != -1) {
+            return passengers.get(result);
+        } else {
+            System.out.println("no passenger found!");
+            return null;
+        }
     }
+
+    public void toJSON(){
+        PassengerMock passengerMock = new PassengerMock();
+        try {
+            passengerMock.toJSON((ArrayList<Passenger>) passengers, false);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
 }
