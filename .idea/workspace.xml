@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f4f7db67-aaf2-4a5f-920b-4ef1efac5f5d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,6 +15,13 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="28HuZRwcVd1nl0PzUjlvxVLeLbP" />
   <component name="ProjectViewState">
@@ -32,6 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1650885896808</updated>
       <workItem from="1650885897040" duration="10000" />
+      <workItem from="1650886075079" duration="36000" />
     </task>
     <servers />
   </component>
