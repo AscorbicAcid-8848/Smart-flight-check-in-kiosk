@@ -1,9 +1,8 @@
-package Boundary;
+package boundary;
 
 import model.*;
 
 import javax.swing.*;
-import javax.swing.plaf.PanelUI;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -70,7 +69,7 @@ public class InitPage extends JFrame implements ActionListener {
         panel_InitPage = new JPanel();
         panel_bot = new JPanel();
         panel_top = new JPanel();
-        heathrowImage = new ImageIcon("Boundary/images/HeathrowAirport.jpg");
+        heathrowImage = new ImageIcon("boundary/images/HeathrowAirport.jpg");
         heathrowLabel = new JLabel(heathrowImage);
 
         label_Login.setFont(new Font("SimSun", Font.PLAIN, 20));
