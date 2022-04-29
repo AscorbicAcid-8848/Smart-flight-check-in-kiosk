@@ -41,7 +41,7 @@ public class InitPage extends JFrame implements ActionListener {
     private JButton button_LoginByNameId_backToInit;
     private JButton button_LoginByNameId_confirm;
     private JToggleButton button_LoginByNameId_see;
-    private JToggleButton button_UserInfoPageId_see;
+    private JToggleButton button_LoginBybookingNumberId_see;
     private int see_type =1;
     private int see_type1 =1;
 
@@ -49,8 +49,8 @@ public class InitPage extends JFrame implements ActionListener {
     private LoginByIdDocPage panel_LoginByIdDocPage;
     private JButton button_LoginByIdDocPage_backToInit;
 
-    //UserInfoPage
-    private UserInfoPage panel_UserInfoPage;
+    //LoginBybookingNumber
+    private LoginBybookingNumber panel_LoginBybookingNumber;
     private JButton button_userinfo_backToInit;
 
     public InitPage(){//此方法作用：初始化Frame 及framePanel，不作对于panel的修改
@@ -102,11 +102,11 @@ public class InitPage extends JFrame implements ActionListener {
         framePanel.add(panel_InitPage);
     }
     public void setOtherPages(){//实例化每一个界面的panel对象，以及拿到对应panel里面的按钮，并给按钮绑定事件
-        panel_UserInfoPage = new UserInfoPage();
-        button_userinfo_backToInit = panel_UserInfoPage.getButton_backToInit();
+        panel_LoginBybookingNumber = new LoginBybookingNumber();
+        button_userinfo_backToInit = panel_LoginBybookingNumber.getButton_backToInit();
         button_userinfo_backToInit.addActionListener(this);
-        button_UserInfoPageId_see = panel_UserInfoPage.getButton_see();
-        button_UserInfoPageId_see.addActionListener(this);
+        button_LoginBybookingNumberId_see = panel_LoginBybookingNumber.getButton_see();
+        button_LoginBybookingNumberId_see.addActionListener(this);
         
         panel_LoginByNameIdPage = new LoginByNameIdPage();
         button_LoginByNameId_backToInit = panel_LoginByNameIdPage.getButton_backToInit();
@@ -130,16 +130,16 @@ public class InitPage extends JFrame implements ActionListener {
             else if(see_type ==1)
             panel_LoginByNameIdPage.setId().setEchoChar('*');
         }
-        if(e.getSource() == button_UserInfoPageId_see){
+        if(e.getSource() == button_LoginBybookingNumberId_see){
             see_type1 = -see_type1;
             if(see_type1==-1)
-            panel_UserInfoPage.setId1().setEchoChar('\0');
+            panel_LoginBybookingNumber.setId1().setEchoChar('\0');
             else if(see_type1 ==1)
-            panel_UserInfoPage.setId1().setEchoChar('*');
+            panel_LoginBybookingNumber.setId1().setEchoChar('*');
         }
         if(e.getSource() == button_bookNum){
             //测试：点击此按钮进入userinfo界面
-            pageChange(panel_UserInfoPage);
+            pageChange(panel_LoginBybookingNumber);
         }
         ///////////////////////////去往用名字Id登录的界面
         if(e.getSource() == button_UserInfo){
@@ -150,8 +150,8 @@ public class InitPage extends JFrame implements ActionListener {
             pageChange(panel_InitPage);
             refresh();
         }
-        //属于LoginByNameId,确定登录,之后进入UserInfoPage
-        //在前往userInfoPage之前，渲染界面。
+        //属于LoginByNameId,确定登录,之后进入LoginBybookingNumber
+        //在前往LoginBybookingNumber之前，渲染界面。
         //to be added: 检查数据库里面有没有这个人，如果没有，不能通过。
         if(e.getSource()==button_LoginByNameId_confirm){
             boolean isValid = true;
@@ -165,14 +165,14 @@ public class InitPage extends JFrame implements ActionListener {
 
             try{
                 passenger.setPassengerId(Integer.parseInt(panel_LoginByNameIdPage.getId()));
-                panel_UserInfoPage.render(passenger);
+                panel_LoginBybookingNumber.render(passenger);
             }
             catch(NumberFormatException exception){
                 isValid = false;
                 panel_LoginByNameIdPage.IdWarning();
             }
             if(isValid)
-                pageChange(panel_UserInfoPage);
+                pageChange(panel_LoginBybookingNumber);
             else
                 pageChange(panel_LoginByNameIdPage);
         }
@@ -186,7 +186,7 @@ public class InitPage extends JFrame implements ActionListener {
             pageChange(panel_InitPage);
             refresh();
         }
-        //属于UserInfoPage,返回最高级
+        //属于LoginBybookingNumber,返回最高级
         if(e.getSource() == button_userinfo_backToInit){
             pageChange(panel_InitPage);
             refresh();
