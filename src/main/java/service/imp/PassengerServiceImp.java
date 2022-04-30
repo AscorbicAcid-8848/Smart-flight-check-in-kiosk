@@ -120,7 +120,7 @@ public class PassengerServiceImp implements PassengerService {
         int result = -1;
 
         for (int i = 0; i < passengers.size(); i++) {
-            if (passengers.get(i).getIdDocument().equals(passenger.getIdDocument())) {
+            if (passengers.get(i).getPassengerId().equals(passenger.getPassengerId())) {
                 //update
                 passengers.get(i).setSeatLevel(seatLevel);
                 passengers.get(i).setMeal(meal);
