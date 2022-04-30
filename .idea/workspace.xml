@@ -4,19 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="运行版本">
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="将航班与乘客的关系，由一对一改为多对一">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/FlightSeat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Seat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/FlightSeatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/FlightServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/FlightServiceImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,7 +92,8 @@
       <workItem from="1651037224314" duration="1315000" />
       <workItem from="1651041338401" duration="527000" />
       <workItem from="1651041946738" duration="1343000" />
-      <workItem from="1651292566168" duration="2961000" />
+      <workItem from="1651292566168" duration="4563000" />
+      <workItem from="1651303542352" duration="6305000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -116,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651043248623</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="将航班与乘客的关系，由一对一改为多对一">
+      <created>1651295641721</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651295641721</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +150,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="运行版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="运行版本" />
+    <MESSAGE value="将航班与乘客的关系，由一对一改为多对一" />
+    <option name="LAST_COMMIT_MESSAGE" value="将航班与乘客的关系，由一对一改为多对一" />
   </component>
 </project>
