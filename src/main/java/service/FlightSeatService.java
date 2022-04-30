@@ -1,5 +1,7 @@
 package service;
 
+import model.FlightSeat;
+import model.Passenger;
 import model.Seat;
 
 import java.util.List;
@@ -11,8 +13,8 @@ import java.util.List;
  */
 public interface FlightSeatService {
     //更改指定座位的状态
-    public void update (Integer idDocument, Integer flightId,Integer seatNumber,String seatLevel);
+    public Passenger update (Integer idDocument, Integer flightId, Integer seatNumber, String seatLevel);
     //展示所在flight的全部座位
-    public List<Seat> searchByFlightId(Integer flightId);
+    public FlightSeat searchByFlightId(Integer flightId);
 }
 

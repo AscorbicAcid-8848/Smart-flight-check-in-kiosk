@@ -115,8 +115,8 @@ public class PassengerServiceImp implements PassengerService {
     }
 
     @Override
-    public Passenger update(Passenger passenger, String seatLevel, Integer meal, Integer seatNumber) {
-
+    public Passenger update(Passenger passenger) {
+//叶哥，在这里改一下，辛苦
         int result = -1;
 
         for (int i = 0; i < passengers.size(); i++) {

@@ -15,5 +15,5 @@ public interface PassengerService {
     //通过乘客id document查询
     Passenger searchByIdDocument(Integer idDocument);
     //2.2中的自定义操作
-    Passenger update(Passenger passenger, String seatLevel, Integer meal, Integer seatNumber);//前排座位被选的情况
+    Passenger update(Passenger passenger);//前排座位被选的情况
 }

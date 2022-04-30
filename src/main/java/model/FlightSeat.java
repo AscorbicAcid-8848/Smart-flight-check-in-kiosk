@@ -11,6 +11,9 @@ public class FlightSeat {
     private Integer flightId;
     private List<Seat> seatList;
 
+    public FlightSeat(){
+
+    }
     public FlightSeat(Integer flightId, List<Seat> seatList) {
         this.flightId = flightId;
         this.seatList = seatList;
