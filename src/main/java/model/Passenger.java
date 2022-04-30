@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Passenger {
     private Integer bookingNumber;//与航班挂钩
-    private Integer flightId;
+    private List<Integer> flightId;
     private Integer passengerId;
     private String surname;
     private String firstname;
@@ -38,11 +38,11 @@ public class Passenger {
     //setter and getter
 
 
-    public Integer getFlightId() {
+    public List<Integer> getFlightId() {
         return flightId;
     }
 
-    public void setFlightId(Integer flightId) {
+    public void setFlightId(List<Integer> flightId) {
         this.flightId = flightId;
     }
 

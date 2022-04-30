@@ -38,7 +38,7 @@ public class FlightServiceImp implements FlightService {
 
     @Override
     public Flight insert(Integer airlineId, Integer flightId, String flightName, Date departureTime, Date fallTime, boolean isDelayed,
-                         Integer departureGate, String destWeather, String destCOVIDPolicy, String arrivalAirport, Integer arrivalTerminal) {
+                         Integer departureGate, String destWeather, String destCOVIDPolicy, String arrivalAirport, Integer arrivalTerminal,Boolean isCurrent) {
         Flight flight = new Flight();
         flight.setAirlineId(airlineId);
         flight.setFlightName(flightName);
@@ -52,6 +52,7 @@ public class FlightServiceImp implements FlightService {
         flight.setDestCOVIDPolicy(destCOVIDPolicy);
         flight.setArrivalAirport(arrivalAirport);
         flight.setArrivalTerminal(arrivalTerminal);
+        flight.setCurrent(isCurrent);
         //向json文件中插入数据
         flights.add(flight);
         return flight;

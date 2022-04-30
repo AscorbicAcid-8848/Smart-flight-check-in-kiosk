@@ -9,6 +9,8 @@ import service.PassengerService;
 import service.imp.FlightServiceImp;
 import service.imp.PassengerServiceImp;
 
+import java.util.List;
+
 /**
  * @author YichenLiu
  * @description: 操控乘客
@@ -16,27 +18,42 @@ import service.imp.PassengerServiceImp;
  */
 //这是我的登机牌controller
 public class BoardingPassController {
-
+    private FlightController flightController;
     private FlightService flightService = new FlightServiceImp();
     private PassengerService passengerService = new PassengerServiceImp();
 
     public BoardingPass checkPassenger(Integer bookingNumber){
         Passenger passenger = passengerService.searchByBookingNumber(bookingNumber);
-        Integer flightId = passenger.getFlightId();
-        Flight flight = flightService.searchByFlightId(flightId);
-        return returnBoardingPass(flight,passenger);
+        List<Flight> flightList = flightController.getByBookingNumber(bookingNumber);
+        Flight currentFlight = new Flight();
+        for(Flight flight:flightList){
+            if(flight.getCurrent()){
+                currentFlight =flight;
+            }
+        }
+        return returnBoardingPass(currentFlight,passenger);
     }
     public BoardingPass checkPassenger(String surname, Integer passengerId){
         Passenger passenger = passengerService.searchBySurnameAndPassengerId(surname,passengerId);
-        Integer flightId = passenger.getFlightId();
-        Flight flight = flightService.searchByFlightId(flightId);
-        return returnBoardingPass(flight,passenger);
+        List<Flight> flightList = flightController.getBySurnameAndPassengerId(surname, passengerId);
+        Flight currentFlight = new Flight();
+        for(Flight flight:flightList){
+            if(flight.getCurrent()){
+                currentFlight =flight;
+            }
+        }
+        return returnBoardingPass(currentFlight,passenger);
     }
     public BoardingPass checkPassenger(IdDocument idDocument){
         Passenger passenger = passengerService.searchByIdDocument(idDocument.getId());
-        Integer flightId = passenger.getFlightId();
-        Flight flight = flightService.searchByFlightId(flightId);
-        return returnBoardingPass(flight,passenger);
+        List<Flight> flightList = flightController.getByIdDocument(idDocument);
+        Flight currentFlight = new Flight();
+        for(Flight flight:flightList){
+            if(flight.getCurrent()){
+                currentFlight =flight;
+            }
+        }
+        return returnBoardingPass(currentFlight,passenger);
     }
     /**
      *
