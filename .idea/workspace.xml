@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="在使用passengercontroller之前">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/boundary/FlightDetailPage.class" beforeDir="false" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="使用passengercontroller">
       <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651396694153</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="使用passengercontroller">
+      <created>1651398113886</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1651398113886</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +182,7 @@
     <MESSAGE value="将航班与乘客的关系，由一对一改为多对一" />
     <MESSAGE value="小结" />
     <MESSAGE value="在使用passengercontroller之前" />
-    <option name="LAST_COMMIT_MESSAGE" value="在使用passengercontroller之前" />
+    <MESSAGE value="使用passengercontroller" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用passengercontroller" />
   </component>
 </project>

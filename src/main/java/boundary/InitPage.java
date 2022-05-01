@@ -177,6 +177,7 @@ public class InitPage extends JFrame implements ActionListener {
             }
             if(isValid){
                 if(passengerController.doesPassengerExist(surname,passengerId)){
+                    passenger = boardingPassController.checkPassenger(surname,passengerId).getPassenger();
                     panel_UserInfoPage.render(passenger);
                     pageChange(panel_UserInfoPage);
                 }
