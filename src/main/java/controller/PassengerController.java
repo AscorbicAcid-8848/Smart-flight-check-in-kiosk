@@ -14,16 +14,17 @@ import service.imp.PassengerServiceImp;
 public class PassengerController {
     private PassengerService passengerService = new PassengerServiceImp();
 
-    boolean doesPassengerExist(String surname, Integer id){
+    public boolean doesPassengerExist(String surname, Integer id){
         Passenger passenger = passengerService.searchBySurnameAndPassengerId(surname, id);
         if(passenger != null){
             return true;
         }
         return false;
     }
-    //更改自选
-    public Passenger customChoices(Passenger passenger,Integer meal,Integer seatNumber,String seatLevel){
-        passenger = passengerService.update(passenger,seatLevel,meal,seatNumber);
+    //更改自选餐饮
+    public Passenger customChoices(Passenger passenger,Integer meal){
+        passenger.setMeal(meal);
+        passenger = passengerService.update(passenger);
         return passenger;
     }
 }

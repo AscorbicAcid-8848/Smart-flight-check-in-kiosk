@@ -1,5 +1,8 @@
 package boundary;
 
+import controller.BoardingPassController;
+import controller.FlightController;
+import controller.PassengerController;
 import model.*;
 
 import javax.swing.*;
@@ -20,6 +23,20 @@ public class InitPage extends JFrame implements ActionListener {
     private Flight flight = new Flight();
     //此次登录的Id doc
     private IdDocument idDocument = new IdDocument();
+
+    //controllers
+    //BoardingPassController
+    //返回一个乘客的登机牌
+    //可以用在通过bookingnum登录页面
+    BoardingPassController boardingPassController = new BoardingPassController();
+
+    //FlightController
+    //返回这个人的所有航班
+    FlightController flightController = new FlightController();
+
+    //PassengerController
+    //检查乘客存不存在
+    PassengerController passengerController = new PassengerController();
 
     //最高级panel：所有页面的容器
     private JPanel framePanel;
@@ -143,24 +160,33 @@ public class InitPage extends JFrame implements ActionListener {
         //to be added: 检查数据库里面有没有这个人，如果没有，不能通过。
         if(e.getSource()==button_LoginByNameId_confirm){
             boolean isValid = true;
+            String surname;
+            Integer passengerId = null;
 
-            passenger.setSurname(panel_LoginByNameIdPage.getSurname());
-
-            if(Objects.equals(passenger.getSurname(), "")){
+            if(Objects.equals(panel_LoginByNameIdPage.getSurname(), "")){
                 isValid = false;
                 panel_LoginByNameIdPage.nameWarning();
             }
-
+            surname = panel_LoginByNameIdPage.getSurname();
             try{
-                passenger.setPassengerId(Integer.parseInt(panel_LoginByNameIdPage.getId()));
-                panel_UserInfoPage.render(passenger);
+                passengerId = Integer.parseInt(panel_LoginByNameIdPage.getId());
             }
             catch(NumberFormatException exception){
                 isValid = false;
                 panel_LoginByNameIdPage.IdWarning();
             }
-            if(isValid)
-                pageChange(panel_UserInfoPage);
+            if(isValid){
+                if(passengerController.doesPassengerExist(surname,passengerId)){
+                    passenger = boardingPassController.checkPassenger(surname,passengerId).getPassenger();
+                    panel_UserInfoPage.render(passenger);
+                    pageChange(panel_UserInfoPage);
+                }
+                else{
+                    JOptionPane.showMessageDialog(panel_LoginByNameIdPage, "Passenger does not exist", "Exception occurs",JOptionPane.WARNING_MESSAGE);
+                    pageChange(panel_LoginByNameIdPage);
+                }
+            }
+
             else
                 pageChange(panel_LoginByNameIdPage);
         }

@@ -19,6 +19,7 @@ public class Flight {
     private String destCOVIDPolicy;
     private String arrivalAirport;
     private Integer arrivalTerminal;
+    private Boolean isCurrent;
 
 
     @Override
@@ -35,11 +36,20 @@ public class Flight {
                 ", destCOVIDPolicy='" + destCOVIDPolicy + '\'' +
                 ", arrivalAirport='" + arrivalAirport + '\'' +
                 ", arrivalTerminal=" + arrivalTerminal +
+                ", isCurrent=" + isCurrent +
                 '}';
     }
 
 
     //setter and getter
+    public Boolean getCurrent() {
+        return isCurrent;
+    }
+
+    public void setCurrent(Boolean current) {
+        isCurrent = current;
+    }
+
     public void setDelayed(boolean delayed) {
         isDelayed = delayed;
     }
