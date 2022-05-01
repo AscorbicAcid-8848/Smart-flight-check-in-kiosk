@@ -4,15 +4,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="小结">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" afterDir="false" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="加入flightdetailpage。">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_12_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_12_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_12_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_12_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/FlightSeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/FlightSeat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/FlightSeatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/FlightSeatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/PassengerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PassengerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/PassengerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/PassengerServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XXXManagementSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/XXXManagementSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/Boundary/Entrance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/Boundary/FlightDetailPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/Boundary/LoginByIdDocPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/Boundary/LoginByNameIdPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/Boundary/UserInfoPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/controller/BoardingPassController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/controller/FlightController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/controller/PassengerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/model/Airline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/model/BoardingPass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/model/Flight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/model/IdDocument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/model/Passenger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/service/AirlineService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/service/FlightService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/service/PassengerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/service/imp/AirlineServiceImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/service/imp/FlightServiceImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/service/imp/PassengerServiceImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/Entrance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/Entrance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/FlightDetailPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/FlightDetailPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/HeathrowAirport.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/QRcode.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/eye slash-fill.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/eye-fill.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/FlightController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mock/AirlineMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/AirlineMock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mock/FlightMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/FlightMock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Airline.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Airline.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/BoardingPass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/BoardingPass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Flight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/IdDocument.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/IdDocument.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Passenger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Passenger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/AirlineService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/FlightService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/FlightService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/PassengerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PassengerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/AirlineServiceImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/FlightServiceImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/PassengerServiceImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/AirlineMockTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/FlightMockTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/PassengerMockTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/AirlineServiceImpTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/FlightServiceImpTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/PassengerServiceImpTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +95,15 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="28MrHbNBmzQLwSXEpfLHYsPZBCZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,6 +111,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/boundary" />
     <property name="node.js.detected.package.eslint" value="true" />

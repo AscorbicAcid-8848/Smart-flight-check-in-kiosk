@@ -1,5 +1,8 @@
 package boundary;
 
+import controller.BoardingPassController;
+import controller.FlightController;
+import controller.PassengerController;
 import model.*;
 
 import javax.swing.*;
@@ -20,6 +23,20 @@ public class InitPage extends JFrame implements ActionListener {
     private Flight flight = new Flight();
     //此次登录的Id doc
     private IdDocument idDocument = new IdDocument();
+
+    //controllers
+    //BoardingPassController
+    //返回一个乘客的登机牌
+    //可以用在通过bookingnum登录页面
+    BoardingPassController boardingPassController = new BoardingPassController();
+
+    //FlightController
+    //返回这个人的所有航班
+    FlightController flightController = new FlightController();
+
+    //PassengerController
+    //检查乘客存不存在
+    PassengerController passengerController = new PassengerController();
 
     //最高级panel：所有页面的容器
     private JPanel framePanel;
