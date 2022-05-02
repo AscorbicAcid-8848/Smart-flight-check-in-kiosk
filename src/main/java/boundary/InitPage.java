@@ -1,5 +1,8 @@
 package boundary;
 
+import controller.BoardingPassController;
+import controller.FlightController;
+import controller.PassengerController;
 import model.*;
 
 import javax.swing.*;
@@ -11,7 +14,7 @@ import java.util.Objects;
 
 public class InitPage extends JFrame implements ActionListener {
     //此次登录的用户对象
-    private static Passenger passenger =new Passenger();
+    private Passenger passenger =new Passenger();
     //此次登录的航空公司对象
     private Airline airline = new Airline();
     //此次登录的登机牌对象
@@ -20,6 +23,20 @@ public class InitPage extends JFrame implements ActionListener {
     private Flight flight = new Flight();
     //此次登录的Id doc
     private IdDocument idDocument = new IdDocument();
+
+    //controllers
+    //BoardingPassController
+    //返回一个乘客的登机牌
+    //可以用在通过bookingnum登录页面
+    BoardingPassController boardingPassController = new BoardingPassController();
+
+    //FlightController
+    //返回这个人的所有航班
+    FlightController flightController = new FlightController();
+
+    //PassengerController
+    //检查乘客存不存在
+    PassengerController passengerController = new PassengerController();
 
     //最高级panel：所有页面的容器
     private JPanel framePanel;
@@ -46,9 +63,19 @@ public class InitPage extends JFrame implements ActionListener {
     private LoginByIdDocPage panel_LoginByIdDocPage;
     private JButton button_LoginByIdDocPage_backToInit;
 
+    //LoginByBookingNumPage
+    private LoginByBookingNumPage panel_LoginByBookingNumPage;
+    private JButton button_LoginByBookingNumPage_backToInit;
+    private JButton button_LoginByBookingNumPage_next;
+
     //UserInfoPage
     private UserInfoPage panel_UserInfoPage;
     private JButton button_userinfo_backToInit;
+
+    //flight detail page
+    private FlightDetailPage panel_flightDetailPage;
+    private JButton button_flightDetailPage_confirm;
+    private JButton button_flightDetailPage_back;
 
     public InitPage(){//此方法作用：初始化Frame 及framePanel，不作对于panel的修改
 
@@ -114,6 +141,14 @@ public class InitPage extends JFrame implements ActionListener {
         panel_LoginByIdDocPage = new LoginByIdDocPage();
         button_LoginByIdDocPage_backToInit = panel_LoginByIdDocPage.getButton_backToInit();
         button_LoginByIdDocPage_backToInit.addActionListener(this);
+
+        panel_LoginByBookingNumPage = new LoginByBookingNumPage();
+        button_LoginByBookingNumPage_backToInit = panel_LoginByBookingNumPage.getButton_backToInit();
+        button_LoginByBookingNumPage_next = panel_LoginByBookingNumPage.getButton_next();
+
+        panel_flightDetailPage = new FlightDetailPage();
+        button_flightDetailPage_back = panel_flightDetailPage.getButton_back();
+        button_flightDetailPage_confirm = panel_flightDetailPage.getButton_confirm();
     }
 
     @Override
@@ -125,9 +160,46 @@ public class InitPage extends JFrame implements ActionListener {
             else if(see_type ==1)
             panel_LoginByNameIdPage.setId().setEchoChar('*');
         }
+        ///////////////////////////去往用bookingNum登录页面
         if(e.getSource() == button_bookNum){
-            //测试：点击此按钮进入userinfo界面
-            pageChange(panel_UserInfoPage);
+
+            pageChange(panel_LoginByBookingNumPage);
+        }//属于LoginByBookingNum,返回到最高级
+        if(e.getSource() == button_LoginByBookingNumPage_backToInit){
+            pageChange(panel_InitPage);
+            refresh();
+        }
+        //属于LoginByBookingNum,确定登录,之后进入FlightDetailPage
+        //在前往FlightDetailPage之前，渲染界面。
+        if(e.getSource() == button_LoginByBookingNumPage_next){
+            boolean isValid = true;
+            Integer bookingNum = null;
+            if(Objects.equals(panel_LoginByBookingNumPage.getBookingNum(), "")){
+                isValid = false;
+                panel_LoginByNameIdPage.nameWarning();
+            }
+            try{
+                bookingNum = Integer.parseInt(panel_LoginByNameIdPage.getId());
+            }
+            catch(NumberFormatException exception){
+                isValid = false;
+                panel_LoginByBookingNumPage.bookingNumFormatWarning();
+            }
+
+            if(isValid){
+                if(boardingPassController.checkPassenger(bookingNum)!=null){
+                    passenger = boardingPassController.checkPassenger(bookingNum).getPassenger();
+                    flight = boardingPassController.checkPassenger(bookingNum).getFlight();
+                    panel_flightDetailPage.render(passenger,flight);
+                    pageChange(panel_flightDetailPage);
+                }
+                else{
+                    panel_LoginByBookingNumPage.bookingNumNonExistWarning();
+                    pageChange(panel_LoginByBookingNumPage);
+                }
+            }
+            else
+                pageChange(panel_LoginByBookingNumPage);
         }
         ///////////////////////////去往用名字Id登录的界面
         if(e.getSource() == button_UserInfo){
@@ -143,24 +215,33 @@ public class InitPage extends JFrame implements ActionListener {
         //to be added: 检查数据库里面有没有这个人，如果没有，不能通过。
         if(e.getSource()==button_LoginByNameId_confirm){
             boolean isValid = true;
+            String surname;
+            Integer passengerId = null;
 
-            passenger.setSurname(panel_LoginByNameIdPage.getSurname());
-
-            if(Objects.equals(passenger.getSurname(), "")){
+            if(Objects.equals(panel_LoginByNameIdPage.getSurname(), "")){
                 isValid = false;
-                panel_LoginByNameIdPage.nameWarning();
+                panel_LoginByBookingNumPage.bookingNumWarning();
             }
-
+            surname = panel_LoginByNameIdPage.getSurname();
             try{
-                passenger.setPassengerId(Integer.parseInt(panel_LoginByNameIdPage.getId()));
-                panel_UserInfoPage.render(passenger);
+                passengerId = Integer.parseInt(panel_LoginByNameIdPage.getId());
             }
             catch(NumberFormatException exception){
                 isValid = false;
                 panel_LoginByNameIdPage.IdWarning();
             }
-            if(isValid)
-                pageChange(panel_UserInfoPage);
+            if(isValid){
+                if(passengerController.doesPassengerExist(surname,passengerId)){
+                    passenger = boardingPassController.checkPassenger(surname,passengerId).getPassenger();
+                    panel_UserInfoPage.render(passenger);
+                    pageChange(panel_UserInfoPage);
+                }
+                else{
+                    panel_LoginByNameIdPage.passengerNonExistWarning();
+                    pageChange(panel_LoginByNameIdPage);
+                }
+            }
+
             else
                 pageChange(panel_LoginByNameIdPage);
         }

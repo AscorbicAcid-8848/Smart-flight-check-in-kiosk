@@ -14,7 +14,7 @@ import service.imp.PassengerServiceImp;
 public class PassengerController {
     private PassengerService passengerService = new PassengerServiceImp();
 
-    boolean doesPassengerExist(String surname, Integer id){
+    public boolean doesPassengerExist(String surname, Integer id){
         Passenger passenger = passengerService.searchBySurnameAndPassengerId(surname, id);
         if(passenger != null){
             return true;

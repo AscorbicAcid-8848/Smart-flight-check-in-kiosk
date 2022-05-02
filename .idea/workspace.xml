@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="完成选座Service层与controller层" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="小结">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/FlightSeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/FlightSeat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/FlightSeatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/FlightSeatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/PassengerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PassengerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/PassengerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/PassengerServiceImp.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +49,6 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/boundary" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -89,7 +97,7 @@
       <workItem from="1651041946738" duration="1343000" />
       <workItem from="1651292566168" duration="4563000" />
       <workItem from="1651303542352" duration="6666000" />
-      <workItem from="1651324653372" duration="843000" />
+      <workItem from="1651324653372" duration="791000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -133,14 +141,7 @@
       <option name="project" value="LOCAL" />
       <updated>1651312273179</updated>
     </task>
-    <task id="LOCAL-00007" summary="完成选座Service层与controller层">
-      <created>1651325486746</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1651325486746</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +163,6 @@
     <MESSAGE value="运行版本" />
     <MESSAGE value="将航班与乘客的关系，由一对一改为多对一" />
     <MESSAGE value="小结" />
-    <MESSAGE value="完成选座Service层与controller层" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成选座Service层与controller层" />
+    <option name="LAST_COMMIT_MESSAGE" value="小结" />
   </component>
 </project>

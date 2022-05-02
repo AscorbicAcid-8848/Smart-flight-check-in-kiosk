@@ -1,0 +1,29 @@
+<changelist name="Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]" date="1651036018903" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022/4/27 13:06 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/XXXManagementSystem/Boundary/LoginByNameIdPage.class" />
+    <option name="AFTER_PATH" value="out/production/XXXManagementSystem/Boundary/LoginByNameIdPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]/LoginByNameIdPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/XXXManagementSystem/Boundary/UserInfoPage.class" />
+    <option name="AFTER_PATH" value="out/production/XXXManagementSystem/Boundary/UserInfoPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]/UserInfoPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/XXXManagementSystem/model/Flight.class" />
+    <option name="AFTER_PATH" value="out/production/XXXManagementSystem/model/Flight.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]/Flight.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/XXXManagementSystem/Boundary/InitPage.class" />
+    <option name="AFTER_PATH" value="out/production/XXXManagementSystem/Boundary/InitPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]/InitPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/XXXManagementSystem/Boundary/LoginByIdDocPage.class" />
+    <option name="AFTER_PATH" value="out/production/XXXManagementSystem/Boundary/LoginByIdDocPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]/LoginByIdDocPage.class" />
+  </binary>
+</changelist>
