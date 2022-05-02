@@ -154,6 +154,8 @@ public class InitPage extends JFrame implements ActionListener {
         panel_flightDetailPage = new FlightDetailPage();
         button_flightDetailPage_back = panel_flightDetailPage.getButton_back();
         button_flightDetailPage_confirm = panel_flightDetailPage.getButton_confirm();
+        button_flightDetailPage_confirm.addActionListener(this);
+        button_flightDetailPage_back.addActionListener(this);
 
     }
 
@@ -273,6 +275,11 @@ public class InitPage extends JFrame implements ActionListener {
         }
         //属于UserInfoPage,返回最高级
         if(e.getSource() == button_userinfo_backToInit){
+            pageChange(panel_InitPage);
+            refresh();
+        }
+        ////////////属于FlightDetailPage
+        if(e.getSource() == button_flightDetailPage_back){
             pageChange(panel_InitPage);
             refresh();
         }

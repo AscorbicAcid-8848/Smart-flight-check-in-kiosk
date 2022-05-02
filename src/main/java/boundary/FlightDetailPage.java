@@ -63,7 +63,7 @@ public class FlightDetailPage extends JPanel {
         panel_mid = new JPanel();
         panel_bot = new JPanel();
 
-        button_back = new JButton("Go Back");
+        button_back = new JButton("To initial page");
         button_confirm = new JButton("Confirm");
 
         this.setLayout(new GridLayout(3,1,0,20));
