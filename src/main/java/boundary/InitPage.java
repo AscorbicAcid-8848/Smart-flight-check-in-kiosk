@@ -78,6 +78,8 @@ public class InitPage extends JFrame implements ActionListener {
     private JButton button_flightDetailPage_confirm;
     private JButton button_flightDetailPage_back;
 
+    //
+
     public InitPage(){//此方法作用：初始化Frame 及framePanel，不作对于panel的修改
 
         framePanel = new JPanel();
@@ -154,6 +156,8 @@ public class InitPage extends JFrame implements ActionListener {
         panel_flightDetailPage = new FlightDetailPage();
         button_flightDetailPage_back = panel_flightDetailPage.getButton_back();
         button_flightDetailPage_confirm = panel_flightDetailPage.getButton_confirm();
+        button_flightDetailPage_confirm.addActionListener(this);
+        button_flightDetailPage_back.addActionListener(this);
 
     }
 
@@ -236,7 +240,7 @@ public class InitPage extends JFrame implements ActionListener {
 
             if(Objects.equals(panel_LoginByNameIdPage.getSurname(), "")){
                 isValid = false;
-                panel_LoginByBookingNumPage.bookingNumWarning();
+                panel_LoginByNameIdPage.nameWarning();
             }
             surname = panel_LoginByNameIdPage.getSurname();
             try{
@@ -273,6 +277,11 @@ public class InitPage extends JFrame implements ActionListener {
         }
         //属于UserInfoPage,返回最高级
         if(e.getSource() == button_userinfo_backToInit){
+            pageChange(panel_InitPage);
+            refresh();
+        }
+        ////////////属于FlightDetailPage
+        if(e.getSource() == button_flightDetailPage_back){
             pageChange(panel_InitPage);
             refresh();
         }

@@ -6,7 +6,7 @@ import model.Passenger;
 import javax.swing.*;
 import java.awt.*;
 
-public class FlightDetailPage extends JPanel {
+public class FinalConfirmPage extends JPanel {
 //
 //    //旅客信息
 //    private Passenger passenger;
@@ -52,18 +52,18 @@ public class FlightDetailPage extends JPanel {
     JLabel departureGate = new JLabel();
     JLabel arrivalGate_terminal = new JLabel();
     JLabel arrivalTime = new JLabel();
-    JLabel destWeather = new JLabel();
-    JLabel COVIDPolicy = new JLabel();
-    JLabel delayState = new JLabel();
+    JLabel seatNumber = new JLabel();
+    JLabel seatLevel = new JLabel();
+    JLabel meal = new JLabel();
 
 
-    public FlightDetailPage(){
+    public FinalConfirmPage(){
 
         panel_top = new JPanel();
         panel_mid = new JPanel();
         panel_bot = new JPanel();
 
-        button_back = new JButton("To initial page");
+        button_back = new JButton("Go Back");
         button_confirm = new JButton("Confirm");
 
         this.setLayout(new GridLayout(3,1,0,20));
@@ -82,16 +82,16 @@ public class FlightDetailPage extends JPanel {
         panel_mid.add(departureGate);
         panel_mid.add(arrivalTime);
         panel_mid.add(arrivalGate_terminal);
-        panel_mid.add(destWeather);
-        panel_mid.add(delayState);
-        panel_mid.add(COVIDPolicy);
+        panel_mid.add(seatLevel);
+        panel_mid.add(seatNumber);
+        panel_mid.add(meal);
 
         panel_bot.add(button_back);
         panel_bot.add(button_confirm);
 
 
     }
-//获取button，由initpage调用，在initpage实现监听
+    //获取button，由initpage调用，在initpage实现监听
     public JButton getButton_back() {
         return button_back;
     }
@@ -102,14 +102,17 @@ public class FlightDetailPage extends JPanel {
 
     public void render(Passenger passenger,Flight flight){
         label_top_first.setText("Dear"+passenger.getSurname()+", with booking number "+passenger.getBookingNumber()+",");
-        label_top_second.setText("Here is the information for flight: "+flight.getFlightName());
+        label_top_second.setText("Please check your information of your flight: "+flight.getFlightName());
         departureTime.setText("Departure Time: "+flight.getDepartureTime());
         departureGate.setText("Departure Gate: "+flight.getDepartureGate());
         arrivalTime.setText("Arrival Time: "+flight.getFallTime());
         arrivalGate_terminal.setText("Arrival Airport&Terminal:  "+flight.getArrivalAirport()+" Terminal"+ flight.getArrivalTerminal());
-        destWeather.setText("Destination Weather: "+flight.getDestWeather());
-        COVIDPolicy.setText("Destination COVID Policy: "+flight.getDestCOVIDPolicy());
-        delayState.setText(flight.isDelayed() ? "Delay State: Delayed":"Delay State: No Delay");
+        seatLevel.setText("Seat Level: "+passenger.getSeatLevel());
+        seatNumber.setText("Seat Number: "+passenger.getSeatNumber());
+        meal.setText("Meal: "+passenger.getMeal());
+        //destWeather.setText("Destination Weather: "+flight.getDestWeather());
+        //COVIDPolicy.setText("Destination COVID Policy: "+flight.getDestCOVIDPolicy());
+        //delayState.setText(flight.isDelayed() ? "Delay State: Delayed":"Delay State: No Delay");
     }
 
 
