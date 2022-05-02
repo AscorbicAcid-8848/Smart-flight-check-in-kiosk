@@ -4,77 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48aeb5d9-b861-4592-8c07-508f3ad86630" name="Changes" comment="Merge branch 'RanXu_latest_version' of https://github.com/AscorbicAcid-8848/Smart-flight-check-in-kiosk into RanXu_latest_version&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]/Flight.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]/InitPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_1_16_42_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_1_16_42__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/controller/FlightSeatController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/model/FlightSeat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/model/Seat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/service/FlightSeatService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/service/imp/FlightSeatServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/Boundary/Entrance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/Boundary/LoginByIdDocPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]/LoginByIdDocPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/Boundary/LoginByNameIdPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]/LoginByNameIdPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/Boundary/UserInfoPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06_[Changes]/UserInfoPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/boundary/FlightDetailPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/controller/BoardingPassController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/controller/FlightController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/controller/PassengerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/model/Airline.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/model/BoardingPass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/model/Flight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/model/IdDocument.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/model/Passenger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/service/AirlineService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/service/FlightService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/service/PassengerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/service/imp/AirlineServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/service/imp/FlightServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/XXXManagementSystem/service/imp/PassengerServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByNameIdPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByNameIdPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/Entrance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/Entrance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/FlightDetailPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/FlightDetailPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/HeathrowAirport.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/QRcode.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/eye slash-fill.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XXXManagementSystem/Boundary/images/eye slash-fill.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/eye-fill.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XXXManagementSystem/Boundary/images/eye-fill.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/FlightController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/AirlineMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/AirlineMock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/FlightMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/FlightMock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Airline.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Airline.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/BoardingPass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/BoardingPass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Flight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/IdDocument.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/IdDocument.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Passenger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Passenger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/AirlineService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/AirlineService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/FlightService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/FlightService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PassengerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PassengerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/AirlineServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/imp/AirlineServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/FlightServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/imp/FlightServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/PassengerServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/AirlineMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/FlightMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/PassengerMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/AirlineServiceImpTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/FlightServiceImpTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/PassengerServiceImpTest.class" beforeDir="false" />
-    </list>
+    <list default="true" id="986d0805-2ad1-4d77-99a1-a7c8c5a3f660" name="Changes" comment="new version" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651312273179</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="new version">
+      <created>1651466278019</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651466278020</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +173,7 @@
     <MESSAGE value="将航班与乘客的关系，由一对一改为多对一" />
     <MESSAGE value="小结" />
     <MESSAGE value="Merge branch 'RanXu_latest_version' of https://github.com/AscorbicAcid-8848/Smart-flight-check-in-kiosk into RanXu_latest_version&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'RanXu_latest_version' of https://github.com/AscorbicAcid-8848/Smart-flight-check-in-kiosk into RanXu_latest_version&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="new version" />
+    <option name="LAST_COMMIT_MESSAGE" value="new version" />
   </component>
 </project>
