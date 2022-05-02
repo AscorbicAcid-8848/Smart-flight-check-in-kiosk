@@ -26,6 +26,9 @@ public class BoardingPassController {
         Passenger passenger = passengerService.searchByBookingNumber(bookingNumber);
         List<Flight> flightList = flightController.getByBookingNumber(bookingNumber);
         Flight currentFlight = new Flight();
+        if(flightList==null){
+            return null;
+        }
         for(Flight flight:flightList){
             if(flight.getCurrent()){
                 currentFlight =flight;
@@ -37,6 +40,9 @@ public class BoardingPassController {
         Passenger passenger = passengerService.searchBySurnameAndPassengerId(surname,passengerId);
         List<Flight> flightList = flightController.getBySurnameAndPassengerId(surname, passengerId);
         Flight currentFlight = new Flight();
+        if(flightList==null){
+            return null;
+        }
         for(Flight flight:flightList){
             if(flight.getCurrent()){
                 currentFlight =flight;
@@ -48,6 +54,9 @@ public class BoardingPassController {
         Passenger passenger = passengerService.searchByIdDocument(idDocument.getId());
         List<Flight> flightList = flightController.getByIdDocument(idDocument);
         Flight currentFlight = new Flight();
+        if(flightList==null){
+            return null;
+        }
         for(Flight flight:flightList){
             if(flight.getCurrent()){
                 currentFlight =flight;

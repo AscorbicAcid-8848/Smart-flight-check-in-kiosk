@@ -8,9 +8,9 @@ import java.util.List;
  * @date 2022/3/16 16:27
  */
 public class Passenger {
-    private Integer bookingNumber;//与航班挂钩
-    private List<Integer> flightId;
-    private Integer passengerId;
+    private List<Integer> bookingNumber;//与航班挂钩
+    private List<Integer> flightId;//三位数
+    private Integer passengerId;//一位数
     private String surname;
     private String firstname;
     private Integer gender;
@@ -54,11 +54,11 @@ public class Passenger {
         IdDocument = idDocument;
     }
 
-    public Integer getBookingNumber() {
+    public List<Integer> getBookingNumber() {
         return bookingNumber;
     }
 
-    public void setBookingNumber(Integer bookingNumber) {
+    public void setBookingNumber(List<Integer> bookingNumber) {
         this.bookingNumber = bookingNumber;
     }
 
