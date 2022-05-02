@@ -51,11 +51,27 @@ public class PassengerMock {
         passenger2.setPassengerId(3);
         passenger3.setPassengerId(4);
 
+        List<Integer> bookingnumber0 = new ArrayList<>();
+        List<Integer> bookingnumber1 = new ArrayList<>();
+        List<Integer> bookingnumber2 = new ArrayList<>();
+        List<Integer> bookingnumber3 = new ArrayList<>();
         //set booking number
-        passenger0.setBookingNumber(10000);
-        passenger1.setBookingNumber(10001);
-        passenger2.setBookingNumber(20000);
-        passenger3.setBookingNumber(20001);
+        for(Integer i: passenger0.getFlightId()){
+            bookingnumber0.add(i*10 + passenger0.getPassengerId());
+        }
+        for(Integer i: passenger1.getFlightId()){
+            bookingnumber1.add(i*10 + passenger1.getPassengerId());
+        }
+        for(Integer i: passenger2.getFlightId()){
+            bookingnumber2.add(i*10 + passenger2.getPassengerId());
+        }
+        for(Integer i: passenger3.getFlightId()){
+            bookingnumber3.add(i*10 + passenger3.getPassengerId());
+        }
+        passenger0.setBookingNumber(bookingnumber0);
+        passenger1.setBookingNumber(bookingnumber1);
+        passenger2.setBookingNumber(bookingnumber2);
+        passenger3.setBookingNumber(bookingnumber3);
 
         //set surname (4 people: Zihao Ye, Yichen Liu, Ran Xu, Zhihan Zhang)
         passenger0.setSurname("Ye");
