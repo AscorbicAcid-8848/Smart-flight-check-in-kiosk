@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="不能正常登录">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/FlightController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" afterDir="false" />
-    </list>
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="不能正常登录" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="GitIgnore" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/boundary" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -131,6 +124,7 @@
       <workItem from="1651474711648" duration="476000" />
       <workItem from="1651475843519" duration="274000" />
       <workItem from="1651476701867" duration="510000" />
+      <workItem from="1651477505649" duration="253000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
