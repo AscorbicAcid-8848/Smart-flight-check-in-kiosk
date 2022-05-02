@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="不能正常登录">
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/FinalConfirmPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,14 +181,7 @@
       <option name="project" value="LOCAL" />
       <updated>1651470466670</updated>
     </task>
-    <task id="LOCAL-00011" summary="不能正常登录">
-      <created>1651471628340</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1651471628340</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

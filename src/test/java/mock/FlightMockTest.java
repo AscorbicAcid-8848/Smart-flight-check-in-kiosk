@@ -14,10 +14,10 @@ public class FlightMockTest {
     @Test
     public void toJSON() {
 
-        FlightServiceImp flightServiceImp = new FlightServiceImp();
+        FlightMock flightMock = new FlightMock();
 
         try {
-            flightServiceImp.toJSON();
+            flightMock.toJSON(null, true);
         }catch (Exception e){
             e.printStackTrace();
         }
