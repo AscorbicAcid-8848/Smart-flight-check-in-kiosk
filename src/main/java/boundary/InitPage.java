@@ -236,7 +236,7 @@ public class InitPage extends JFrame implements ActionListener {
 
             if(Objects.equals(panel_LoginByNameIdPage.getSurname(), "")){
                 isValid = false;
-                panel_LoginByBookingNumPage.bookingNumWarning();
+                panel_LoginByNameIdPage.nameWarning();
             }
             surname = panel_LoginByNameIdPage.getSurname();
             try{
