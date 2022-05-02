@@ -71,7 +71,7 @@
       <recent name="boundary" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FlightMockTest.toJSON">
+  <component name="RunManager" selected="Application.Entrance">
     <configuration name="Entrance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.Entrance" />
       <module name="XXXManagementSystem" />
@@ -103,8 +103,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FlightMockTest.toJSON" />
         <item itemvalue="Application.Entrance" />
+        <item itemvalue="JUnit.FlightMockTest.toJSON" />
       </list>
     </recent_temporary>
   </component>
