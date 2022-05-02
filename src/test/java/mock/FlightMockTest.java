@@ -15,8 +15,6 @@ public class FlightMockTest {
     public void toJSON() {
 
         FlightServiceImp flightServiceImp = new FlightServiceImp();
-        flightServiceImp.insert(8888,8888,"Test",new Date(),new Date(),true,
-                8888,"Test","Test","Test",8888).toString();
 
         try {
             flightServiceImp.toJSON();

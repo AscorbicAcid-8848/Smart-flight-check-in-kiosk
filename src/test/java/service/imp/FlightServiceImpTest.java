@@ -3,6 +3,7 @@ package service.imp;
 import model.Flight;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -14,9 +15,10 @@ public class FlightServiceImpTest {
 
     @Test
     public void testInsert() {
-        System.out.println(flightServiceImp.insert(8888,8888,"Test",new Date(),new Date(),true,
-                8888,"Test","Test","Test",8888).toString());
-        System.out.println("");
+        for (String s : Arrays.asList(flightServiceImp.insert(8888, 8888, "Test", new Date(), new Date(), true,
+                8888, "Test", "Test", "Test", 8888, true).toString(), "")) {
+            System.out.println(s);
+        }
     }
 
     @Test

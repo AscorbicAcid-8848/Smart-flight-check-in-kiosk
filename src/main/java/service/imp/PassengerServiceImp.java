@@ -116,15 +116,21 @@ public class PassengerServiceImp implements PassengerService {
 
     @Override
     public Passenger update(Passenger passenger) {
-//叶哥，在这里改一下，辛苦
+
         int result = -1;
 
         for (int i = 0; i < passengers.size(); i++) {
-            if (passengers.get(i).getIdDocument().equals(passenger.getIdDocument())) {
+            if (passengers.get(i).getPassengerId().equals(passenger.getPassengerId())) {
                 //update
-                passengers.get(i).setSeatLevel(seatLevel);
-                passengers.get(i).setMeal(meal);
-                passengers.get(i).setSeatNumber(seatNumber);
+                passengers.get(i).setBookingNumber(passenger.getBookingNumber());
+                passengers.get(i).setFlightId(passenger.getFlightId());
+                passengers.get(i).setPassengerId(passenger.getPassengerId());
+                passengers.get(i).setSurname(passenger.getSurname());
+                passengers.get(i).setFirstname(passenger.getFirstname());
+                passengers.get(i).setGender(passenger.getGender());
+                passengers.get(i).setSeatLevel(passenger.getSeatLevel());
+                passengers.get(i).setMeal(passenger.getMeal());
+                passengers.get(i).setSeatNumber(passenger.getSeatNumber());
 
                 result = i;
             }

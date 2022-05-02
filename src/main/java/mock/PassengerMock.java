@@ -32,11 +32,23 @@ public class PassengerMock {
         passenger2.setBookingNumber(20000);
         passenger3.setBookingNumber(20001);
 
-        //set flight id (two flight 1 and 2)
-        passenger0.setFlightId(1);
-        passenger1.setFlightId(1);
-        passenger2.setFlightId(2);
-        passenger3.setFlightId(2);
+
+        //set flight id (three flight 100:BUPT2022 ,101:QM2022, 200:BUPT2021
+        List<Integer> passenger0FlightIDs = new ArrayList<>();
+        List<Integer> passenger1FlightIDs = new ArrayList<>();
+        List<Integer> passenger2FlightIDs = new ArrayList<>();
+        List<Integer> passenger3FlightIDs = new ArrayList<>();
+        passenger0FlightIDs.add(100);
+        passenger0FlightIDs.add(200);
+        passenger1FlightIDs.add(100);
+        passenger1FlightIDs.add(101);
+        passenger2FlightIDs.add(200);
+        passenger3FlightIDs.add(200);
+        passenger3FlightIDs.add(101);
+        passenger0.setFlightId(passenger0FlightIDs);
+        passenger1.setFlightId(passenger1FlightIDs);
+        passenger2.setFlightId(passenger2FlightIDs);
+        passenger3.setFlightId(passenger3FlightIDs);
 
         //set passenger ID (4 passengers corresponds to 1,2,3,4)
         passenger0.setPassengerId(1);
@@ -62,23 +74,23 @@ public class PassengerMock {
         passenger2.setGender(2);
         passenger3.setGender(1);
 
-        //set seat level (fir: first class, bus: business class, eco: economy class)
-        passenger0.setSeatLevel("eco");
-        passenger1.setSeatLevel("bus");
-        passenger2.setSeatLevel("fir");
-        passenger3.setSeatLevel("eco");
+        //set seat level (fir: first class, bus: business class, eco: economy class) nul: for null
+        passenger0.setSeatLevel("nul");
+        passenger1.setSeatLevel("nul");
+        passenger2.setSeatLevel("nul");
+        passenger3.setSeatLevel("nul");
 
-        //set seat number
-        passenger0.setSeatNumber(1);
-        passenger1.setSeatNumber(2);
-        passenger2.setSeatNumber(10);
-        passenger3.setSeatNumber(11);
+        //set seat number -1:for null
+        passenger0.setSeatNumber(-1);
+        passenger1.setSeatNumber(-1);
+        passenger2.setSeatNumber(-1);
+        passenger3.setSeatNumber(-1);
 
-        //set meal (1,2)
-        passenger0.setMeal(1);
-        passenger1.setMeal(2);
-        passenger2.setMeal(1);
-        passenger3.setMeal(2);
+        //set meal (1,2) -1:for null
+        passenger0.setMeal(-1);
+        passenger1.setMeal(-1);
+        passenger2.setMeal(-1);
+        passenger3.setMeal(-1);
 
         //set IdDocument
         passenger0.setIdDocument(1111);
