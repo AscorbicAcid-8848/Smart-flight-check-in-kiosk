@@ -4,52 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="更改workspace">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/Entrance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/FlightDetailPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/HeathrowAirport.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/QRcode.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/eye slash-fill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/eye-fill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightSeatController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/AirlineMock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/FlightMock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/FlightSeatMock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Airline.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/BoardingPass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Flight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/FlightSeat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/IdDocument.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Passenger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Seat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/AirlineService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/FlightSeatService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/FlightService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PassengerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/AirlineServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/FlightSeatServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/FlightServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/PassengerServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/AirlineMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/FlightMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/FlightSeatMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/PassengerMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/AirlineServiceImpTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/FlightSeatServiceImpTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/FlightServiceImpTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/PassengerServiceImpTest.class" beforeDir="false" />
-    </list>
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="更改workspace" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +125,7 @@
       <workItem from="1651475843519" duration="274000" />
       <workItem from="1651476701867" duration="510000" />
       <workItem from="1651477505649" duration="281000" />
-      <workItem from="1651477820384" duration="236000" />
+      <workItem from="1651477820384" duration="289000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -256,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651477775434</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="更改workspace">
+      <created>1651478080193</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1651478080193</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
