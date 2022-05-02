@@ -121,7 +121,7 @@ public class LoginByBookingNumPage extends JPanel{
 
     }
     public void bookingNumFormatWarning(){
-        JOptionPane.showMessageDialog(this, "Invalid booking number format, please enter a number.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Invalid booking number format, please enter a number with 8 digits.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
 
     }
     public void bookingNumNonExistWarning(){

@@ -86,7 +86,7 @@ public class InitPage extends JFrame implements ActionListener {
         setPanelInitPage();
         setOtherPages();
         showInitPage();//第一次进入，展示initpage内容
-        setBounds(300,300,977,717);
+        setBounds(300,200,977,717);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -198,11 +198,16 @@ public class InitPage extends JFrame implements ActionListener {
             else{
                 try{
                     bookingNum = Integer.parseInt(panel_LoginByBookingNumPage.getBookingNum());
+                    if(panel_LoginByBookingNumPage.getBookingNum().length()!=8){
+                        throw new NumberFormatException();
+                    }
                 }
                 catch(NumberFormatException exception){
                     isValid = false;
                     panel_LoginByBookingNumPage.bookingNumFormatWarning();
                 }
+
+
             }
 
 
