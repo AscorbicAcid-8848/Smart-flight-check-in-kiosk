@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2de2f67-38c3-4575-b6c1-bb42f87fb024" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_15_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_15_15__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/passengerList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/passengerList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +27,27 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/boundary" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\target\classes\boundary" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Entrance">
+    <configuration name="Entrance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="boundary.Entrance" />
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="boundary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PassengerMockTest.toJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="XXXManagementSystem" />
       <extension name="coverage">
@@ -52,6 +66,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Entrance" />
         <item itemvalue="JUnit.PassengerMockTest.toJSON" />
       </list>
     </recent_temporary>
@@ -65,6 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651497907214</updated>
       <workItem from="1651497913844" duration="317000" />
+      <workItem from="1651498459241" duration="425000" />
     </task>
     <servers />
   </component>
