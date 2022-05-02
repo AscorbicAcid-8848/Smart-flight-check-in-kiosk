@@ -78,6 +78,8 @@ public class InitPage extends JFrame implements ActionListener {
     private JButton button_flightDetailPage_confirm;
     private JButton button_flightDetailPage_back;
 
+    //
+
     public InitPage(){//此方法作用：初始化Frame 及framePanel，不作对于panel的修改
 
         framePanel = new JPanel();
