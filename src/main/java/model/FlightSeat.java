@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,12 +9,13 @@ import java.util.List;
  * @date 2022/4/30 16:32
  */
 public class FlightSeat {
+
     private Integer flightId;
-    private List<Seat> seatList;
+    private List<Seat> seatList = new ArrayList<>();
 
-    public FlightSeat(){
 
-    }
+    public FlightSeat(){}
+
     public FlightSeat(Integer flightId, List<Seat> seatList) {
         this.flightId = flightId;
         this.seatList = seatList;
