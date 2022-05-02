@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="不能正常登录">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_13_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_13_15__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_13_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_13_26__Changes_.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="不能正常登录" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +68,7 @@
       <recent name="boundary" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FlightMockTest.toJSON">
+  <component name="RunManager" selected="Application.Entrance">
     <configuration name="Entrance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.Entrance" />
       <module name="XXXManagementSystem" />
@@ -103,8 +100,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FlightMockTest.toJSON" />
         <item itemvalue="Application.Entrance" />
+        <item itemvalue="JUnit.FlightMockTest.toJSON" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +121,7 @@
       <workItem from="1651324653372" duration="791000" />
       <workItem from="1651472669348" duration="1210000" />
       <workItem from="1651474711648" duration="476000" />
+      <workItem from="1651475843519" duration="274000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>

@@ -35,6 +35,9 @@ public class FlightController {
     public List<Flight> getBySurnameAndPassengerId(String surname, Integer passengerId){
         List<Flight> flightList = new ArrayList();
         Passenger passenger= passengerService.searchBySurnameAndPassengerId(surname, passengerId);
+        if(passenger==null){
+            return null;
+        }
         List<Integer> flightIds = passenger.getFlightId();
         for (Integer flightId:flightIds){
             Flight flight = flightService.searchByFlightId(flightId);
@@ -46,6 +49,9 @@ public class FlightController {
     public List<Flight> getByBookingNumber(Integer bookingNumber){
         List<Flight> flightList = new ArrayList();
         Passenger passenger= passengerService.searchByBookingNumber(bookingNumber);
+        if(passenger==null){
+            return null;
+        }
         List<Integer> flightIds = passenger.getFlightId();
         for (Integer flightId:flightIds){
             Flight flight = flightService.searchByFlightId(flightId);
@@ -57,6 +63,9 @@ public class FlightController {
     public List<Flight> getByIdDocument(IdDocument idDocument){
         List<Flight> flightList = new ArrayList();
         Passenger passenger= passengerService.searchByIdDocument(idDocument.getId());
+        if(passenger==null){
+            return null;
+        }
         List<Integer> flightIds = passenger.getFlightId();
         for (Integer flightId:flightIds){
             Flight flight = flightService.searchByFlightId(flightId);
