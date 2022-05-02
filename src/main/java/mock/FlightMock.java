@@ -105,6 +105,11 @@ public class FlightMock {
         flight1.setArrivalTerminal(3);
         flight2.setArrivalTerminal(1);
 
+        //set current state
+        flight0.setCurrent(false);
+        flight1.setCurrent(false);
+        flight2.setCurrent(false);
+
         flights.add(flight0);
         flights.add(flight1);
         flights.add(flight2);
