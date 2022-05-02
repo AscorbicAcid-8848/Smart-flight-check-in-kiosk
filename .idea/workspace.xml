@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="不能正常登录" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="更改workspace" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +124,7 @@
       <workItem from="1651474711648" duration="476000" />
       <workItem from="1651475843519" duration="274000" />
       <workItem from="1651476701867" duration="510000" />
-      <workItem from="1651477505649" duration="253000" />
+      <workItem from="1651477505649" duration="281000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651473880716</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="更改workspace">
+      <created>1651477775434</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1651477775434</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +235,7 @@
     <MESSAGE value="在使用passengercontroller之前" />
     <MESSAGE value="使用passengercontroller" />
     <MESSAGE value="不能正常登录" />
-    <option name="LAST_COMMIT_MESSAGE" value="不能正常登录" />
+    <MESSAGE value="更改workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改workspace" />
   </component>
 </project>
