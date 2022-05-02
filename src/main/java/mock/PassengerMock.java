@@ -57,16 +57,16 @@ public class PassengerMock {
         List<Integer> bookingnumber3 = new ArrayList<>();
         //set booking number
         for(Integer i: passenger0.getFlightId()){
-            bookingnumber0.add(i*10 + passenger0.getPassengerId());
+            bookingnumber0.add(i*100 + passenger0.getPassengerId());
         }
         for(Integer i: passenger1.getFlightId()){
-            bookingnumber1.add(i*10 + passenger1.getPassengerId());
+            bookingnumber1.add(i*100 + passenger1.getPassengerId());
         }
         for(Integer i: passenger2.getFlightId()){
-            bookingnumber2.add(i*10 + passenger2.getPassengerId());
+            bookingnumber2.add(i*100 + passenger2.getPassengerId());
         }
         for(Integer i: passenger3.getFlightId()){
-            bookingnumber3.add(i*10 + passenger3.getPassengerId());
+            bookingnumber3.add(i*100 + passenger3.getPassengerId());
         }
         passenger0.setBookingNumber(bookingnumber0);
         passenger1.setBookingNumber(bookingnumber1);

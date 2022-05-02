@@ -8,7 +8,7 @@ import java.util.List;
  * @date 2022/3/16 16:27
  */
 public class Passenger {
-    private List<Integer> bookingNumber;//与航班挂钩
+    private List<Integer> bookingNumber;//与航班挂钩 五位数
     private List<Integer> flightId;//三位数
     private Integer passengerId;//一位数
     private String surname;
