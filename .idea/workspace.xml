@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2de2f67-38c3-4575-b6c1-bb42f87fb024" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/passengerList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/passengerList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" afterDir="false" />
-    </list>
+    <list default="true" id="e2de2f67-38c3-4575-b6c1-bb42f87fb024" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +26,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.PassengerMockTest.toJSON">
+  <component name="RunManager" selected="JUnit.PassengerServiceImpTest.searchByBookingNumber">
     <configuration name="PassengerMockTest.toJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="XXXManagementSystem" />
       <extension name="coverage">
@@ -67,8 +61,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PassengerMockTest.toJSON" />
         <item itemvalue="JUnit.PassengerServiceImpTest.searchByBookingNumber" />
+        <item itemvalue="JUnit.PassengerMockTest.toJSON" />
       </list>
     </recent_temporary>
   </component>
@@ -82,7 +76,7 @@
       <updated>1651497907214</updated>
       <workItem from="1651497913844" duration="317000" />
       <workItem from="1651498726061" duration="189000" />
-      <workItem from="1651499363689" duration="76000" />
+      <workItem from="1651499489830" duration="31000" />
     </task>
     <servers />
   </component>
