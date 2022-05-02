@@ -67,6 +67,7 @@ public class InitPage extends JFrame implements ActionListener {
     private LoginByBookingNumPage panel_LoginByBookingNumPage;
     private JButton button_LoginByBookingNumPage_backToInit;
     private JButton button_LoginByBookingNumPage_next;
+    private JToggleButton button_LoginByBookingNumPage_see;
 
     //UserInfoPage
     private UserInfoPage panel_UserInfoPage;
@@ -145,10 +146,15 @@ public class InitPage extends JFrame implements ActionListener {
         panel_LoginByBookingNumPage = new LoginByBookingNumPage();
         button_LoginByBookingNumPage_backToInit = panel_LoginByBookingNumPage.getButton_backToInit();
         button_LoginByBookingNumPage_next = panel_LoginByBookingNumPage.getButton_next();
+        button_LoginByBookingNumPage_see = panel_LoginByBookingNumPage.getButton_see();
+        button_LoginByBookingNumPage_see.addActionListener(this);
+        button_LoginByBookingNumPage_next.addActionListener(this);
+        button_LoginByBookingNumPage_backToInit.addActionListener(this);
 
         panel_flightDetailPage = new FlightDetailPage();
         button_flightDetailPage_back = panel_flightDetailPage.getButton_back();
         button_flightDetailPage_confirm = panel_flightDetailPage.getButton_confirm();
+
     }
 
     @Override
@@ -159,6 +165,13 @@ public class InitPage extends JFrame implements ActionListener {
             panel_LoginByNameIdPage.setId().setEchoChar('\0');
             else if(see_type ==1)
             panel_LoginByNameIdPage.setId().setEchoChar('*');
+        }
+        if(e.getSource() == button_LoginByBookingNumPage_see){
+            see_type = -see_type;
+            if(see_type==-1)
+                panel_LoginByBookingNumPage.setId().setEchoChar('\0');
+            else if(see_type ==1)
+                panel_LoginByBookingNumPage.setId().setEchoChar('*');
         }
         ///////////////////////////去往用bookingNum登录页面
         if(e.getSource() == button_bookNum){
@@ -176,15 +189,18 @@ public class InitPage extends JFrame implements ActionListener {
             Integer bookingNum = null;
             if(Objects.equals(panel_LoginByBookingNumPage.getBookingNum(), "")){
                 isValid = false;
-                panel_LoginByNameIdPage.nameWarning();
+                panel_LoginByBookingNumPage.bookingNumWarning();
             }
-            try{
-                bookingNum = Integer.parseInt(panel_LoginByNameIdPage.getId());
+            else{
+                try{
+                    bookingNum = Integer.parseInt(panel_LoginByBookingNumPage.getBookingNum());
+                }
+                catch(NumberFormatException exception){
+                    isValid = false;
+                    panel_LoginByBookingNumPage.bookingNumFormatWarning();
+                }
             }
-            catch(NumberFormatException exception){
-                isValid = false;
-                panel_LoginByBookingNumPage.bookingNumFormatWarning();
-            }
+
 
             if(isValid){
                 if(boardingPassController.checkPassenger(bookingNum)!=null){
@@ -273,6 +289,7 @@ public class InitPage extends JFrame implements ActionListener {
     //并且将用户，航空公司等对象信息全部清零
     public void refresh(){
         panel_LoginByNameIdPage.refresh();
+        panel_LoginByBookingNumPage.refresh();
 
         passenger = new Passenger();
         airline = new Airline();

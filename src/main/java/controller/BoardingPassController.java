@@ -18,7 +18,7 @@ import java.util.List;
  */
 //这是我的登机牌controller
 public class BoardingPassController {
-    private FlightController flightController;
+    private FlightController flightController = new FlightController();
     private FlightService flightService = new FlightServiceImp();
     private PassengerService passengerService = new PassengerServiceImp();
 

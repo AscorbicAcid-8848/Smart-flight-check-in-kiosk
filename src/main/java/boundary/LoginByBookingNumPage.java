@@ -37,7 +37,7 @@ public class LoginByBookingNumPage extends JPanel{
         panel_name = new JPanel();
         panel_name.setLayout(new GridLayout(0,3,0,0));
         panel_id = new JPanel();
-        label_overall = new JLabel("Account Information");
+        label_overall = new JLabel("Login via booking number");
         panel_id.setLayout(new GridLayout(0,3,0,0));
         label_name = new JLabel("                              ");
 
@@ -101,6 +101,9 @@ public class LoginByBookingNumPage extends JPanel{
         return button_next;
     }
 
+    public JPasswordField setId(){
+        return passengerId;
+    }
 
     public JToggleButton getButton_see(){
         return see;
