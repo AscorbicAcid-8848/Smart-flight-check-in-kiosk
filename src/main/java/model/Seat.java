@@ -10,10 +10,12 @@ public class Seat {
     private Boolean occupied;
     private String seatLevel;
 
-    public Seat(Integer seatNumber, Boolean occupied, String seatClass) {
+    public Seat(){}
+
+    public Seat(Integer seatNumber, Boolean occupied, String seatLevel) {
         this.seatNumber = seatNumber;
         this.occupied = occupied;
-        this.seatLevel = seatClass;
+        this.seatLevel = seatLevel;
     }
 
     public Integer getSeatNumber() {

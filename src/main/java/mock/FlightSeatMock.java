@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import model.Flight;
 import model.FlightSeat;
+import model.Seat;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -22,12 +23,29 @@ public class FlightSeatMock {
     FlightSeat flightSeat0 = new FlightSeat();
     FlightSeat flightSeat1 = new FlightSeat();
     FlightSeat flightSeat2 = new FlightSeat();
+    private final int seatNum = 100; //100 seats for default
+
 
     public FlightSeatMock(){
         //set flight id
         flightSeat0.setFlightId(100);
         flightSeat1.setFlightId(101);
         flightSeat2.setFlightId(200);
+
+        //return a flight seat object with all the seat's occupied=false seatlevel=nul
+        //this object does not set its flightID!
+        for(int i=0; i< seatNum; i++){
+            Seat seat = new Seat(i, false, "nul");
+            flightSeat0.getSeatList().add(seat);
+        }
+        for(int i=0; i< seatNum; i++){
+            Seat seat = new Seat(i, false, "nul");
+            flightSeat1.getSeatList().add(seat);
+        }
+        for(int i=0; i< seatNum; i++){
+            Seat seat = new Seat(i, false, "nul");
+            flightSeat2.getSeatList().add(seat);
+        }
 
         flightSeats.add(flightSeat0);
         flightSeats.add(flightSeat1);

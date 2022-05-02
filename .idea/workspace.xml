@@ -5,23 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mock/FlightSeatMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_12_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_12_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_12_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_12_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_4_27_13_06__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_1_16_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_1_16_42__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mock/FlightSeatMockTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/imp/FlightSeatServiceImpTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XXXManagementSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/XXXManagementSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/FlightMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/FlightMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/flightList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/flightList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/passengerList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/passengerList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mock/FlightSeatMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/FlightSeatMock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/FlightSeat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/FlightSeat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Seat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/PassengerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/PassengerServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mock/FlightMockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mock/FlightMockTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/imp/FlightServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/imp/FlightServiceImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/imp/PassengerServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/imp/PassengerServiceImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/Entrance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/Entrance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/FlightDetailPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/FlightDetailPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/FlightController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightSeatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/FlightSeatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mock/AirlineMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/AirlineMock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mock/FlightMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/FlightMock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Airline.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Airline.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/BoardingPass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/BoardingPass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Flight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/FlightSeat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/FlightSeat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/IdDocument.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/IdDocument.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Passenger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Passenger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Seat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Seat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/AirlineService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/AirlineService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/FlightSeatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/FlightSeatService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/FlightService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/FlightService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/PassengerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PassengerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/AirlineServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/imp/AirlineServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/FlightSeatServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/imp/FlightSeatServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/FlightServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/imp/FlightServiceImp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +54,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -53,6 +76,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/boundary" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -66,8 +91,15 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\src\main\resources" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="service.imp" />
+      <recent name="mock" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.FlightSeatServiceImpTest.update">
     <configuration name="Entrance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.Entrance" />
       <module name="XXXManagementSystem" />
@@ -81,6 +113,78 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FlightMockTest.toJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mock" />
+      <option name="MAIN_CLASS_NAME" value="mock.FlightMockTest" />
+      <option name="METHOD_NAME" value="toJSON" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightSeatMockTest.toJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mock" />
+      <option name="MAIN_CLASS_NAME" value="mock.FlightSeatMockTest" />
+      <option name="METHOD_NAME" value="toJSON" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightSeatServiceImpTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.imp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service.imp" />
+      <option name="MAIN_CLASS_NAME" value="service.imp.FlightSeatServiceImpTest" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PassengerMockTest.toJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mock" />
+      <option name="MAIN_CLASS_NAME" value="mock.PassengerMockTest" />
+      <option name="METHOD_NAME" value="toJSON" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FlightSeatServiceImpTest.update" />
+        <item itemvalue="JUnit.FlightSeatMockTest.toJSON" />
+        <item itemvalue="JUnit.PassengerMockTest.toJSON" />
+        <item itemvalue="JUnit.FlightMockTest.toJSON" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -96,6 +200,7 @@
       <workItem from="1651307954475" duration="1370000" />
       <workItem from="1651401385361" duration="1219000" />
       <workItem from="1651404331925" duration="4501000" />
+      <workItem from="1651419411728" duration="5570000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -131,5 +236,46 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <option name="LAST_COMMIT_MESSAGE" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/mock/FlightSeatMockTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mock/FlightMock.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/mock/FlightSeatMock.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/service/imp/FlightSeatServiceImpTest.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/service/imp/FlightSeatServiceImpTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/service/imp/FlightSeatServiceImpTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="service.imp.PassengerServiceImp" memberName="passengers" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

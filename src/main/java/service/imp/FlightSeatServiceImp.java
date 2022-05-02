@@ -26,11 +26,11 @@ public class FlightSeatServiceImp implements FlightSeatService {
 
     public FlightSeatServiceImp(){
 
-        File flightList = new File("data\\flightSeatList.json");
+        File flightSeatList = new File("data\\flightSeatList.json");
 
         try {
-            JavaType type = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Flight.class);
-            flightSeats = objectMapper.readValue(flightList, type);
+            JavaType type = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, FlightSeat.class);
+            flightSeats = objectMapper.readValue(flightSeatList, type);
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -46,6 +46,7 @@ public class FlightSeatServiceImp implements FlightSeatService {
             if (flightSeats.get(i).getFlightId().equals(flightId)) {
                 //set seat level
                 flightSeats.get(i).getSeatList().get(seatNumber).setSeatLevel(seatLevel);
+                flightSeats.get(i).getSeatList().get(seatNumber).setOccupied(true);
             }
         }
 
