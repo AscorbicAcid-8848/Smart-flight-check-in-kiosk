@@ -24,15 +24,9 @@ public class BoardingPassController {
 
     public BoardingPass checkPassenger(Integer bookingNumber){
         Passenger passenger = passengerService.searchByBookingNumber(bookingNumber);
-        List<Flight> flightList = flightController.getByBookingNumber(bookingNumber);
-        Flight currentFlight = new Flight();
-        if(flightList==null){
+        Flight currentFlight = flightController.getByBookingNumber(bookingNumber);
+        if(currentFlight==null){
             return null;
-        }
-        for(Flight flight:flightList){
-            if(flight.getCurrent()){
-                currentFlight =flight;
-            }
         }
         return returnBoardingPass(currentFlight,passenger);
     }

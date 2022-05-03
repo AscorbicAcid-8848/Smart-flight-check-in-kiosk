@@ -43,12 +43,14 @@ public class PassengerServiceImp implements PassengerService {
         //search in passenger list
         for(int i=0; i< passengers.size(); i++){
             //if booking numbers match
-            if(passengers.get(i).getBookingNumber().equals(bookingNumber)){
-                //and if there is only one result
-                if(result == -1){
-                    result = i;
-                }else{ //is there are more than one result: print alarm and show the first result
-                    System.out.println("There are more than one result!");
+            for(Integer j: passengers.get(i).getBookingNumber()) {
+                if (j.equals(bookingNumber)) {
+                    //and if there is only one result
+                    if (result == -1) {
+                        result = i;
+                    } else { //is there are more than one result: print alarm and show the first result
+                        System.out.println("There are more than one result!");
+                    }
                 }
             }
         }

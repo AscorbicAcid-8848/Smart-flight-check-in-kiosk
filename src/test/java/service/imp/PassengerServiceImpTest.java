@@ -16,7 +16,7 @@ public class PassengerServiceImpTest {
     public void searchByBookingNumber() {
         PassengerServiceImp passengerServiceImp = new PassengerServiceImp();
 
-        System.out.println(passengerServiceImp.searchByBookingNumber(10000).toString());
+        System.out.println(passengerServiceImp.searchByBookingNumber(2001).toString());
     }
 
     @Test
