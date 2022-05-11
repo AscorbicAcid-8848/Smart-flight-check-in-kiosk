@@ -198,7 +198,7 @@ public class InitPage extends JFrame implements ActionListener {
             else{
                 try{
                     bookingNum = Integer.parseInt(panel_LoginByBookingNumPage.getBookingNum());
-                    if(panel_LoginByBookingNumPage.getBookingNum().length()!=8){
+                    if(panel_LoginByBookingNumPage.getBookingNum().length()!=5){
                         throw new NumberFormatException();
                     }
                 }
@@ -215,7 +215,7 @@ public class InitPage extends JFrame implements ActionListener {
                 if(boardingPassController.checkPassenger(bookingNum)!=null){
                     passenger = boardingPassController.checkPassenger(bookingNum).getPassenger();
                     flight = boardingPassController.checkPassenger(bookingNum).getFlight();
-                    panel_flightDetailPage.render(passenger,flight);
+                    panel_flightDetailPage.render(passenger,flight,bookingNum);
                     pageChange(panel_flightDetailPage);
                 }
                 else{

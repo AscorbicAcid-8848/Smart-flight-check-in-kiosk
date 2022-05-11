@@ -100,8 +100,8 @@ public class FlightDetailPage extends JPanel {
     }
 
 
-    public void render(Passenger passenger,Flight flight){
-        label_top_first.setText("Dear"+passenger.getSurname()+", with booking number "+passenger.getBookingNumber()+",");
+    public void render(Passenger passenger,Flight flight, Integer bookingNum){
+        label_top_first.setText("Dear"+passenger.getSurname()+", with booking number "+bookingNum+",");
         label_top_second.setText("Here is the information for flight: "+flight.getFlightName());
         departureTime.setText("Departure Time: "+flight.getDepartureTime());
         departureGate.setText("Departure Gate: "+flight.getDepartureGate());

@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="完成除定制以外的功能">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_13_26_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_13_26__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_15_15_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_5_2_15_15__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/FlightDetailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/FlightDetailPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/FlightController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +134,8 @@
       <workItem from="1651324653372" duration="791000" />
       <workItem from="1651472669348" duration="1210000" />
       <workItem from="1651474711648" duration="476000" />
+      <workItem from="1651891353046" duration="3290000" />
+      <workItem from="1652241095406" duration="2217000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -210,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651482839589</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="完成除定制以外的功能">
+      <created>1651496990677</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1651496990677</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,20 +255,5 @@
     <MESSAGE value="不能正常登录" />
     <MESSAGE value="完成除定制以外的功能" />
     <option name="LAST_COMMIT_MESSAGE" value="完成除定制以外的功能" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java</url>
-          <line>38</line>
-          <properties class="controller.BoardingPassController" method="checkPassenger">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
