@@ -7,7 +7,7 @@ public class LoginByIdDocPage extends JPanel {
 
 	private JPanel contentPane;
 	private JButton BTOBut;
-
+	private JButton back;
 	/**
 	 * Create the panel.
 	 */
@@ -19,7 +19,7 @@ public class LoginByIdDocPage extends JPanel {
 		JPanel panel = new JPanel();
 		contentPane.add(panel, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel = new JLabel("Please Scan the QR code：");
+		JLabel lblNewLabel = new JLabel("Detected your ID document, press the Login button to login by ID document");
 		lblNewLabel.setFont(new Font("SimSun", Font.PLAIN, 24));
 		panel.add(lblNewLabel);
 		
@@ -40,6 +40,12 @@ public class LoginByIdDocPage extends JPanel {
 
 		BTOBut.setFont(new Font("SimSun", Font.PLAIN, 18));
 		panel_2.add(BTOBut);
+
+
+		back = new JButton("Login");
+
+		back.setFont(new Font("SimSun", Font.PLAIN, 18));
+		panel_2.add(back);
 	}
 
 	public JButton getButton_backToInit(){

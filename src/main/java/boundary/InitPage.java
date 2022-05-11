@@ -80,6 +80,7 @@ public class InitPage extends JFrame implements ActionListener {
 
     //
 
+    private int invalidTimes = 0;
     public InitPage(){//此方法作用：初始化Frame 及framePanel，不作对于panel的修改
 
         framePanel = new JPanel();
@@ -219,8 +220,16 @@ public class InitPage extends JFrame implements ActionListener {
                     pageChange(panel_flightDetailPage);
                 }
                 else{
-                    panel_LoginByBookingNumPage.bookingNumNonExistWarning();
-                    pageChange(panel_LoginByBookingNumPage);
+                    panel_LoginByBookingNumPage.bookingNumNonExistWarning(invalidTimes++);
+                    if(invalidTimes<=5)
+                        pageChange(panel_LoginByBookingNumPage);
+                    else
+                    {
+                        enteringTimesWarning();
+                        refresh();
+                        pageChange(panel_InitPage);
+                        invalidTimes = 0;
+                    }
                 }
             }
             else
@@ -262,8 +271,18 @@ public class InitPage extends JFrame implements ActionListener {
                     pageChange(panel_UserInfoPage);
                 }
                 else{
-                    panel_LoginByNameIdPage.passengerNonExistWarning();
-                    pageChange(panel_LoginByNameIdPage);
+                    panel_LoginByNameIdPage.passengerNonExistWarning(invalidTimes++);
+
+                    if(invalidTimes<=5)
+                        pageChange(panel_LoginByNameIdPage);
+                    else
+                    {
+                        enteringTimesWarning();
+                        refresh();
+                        pageChange(panel_InitPage);
+                        invalidTimes = 0;
+
+                    }
                 }
             }
 
@@ -310,6 +329,9 @@ public class InitPage extends JFrame implements ActionListener {
         boardingPass = new BoardingPass();
         idDocument = new IdDocument();
         flight = new Flight();
+    }
+    public void enteringTimesWarning(){
+        JOptionPane.showMessageDialog(this, "Entered more than 5 times, system will init again", "Exception occurs",JOptionPane.WARNING_MESSAGE);
     }
 
 }

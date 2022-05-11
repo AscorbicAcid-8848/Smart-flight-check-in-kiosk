@@ -151,8 +151,8 @@ public class LoginByNameIdPage extends JPanel {
 		JOptionPane.showMessageDialog(this, "Invalid ID format", "Exception occurs",JOptionPane.WARNING_MESSAGE);
 	}
 
-	public void passengerNonExistWarning(){
-		JOptionPane.showMessageDialog(this, "Passenger does not exist", "Exception occurs",JOptionPane.WARNING_MESSAGE);
+	public void passengerNonExistWarning(int invalidTimes){
+		JOptionPane.showMessageDialog(this, "Name and ID not matched, "+(5-invalidTimes)+" times remain", "Exception occurs",JOptionPane.WARNING_MESSAGE);
 	}
 	public void refresh(){
 		textField_1.setText("");

@@ -124,8 +124,8 @@ public class LoginByBookingNumPage extends JPanel{
         JOptionPane.showMessageDialog(this, "Invalid booking number format, please enter a number with 5 digits.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
 
     }
-    public void bookingNumNonExistWarning(){
-        JOptionPane.showMessageDialog(this, "Booking Number does not exist", "Exception occurs",JOptionPane.WARNING_MESSAGE);
+    public void bookingNumNonExistWarning(int invalidTimes){
+        JOptionPane.showMessageDialog(this, "Booking Number does not exist, "+(5-invalidTimes)+" times remain", "Exception occurs",JOptionPane.WARNING_MESSAGE);
 
     }
 
