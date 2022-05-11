@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="完成除定制以外的功能">
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/PayingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByIdDocPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByIdDocPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByNameIdPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByNameIdPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" afterDir="false" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="加入输入次数限制，加入PayingPage">
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651496990677</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="加入输入次数限制，加入PayingPage">
+      <created>1652254807963</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652254807963</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +250,7 @@
     <MESSAGE value="使用passengercontroller" />
     <MESSAGE value="不能正常登录" />
     <MESSAGE value="完成除定制以外的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成除定制以外的功能" />
+    <MESSAGE value="加入输入次数限制，加入PayingPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入输入次数限制，加入PayingPage" />
   </component>
 </project>

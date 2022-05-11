@@ -218,6 +218,7 @@ public class InitPage extends JFrame implements ActionListener {
                     flight = boardingPassController.checkPassenger(bookingNum).getFlight();
                     panel_flightDetailPage.render(passenger,flight,bookingNum);
                     pageChange(panel_flightDetailPage);
+                    invalidTimes = 0;
                 }
                 else{
                     panel_LoginByBookingNumPage.bookingNumNonExistWarning(invalidTimes++);
@@ -234,6 +235,7 @@ public class InitPage extends JFrame implements ActionListener {
             }
             else
                 pageChange(panel_LoginByBookingNumPage);
+
         }
         ///////////////////////////去往用名字Id登录的界面
         if(e.getSource() == button_UserInfo){
@@ -269,6 +271,7 @@ public class InitPage extends JFrame implements ActionListener {
                     passenger = boardingPassController.checkPassenger(surname,passengerId).getPassenger();
                     panel_UserInfoPage.render(passenger);
                     pageChange(panel_UserInfoPage);
+                    invalidTimes = 0;
                 }
                 else{
                     panel_LoginByNameIdPage.passengerNonExistWarning(invalidTimes++);
