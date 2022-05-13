@@ -15,10 +15,10 @@ import static org.junit.Assert.*;
  */
 public class FlightSeatServiceImpTest {
 
+    FlightSeatServiceImp flightSeatServiceImp = new FlightSeatServiceImp();
     @Test
     public void update() {
         Passenger passenger = new Passenger();
-        FlightSeatServiceImp flightSeatServiceImp = new FlightSeatServiceImp();
         FlightSeat flightSeat = new FlightSeat();
 
         passenger = flightSeatServiceImp.update(1111,100,1,"fir");
@@ -28,9 +28,16 @@ public class FlightSeatServiceImpTest {
         flightSeat  = flightSeatServiceImp.searchByFlightId(100);
 
         System.out.println();
+
+        flightSeatServiceImp.toJSON();
     }
 
     @Test
     public void searchByFlightId() {
+
+    }
+
+    public void testToJSON() {
+
     }
 }
