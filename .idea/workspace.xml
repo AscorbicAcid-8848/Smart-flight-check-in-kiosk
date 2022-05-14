@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="加入撤销功能">
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/ChooseMealPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/images/easternAirline.jpg" afterDir="false" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="加入选餐页面，但没有实现插入图片">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/ChooseMealPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/ChooseMealPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByIdDocPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByIdDocPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +132,7 @@
       <workItem from="1651474711648" duration="476000" />
       <workItem from="1651891353046" duration="3290000" />
       <workItem from="1652241095406" duration="2217000" />
-      <workItem from="1652522694090" duration="10832000" />
+      <workItem from="1652522694090" duration="12944000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -250,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652525239026</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="加入选餐页面，但没有实现插入图片">
+      <created>1652534826521</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1652534826521</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +282,7 @@
     <MESSAGE value="完成除定制以外的功能" />
     <MESSAGE value="加入输入次数限制，加入PayingPage" />
     <MESSAGE value="加入撤销功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入撤销功能" />
+    <MESSAGE value="加入选餐页面，但没有实现插入图片" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入选餐页面，但没有实现插入图片" />
   </component>
 </project>

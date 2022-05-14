@@ -11,42 +11,38 @@ public class ChooseMealPage extends JPanel {
     private JPanel panelTop;
     private JPanel panelMid;
     private JPanel panelBot;
+    private JPanel contentPane;
 
     JLabel pageIntro = new JLabel("Here you can choose your meal.");
     JLabel AirlineLogo;
     JComboBox chooseBox;
-
-
-
     JButton confirm;
-
-
-
     JButton back;
-
-
     JButton withdraw;
-
     ArrayList<String> testing = new ArrayList<>();
 
 
     public ChooseMealPage() {
 
-        this.setLayout(new GridLayout(3,1,100,0));
+        contentPane = new JPanel();
+        contentPane.setLayout(new GridLayout(3,1,100,0));
+        this.add(contentPane);
+
 
         panelTop = new JPanel();
         panelMid = new JPanel();
         panelBot = new JPanel();
-        this.add(panelTop);
-        this.add(panelMid);
-        this.add(panelBot);
+
+        contentPane.add(panelTop);
+        contentPane.add(panelMid);
+        contentPane.add(panelBot);
 
         confirm = new JButton("Confirm");
         back = new JButton("Back to init");
         confirm = new JButton("Confirm");
         withdraw = new JButton("Withdraw");
 
-        AirlineLogo = new JLabel();
+        AirlineLogo = new JLabel("");
 
         testing.add("Meal1");
         testing.add("Meal2");
@@ -61,9 +57,6 @@ public class ChooseMealPage extends JPanel {
         panelBot.add(withdraw);
 
         panelTop.add(pageIntro);
-        panelTop.add(AirlineLogo);
-
-
 
 
     }
@@ -75,13 +68,10 @@ public class ChooseMealPage extends JPanel {
         for (String meal : meals) {
             chooseBox.addItem(makeObj(meal));
         }
-        URL resource = ChooseMealPage.class.getResource("images//easternAirline.jpg");
-        ImageIcon easternAirline= new ImageIcon(resource);
-        Image temp = easternAirline.getImage().getScaledInstance(200,100,easternAirline.getImage().SCALE_DEFAULT);
-
+        ImageIcon easternAirline= new ImageIcon("src/main/java/boundary/images/easternAirline.jpg");
+        easternAirline.setImage(easternAirline.getImage().getScaledInstance(200,100,1));
         AirlineLogo.setIcon(easternAirline);
-
-
+        panelTop.add(AirlineLogo);
 
     }
 
@@ -105,6 +95,9 @@ public class ChooseMealPage extends JPanel {
     }
     public JButton getWithdraw() {
         return withdraw;
+    }
+    public String getMeal(){
+        return (String) chooseBox.getSelectedItem();
     }
 
 
