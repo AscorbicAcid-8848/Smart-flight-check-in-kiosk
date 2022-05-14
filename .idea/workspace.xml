@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="加入输入次数限制，加入PayingPage">
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="加入撤销功能">
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/ChooseMealPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/images/easternAirline.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByNameIdPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByNameIdPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/UserInfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/UserInfoPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByIdDocPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByIdDocPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,17 +49,20 @@
     </option>
   </component>
   <component name="ProjectId" id="28MrHbNBmzQLwSXEpfLHYsPZBCZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/boundary" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/boundary" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -66,6 +70,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\src\main\java\boundary" />
       <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\target\classes\boundary" />
       <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\target\classes\boundary" />
     </key>
@@ -131,7 +136,7 @@
       <workItem from="1651474711648" duration="476000" />
       <workItem from="1651891353046" duration="3290000" />
       <workItem from="1652241095406" duration="2217000" />
-      <workItem from="1652522694090" duration="2352000" />
+      <workItem from="1652522694090" duration="10832000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -238,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652256009916</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="加入撤销功能">
+      <created>1652525239026</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652525239026</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +268,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1" />
     <MESSAGE value="运行版本" />
     <MESSAGE value="将航班与乘客的关系，由一对一改为多对一" />
@@ -265,6 +278,7 @@
     <MESSAGE value="不能正常登录" />
     <MESSAGE value="完成除定制以外的功能" />
     <MESSAGE value="加入输入次数限制，加入PayingPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入输入次数限制，加入PayingPage" />
+    <MESSAGE value="加入撤销功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入撤销功能" />
   </component>
 </project>
