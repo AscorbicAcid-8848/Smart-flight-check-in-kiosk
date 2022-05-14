@@ -17,6 +17,7 @@ public class LoginByNameIdPage extends JPanel {
 	private JButton BTOBut;
 	private JButton CertBut;
 	private JToggleButton see;
+	private JButton withdraw;
 	/**
 	 * Create the panel.
 	 */
@@ -37,8 +38,13 @@ public class LoginByNameIdPage extends JPanel {
 		
 		CertBut = new JButton("Confirm");
 		CertBut.setFont(new Font("SimSun", Font.PLAIN, 18));
-
 		ChoosePage.add(CertBut);
+
+		withdraw = new JButton("Withdraw");
+		withdraw.setFont(new Font("SimSun", Font.PLAIN, 18));
+		ChoosePage.add(withdraw);
+
+
 		contentPane.setLayout(new BorderLayout(0, 30));
 		contentPane.add(ChoosePage, BorderLayout.SOUTH);
 		
@@ -102,10 +108,6 @@ public class LoginByNameIdPage extends JPanel {
 		see.setFocusPainted(false);
 		IDInput.add(textField_1);
 		IDInput.add(see);
-		
-
-
-
 
 		JPanel WestEdge = new JPanel();
 		FlowLayout fl_WestEdge = (FlowLayout) WestEdge.getLayout();
@@ -116,6 +118,7 @@ public class LoginByNameIdPage extends JPanel {
 		FlowLayout fl_EastEdge = (FlowLayout) EastEdge.getLayout();
 		fl_EastEdge.setHgap(40);
 		CenterInput.add(EastEdge, BorderLayout.EAST);
+
 	}
 	//返回button给initpage
 	public JButton getButton_backToInit() {
@@ -125,6 +128,8 @@ public class LoginByNameIdPage extends JPanel {
 	public JButton getButton_confirm() {
 		return CertBut;
 	}
+
+	public JButton getButton_withdraw(){return withdraw;}
 	
 	public JToggleButton getButton_see(){
 		return see;

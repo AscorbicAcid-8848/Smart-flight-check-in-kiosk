@@ -57,6 +57,7 @@ public class InitPage extends JFrame implements ActionListener {
     private JButton button_LoginByNameId_backToInit;
     private JButton button_LoginByNameId_confirm;
     private JToggleButton button_LoginByNameId_see;
+    private JButton button_LoginByNameId_withdraw;
     private int see_type =1;
 
     //LoginByIdDocPage
@@ -67,6 +68,7 @@ public class InitPage extends JFrame implements ActionListener {
     private LoginByBookingNumPage panel_LoginByBookingNumPage;
     private JButton button_LoginByBookingNumPage_backToInit;
     private JButton button_LoginByBookingNumPage_next;
+    private JButton button_LoginByBookingNum_withdraw;
     private JToggleButton button_LoginByBookingNumPage_see;
 
     //UserInfoPage
@@ -138,9 +140,12 @@ public class InitPage extends JFrame implements ActionListener {
         button_LoginByNameId_backToInit = panel_LoginByNameIdPage.getButton_backToInit();
         button_LoginByNameId_confirm = panel_LoginByNameIdPage.getButton_confirm();
         button_LoginByNameId_see = panel_LoginByNameIdPage.getButton_see();
+        button_LoginByNameId_withdraw = panel_LoginByNameIdPage.getButton_withdraw();
+
         button_LoginByNameId_backToInit.addActionListener(this);
         button_LoginByNameId_confirm.addActionListener(this);
         button_LoginByNameId_see.addActionListener(this);
+        button_LoginByNameId_withdraw.addActionListener(this);
         
         panel_LoginByIdDocPage = new LoginByIdDocPage();
         button_LoginByIdDocPage_backToInit = panel_LoginByIdDocPage.getButton_backToInit();
@@ -150,9 +155,11 @@ public class InitPage extends JFrame implements ActionListener {
         button_LoginByBookingNumPage_backToInit = panel_LoginByBookingNumPage.getButton_backToInit();
         button_LoginByBookingNumPage_next = panel_LoginByBookingNumPage.getButton_next();
         button_LoginByBookingNumPage_see = panel_LoginByBookingNumPage.getButton_see();
+        button_LoginByBookingNum_withdraw = panel_LoginByBookingNumPage.getButton_withdraw();
         button_LoginByBookingNumPage_see.addActionListener(this);
         button_LoginByBookingNumPage_next.addActionListener(this);
         button_LoginByBookingNumPage_backToInit.addActionListener(this);
+        button_LoginByBookingNum_withdraw.addActionListener(this);
 
         panel_flightDetailPage = new FlightDetailPage();
         button_flightDetailPage_back = panel_flightDetailPage.getButton_back();
@@ -186,6 +193,9 @@ public class InitPage extends JFrame implements ActionListener {
         if(e.getSource() == button_LoginByBookingNumPage_backToInit){
             pageChange(panel_InitPage);
             refresh();
+        }
+        if(e.getSource()==button_LoginByBookingNum_withdraw){
+            panel_LoginByBookingNumPage.refresh();
         }
         //属于LoginByBookingNum,确定登录,之后进入FlightDetailPage
         //在前往FlightDetailPage之前，渲染界面。
@@ -245,6 +255,10 @@ public class InitPage extends JFrame implements ActionListener {
         if(e.getSource()==button_LoginByNameId_backToInit){
             pageChange(panel_InitPage);
             refresh();
+        }
+        // 属于LoginByNameId,撤销操作
+        if(e.getSource()==button_LoginByNameId_withdraw){
+            panel_LoginByNameIdPage.refresh();
         }
         //属于LoginByNameId,确定登录,之后进入UserInfoPage
         //在前往userInfoPage之前，渲染界面。
