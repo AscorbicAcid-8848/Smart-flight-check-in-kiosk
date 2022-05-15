@@ -21,6 +21,13 @@ public class SeatPanel extends JPanel implements ActionListener{
         JPanel economicPanel;
         JPanel businessPanel;
         JPanel specialSeatPanel;
+        JPanel controlPanel;
+
+
+
+    JButton confirm;
+        JButton withdraw;
+        JButton back;
 
         int lastSeatNum = -1;
         public SeatPanel(){
@@ -28,19 +35,21 @@ public class SeatPanel extends JPanel implements ActionListener{
             int count = 0;
             //this.setSize(new Dimension(400, 500));
             this.setLayout(null);
-
+            controlPanel = new JPanel();
+            controlPanel.setLayout(null);
              economicPanel = new JPanel();
              businessPanel = new JPanel();
              specialSeatPanel = new JPanel();
-            businessPanel.setBounds(400,0,200,350);
-            economicPanel.setBounds(0,0,350,600);
-            specialSeatPanel.setBounds(400,400,200,200);
-            economicPanel.setBorder(BorderFactory.createTitledBorder("Economic Seat"));
-            businessPanel.setBorder(BorderFactory.createTitledBorder("Business Seat"));
-            specialSeatPanel.setBorder(BorderFactory.createTitledBorder("Special Seat"));
-            economicPanel.setLayout(null);
-            businessPanel.setLayout(null);
-            specialSeatPanel.setLayout(null);
+             businessPanel.setBounds(400,0,200,350);
+             economicPanel.setBounds(0,0,350,600);
+             specialSeatPanel.setBounds(400,400,200,200);
+             controlPanel.setBounds(250,600,400,100);
+             economicPanel.setBorder(BorderFactory.createTitledBorder("Economic Seat"));
+             businessPanel.setBorder(BorderFactory.createTitledBorder("Business Seat"));
+             specialSeatPanel.setBorder(BorderFactory.createTitledBorder("Special Seat"));
+             economicPanel.setLayout(null);
+             businessPanel.setLayout(null);
+             specialSeatPanel.setLayout(null);
 
             for(int j = 0; j < 2; j++){
                 for(int i = 0; i < 5; i++) {
@@ -85,9 +94,32 @@ public class SeatPanel extends JPanel implements ActionListener{
             businessPanel.setVisible(true);
             specialSeatPanel.setVisible(true);
             economicPanel.setVisible(true);
+
+            confirm = new JButton("Confirm");
+            confirm.setBounds(20,20,100,40);
+            withdraw= new JButton("Withdraw");
+            withdraw.setBounds(140,20,100,40);
+            withdraw.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    if(e.getSource() == withdraw){
+                        seatList.get(lastSeatNum).setOccupied(false);
+                        lastSeatNum = -1;
+                        selectedButton = null;
+                    }
+                }
+            });
+            back = new JButton("Back");
+            back.setBounds(260,20,100,40);
+            controlPanel.add(confirm);
+            controlPanel.add(withdraw);
+            controlPanel.add(back);
+
+
             this.add(businessPanel);
             this.add(economicPanel);
             this.add(specialSeatPanel);
+            this.add(controlPanel);
             this.setVisible(true);
         }
 
@@ -100,6 +132,13 @@ public class SeatPanel extends JPanel implements ActionListener{
             }
             return null;
         }
+    public JButton getConfirm() {
+        return confirm;
+    }
+
+    public JButton getBack(){
+            return back;
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {

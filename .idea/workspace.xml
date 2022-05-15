@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="加入选餐页面，但没有实现插入图片">
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" afterDir="false" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="加入选餐页面，选座页面，所有航班页面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/ChooseMealPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/ChooseMealPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByIdDocPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByIdDocPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Seat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Seat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Seat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +77,7 @@
       <recent name="boundary" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Entrance">
+  <component name="RunManager" selected="Application.SeatPanel">
     <configuration name="AllFlightsPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.AllFlightsPage" />
       <module name="XXXManagementSystem" />
@@ -144,9 +135,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SeatPanel" />
         <item itemvalue="Application.Entrance" />
         <item itemvalue="Application.AllFlightsPage" />
-        <item itemvalue="Application.SeatPanel" />
         <item itemvalue="JUnit.FlightMockTest.toJSON" />
       </list>
     </recent_temporary>
@@ -170,7 +161,7 @@
       <workItem from="1651891353046" duration="3290000" />
       <workItem from="1652241095406" duration="2217000" />
       <workItem from="1652522694090" duration="22938000" />
-      <workItem from="1652621461491" duration="4241000" />
+      <workItem from="1652621461491" duration="5899000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -298,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652536675566</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="加入选餐页面，选座页面，所有航班页面">
+      <created>1652625914315</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1652625914315</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +326,22 @@
     <MESSAGE value="加入输入次数限制，加入PayingPage" />
     <MESSAGE value="加入撤销功能" />
     <MESSAGE value="加入选餐页面，但没有实现插入图片" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入选餐页面，但没有实现插入图片" />
+    <MESSAGE value="加入选餐页面，选座页面，所有航班页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入选餐页面，选座页面，所有航班页面" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java</url>
+          <line>180</line>
+          <properties class="boundary.SeatPanel" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
