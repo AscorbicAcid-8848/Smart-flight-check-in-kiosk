@@ -11,31 +11,36 @@ public class ChooseMealPage extends JPanel {
     private JPanel panelTop;
     private JPanel panelMid;
     private JPanel panelBot;
-    private JPanel contentPane;
 
     JLabel pageIntro = new JLabel("Here you can choose your meal.");
     JLabel AirlineLogo;
     JComboBox chooseBox;
+
+
+
     JButton confirm;
+
+
+
     JButton back;
+
+
     JButton withdraw;
+
     ArrayList<String> testing = new ArrayList<>();
 
 
     public ChooseMealPage() {
 
-        contentPane = new JPanel();
-        contentPane.setLayout(new GridLayout(3,1,100,0));
-        this.add(contentPane);
-
+        this.setLayout(new GridLayout(3,1,100,0));
 
         panelTop = new JPanel();
         panelMid = new JPanel();
         panelBot = new JPanel();
 
-        contentPane.add(panelTop);
-        contentPane.add(panelMid);
-        contentPane.add(panelBot);
+        this.add(panelTop);
+        this.add(panelMid);
+        this.add(panelBot);
 
         confirm = new JButton("Confirm");
         back = new JButton("Back to init");
@@ -76,16 +81,16 @@ public class ChooseMealPage extends JPanel {
     }
 
     private Object makeObj(final String item)  {
-          return new Object() { public String toString() { return item; } };
-        }
+        return new Object() { public String toString() { return item; } };
+    }
 
 
-        public void refresh(){
-            chooseBox.removeAllItems();
-        }
-        public void withdraw(){
-            chooseBox.setSelectedIndex(0);
-        }
+    public void refresh(){
+        chooseBox.removeAllItems();
+    }
+    public void withdraw(){
+        chooseBox.setSelectedIndex(0);
+    }
 
     public JButton getBack() {
         return back;

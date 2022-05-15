@@ -26,7 +26,7 @@ public class Seat {
         this.seatNumber = seatNumber;
     }
 
-    public Boolean getOccupied() {
+    public Boolean isOccupied() {
         return occupied;
     }
 

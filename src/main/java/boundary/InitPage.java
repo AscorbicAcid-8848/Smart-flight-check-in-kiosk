@@ -18,6 +18,8 @@ public class InitPage extends JFrame implements ActionListener {
 
     ///////////////////testing, constructor 里面进行初始化
     ArrayList<String> testing = new ArrayList<>();
+    //////////////////testing, constructor 里面进行初始化
+    ArrayList<Seat> seats = new ArrayList<Seat>();
 
 
 
@@ -94,21 +96,42 @@ public class InitPage extends JFrame implements ActionListener {
     private JButton button_chooseMealPage_back;
     private JButton button_chooseMealPage_withdraw;
 
+    //choose seat page
+    private SeatPanel panel_chooseSeat;
+    private JButton button_chooseSeat_confirm;
+
+
 
     private int invalidTimes = 0;
     public InitPage(){//此方法作用：初始化Frame 及framePanel，不作对于panel的修改
-
+//////////////////////////////////////////////
         testing.add("Meal1");
         testing.add("Meal2");
         testing.add("Meal3");
         testing.add("Meal4");
+/////////////////////////////////////////////
+        for(int i = 0; i < 10; i++){
+            Seat s1 = new Seat();
+            s1.setOccupied(false);
+            s1.setSeatLevel("A");
+            seats.add(s1);
+        }
+
+        for(int i = 0; i < 42; i++){
+            Seat s1 = new Seat();
+            s1.setOccupied(false);
+            s1.setSeatLevel("B");
+            seats.add(s1);
+        }
+        
 
 
         framePanel = new JPanel();
+
         setPanelInitPage();
         setOtherPages();
         showInitPage();//第一次进入，展示initpage内容
-        setBounds(300,200,977,717);
+        setBounds(300,200,900,700);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -193,6 +216,9 @@ public class InitPage extends JFrame implements ActionListener {
         button_chooseMealPage_back.addActionListener(this);
         button_chooseMealPage_confirm.addActionListener(this);
         button_chooseMealPage_withdraw.addActionListener(this);
+
+        panel_chooseSeat = new SeatPanel();
+        panel_chooseSeat.setLayout(null);
 
     }
 
@@ -364,6 +390,15 @@ public class InitPage extends JFrame implements ActionListener {
         }//////belongs to chooseMealPage, withdraw
         if(e.getSource() == button_chooseMealPage_withdraw){
             panel_chooseMealPage.withdraw();
+        }
+        if(e.getSource() == button_chooseMealPage_confirm){
+            framePanel.setLayout(new BorderLayout());
+            panel_chooseSeat.render(seats,passenger);
+           // pageChange(panel_chooseSeat);
+            framePanel.removeAll();
+            framePanel.repaint();
+            framePanel.add(panel_chooseSeat, BorderLayout.CENTER);
+            framePanel.validate();
         }
 
     }

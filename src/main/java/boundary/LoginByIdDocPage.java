@@ -28,8 +28,8 @@ public class LoginByIdDocPage extends JPanel {
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		
-		ImageIcon icon = new ImageIcon("src/main/java/boundary/images/QRcode.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(500,500,1));
+		ImageIcon icon = new ImageIcon("src/main/java/boundary/images/HeathrowAirport.jpg");
+		icon.setImage(icon.getImage().getScaledInstance(800,500,1));
 		lblNewLabel_1.setIcon(icon);
 		panel_1.add(lblNewLabel_1);
 		
