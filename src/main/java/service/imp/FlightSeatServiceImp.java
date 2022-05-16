@@ -2,7 +2,6 @@ package service.imp;
 
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.Flight;
 import model.FlightSeat;
 import model.Passenger;
 import service.FlightSeatService;
@@ -38,20 +37,32 @@ public class FlightSeatServiceImp implements FlightSeatService {
     }
 
     @Override
-    public Passenger update(Integer idDocument, Integer flightId, Integer seatNumber, String seatLevel) {
+    public Passenger update(Integer idDocument, Integer flightId, Integer seatNumber) {
+
+        Passenger passenger = passengerService.searchByIdDocument(idDocument);
+
+        String seatLevel = "seat number wrong!";
+        if(seatNumber >= 0 && seatNumber <10){
+            seatLevel = "Business";
+        }else if(seatNumber >= 10 && seatNumber <16){
+            seatLevel = "Special";
+        }else if (seatNumber >= 16 && seatNumber <52){
+            seatLevel = "Economic";
+        }
 
         //search in flight list
         for(int i=0; i< flightSeats.size(); i++) {
             //if match
             if (flightSeats.get(i).getFlightId().equals(flightId)) {
+                //cancel the previous seat
+                if (passenger.getSeatNumber() != -1) {
+                    flightSeats.get(i).getSeatList().get(passenger.getSeatNumber()).setOccupied(false);
+                }
                 //set seat level
-                flightSeats.get(i).getSeatList().get(seatNumber).setSeatLevel(seatLevel);
                 flightSeats.get(i).getSeatList().get(seatNumber).setOccupied(true);
             }
         }
 
-        //然后修改Passenger的数据,我做了
-        Passenger passenger = passengerService.searchByIdDocument(idDocument);
         passenger.setSeatLevel(seatLevel);
         passenger.setSeatNumber(seatNumber);
         passengerService.update(passenger);
@@ -78,7 +89,7 @@ public class FlightSeatServiceImp implements FlightSeatService {
         //if there is result return it
         if(result != -1) {
             return flightSeats.get(result);
-        }else {//if there is no result, return an empty flight
+        }else {//if  there is no result, return an empty flight
             System.out.println("No result");
             return null;
         }

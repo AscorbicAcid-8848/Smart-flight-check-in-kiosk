@@ -115,6 +115,18 @@ public class PassengerMock {
         passenger2.setIdDocument(3333);
         passenger3.setIdDocument(4444);
 
+        //set visa id
+        passenger0.setVisaId(11111111);
+        passenger1.setVisaId(22222222);
+        passenger2.setVisaId(33333333);
+        passenger3.setVisaId(44444444);
+
+        //set visa password
+        passenger0.setVisaPassword("yezihao000");
+        passenger1.setVisaPassword("liuyichen111");
+        passenger2.setVisaPassword("xuran222");
+        passenger3.setVisaPassword("zhangzhihan333");
+
         //set visa informations
 
         passengers.add(passenger0);
