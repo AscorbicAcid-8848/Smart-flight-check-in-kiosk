@@ -102,7 +102,10 @@ public class ChooseMealPage extends JPanel {
         return withdraw;
     }
     public String getMeal(){
-        return (String) chooseBox.getSelectedItem();
+        return chooseBox.getSelectedItem().toString();
+    }
+    public void mealNotChosenWarning(){
+        JOptionPane.showMessageDialog(this, "You haven't choose your meal yet.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
     }
 
 

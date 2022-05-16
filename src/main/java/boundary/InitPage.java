@@ -99,6 +99,13 @@ public class InitPage extends JFrame implements ActionListener {
     //choose seat page
     private SeatPanel panel_chooseSeat;
     private JButton button_chooseSeat_confirm;
+    private JButton button_chooseSeat_back;
+    //private JButton button_chooseSeat_withdraw;
+
+    //paying page
+    private PayingPage panel_payingPage;
+    private JButton button_paying_confirm;
+    private JButton button_paying_back;
 
 
 
@@ -219,6 +226,16 @@ public class InitPage extends JFrame implements ActionListener {
 
         panel_chooseSeat = new SeatPanel();
         panel_chooseSeat.setLayout(null);
+        button_chooseSeat_confirm = panel_chooseSeat.getConfirm();
+        button_chooseSeat_back = panel_chooseSeat.getBack();
+        button_chooseSeat_back.addActionListener(this);
+        button_chooseSeat_confirm.addActionListener(this);
+
+        panel_payingPage = new PayingPage();
+        button_paying_confirm = panel_payingPage.getButton_confirm();
+        button_paying_back = panel_payingPage.getButton_back();
+        button_paying_back.addActionListener(this);
+        button_paying_confirm.addActionListener(this);
 
     }
 
@@ -270,11 +287,7 @@ public class InitPage extends JFrame implements ActionListener {
                     isValid = false;
                     panel_LoginByBookingNumPage.bookingNumFormatWarning();
                 }
-
-
             }
-
-
             if(isValid){
                 if(boardingPassController.checkPassenger(bookingNum)!=null){
                     passenger = boardingPassController.checkPassenger(bookingNum).getPassenger();
@@ -351,7 +364,6 @@ public class InitPage extends JFrame implements ActionListener {
                         refresh();
                         pageChange(panel_InitPage);
                         invalidTimes = 0;
-
                     }
                 }
             }
@@ -390,17 +402,33 @@ public class InitPage extends JFrame implements ActionListener {
         }//////belongs to chooseMealPage, withdraw
         if(e.getSource() == button_chooseMealPage_withdraw){
             panel_chooseMealPage.withdraw();
-        }
+        }///to chooseSeatPage
         if(e.getSource() == button_chooseMealPage_confirm){
-            framePanel.setLayout(new BorderLayout());
-            panel_chooseSeat.render(seats,passenger);
-           // pageChange(panel_chooseSeat);
-            framePanel.removeAll();
-            framePanel.repaint();
-            framePanel.add(panel_chooseSeat, BorderLayout.CENTER);
-            framePanel.validate();
+
+            if(Objects.equals(panel_chooseMealPage.getMeal(), "")){
+                panel_chooseMealPage.mealNotChosenWarning();
+
+            }
+            else {
+                framePanel.setLayout(new BorderLayout());
+                panel_chooseSeat.render(seats, passenger);
+                framePanel.removeAll();
+                framePanel.repaint();
+                framePanel.add(panel_chooseSeat, BorderLayout.CENTER);
+                framePanel.validate();
+            }
+        }
+        ////////////////////////belongs to chooseSeatPage, back to chooseMealPage
+        if(e.getSource() == button_chooseSeat_back){
+            framePanel.setLayout(new FlowLayout());
+            pageChange(panel_chooseMealPage);
         }
 
+        ///belongs to chooseSeatPage, to paying page
+        if(e.getSource() == button_chooseSeat_confirm){
+            framePanel.setLayout(new FlowLayout());
+            pageChange(panel_payingPage);
+        }
     }
 
     public void pageChange(JPanel page){
