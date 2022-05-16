@@ -13,7 +13,8 @@ import java.util.List;
  */
 public interface FlightSeatService {
     //更改指定座位的状态
-    public Passenger update (Integer idDocument, Integer flightId, Integer seatNumber, String seatLevel);
+    public Passenger update(Integer idDocument, Integer flightId, Integer seatNumber);
+
     //展示所在flight的全部座位
     public FlightSeat searchByFlightId(Integer flightId);
 }

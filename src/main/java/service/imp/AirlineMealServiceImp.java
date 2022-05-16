@@ -27,11 +27,11 @@ public class AirlineMealServiceImp implements AirlineMealService {
 
     public AirlineMealServiceImp(){
 
-        File flightSeatList = new File("data\\airlineMealList.json");
+        File airlineMealList = new File("data\\airlineMealList.json");
 
         try {
             JavaType type = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, AirLineMeal.class);
-            airLineMeals = objectMapper.readValue(flightSeatList, type);
+            airLineMeals = objectMapper.readValue(airlineMealList, type);
         }catch (IOException e){
             e.printStackTrace();
         }

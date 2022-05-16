@@ -10,6 +10,8 @@ public class Meal {
     private String mealName;
     private Integer mealCost;
 
+    public Meal(){}
+
     public Meal(Integer mealId, String mealName, Integer mealCost) {
         this.mealId = mealId;
         this.mealName = mealName;

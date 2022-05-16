@@ -14,11 +14,6 @@ public class AirLineMeal {
 
     public AirLineMeal(){}
 
-    public AirLineMeal(Integer airlineId, List<Meal> meals) {
-        this.airlineId = airlineId;
-        this.meals = meals;
-    }
-
     public Integer getAirlineId() {
         return airlineId;
     }
