@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="加入选餐页面，选座页面，所有航班页面">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AirlineMealController.java" afterDir="false" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="meal controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/AirLineMeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/AirLineMeal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MealList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Meal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,7 +335,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java</url>
           <line>180</line>
-          <properties class="boundary.SeatPanel" method="main">
+          <properties class="boundary.SeatPanel">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
