@@ -22,8 +22,8 @@ public class AirlineMealController {
         return  airlineMealService.update(idDocument, airlineId, mealId);
     }
 
-    public List<Meal> getMeals(Integer airlineId){
-        List<Meal> mealList = airlineMealService.searchByAirlineId(airlineId).getMealList();
+    public List<Meal> showMeals(Integer airlineId){
+        List<Meal> mealList = airlineMealService.searchByAirlineId(airlineId).getMeals();
         return mealList;
     }
 }
