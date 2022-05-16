@@ -5,21 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="加入选餐页面，选座页面，所有航班页面">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mock/AirlineMealMock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/AirLineMeal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/MealList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/AirlineMealService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/imp/AirlineMealServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/imp/AirlineMealServiceImpTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Seat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/FlightSeatMock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Passenger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Passenger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Seat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Seat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/AirLineMeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/AirLineMeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/FlightSeatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/FlightSeatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/AirlineMealServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/AirlineMealServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/imp/FlightSeatServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/imp/FlightSeatServiceImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightSeatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/FlightSeatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/AirLineMeal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/AirLineMeal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/FlightSeatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/FlightSeatService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/AirlineMealServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/imp/AirlineMealServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/FlightSeatServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/imp/FlightSeatServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/FlightSeatServiceImpTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/service/imp/FlightSeatServiceImpTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +30,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit3 Test Class" />
       </list>
     </option>
   </component>
@@ -55,6 +55,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="28MrHbNBmzQLwSXEpfLHYsPZBCZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -69,6 +72,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/boundary" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -85,51 +90,19 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\src\main\resources" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="service.imp" />
+      <recent name="mock" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="boundary" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Entrance">
-    <configuration name="AllFlightsPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="boundary.AllFlightsPage" />
-      <module name="XXXManagementSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="boundary.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Entrance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="boundary.Entrance" />
-      <module name="XXXManagementSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="boundary.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SeatPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="boundary.SeatPanel" />
-      <module name="XXXManagementSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="boundary.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FlightMockTest.toJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AirlineMealServiceImpTest.testUpdate">
+    <configuration name="AirlineMealMockTest.testToJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="XXXManagementSystem" />
       <extension name="coverage">
         <pattern>
@@ -138,7 +111,71 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="mock" />
-      <option name="MAIN_CLASS_NAME" value="mock.FlightMockTest" />
+      <option name="MAIN_CLASS_NAME" value="mock.AirlineMealMockTest" />
+      <option name="METHOD_NAME" value="testToJSON" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AirlineMealServiceImpTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.imp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service.imp" />
+      <option name="MAIN_CLASS_NAME" value="service.imp.AirlineMealServiceImpTest" />
+      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightSeatMockTest.toJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mock" />
+      <option name="MAIN_CLASS_NAME" value="mock.FlightSeatMockTest" />
+      <option name="METHOD_NAME" value="toJSON" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightSeatServiceImpTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.imp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service.imp" />
+      <option name="MAIN_CLASS_NAME" value="service.imp.FlightSeatServiceImpTest" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PassengerMockTest.toJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mock" />
+      <option name="MAIN_CLASS_NAME" value="mock.PassengerMockTest" />
       <option name="METHOD_NAME" value="toJSON" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -147,10 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Entrance" />
-        <item itemvalue="Application.SeatPanel" />
-        <item itemvalue="Application.AllFlightsPage" />
-        <item itemvalue="JUnit.FlightMockTest.toJSON" />
+        <item itemvalue="JUnit.AirlineMealServiceImpTest.testUpdate" />
+        <item itemvalue="JUnit.FlightSeatServiceImpTest.update" />
+        <item itemvalue="JUnit.AirlineMealMockTest.testToJSON" />
+        <item itemvalue="JUnit.FlightSeatMockTest.toJSON" />
+        <item itemvalue="JUnit.PassengerMockTest.toJSON" />
       </list>
     </recent_temporary>
   </component>
@@ -175,6 +213,7 @@
       <workItem from="1652522694090" duration="22938000" />
       <workItem from="1652621461491" duration="5899000" />
       <workItem from="1652668379242" duration="2059000" />
+      <workItem from="1652672266863" duration="10649000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -309,7 +348,28 @@
       <option name="project" value="LOCAL" />
       <updated>1652625914315</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="加入选餐页面，选座页面，所有航班页面">
+      <created>1652684718101</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1652684718101</updated>
+    </task>
+    <task id="LOCAL-00021" summary="加入选餐页面，选座页面，所有航班页面">
+      <created>1652684732340</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1652684732340</updated>
+    </task>
+    <task id="LOCAL-00022" summary="加入选餐页面，选座页面，所有航班页面">
+      <created>1652684738386</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1652684738386</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,11 +408,21 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java</url>
           <line>180</line>
-          <properties class="boundary.SeatPanel" method="main">
+          <properties class="boundary.SeatPanel">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/service/imp/FlightSeatServiceImpTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/service/imp/AirlineMealServiceImp.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

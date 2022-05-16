@@ -18,8 +18,8 @@ public class FlightSeatController {
     private PassengerService passengerService = new PassengerServiceImp();
     private FlightSeatService flightSeatService = new FlightSeatServiceImp();
     //选座
-    public Passenger selectSeat(Integer idDocument, Integer flightId, Integer seatNumber, String seatLevel){
-        return flightSeatService.update(idDocument, flightId, seatNumber, seatLevel);
+    public Passenger selectSeat(Integer idDocument, Integer flightId, Integer seatNumber){
+        return flightSeatService.update(idDocument, flightId, seatNumber);
     }
     //展示所有座位
     public List<Seat> showSeats(Integer flightId){
