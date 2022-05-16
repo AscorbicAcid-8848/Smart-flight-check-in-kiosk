@@ -19,7 +19,7 @@ public class Passenger {
     private Integer meal;
     private Integer IdDocument;
     private Integer visaId;
-    private Integer visaPassword;
+    private String visaPassword;
 
 
 
@@ -52,11 +52,11 @@ public class Passenger {
         this.visaId = visaId;
     }
 
-    public Integer getVisaPassword() {
+    public String getVisaPassword() {
         return visaPassword;
     }
 
-    public void setVisaPassword(Integer visaPassword) {
+    public void setVisaPassword(String visaPassword) {
         this.visaPassword = visaPassword;
     }
 

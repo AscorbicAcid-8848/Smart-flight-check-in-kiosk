@@ -45,7 +45,6 @@ public class FlightSeatServiceImp implements FlightSeatService {
             //if match
             if (flightSeats.get(i).getFlightId().equals(flightId)) {
                 //set seat level
-                flightSeats.get(i).getSeatList().get(seatNumber).setSeatLevel(seatLevel);
                 flightSeats.get(i).getSeatList().get(seatNumber).setOccupied(true);
             }
         }
@@ -78,7 +77,7 @@ public class FlightSeatServiceImp implements FlightSeatService {
         //if there is result return it
         if(result != -1) {
             return flightSeats.get(result);
-        }else {//if there is no result, return an empty flight
+        }else {//if  there is no result, return an empty flight
             System.out.println("No result");
             return null;
         }

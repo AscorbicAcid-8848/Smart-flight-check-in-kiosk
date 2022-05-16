@@ -5,10 +5,16 @@ package model;
  * @description: Meal
  * @date 2022/5/16 10:36
  */
-public class MealList {
+public class Meal {
     private Integer mealId;
     private String mealName;
     private Integer mealCost;
+
+    public Meal(Integer mealId, String mealName, Integer mealCost) {
+        this.mealId = mealId;
+        this.mealName = mealName;
+        this.mealCost = mealCost;
+    }
 
     public Integer getMealId() {
         return mealId;

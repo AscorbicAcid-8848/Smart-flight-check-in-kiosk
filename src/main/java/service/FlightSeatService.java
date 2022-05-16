@@ -18,3 +18,4 @@ public interface FlightSeatService {
     public FlightSeat searchByFlightId(Integer flightId);
 }
 
+
