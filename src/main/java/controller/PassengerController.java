@@ -21,11 +21,4 @@ public class PassengerController {
         }
         return false;
     }
-    
-    //更改自选餐饮
-    public Passenger customChoices(Passenger passenger,Integer meal){
-        passenger.setMeal(meal);
-        passenger = passengerService.update(passenger);
-        return passenger;
-    }
 }
