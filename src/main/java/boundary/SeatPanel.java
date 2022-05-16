@@ -103,6 +103,9 @@ public class SeatPanel extends JPanel implements ActionListener{
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     if(e.getSource() == withdraw){
+                        if(selectedButton == null && lastSeatNum == -1){
+                             return;
+                        }
                         seatList.get(lastSeatNum).setOccupied(false);
                         lastSeatNum = -1;
                         selectedButton = null;
