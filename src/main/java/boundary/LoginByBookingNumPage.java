@@ -26,6 +26,7 @@ public class LoginByBookingNumPage extends JPanel{
 
     private JButton button_backToInit;
     private JButton button_next;
+    private JButton button_withdraw;
 
     private JToggleButton see;
 
@@ -33,6 +34,8 @@ public class LoginByBookingNumPage extends JPanel{
         panelTop = new JPanel();
         panelMid = new JPanel();
         panelBot = new JPanel();
+
+        button_withdraw = new JButton("Withdraw");
 
         panel_name = new JPanel();
         panel_name.setLayout(new GridLayout(0,3,0,0));
@@ -69,6 +72,7 @@ public class LoginByBookingNumPage extends JPanel{
         panel_id.add(passengerId);
         panelBot.add(button_backToInit);
         panelBot.add(button_next);
+        panelBot.add(button_withdraw);
 
         passengerId.setColumns(10);
         passengerId.setEchoChar('*');
@@ -91,6 +95,7 @@ public class LoginByBookingNumPage extends JPanel{
         see.setBorderPainted(false);
         see.setFocusPainted(false);
         panel_id.add(see);
+
     }
 
     public JButton getButton_backToInit() {
@@ -108,6 +113,8 @@ public class LoginByBookingNumPage extends JPanel{
     public JToggleButton getButton_see(){
         return see;
     }
+
+    public JButton getButton_withdraw(){return button_withdraw;}
 
     public String getBookingNum(){
         return passengerId.getText();

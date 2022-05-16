@@ -19,7 +19,6 @@ public class UserInfoPage extends JPanel{
     private JLabel label_name;
     private JLabel passengerName;
 
-
     private JLabel label_IdNum;
     private JLabel passengerId;
 
@@ -44,11 +43,9 @@ public class UserInfoPage extends JPanel{
         button_backToInit = new JButton("Go Back");
         button_next = new JButton("Check My Flights");
 
-
         this.setLayout(new GridLayout(3,1,0,50));
         panelMid.setLayout(new GridLayout(2,1,0,20));
         panelBot.setLayout(new GridLayout(1,2,100,0));
-
 
         add(panelTop);
         add(panelMid);

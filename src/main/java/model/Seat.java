@@ -9,13 +9,27 @@ public class Seat {
     private Integer seatNumber;
     private Boolean occupied;
     private String seatLevel;
+    private Integer seatCost;
 
     public Seat(){}
 
-    public Seat(Integer seatNumber, Boolean occupied, String seatLevel) {
+    public Seat(Integer seatNumber, Boolean occupied, String seatLevel, Integer seatCost) {
         this.seatNumber = seatNumber;
         this.occupied = occupied;
         this.seatLevel = seatLevel;
+        this.seatCost = seatCost;
+    }
+
+    public Boolean getOccupied() {
+        return occupied;
+    }
+
+    public Integer getSeatCost() {
+        return seatCost;
+    }
+
+    public void setSeatCost(Integer seatCost) {
+        this.seatCost = seatCost;
     }
 
     public Integer getSeatNumber() {
@@ -26,7 +40,7 @@ public class Seat {
         this.seatNumber = seatNumber;
     }
 
-    public Boolean getOccupied() {
+    public Boolean isOccupied() {
         return occupied;
     }
 
