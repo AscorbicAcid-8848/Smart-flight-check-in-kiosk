@@ -18,6 +18,10 @@ public class Passenger {
     private Integer seatNumber;
     private Integer meal;
     private Integer IdDocument;
+    private Integer visaId;
+    private Integer visaPassword;
+
+
 
     @Override
     public String toString() {
@@ -27,16 +31,34 @@ public class Passenger {
                 ", passengerId=" + passengerId +
                 ", surname='" + surname + '\'' +
                 ", firstname='" + firstname + '\'' +
-                ", gender='" + gender + '\'' +
+                ", gender=" + gender +
                 ", seatLevel='" + seatLevel + '\'' +
                 ", seatNumber=" + seatNumber +
                 ", meal=" + meal +
                 ", IdDocument=" + IdDocument +
+                ", visaId=" + visaId +
+                ", visaPassword=" + visaPassword +
                 '}';
     }
 
     //setter and getter
 
+
+    public Integer getVisaId() {
+        return visaId;
+    }
+
+    public void setVisaId(Integer visaId) {
+        this.visaId = visaId;
+    }
+
+    public Integer getVisaPassword() {
+        return visaPassword;
+    }
+
+    public void setVisaPassword(Integer visaPassword) {
+        this.visaPassword = visaPassword;
+    }
 
     public List<Integer> getFlightId() {
         return flightId;

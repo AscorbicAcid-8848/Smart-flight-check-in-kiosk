@@ -115,6 +115,8 @@ public class PassengerMock {
         passenger2.setIdDocument(3333);
         passenger3.setIdDocument(4444);
 
+        //set visa informations
+
         passengers.add(passenger0);
         passengers.add(passenger1);
         passengers.add(passenger2);
