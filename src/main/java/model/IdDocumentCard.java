@@ -9,6 +9,8 @@ package model;
 public class IdDocumentCard {
     private Integer id;
 
+    public IdDocumentCard() {}
+
     public Integer getId() {
         return id;
     }

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="等到idDocumentCard 服务层完成" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="等到idDocumentCard 服务层完成">
+      <change afterPath="$PROJECT_DIR$/src/main/java/mock/IdDocumentCardMock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mock/IdDocumentCardMockTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/IdDocumentCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/IdDocumentCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/IdDocumentCardServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/IdDocumentCardServiceImp.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +21,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit3 Test Class" />
       </list>
     </option>
   </component>
@@ -53,6 +60,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/boundary" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -62,6 +71,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yeeeeezy\Dropbox\My PC (子一十)\Documents\GitHub\Smart-flight-check-in-kiosk\idDocumentCard" />
       <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\src\main\java\boundary" />
       <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\target\classes\boundary" />
       <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\target\classes\boundary" />
@@ -69,11 +79,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\src\main\resources" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="service.imp" />
+      <recent name="mock" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="boundary" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Entrance">
+  <component name="RunManager" selected="JUnit.IdDocumentCardServiceImpTest.testCheckCard">
     <configuration name="AllFlightsPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.AllFlightsPage" />
       <module name="XXXManagementSystem" />
@@ -113,7 +130,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightMockTest.toJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IdDocumentCardMockTest.testToJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="XXXManagementSystem" />
       <extension name="coverage">
         <pattern>
@@ -122,8 +139,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="mock" />
-      <option name="MAIN_CLASS_NAME" value="mock.FlightMockTest" />
-      <option name="METHOD_NAME" value="toJSON" />
+      <option name="MAIN_CLASS_NAME" value="mock.IdDocumentCardMockTest" />
+      <option name="METHOD_NAME" value="testToJSON" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IdDocumentCardServiceImpTest.testCheckCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.imp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service.imp" />
+      <option name="MAIN_CLASS_NAME" value="service.imp.IdDocumentCardServiceImpTest" />
+      <option name="METHOD_NAME" value="testCheckCard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,10 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IdDocumentCardServiceImpTest.testCheckCard" />
+        <item itemvalue="JUnit.IdDocumentCardMockTest.testToJSON" />
         <item itemvalue="Application.Entrance" />
         <item itemvalue="Application.SeatPanel" />
         <item itemvalue="Application.AllFlightsPage" />
-        <item itemvalue="JUnit.FlightMockTest.toJSON" />
       </list>
     </recent_temporary>
   </component>
@@ -161,6 +195,7 @@
       <workItem from="1652668379242" duration="2059000" />
       <workItem from="1652685251365" duration="2894000" />
       <workItem from="1652775218331" duration="1255000" />
+      <workItem from="1652792665386" duration="1230000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
