@@ -115,6 +115,18 @@ public class PassengerMock {
         passenger2.setIdDocument(3333);
         passenger3.setIdDocument(4444);
 
+        //set visa id
+        passenger0.setCreditcardNum(11111111);
+        passenger1.setCreditcardNum(22222222);
+        passenger2.setCreditcardNum(33333333);
+        passenger3.setCreditcardNum(44444444);
+
+        //set visa password
+        passenger0.setCardPin("yezihao000");
+        passenger1.setCardPin("liuyichen111");
+        passenger2.setCardPin("xuran222");
+        passenger3.setCardPin("zhangzhihan333");
+
         //set visa informations
 
         passengers.add(passenger0);

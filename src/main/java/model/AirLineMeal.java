@@ -10,14 +10,9 @@ import java.util.List;
  */
 public class AirLineMeal {
     private Integer airlineId;
-    private List<MealList> mealList = new ArrayList<>();
+    private List<Meal> meals = new ArrayList<>();
 
     public AirLineMeal(){}
-
-    public AirLineMeal(Integer airlineId, List<MealList> mealList) {
-        this.airlineId = airlineId;
-        this.mealList = mealList;
-    }
 
     public Integer getAirlineId() {
         return airlineId;
@@ -27,11 +22,11 @@ public class AirLineMeal {
         this.airlineId = airlineId;
     }
 
-    public List<MealList> getMealList() {
-        return mealList;
+    public List<Meal> getMeals() {
+        return meals;
     }
 
-    public void setMealList(List<MealList> mealList) {
-        this.mealList = mealList;
+    public void setMeas(List<Meal> meals) {
+        this.meals = meals;
     }
 }

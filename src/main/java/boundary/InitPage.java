@@ -32,7 +32,7 @@ public class InitPage extends JFrame implements ActionListener {
     //此次登录的航班对象
     private Flight flight = new Flight();
     //此次登录的Id doc
-    private IdDocument idDocument = new IdDocument();
+    private IdDocumentCard idDocument = new IdDocumentCard();
 
     //controllers
     //BoardingPassController
@@ -448,7 +448,7 @@ public class InitPage extends JFrame implements ActionListener {
         passenger = new Passenger();
         airline = new Airline();
         boardingPass = new BoardingPass();
-        idDocument = new IdDocument();
+        idDocument = new IdDocumentCard();
         flight = new Flight();
     }
     public void enteringTimesWarning(){
