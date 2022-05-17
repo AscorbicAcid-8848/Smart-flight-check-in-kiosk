@@ -18,8 +18,8 @@ public class Passenger {
     private Integer seatNumber;
     private Integer meal;
     private Integer IdDocument;
-    private Integer creditcardNum;
-    private String cardPin;
+    private Integer visaId;
+    private String visaPassword;
 
 
 
@@ -36,28 +36,28 @@ public class Passenger {
                 ", seatNumber=" + seatNumber +
                 ", meal=" + meal +
                 ", IdDocument=" + IdDocument +
-                ", creditcardNum=" + creditcardNum +
-                ", cardPin=" + cardPin +
+                ", visaId=" + visaId +
+                ", visaPassword=" + visaPassword +
                 '}';
     }
 
     //setter and getter
 
 
-    public Integer getCreditcardNum() {
-        return creditcardNum;
+    public Integer getVisaId() {
+        return visaId;
     }
 
-    public void setCreditcardNum(Integer creditcardNum) {
-        this.creditcardNum = creditcardNum;
+    public void setVisaId(Integer visaId) {
+        this.visaId = visaId;
     }
 
-    public String getCardPin() {
-        return cardPin;
+    public String getVisaPassword() {
+        return visaPassword;
     }
 
-    public void setCardPin(String cardPin) {
-        this.cardPin = cardPin;
+    public void setVisaPassword(String visaPassword) {
+        this.visaPassword = visaPassword;
     }
 
     public List<Integer> getFlightId() {

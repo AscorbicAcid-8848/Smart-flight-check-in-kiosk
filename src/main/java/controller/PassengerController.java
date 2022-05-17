@@ -1,9 +1,7 @@
 package controller;
 
 import model.Passenger;
-import service.FlightService;
 import service.PassengerService;
-import service.imp.FlightServiceImp;
 import service.imp.PassengerServiceImp;
 
 import java.util.Objects;
@@ -26,7 +24,7 @@ public class PassengerController {
 
     public Boolean doesCardExist(Integer creditcardNum, Integer passengerId, String surname){
         Passenger passenger = passengerService.searchBySurnameAndPassengerId(surname, passengerId);
-        if(Objects.equals(passenger.getCreditcardNum(), creditcardNum)){
+        if(Objects.equals(passenger.getVisaId(), creditcardNum)){
             return true;
         }
         return false;
@@ -34,7 +32,7 @@ public class PassengerController {
 
     public Boolean isCardPinCorrect(Integer creditcardNum,Integer passengerId, String surname, String cardPin){
         Passenger passenger = passengerService.searchBySurnameAndPassengerId(surname, passengerId);
-        if(Objects.equals(passenger.getCardPin(), cardPin) && this.doesCardExist(creditcardNum, passengerId, surname)){
+        if(Objects.equals(passenger.getVisaPassword(), cardPin) && this.doesCardExist(creditcardNum, passengerId, surname)){
             return true;
         }
         return false;
