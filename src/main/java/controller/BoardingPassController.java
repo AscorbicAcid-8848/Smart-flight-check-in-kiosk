@@ -2,11 +2,13 @@ package controller;
 
 import model.BoardingPass;
 import model.Flight;
-import model.IdDocument;
+import model.IdDocumentCard;
 import model.Passenger;
 import service.FlightService;
+import service.IdDocumentCardService;
 import service.PassengerService;
 import service.imp.FlightServiceImp;
+import service.imp.IdDocumentCardServiceImp;
 import service.imp.PassengerServiceImp;
 
 import java.util.List;
@@ -21,6 +23,7 @@ public class BoardingPassController {
     private FlightController flightController = new FlightController();
     private FlightService flightService = new FlightServiceImp();
     private PassengerService passengerService = new PassengerServiceImp();
+    private IdDocumentCardService idDocumentCardService = new IdDocumentCardServiceImp();
 
     public BoardingPass checkPassenger(Integer bookingNumber){
         Passenger passenger = passengerService.searchByBookingNumber(bookingNumber);
@@ -44,9 +47,10 @@ public class BoardingPassController {
         }
         return returnBoardingPass(currentFlight,passenger);
     }
-    public BoardingPass checkPassenger(IdDocument idDocument){
-        Passenger passenger = passengerService.searchByIdDocument(idDocument.getId());
-        List<Flight> flightList = flightController.getByIdDocument(idDocument);
+    public BoardingPass checkPassenger(){
+        IdDocumentCard idDocumentCard = idDocumentCardService.checkCard();
+        Passenger passenger = passengerService.searchByIdDocument(idDocumentCard.getId());
+        List<Flight> flightList = flightController.getByIdDocument(idDocumentCard);
         Flight currentFlight = new Flight();
         if(flightList==null){
             return null;

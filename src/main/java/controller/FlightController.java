@@ -1,7 +1,7 @@
 package controller;
 
 import model.Flight;
-import model.IdDocument;
+import model.IdDocumentCard;
 import model.Passenger;
 import service.FlightService;
 import service.PassengerService;
@@ -58,9 +58,9 @@ public class FlightController {
         return flight;
     }
 
-    public List<Flight> getByIdDocument(IdDocument idDocument){
+    public List<Flight> getByIdDocument(IdDocumentCard idDocumentCard){
         List<Flight> flightList = new ArrayList();
-        Passenger passenger= passengerService.searchByIdDocument(idDocument.getId());
+        Passenger passenger= passengerService.searchByIdDocument(idDocumentCard.getId());
         if(passenger==null){
             return null;
         }
