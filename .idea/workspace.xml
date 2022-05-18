@@ -5,74 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="加入选餐页面，选座页面，所有航班页面">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/Entrance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/FinalConfirmPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/FlightDetailPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/PayingPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/HeathrowAirport.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/QRcode.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/eye slash-fill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/eye-fill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/AirlineMealController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightSeatController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/AirlineMealMock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/AirlineMock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/FlightMock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/FlightSeatMock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/IdDocumentCardMock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/PassengerMock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/AirLineMeal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Airline.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/BoardingPass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Flight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/FlightSeat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/IdDocumentCard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Meal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/MealList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Passenger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Seat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/AirlineMealService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/AirlineService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/FlightSeatService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/FlightService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/IdDocumentCardService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PassengerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/AirlineMealServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/AirlineServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/FlightSeatServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/FlightServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/IdDocumentCardServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/PassengerServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/AirlineMealMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/AirlineMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/FlightMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/FlightSeatMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/IdDocumentCardMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mock/PassengerMockTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/AirlineMealServiceImpTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/AirlineServiceImpTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/FlightSeatServiceImpTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/FlightServiceImpTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/IdDocumentCardServiceImpTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/PassengerServiceImpTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/ChooseMealPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/ChooseMealPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByIdDocPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByIdDocPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/PayingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/PayingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Meal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/PayingPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/PayingPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +35,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>

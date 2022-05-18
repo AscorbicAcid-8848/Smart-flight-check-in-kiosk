@@ -2,6 +2,8 @@ package boundary;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.URL;
 
 public class PayingPage extends JPanel {
@@ -16,6 +18,7 @@ public class PayingPage extends JPanel {
     private JPasswordField textField_1;
     private JButton BTOBut;
     private JButton CertBut;
+    private JButton withdraw;
     private JToggleButton see;
     /**
      * Create the panel.
@@ -37,8 +40,18 @@ public class PayingPage extends JPanel {
 
         CertBut = new JButton("Confirm");
         CertBut.setFont(new Font("SimSun", Font.PLAIN, 18));
-
         ChoosePage.add(CertBut);
+
+        withdraw = new JButton("Withdraw");
+        withdraw.setFont(new Font("SimSun", Font.PLAIN, 18));
+
+        ChoosePage.add(withdraw);
+        withdraw.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                refresh();
+            }
+        });
         contentPane.setLayout(new BorderLayout(0, 30));
         contentPane.add(ChoosePage, BorderLayout.SOUTH);
 
@@ -121,6 +134,10 @@ public class PayingPage extends JPanel {
 
     public JButton getButton_confirm() {
         return CertBut;
+    }
+
+    public JButton getWithdraw() {
+        return withdraw;
     }
 
     public JToggleButton getButton_see(){
