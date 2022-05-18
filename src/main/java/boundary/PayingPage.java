@@ -157,17 +157,19 @@ public class PayingPage extends JPanel {
 
     //用户输入错误情况：1.没有输入姓名,此操作不会抛出exception
     //2.没有输入id或者输入id含有特殊字符，抛出NumberFormatException
-    public void cardNumWarning(){
+    public void infoIncompleteWarning(){
         JOptionPane.showMessageDialog(this, "Enter your card number please", "Exception occurs",JOptionPane.WARNING_MESSAGE);
     }
 
-    public void passwordWarning(){
-        JOptionPane.showMessageDialog(this, "Enter your password please", "Exception occurs",JOptionPane.WARNING_MESSAGE);
+    public void cardNumWarning(){
+        JOptionPane.showMessageDialog(this, "Invalid card number, please enter a number with 8 digit!", "Exception occurs",JOptionPane.WARNING_MESSAGE);
     }
 
-    public void nonExistWarning(){
-        JOptionPane.showMessageDialog(this, "Card number cannot match password, please try again", "Exception occurs",JOptionPane.WARNING_MESSAGE);
+    public void nonExistWarning(int invalidTimes){
+        JOptionPane.showMessageDialog(this, "Card number cannot match password, "+(5-invalidTimes)+" times remain.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
     }
+
+
     public void refresh(){
         textField_1.setText("");
         textField.setText("");
