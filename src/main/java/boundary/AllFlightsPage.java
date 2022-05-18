@@ -14,15 +14,32 @@ import java.util.ArrayList;
 
 public class AllFlightsPage extends JPanel{
 
-    private JPanel infoPanel;
+    //private JPanel infoPanel;
     private JTextArea curTex;
-    private JPanel buttonPanel;
-    private JPanel labelPanel;
-    private JButton confirm = new JButton();
-    private JButton withdraw = new JButton();
-    private JButton back = new JButton("Back");
+    //private JPanel buttonPanel;
+    //private JPanel labelPanel;
+    private JButton currentButton = null;
+    private JButton confirm = new JButton("confirm");
+    private JButton back = new JButton("back");
     protected ArrayList<JTextArea> texs = new ArrayList<JTextArea>();
+    private ArrayList<JButton> buttonList = new ArrayList<>();
     private JButton infoButton;
+
+    public JButton getCurrentButton() {
+        return currentButton;
+    }
+
+    public JButton getConfirm() {
+        return confirm;
+    }
+
+    public JButton getBack(){
+        return back;
+    }
+
+    public ArrayList<JButton> getButtonList(){
+        return buttonList;
+    }
     public AllFlightsPage() {
     }
 
@@ -33,7 +50,7 @@ public class AllFlightsPage extends JPanel{
         flights.add(new Flight());
         flights.add(new Flight());
         JFrame f = new JFrame();
-        f.setSize(new Dimension(500, 500));
+        f.setSize(new Dimension(1000, 900));
         AllFlightsPage a = new AllFlightsPage();
         a.render(flights);
         f.add(a);
@@ -44,7 +61,7 @@ public class AllFlightsPage extends JPanel{
         if (flightList == null) {
             JOptionPane.showMessageDialog(null, "Error", "No booked flight!", JOptionPane.ERROR_MESSAGE);
         }
-        this.setSize(new Dimension(500, 500));
+        this.setSize(new Dimension(1000, 900));
         this.setLayout(null);
         /*init TextArea*/
         Flight curFlight;
@@ -64,6 +81,7 @@ public class AllFlightsPage extends JPanel{
             infoButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    currentButton = (JButton)e.getSource();
                     JOptionPane.showMessageDialog(null, finalCurFlight.toString(), "Information", JOptionPane.INFORMATION_MESSAGE);
                 }
             });
@@ -74,12 +92,13 @@ public class AllFlightsPage extends JPanel{
             y2 = y2 + 500 / flightList.size();
             this.add(curTex);
             this.add(infoButton);
+            buttonList.add(infoButton);
         }
-        this.add(withdraw);
+        back.setBounds(200, 700, 100, 50);
+        confirm.setBounds(350,700,100,50);
         this.add(back);
         this.add(confirm);
         this.setVisible(true);
     }
-
 
 }

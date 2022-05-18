@@ -124,7 +124,7 @@ public class InitPage extends JFrame implements ActionListener {
 /////////////////////////////////////////////
         for(int i = 0; i < 10; i++){
             Seat s1 = new Seat();
-            s1.setOccupied(false);
+            s1.setOccupied(true);
             s1.setSeatLevel("A");
             seats.add(s1);
         }
