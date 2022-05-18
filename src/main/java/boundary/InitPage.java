@@ -285,6 +285,7 @@ public class InitPage extends JFrame implements ActionListener {
         if(e.getSource() == button_LoginByBookingNumPage_backToInit){
             pageChange(panel_InitPage);
             refresh();
+            see_type =1;
         }
         if(e.getSource()==button_LoginByBookingNum_withdraw){
             panel_LoginByBookingNumPage.refresh();
@@ -317,6 +318,7 @@ public class InitPage extends JFrame implements ActionListener {
                     panel_flightDetailPage.render(passenger,flight,bookingNum);
                     pageChange(panel_flightDetailPage);
                     invalidTimes = 0;
+                    see_type =1;
                 }
                 else{
                     panel_LoginByBookingNumPage.bookingNumNonExistWarning(invalidTimes++);
@@ -343,6 +345,7 @@ public class InitPage extends JFrame implements ActionListener {
         if(e.getSource()==button_LoginByNameId_backToInit){
             pageChange(panel_InitPage);
             refresh();
+            see_type =1;
         }
         // 属于LoginByNameId,撤销操作
         if(e.getSource()==button_LoginByNameId_withdraw){
@@ -373,6 +376,7 @@ public class InitPage extends JFrame implements ActionListener {
                     panel_UserInfoPage.render(passenger);
                     pageChange(panel_UserInfoPage);
                     invalidTimes = 0;
+                    see_type =1;
                 }
                 else{
                     panel_LoginByNameIdPage.passengerNonExistWarning(invalidTimes++);
@@ -473,8 +477,14 @@ public class InitPage extends JFrame implements ActionListener {
 
         //belongs to paying page, back
         if(e.getSource() == button_paying_back){
-            pageChange(panel_chooseSeat);
+            framePanel.setLayout(new BorderLayout());
+            panel_chooseSeat.render(seats, passenger);
+            framePanel.removeAll();
+            framePanel.repaint();
+            framePanel.add(panel_chooseSeat, BorderLayout.CENTER);
             panel_payingPage.refresh();
+            see_type =1;
+            invalidTimes = 0;
         }
         //belongs to paying page, confirm
         if(e.getSource() == button_paying_confirm){
@@ -497,6 +507,8 @@ public class InitPage extends JFrame implements ActionListener {
             if(isValid){
                 if(passengerController.isCardPinCorrect(cardNum,passenger.getPassengerId(),passenger.getSurname(),pin)){
 
+                    see_type =1;
+                    invalidTimes = 0;
                 }
                 else{
                     panel_payingPage.nonExistWarning(invalidTimes++);
@@ -507,6 +519,7 @@ public class InitPage extends JFrame implements ActionListener {
                         enteringTimesWarning();
                         refresh();
                         pageChange(panel_InitPage);
+                        see_type =1;
                         invalidTimes = 0;
                     }
 
