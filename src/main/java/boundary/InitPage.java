@@ -516,7 +516,7 @@ public class InitPage extends JFrame implements ActionListener {
             else{
                 try{
                     cardNum = Integer.parseInt(panel_payingPage.getCardNum());
-                    if(panel_payingPage.getCardNum().length()!=5){
+                    if(panel_payingPage.getCardNum().length()!=8){
                         throw new NumberFormatException();
                     }
                 }catch (NumberFormatException exception){
