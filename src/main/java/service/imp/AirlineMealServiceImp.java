@@ -45,6 +45,9 @@ public class AirlineMealServiceImp implements AirlineMealService {
     public Passenger update(Integer idDocument, Integer airlineId, Integer mealId) {
         Passenger passenger = passengerService.searchByIdDocument(idDocument);
         passenger.setMeal(mealId);
+        Passenger passenger_update = passenger;
+        passenger_update.setMeal(mealId);
+        passengerService.update(passenger_update);
         passengerService.toJSON();
         return passenger;
     }
