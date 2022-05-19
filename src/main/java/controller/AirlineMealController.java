@@ -19,7 +19,6 @@ public class AirlineMealController {
 
     public Passenger selectMeal(Integer idDocument, Integer airlineId, Integer mealId){
         Passenger passenger = airlineMealService.update(idDocument, airlineId, mealId);
-        System.out.println(passenger.toString());
         airlineMealService.toJSON();
         return  passenger;
     }

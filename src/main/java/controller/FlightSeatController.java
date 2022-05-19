@@ -20,7 +20,6 @@ public class FlightSeatController {
     //选座
     public Passenger selectSeat(Integer idDocument, Integer flightId, Integer seatNumber){
         Passenger passenger = flightSeatService.update(idDocument, flightId, seatNumber);
-        flightSeatService.toJSON();
         return passenger;
     }
     //展示所有座位
