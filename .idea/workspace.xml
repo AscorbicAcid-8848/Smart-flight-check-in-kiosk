@@ -79,19 +79,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.MockAllTest.testRefreshData">
-    <configuration name="AllFlightsPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="boundary.AllFlightsPage" />
-      <module name="XXXManagementSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="boundary.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Entrance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.Entrance" />
       <module name="XXXManagementSystem" />
@@ -116,6 +103,22 @@
       <option name="PACKAGE_NAME" value="controller" />
       <option name="MAIN_CLASS_NAME" value="controller.AirlineMealControllerTest" />
       <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightControllerTest.testChooseFlight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.FlightControllerTest" />
+      <option name="METHOD_NAME" value="testChooseFlight" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,10 +159,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MockAllTest.testRefreshData" />
+        <item itemvalue="JUnit.FlightControllerTest.testChooseFlight" />
         <item itemvalue="JUnit.AirlineMealControllerTest.testUpdate" />
         <item itemvalue="JUnit.FlightSeatControllerTest.testSelect" />
         <item itemvalue="Application.Entrance" />
-        <item itemvalue="Application.AllFlightsPage" />
       </list>
     </recent_temporary>
   </component>
