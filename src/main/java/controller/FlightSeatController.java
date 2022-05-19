@@ -15,7 +15,6 @@ import java.util.List;
  * @date 2022/4/30 21:24
  */
 public class FlightSeatController {
-    private PassengerService passengerService = new PassengerServiceImp();
 
     //选座
     public Passenger selectSeat(Integer idDocument, Integer flightId, Integer seatNumber){

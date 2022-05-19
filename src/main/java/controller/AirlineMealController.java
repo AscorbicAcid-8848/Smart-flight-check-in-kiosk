@@ -15,15 +15,16 @@ import java.util.List;
  * @date 2022/5/16 15:35
  */
 public class AirlineMealController {
-    private AirlineMealServiceImp airlineMealService = new AirlineMealServiceImp();
 
     public Passenger selectMeal(Integer idDocument, Integer airlineId, Integer mealId){
+        AirlineMealServiceImp airlineMealService = new AirlineMealServiceImp();
         Passenger passenger = airlineMealService.update(idDocument, airlineId, mealId);
         airlineMealService.toJSON();
         return  passenger;
     }
 
     public List<Meal> showMeals(Integer airlineId){
+        AirlineMealServiceImp airlineMealService = new AirlineMealServiceImp();
         List<Meal> mealList = airlineMealService.searchByAirlineId(airlineId).getMeals();
         return mealList;
     }

@@ -20,12 +20,11 @@ import java.util.List;
  */
 //这是我的登机牌controller
 public class BoardingPassController {
-    private FlightController flightController = new FlightController();
-    private FlightService flightService = new FlightServiceImp();
-    private PassengerService passengerService = new PassengerServiceImp();
-    private IdDocumentCardService idDocumentCardService = new IdDocumentCardServiceImp();
 
     public BoardingPass checkPassenger(Integer bookingNumber){
+        FlightController flightController = new FlightController();
+        PassengerService passengerService = new PassengerServiceImp();
+        IdDocumentCardService idDocumentCardService = new IdDocumentCardServiceImp();
         Passenger passenger = passengerService.searchByBookingNumber(bookingNumber);
         Flight currentFlight = flightController.getByBookingNumber(bookingNumber);
         if(currentFlight==null){
@@ -34,6 +33,9 @@ public class BoardingPassController {
         return returnBoardingPass(currentFlight,passenger);
     }
     public BoardingPass checkPassenger(String surname, Integer passengerId){
+        FlightController flightController = new FlightController();
+        PassengerService passengerService = new PassengerServiceImp();
+        IdDocumentCardService idDocumentCardService = new IdDocumentCardServiceImp();
         Passenger passenger = passengerService.searchBySurnameAndPassengerId(surname,passengerId);
         List<Flight> flightList = flightController.getBySurnameAndPassengerId(surname, passengerId);
         Flight currentFlight = new Flight();
@@ -48,6 +50,9 @@ public class BoardingPassController {
         return returnBoardingPass(currentFlight,passenger);
     }
     public BoardingPass checkPassenger(){
+        FlightController flightController = new FlightController();
+        PassengerService passengerService = new PassengerServiceImp();
+        IdDocumentCardService idDocumentCardService = new IdDocumentCardServiceImp();
         IdDocumentCard idDocumentCard = idDocumentCardService.checkCard();
         Passenger passenger = passengerService.searchByIdDocument(idDocumentCard.getId());
         List<Flight> flightList = flightController.getByIdDocument(idDocumentCard);
