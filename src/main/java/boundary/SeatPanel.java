@@ -29,6 +29,8 @@ public class SeatPanel extends JPanel implements ActionListener{
     JButton withdraw;
     JButton back;
 
+    int i = 1;
+
     int lastSeatNum = -1;
     public SeatPanel(){
         int count = 0;
@@ -102,6 +104,7 @@ public class SeatPanel extends JPanel implements ActionListener{
                 if(e.getSource() == confirm){
                     if(passenger.getSeatLevel() == null || passenger.getSeatNumber() == null || passenger.getSeatNumber() < 0){
                         JOptionPane.showMessageDialog(null, "You haven't choose your seat yet.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
+                        i=0;
                         return;
                     }
                 }

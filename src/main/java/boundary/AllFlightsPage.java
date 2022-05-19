@@ -78,13 +78,13 @@ public class AllFlightsPage extends JPanel{
                     "\n Delay status: " + curFlight.isDelayed());
             texs.add(curTex);
             Flight finalCurFlight = curFlight;
-            infoButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    currentButton = (JButton)e.getSource();
-                    JOptionPane.showMessageDialog(null, finalCurFlight.toString(), "Information", JOptionPane.INFORMATION_MESSAGE);
-                }
-            });
+//            infoButton.addActionListener(new ActionListener() {
+//                @Override
+//                public void actionPerformed(ActionEvent e) {
+//                    currentButton = (JButton)e.getSource();
+//                    JOptionPane.showMessageDialog(null, finalCurFlight.toString(), "Information", JOptionPane.INFORMATION_MESSAGE);
+//                }
+//            });
             curTex.setBounds(x1, y1, 150, 70);
             curTex.setEditable(false);
             infoButton.setBounds(x2, y2, 100, 50);

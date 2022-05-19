@@ -20,6 +20,7 @@ public class PayingPage extends JPanel {
     private JButton CertBut;
     private JButton withdraw;
     private JToggleButton see;
+    private int see_type =1;
     /**
      * Create the panel.
      */
@@ -115,6 +116,18 @@ public class PayingPage extends JPanel {
         see.setFocusPainted(false);
         IDInput.add(textField_1);
         IDInput.add(see);
+        see.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == see){
+                    see_type = -see_type;
+                    if(see_type==-1)
+                        setId().setEchoChar('\0');
+                    else if(see_type ==1)
+                        setId().setEchoChar('*');
+                }
+            }
+        });
 
 
         JPanel WestEdge = new JPanel();

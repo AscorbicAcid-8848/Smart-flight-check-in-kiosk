@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="输入paying信息成功后的操作没有，meal和seat 不完整, 脱敏有bug">
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="输入paying信息成功后的操作没有，meal和seat 完整, 脱敏有bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/flightSeatList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/flightSeatList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/passengerList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/passengerList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/idDocumentCard/idDocumentCard.json" beforeDir="false" afterPath="$PROJECT_DIR$/idDocumentCard/idDocumentCard.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByNameIdPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByNameIdPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/PayingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/PayingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/PayingPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/PayingPage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/PayingPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/PayingPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" afterDir="false" />
     </list>
@@ -65,7 +72,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/boundary" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/idDocumentCard" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -74,9 +81,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\idDocumentCard" />
+      <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\target\classes\boundary" />
       <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\target\classes\boundary" />
       <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\src\main\java\boundary" />
-      <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\target\classes\boundary" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\src\main\resources" />
@@ -172,6 +180,7 @@
       <workItem from="1652621461491" duration="6915000" />
       <workItem from="1652666283485" duration="3630000" />
       <workItem from="1652804936041" duration="177000" />
+      <workItem from="1652944045617" duration="2626000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -334,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652878913836</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="输入paying信息成功后的操作没有，meal和seat 完整, 脱敏有bug">
+      <created>1652888880474</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1652888880474</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +384,7 @@
     <MESSAGE value="脱敏显示没有应用在所有页面" />
     <MESSAGE value="输入paying信息成功后的操作没有，meal和seat 不完整" />
     <MESSAGE value="输入paying信息成功后的操作没有，meal和seat 不完整, 脱敏有bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="输入paying信息成功后的操作没有，meal和seat 不完整, 脱敏有bug" />
+    <MESSAGE value="输入paying信息成功后的操作没有，meal和seat 完整, 脱敏有bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="输入paying信息成功后的操作没有，meal和seat 完整, 脱敏有bug" />
   </component>
 </project>
