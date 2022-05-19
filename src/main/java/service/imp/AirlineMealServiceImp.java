@@ -2,7 +2,10 @@ package service.imp;
 
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import mock.AirlineMealMock;
+import mock.AirlineMock;
 import model.AirLineMeal;
+import model.Airline;
 import model.FlightSeat;
 import model.Passenger;
 import service.AirlineMealService;
@@ -71,5 +74,14 @@ public class AirlineMealServiceImp implements AirlineMealService {
             return null;
         }
 
+    }
+
+    public void toJSON(){
+        AirlineMealMock airlineMealMock = new AirlineMealMock();
+        try {
+            airlineMealMock.toJSON((ArrayList<AirLineMeal>) airLineMeals, false);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }

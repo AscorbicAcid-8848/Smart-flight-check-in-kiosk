@@ -2,6 +2,9 @@ package service.imp;
 
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import mock.AirlineMealMock;
+import mock.FlightSeatMock;
+import model.AirLineMeal;
 import model.FlightSeat;
 import model.Passenger;
 import service.FlightSeatService;
@@ -93,6 +96,14 @@ public class FlightSeatServiceImp implements FlightSeatService {
             System.out.println("No result");
             return null;
         }
+    }
 
+    public void toJSON(){
+        FlightSeatMock flightSeatMock = new FlightSeatMock();
+        try {
+            flightSeatMock.toJSON((ArrayList<FlightSeat>) flightSeats, false);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }

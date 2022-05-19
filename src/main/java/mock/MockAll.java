@@ -1,33 +1,33 @@
-package mock;
-
-import junit.framework.TestCase;
-import org.junit.Test;
+package mock;/**
+ * @author Zihao Ye
+ * @version 1.0
+ */
 
 import java.io.IOException;
 
 /**
- * @author YichenLiu
- * @description:
- * @date 2022/5/19 17:18
+ * @projectName: workspace.xml
+ * @package: mock
+ * @className: MockAll
+ * @author: Zihao YE
+ * @description: TODO
+ * @date: 2022/5/19 18:23
+ * @version: 1.0
  */
-public class MockAll extends TestCase {
+public class MockAll {
 
-    @Test
     public void refreshData(){
+
         PassengerMock passengerMock = new PassengerMock();
-        IdDocumentCardMock idDocumentCardMock = new IdDocumentCardMock();
         FlightSeatMock flightSeatMock = new FlightSeatMock();
         FlightMock flightMock = new FlightMock();
         AirlineMock airlineMock = new AirlineMock();
         AirlineMealMock airlineMealMock = new AirlineMealMock();
+
         try {
             //passenger
             passengerMock.toJSON(null,true);
-            //idDocumentCard
-            idDocumentCardMock.toJSON(1111,"Zihao Ye");
-            idDocumentCardMock.toJSON(2222,"Yichen Liu");
-            idDocumentCardMock.toJSON(3333,"Ran Xu");
-            idDocumentCardMock.toJSON(4444,"Zhihan Zhang");
+
             //seat
             flightSeatMock.toJSON(null,true);
             //flight
@@ -40,4 +40,5 @@ public class MockAll extends TestCase {
             e.printStackTrace();
         }
     }
+
 }
