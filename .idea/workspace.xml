@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="数据更新已找到问题，下一步：一键更新+toJSON补全">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mock/MockAll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mock/MockAllTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/airlineList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/airlineList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/AirlineMealServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/AirlineMealServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/MockAll.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/AirlineMealServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/imp/AirlineMealServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/imp/FlightSeatServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/imp/FlightSeatServiceImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/FlightSeatServiceImpTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/service/imp/FlightSeatServiceImpTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="数据更新已找到问题，下一步：一键更新+toJSON补全" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,6 +199,7 @@
       <workItem from="1652804936041" duration="177000" />
       <workItem from="1652949594276" duration="2916000" />
       <workItem from="1652955525004" duration="442000" />
+      <workItem from="1652956000387" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
