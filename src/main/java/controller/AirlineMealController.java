@@ -15,11 +15,12 @@ import java.util.List;
  * @date 2022/5/16 15:35
  */
 public class AirlineMealController {
-    private AirlineMealService airlineMealService = new AirlineMealServiceImp();
-    private PassengerService passengerService = new PassengerServiceImp();
+    private AirlineMealServiceImp airlineMealService = new AirlineMealServiceImp();
 
     public Passenger selectMeal(Integer idDocument, Integer airlineId, Integer mealId){
-        return  airlineMealService.update(idDocument, airlineId, mealId);
+        Passenger passenger = airlineMealService.update(idDocument, airlineId, mealId);
+        airlineMealService.toJSON();
+        return  passenger;
     }
 
     public List<Meal> showMeals(Integer airlineId){

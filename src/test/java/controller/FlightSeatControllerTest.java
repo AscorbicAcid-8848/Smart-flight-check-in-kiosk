@@ -14,14 +14,12 @@ import java.util.List;
  * @description: TODO
  * @date 2022/4/30 21:24
  */
-public class FlightSeatController {
+public class FlightSeatControllerTest {
     private PassengerService passengerService = new PassengerServiceImp();
-    private FlightSeatServiceImp flightSeatService = new FlightSeatServiceImp();
+    private FlightSeatService flightSeatService = new FlightSeatServiceImp();
     //选座
     public Passenger selectSeat(Integer idDocument, Integer flightId, Integer seatNumber){
-        Passenger passenger = flightSeatService.update(idDocument, flightId, seatNumber);
-        flightSeatService.toJSON();
-        return passenger;
+        return flightSeatService.update(idDocument, flightId, seatNumber);
     }
     //展示所有座位
     public List<Seat> showSeats(Integer flightId){
