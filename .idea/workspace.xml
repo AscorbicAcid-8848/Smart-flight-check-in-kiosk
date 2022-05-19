@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="输入paying信息成功后的操作没有，meal和seat 不完整">
-      <change afterPath="$PROJECT_DIR$/src/test/java/controller/AirlineMealControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/controller/FlightControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/controller/FlightSeatControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mock/MockAll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="数据更新已找到问题，下一步：一键更新+toJSON补全">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AirlineMealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AirlineMealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/FlightController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mock/MockAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mock/MockAll.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,20 +78,7 @@
       <recent name="boundary" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FlightMockTest.toJSON">
-    <configuration name="Entrance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="boundary.Entrance" />
-      <module name="XXXManagementSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="boundary.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MockAll.refreshData">
     <configuration name="AirlineMealControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="XXXManagementSystem" />
       <extension name="coverage">
@@ -163,13 +142,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MockAll.refreshData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mock" />
+      <option name="MAIN_CLASS_NAME" value="mock.MockAll" />
+      <option name="METHOD_NAME" value="refreshData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MockAll.refreshData" />
         <item itemvalue="JUnit.FlightMockTest.toJSON" />
         <item itemvalue="JUnit.FlightControllerTest.testChooseFlight" />
         <item itemvalue="JUnit.AirlineMealControllerTest.testUpdate" />
         <item itemvalue="JUnit.AirlineMealControllerTest" />
-        <item itemvalue="Application.Entrance" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +190,7 @@
       <workItem from="1652621461491" duration="6915000" />
       <workItem from="1652666283485" duration="3630000" />
       <workItem from="1652804936041" duration="177000" />
-      <workItem from="1652949594276" duration="2275000" />
+      <workItem from="1652949594276" duration="2916000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -351,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652865211800</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="数据更新已找到问题，下一步：一键更新+toJSON补全">
+      <created>1652951939392</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1652951939392</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,6 +386,7 @@
     <MESSAGE value="加入选餐页面，选座页面，所有航班页面" />
     <MESSAGE value="脱敏显示没有应用在所有页面" />
     <MESSAGE value="输入paying信息成功后的操作没有，meal和seat 不完整" />
-    <option name="LAST_COMMIT_MESSAGE" value="输入paying信息成功后的操作没有，meal和seat 不完整" />
+    <MESSAGE value="数据更新已找到问题，下一步：一键更新+toJSON补全" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据更新已找到问题，下一步：一键更新+toJSON补全" />
   </component>
 </project>
