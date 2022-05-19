@@ -29,8 +29,6 @@ public class ChooseMealPage extends JPanel {
 
     JButton withdraw;
 
-    ArrayList<String> testing = new ArrayList<>();
-
 
     public ChooseMealPage() {
 
@@ -45,16 +43,11 @@ public class ChooseMealPage extends JPanel {
         this.add(panelBot);
 
         confirm = new JButton("Confirm");
-        back = new JButton("Back to init");
-        confirm = new JButton("Confirm");
+        back = new JButton("Back");
         withdraw = new JButton("Withdraw");
 
         AirlineLogo = new JLabel("");
 
-        testing.add("Meal1");
-        testing.add("Meal2");
-        testing.add("Meal3");
-        testing.add("Meal4");
 
         chooseBox = new JComboBox();
 
@@ -69,6 +62,7 @@ public class ChooseMealPage extends JPanel {
     }
 
     public void render(ArrayList<Meal> meals, Integer airlineID){
+        chooseBox.removeAllItems();
 
         chooseBox.addItem(makeObj(""));
 

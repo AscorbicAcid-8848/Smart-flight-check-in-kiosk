@@ -42,7 +42,6 @@ public class FinalConfirmPage extends JPanel {
 
 
     //buttons
-    private JButton button_back;
     private JButton button_confirm;
 
     //labels
@@ -63,7 +62,6 @@ public class FinalConfirmPage extends JPanel {
         panel_mid = new JPanel();
         panel_bot = new JPanel();
 
-        button_back = new JButton("Go Back");
         button_confirm = new JButton("Confirm");
 
         this.setLayout(new GridLayout(3,1,0,20));
@@ -86,22 +84,18 @@ public class FinalConfirmPage extends JPanel {
         panel_mid.add(seatNumber);
         panel_mid.add(meal);
 
-        panel_bot.add(button_back);
         panel_bot.add(button_confirm);
 
 
     }
     //获取button，由initpage调用，在initpage实现监听
-    public JButton getButton_back() {
-        return button_back;
-    }
     public JButton getButton_confirm() {
         return button_confirm;
     }
 
 
-    public void render(Passenger passenger,Flight flight){
-        label_top_first.setText("Dear"+passenger.getSurname()+", with booking number "+passenger.getBookingNumber()+",");
+    public void render(Passenger passenger,Flight flight,String mealName){
+        label_top_first.setText("Dear"+passenger.getSurname()+",");
         label_top_second.setText("Please check your information of your flight: "+flight.getFlightName());
         departureTime.setText("Departure Time: "+flight.getDepartureTime());
         departureGate.setText("Departure Gate: "+flight.getDepartureGate());
@@ -109,10 +103,14 @@ public class FinalConfirmPage extends JPanel {
         arrivalGate_terminal.setText("Arrival Airport&Terminal:  "+flight.getArrivalAirport()+" Terminal"+ flight.getArrivalTerminal());
         seatLevel.setText("Seat Level: "+passenger.getSeatLevel());
         seatNumber.setText("Seat Number: "+passenger.getSeatNumber());
-        meal.setText("Meal: "+passenger.getMeal());
+        meal.setText("Meal: "+mealName);
         //destWeather.setText("Destination Weather: "+flight.getDestWeather());
         //COVIDPolicy.setText("Destination COVID Policy: "+flight.getDestCOVIDPolicy());
         //delayState.setText(flight.isDelayed() ? "Delay State: Delayed":"Delay State: No Delay");
+    }
+    public void FinishNotification(){
+        JOptionPane.showMessageDialog(this, "You have confirmed the check-in, your boarding pass, baggage tag and ticket will be printed", "Have a nice trip",JOptionPane.DEFAULT_OPTION);
+
     }
 
 

@@ -113,12 +113,19 @@ public class InitPage extends JFrame implements ActionListener {
     //all flights page
     private AllFlightsPage panel_allFlights;
     private ArrayList<JButton> flightButtons;
-    private JButton flightChosenButton;
+
+    //final confirm page
+    private FinalConfirmPage panel_finalConfirm;
+    private JButton button_finalConfirm;
+
 
 
 
 
     private int invalidTimes = 0;
+    private Integer bookingNum = null;
+    private boolean loginViaBookingNum = false;
+
     public InitPage(){//此方法作用：初始化Frame 及framePanel，不作对于panel的修改
 /////////////////////////////////////////////
         for(int i = 0; i < 10; i++){
@@ -241,6 +248,12 @@ public class InitPage extends JFrame implements ActionListener {
 
         panel_allFlights = new AllFlightsPage();
 
+
+        panel_finalConfirm = new FinalConfirmPage();
+        button_finalConfirm = panel_finalConfirm.getButton_confirm();
+        button_finalConfirm.addActionListener(this);
+
+
     }
 
     @Override
@@ -248,7 +261,7 @@ public class InitPage extends JFrame implements ActionListener {
 
         ///////////////////////////去往用bookingNum登录页面
         if(e.getSource() == button_bookNum){
-
+            loginViaBookingNum = true;
             pageChange(panel_LoginByBookingNumPage);
         }//属于LoginByBookingNum,返回到最高级
         if(e.getSource() == button_LoginByBookingNumPage_backToInit){
@@ -262,7 +275,7 @@ public class InitPage extends JFrame implements ActionListener {
         //在前往FlightDetailPage之前，渲染界面。
         if(e.getSource() == button_LoginByBookingNumPage_next){
             boolean isValid = true;
-            Integer bookingNum = null;
+
             if(Objects.equals(panel_LoginByBookingNumPage.getBookingNum(), "")){
                 isValid = false;
                 panel_LoginByBookingNumPage.bookingNumWarning();
@@ -415,8 +428,20 @@ public class InitPage extends JFrame implements ActionListener {
         }
         ////////////属于FlightDetailPage
         if(e.getSource() == button_flightDetailPage_back){
-            pageChange(panel_InitPage);
-            refresh();
+            if(loginViaBookingNum){
+                pageChange(panel_InitPage);
+                refresh();
+            }
+
+            else{
+                framePanel.setLayout(new BorderLayout());
+                panel_allFlights.render((ArrayList<Flight>) flightController.getBySurnameAndPassengerId(passenger.getSurname(),passenger.getPassengerId()));
+                framePanel.removeAll();
+                framePanel.repaint();
+                framePanel.add(panel_allFlights, BorderLayout.CENTER);
+                framePanel.validate();
+            }
+
         }//属于FlightDetailPage, to choosingMealPage
         if(e.getSource() == button_flightDetailPage_confirm){
             panel_chooseMealPage.render((ArrayList<Meal>)airlineMealController.showMeals(flight.getAirlineId()), 1);
@@ -424,8 +449,8 @@ public class InitPage extends JFrame implements ActionListener {
         }
         //////////////belongs to chooseMealPage, to origin
         if(e.getSource() == button_chooseMealPage_back){
-            pageChange(panel_InitPage);
-            refresh();
+            panel_flightDetailPage.render(passenger,flight,bookingNum);
+            pageChange(panel_flightDetailPage);
         }//////belongs to chooseMealPage, withdraw
         if(e.getSource() == button_chooseMealPage_withdraw){
             panel_chooseMealPage.withdraw();
@@ -438,6 +463,8 @@ public class InitPage extends JFrame implements ActionListener {
             else {
                 meal = airlineMealController.showMeals(flight.getAirlineId()).get(panel_chooseMealPage.getMeal()-1);
                 framePanel.setLayout(new BorderLayout());
+                airlineMealController.selectMeal(passenger.getIdDocument(),flight.getAirlineId(),meal.getMealId());
+
                 seats = (ArrayList<Seat>)flightSeatController.showSeats(flight.getFlightId());
                 panel_chooseSeat.render(seats, passenger);
                 framePanel.removeAll();
@@ -463,13 +490,6 @@ public class InitPage extends JFrame implements ActionListener {
 
                 framePanel.setLayout(new FlowLayout());
                 pageChange(panel_payingPage);
-//            }
-//            else{
-//                panel_chooseSeat.render(seats, passenger);
-//                framePanel.removeAll();
-//                framePanel.repaint();
-//                framePanel.add(panel_chooseSeat, BorderLayout.CENTER);
-//            }
         }
 
         //belongs to paying page, back
@@ -487,21 +507,30 @@ public class InitPage extends JFrame implements ActionListener {
             boolean isValid = true;
             Integer cardNum = null;
             String pin = null;
-            if(panel_payingPage.getCardNum() == ""||(pin = panel_payingPage.getPassword()) == "")
+            if(Objects.equals(panel_payingPage.getCardNum(), "") || Objects.equals(pin = panel_payingPage.getPassword(), ""))
             {
                 panel_payingPage.infoIncompleteWarning();
                 pageChange(panel_payingPage);
                 isValid = false;
             }
-            try{
-                cardNum = Integer.parseInt(panel_payingPage.getCardNum());
-            }catch (NumberFormatException exception){
-                panel_payingPage.cardNumWarning();
-                pageChange(panel_payingPage);
-                isValid = false;
+            else{
+                try{
+                    cardNum = Integer.parseInt(panel_payingPage.getCardNum());
+                    if(panel_payingPage.getCardNum().length()!=5){
+                        throw new NumberFormatException();
+                    }
+                }catch (NumberFormatException exception){
+                    panel_payingPage.cardNumWarning();
+                    pageChange(panel_payingPage);
+                    isValid = false;
+                }
             }
+
             if(isValid){
                 if(passengerController.isCardPinCorrect(cardNum,passenger.getPassengerId(),passenger.getSurname(),pin)){
+                    panel_payingPage.PayNotification(meal.getMealCost()+seats.get(panel_chooseSeat.resultSeatNumber()).getSeatCost());
+                    panel_finalConfirm.render(passenger,flight,meal.getMealName());
+                    pageChange(panel_finalConfirm);
 
                     invalidTimes = 0;
                 }
@@ -516,11 +545,12 @@ public class InitPage extends JFrame implements ActionListener {
                         pageChange(panel_InitPage);
                         invalidTimes = 0;
                     }
-
                 }
-
             }
-
+        }//属于finalconfirm页面，点击后结束程序。
+        if(e.getSource() == button_finalConfirm){
+            panel_finalConfirm.FinishNotification();
+            System.exit(1);
         }
     }
 
@@ -544,6 +574,8 @@ public class InitPage extends JFrame implements ActionListener {
         boardingPass = new BoardingPass();
         idDocument = new IdDocumentCard();
         flight = new Flight();
+
+        loginViaBookingNum = false;
     }
     public void enteringTimesWarning(){
         JOptionPane.showMessageDialog(this, "Entered more than 5 times, system will init again", "Exception occurs",JOptionPane.WARNING_MESSAGE);
