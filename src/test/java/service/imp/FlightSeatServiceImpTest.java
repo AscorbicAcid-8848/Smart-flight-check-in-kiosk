@@ -21,7 +21,7 @@ public class FlightSeatServiceImpTest {
         Passenger passenger = new Passenger();
         FlightSeat flightSeat = new FlightSeat();
 
-        passenger = flightSeatServiceImp.update(1111,100,1,"fir");
+        passenger = flightSeatServiceImp.update(1111,100,1);
         System.out.println(passenger.toString());
 
 

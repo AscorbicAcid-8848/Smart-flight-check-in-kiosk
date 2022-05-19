@@ -6,8 +6,10 @@ package model;
  * @date 2022/3/16 16:29
  */
 //还是需要的，就把他当作身份证来用，主要是让controller体现多态
-public class IdDocument {
+public class IdDocumentCard {
     private Integer id;
+
+    public IdDocumentCard() {}
 
     public Integer getId() {
         return id;

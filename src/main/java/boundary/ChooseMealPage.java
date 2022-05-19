@@ -1,5 +1,7 @@
 package boundary;
 
+import model.Meal;
+
 import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
@@ -66,12 +68,12 @@ public class ChooseMealPage extends JPanel {
 
     }
 
-    public void render(ArrayList<String> meals, Integer airlineID){
+    public void render(ArrayList<Meal> meals, Integer airlineID){
 
         chooseBox.addItem(makeObj(""));
 
-        for (String meal : meals) {
-            chooseBox.addItem(makeObj(meal));
+        for (Meal meal : meals) {
+            chooseBox.addItem(makeObj(meal.getMealName()));
         }
         ImageIcon easternAirline= new ImageIcon("src/main/java/boundary/images/easternAirline.jpg");
         easternAirline.setImage(easternAirline.getImage().getScaledInstance(200,100,1));
@@ -101,8 +103,11 @@ public class ChooseMealPage extends JPanel {
     public JButton getWithdraw() {
         return withdraw;
     }
-    public String getMeal(){
-        return (String) chooseBox.getSelectedItem();
+    public int getMeal(){
+        return chooseBox.getSelectedIndex();
+    }
+    public void mealNotChosenWarning(){
+        JOptionPane.showMessageDialog(this, "You haven't choose your meal yet.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
     }
 
 

@@ -1,5 +1,6 @@
 package boundary;
 
+import controller.AirlineMealController;
 import controller.BoardingPassController;
 import controller.FlightController;
 import controller.PassengerController;
@@ -15,9 +16,6 @@ import java.util.Objects;
 
 public class InitPage extends JFrame implements ActionListener {
 
-
-    ///////////////////testing, constructor 里面进行初始化
-    ArrayList<String> testing = new ArrayList<>();
     //////////////////testing, constructor 里面进行初始化
     ArrayList<Seat> seats = new ArrayList<Seat>();
 
@@ -32,7 +30,9 @@ public class InitPage extends JFrame implements ActionListener {
     //此次登录的航班对象
     private Flight flight = new Flight();
     //此次登录的Id doc
-    private IdDocument idDocument = new IdDocument();
+    private IdDocumentCard idDocument = new IdDocumentCard();
+    //此次登录的meal
+    private Meal meal = new Meal();
 
     //controllers
     //BoardingPassController
@@ -47,6 +47,8 @@ public class InitPage extends JFrame implements ActionListener {
     //PassengerController
     //检查乘客存不存在
     PassengerController passengerController = new PassengerController();
+
+    AirlineMealController airlineMealController = new AirlineMealController();
 
     //最高级panel：所有页面的容器
     private JPanel framePanel;
@@ -73,6 +75,7 @@ public class InitPage extends JFrame implements ActionListener {
     //LoginByIdDocPage
     private LoginByIdDocPage panel_LoginByIdDocPage;
     private JButton button_LoginByIdDocPage_backToInit;
+    private JButton button_LoginByIdDoc_login;
 
     //LoginByBookingNumPage
     private LoginByBookingNumPage panel_LoginByBookingNumPage;
@@ -84,6 +87,7 @@ public class InitPage extends JFrame implements ActionListener {
     //UserInfoPage
     private UserInfoPage panel_UserInfoPage;
     private JButton button_userinfo_backToInit;
+    private JButton button_userinfo_next;
 
     //flight detail page
     private FlightDetailPage panel_flightDetailPage;
@@ -99,16 +103,24 @@ public class InitPage extends JFrame implements ActionListener {
     //choose seat page
     private SeatPanel panel_chooseSeat;
     private JButton button_chooseSeat_confirm;
+    private JButton button_chooseSeat_back;
+    //private JButton button_chooseSeat_withdraw;
+
+    //paying page
+    private PayingPage panel_payingPage;
+    private JButton button_paying_confirm;
+    private JButton button_paying_back;
+    private JToggleButton button_paying_see;
+
+    //all flights page
+    private AllFlightsPage panel_allFlights;
+    private ArrayList<JButton> flightButtons;
+
 
 
 
     private int invalidTimes = 0;
     public InitPage(){//此方法作用：初始化Frame 及framePanel，不作对于panel的修改
-//////////////////////////////////////////////
-        testing.add("Meal1");
-        testing.add("Meal2");
-        testing.add("Meal3");
-        testing.add("Meal4");
 /////////////////////////////////////////////
         for(int i = 0; i < 10; i++){
             Seat s1 = new Seat();
@@ -176,7 +188,9 @@ public class InitPage extends JFrame implements ActionListener {
     public void setOtherPages(){//实例化每一个界面的panel对象，以及拿到对应panel里面的按钮，并给按钮绑定事件
         panel_UserInfoPage = new UserInfoPage();
         button_userinfo_backToInit = panel_UserInfoPage.getButton_backToInit();
+        button_userinfo_next = panel_UserInfoPage.getButton_next();
         button_userinfo_backToInit.addActionListener(this);
+        button_userinfo_next.addActionListener(this);
 
         panel_LoginByNameIdPage = new LoginByNameIdPage();
         button_LoginByNameId_backToInit = panel_LoginByNameIdPage.getButton_backToInit();
@@ -191,6 +205,8 @@ public class InitPage extends JFrame implements ActionListener {
         
         panel_LoginByIdDocPage = new LoginByIdDocPage();
         button_LoginByIdDocPage_backToInit = panel_LoginByIdDocPage.getButton_backToInit();
+        button_LoginByIdDoc_login = panel_LoginByIdDocPage.getLogin();
+        button_LoginByIdDoc_login.addActionListener(this);
         button_LoginByIdDocPage_backToInit.addActionListener(this);
 
         panel_LoginByBookingNumPage = new LoginByBookingNumPage();
@@ -219,6 +235,21 @@ public class InitPage extends JFrame implements ActionListener {
 
         panel_chooseSeat = new SeatPanel();
         panel_chooseSeat.setLayout(null);
+        button_chooseSeat_confirm = panel_chooseSeat.getConfirm();
+        button_chooseSeat_back = panel_chooseSeat.getBack();
+        button_chooseSeat_back.addActionListener(this);
+        button_chooseSeat_confirm.addActionListener(this);
+
+        panel_payingPage = new PayingPage();
+        button_paying_confirm = panel_payingPage.getButton_confirm();
+        button_paying_back = panel_payingPage.getButton_back();
+        button_paying_see = panel_payingPage.getButton_see();
+        button_paying_back.addActionListener(this);
+        button_paying_confirm.addActionListener(this);
+        button_paying_see.addActionListener(this);
+
+
+        panel_allFlights = new AllFlightsPage();
 
     }
 
@@ -238,6 +269,14 @@ public class InitPage extends JFrame implements ActionListener {
             else if(see_type ==1)
                 panel_LoginByBookingNumPage.setId().setEchoChar('*');
         }
+        if(e.getSource() == button_paying_see){
+            see_type = -see_type;
+            if(see_type==-1)
+                panel_payingPage.setId().setEchoChar('\0');
+            else if(see_type ==1)
+                panel_payingPage.setId().setEchoChar('*');
+        }
+
         ///////////////////////////去往用bookingNum登录页面
         if(e.getSource() == button_bookNum){
 
@@ -246,6 +285,7 @@ public class InitPage extends JFrame implements ActionListener {
         if(e.getSource() == button_LoginByBookingNumPage_backToInit){
             pageChange(panel_InitPage);
             refresh();
+            see_type =1;
         }
         if(e.getSource()==button_LoginByBookingNum_withdraw){
             panel_LoginByBookingNumPage.refresh();
@@ -270,11 +310,7 @@ public class InitPage extends JFrame implements ActionListener {
                     isValid = false;
                     panel_LoginByBookingNumPage.bookingNumFormatWarning();
                 }
-
-
             }
-
-
             if(isValid){
                 if(boardingPassController.checkPassenger(bookingNum)!=null){
                     passenger = boardingPassController.checkPassenger(bookingNum).getPassenger();
@@ -282,6 +318,7 @@ public class InitPage extends JFrame implements ActionListener {
                     panel_flightDetailPage.render(passenger,flight,bookingNum);
                     pageChange(panel_flightDetailPage);
                     invalidTimes = 0;
+                    see_type =1;
                 }
                 else{
                     panel_LoginByBookingNumPage.bookingNumNonExistWarning(invalidTimes++);
@@ -308,6 +345,7 @@ public class InitPage extends JFrame implements ActionListener {
         if(e.getSource()==button_LoginByNameId_backToInit){
             pageChange(panel_InitPage);
             refresh();
+            see_type =1;
         }
         // 属于LoginByNameId,撤销操作
         if(e.getSource()==button_LoginByNameId_withdraw){
@@ -315,7 +353,6 @@ public class InitPage extends JFrame implements ActionListener {
         }
         //属于LoginByNameId,确定登录,之后进入UserInfoPage
         //在前往userInfoPage之前，渲染界面。
-        //to be added: 检查数据库里面有没有这个人，如果没有，不能通过。
         if(e.getSource()==button_LoginByNameId_confirm){
             boolean isValid = true;
             String surname;
@@ -339,10 +376,10 @@ public class InitPage extends JFrame implements ActionListener {
                     panel_UserInfoPage.render(passenger);
                     pageChange(panel_UserInfoPage);
                     invalidTimes = 0;
+                    see_type =1;
                 }
                 else{
                     panel_LoginByNameIdPage.passengerNonExistWarning(invalidTimes++);
-
                     if(invalidTimes<=5)
                         pageChange(panel_LoginByNameIdPage);
                     else
@@ -351,13 +388,21 @@ public class InitPage extends JFrame implements ActionListener {
                         refresh();
                         pageChange(panel_InitPage);
                         invalidTimes = 0;
-
                     }
                 }
             }
-
             else
                 pageChange(panel_LoginByNameIdPage);
+        }
+        // userinfo page, click "check my flights" to check all flights.
+
+        if(e.getSource()==button_userinfo_next){
+            framePanel.setLayout(new BorderLayout());
+            panel_allFlights.render((ArrayList<Flight>) flightController.getBySurnameAndPassengerId(passenger.getSurname(),passenger.getPassengerId()));
+            framePanel.removeAll();
+            framePanel.repaint();
+            framePanel.add(panel_allFlights, BorderLayout.CENTER);
+            framePanel.validate();
         }
 
         ////////////////////////////去往 扫描界面
@@ -368,6 +413,18 @@ public class InitPage extends JFrame implements ActionListener {
         if(e.getSource()==button_LoginByIdDocPage_backToInit){
             pageChange(panel_InitPage);
             refresh();
+        }
+        //属于LoginByIdDocPage, login
+        if(e.getSource()==button_LoginByIdDoc_login){
+            if((passenger = boardingPassController.checkPassenger().getPassenger())==null){
+                panel_LoginByIdDocPage.loginFailedWarning();
+                pageChange(panel_LoginByIdDocPage);
+            }
+            else{
+                panel_LoginByIdDocPage.loginSuccessDialog();
+                panel_UserInfoPage.render(passenger);
+                pageChange(panel_UserInfoPage);
+            }
         }
         //属于UserInfoPage,返回最高级
         if(e.getSource() == button_userinfo_backToInit){
@@ -380,8 +437,8 @@ public class InitPage extends JFrame implements ActionListener {
             refresh();
         }//属于FlightDetailPage, to choosingMealPage
         if(e.getSource() == button_flightDetailPage_confirm){
+            panel_chooseMealPage.render((ArrayList<Meal>)airlineMealController.showMeals(flight.getAirlineId()), 1);
             pageChange(panel_chooseMealPage);
-            panel_chooseMealPage.render(testing, 1);
         }
         //////////////belongs to chooseMealPage, to origin
         if(e.getSource() == button_chooseMealPage_back){
@@ -390,17 +447,87 @@ public class InitPage extends JFrame implements ActionListener {
         }//////belongs to chooseMealPage, withdraw
         if(e.getSource() == button_chooseMealPage_withdraw){
             panel_chooseMealPage.withdraw();
-        }
+        }///to chooseSeatPage
         if(e.getSource() == button_chooseMealPage_confirm){
+
+            if(Objects.equals(panel_chooseMealPage.getMeal(), 0)){
+                panel_chooseMealPage.mealNotChosenWarning();
+            }
+            else {
+                meal = airlineMealController.showMeals(flight.getAirlineId()).get(panel_chooseMealPage.getMeal()-1);
+                framePanel.setLayout(new BorderLayout());
+                panel_chooseSeat.render(seats, passenger);
+                framePanel.removeAll();
+                framePanel.repaint();
+                framePanel.add(panel_chooseSeat, BorderLayout.CENTER);
+                framePanel.validate();
+            }
+        }
+        ////////////////////////belongs to chooseSeatPage, back to chooseMealPage
+        if(e.getSource() == button_chooseSeat_back){
+            framePanel.setLayout(new FlowLayout());
+            pageChange(panel_chooseMealPage);
+        }
+
+        ///belongs to chooseSeatPage, to paying page
+        if(e.getSource() == button_chooseSeat_confirm){
+            framePanel.setLayout(new FlowLayout());
+            pageChange(panel_payingPage);
+        }
+
+        //belongs to paying page, back
+        if(e.getSource() == button_paying_back){
             framePanel.setLayout(new BorderLayout());
-            panel_chooseSeat.render(seats,passenger);
-           // pageChange(panel_chooseSeat);
+            panel_chooseSeat.render(seats, passenger);
             framePanel.removeAll();
             framePanel.repaint();
             framePanel.add(panel_chooseSeat, BorderLayout.CENTER);
-            framePanel.validate();
+            panel_payingPage.refresh();
+            see_type =1;
+            invalidTimes = 0;
         }
+        //belongs to paying page, confirm
+        if(e.getSource() == button_paying_confirm){
+            boolean isValid = true;
+            Integer cardNum = null;
+            String pin = null;
+            if(panel_payingPage.getCardNum() == ""||(pin = panel_payingPage.getPassword()) == "")
+            {
+                panel_payingPage.infoIncompleteWarning();
+                pageChange(panel_payingPage);
+                isValid = false;
+            }
+            try{
+                cardNum = Integer.parseInt(panel_payingPage.getCardNum());
+            }catch (NumberFormatException exception){
+                panel_payingPage.cardNumWarning();
+                pageChange(panel_payingPage);
+                isValid = false;
+            }
+            if(isValid){
+                if(passengerController.isCardPinCorrect(cardNum,passenger.getPassengerId(),passenger.getSurname(),pin)){
 
+                    see_type =1;
+                    invalidTimes = 0;
+                }
+                else{
+                    panel_payingPage.nonExistWarning(invalidTimes++);
+                    if(invalidTimes<=5)
+                        pageChange(panel_payingPage);
+                    else
+                    {
+                        enteringTimesWarning();
+                        refresh();
+                        pageChange(panel_InitPage);
+                        see_type =1;
+                        invalidTimes = 0;
+                    }
+
+                }
+
+            }
+
+        }
     }
 
     public void pageChange(JPanel page){
@@ -416,11 +543,12 @@ public class InitPage extends JFrame implements ActionListener {
         panel_LoginByNameIdPage.refresh();
         panel_LoginByBookingNumPage.refresh();
         panel_chooseMealPage.refresh();
+        panel_payingPage.refresh();
 
         passenger = new Passenger();
         airline = new Airline();
         boardingPass = new BoardingPass();
-        idDocument = new IdDocument();
+        idDocument = new IdDocumentCard();
         flight = new Flight();
     }
     public void enteringTimesWarning(){

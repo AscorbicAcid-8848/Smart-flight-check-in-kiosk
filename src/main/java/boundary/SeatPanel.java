@@ -31,7 +31,6 @@ public class SeatPanel extends JPanel implements ActionListener{
 
         int lastSeatNum = -1;
         public SeatPanel(){
-            System.out.println("1111111111111111111111");
             int count = 0;
             //this.setSize(new Dimension(400, 500));
             this.setLayout(null);
@@ -104,7 +103,7 @@ public class SeatPanel extends JPanel implements ActionListener{
                 public void actionPerformed(ActionEvent e) {
                     if(e.getSource() == withdraw){
                         if(selectedButton == null && lastSeatNum == -1){
-                             return;
+                            return;
                         }
                         seatList.get(lastSeatNum).setOccupied(false);
                         lastSeatNum = -1;
@@ -112,11 +111,12 @@ public class SeatPanel extends JPanel implements ActionListener{
                     }
                 }
             });
-            back = new JButton("Back");
+            back = new JButton("Back to meal choosing");
             back.setBounds(260,20,100,40);
+            controlPanel.add(back);
             controlPanel.add(confirm);
             controlPanel.add(withdraw);
-            controlPanel.add(back);
+
 
 
             this.add(businessPanel);
@@ -190,6 +190,10 @@ public class SeatPanel extends JPanel implements ActionListener{
     public void render(ArrayList<Seat> s, Passenger p){
             seatList = s;
             passenger = p;
+    }
+
+    public void seatNotChosenWarning(){
+        JOptionPane.showMessageDialog(this, "You haven't choose your seat yet.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
     }
 
     public static void main(String[] args) {

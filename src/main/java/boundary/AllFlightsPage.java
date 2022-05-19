@@ -20,7 +20,7 @@ public class AllFlightsPage extends JPanel{
     private JPanel labelPanel;
     private JButton confirm = new JButton();
     private JButton withdraw = new JButton();
-    private JButton back = new JButton();
+    private JButton back = new JButton("Back");
     protected ArrayList<JTextArea> texs = new ArrayList<JTextArea>();
     private JButton infoButton;
     public AllFlightsPage() {
@@ -75,11 +75,11 @@ public class AllFlightsPage extends JPanel{
             this.add(curTex);
             this.add(infoButton);
         }
-
         this.add(withdraw);
         this.add(back);
         this.add(confirm);
         this.setVisible(true);
     }
+
 
 }

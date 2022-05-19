@@ -1,7 +1,7 @@
 package controller;
 
 import model.Flight;
-import model.IdDocument;
+import model.IdDocumentCard;
 import model.Passenger;
 import service.FlightService;
 import service.PassengerService;
@@ -18,7 +18,7 @@ import java.util.List;
 * @date 2022/4/8 18:32
 */
 public class FlightController {
-    private final FlightService flightService = new FlightServiceImp();
+    private final FlightServiceImp flightService = new FlightServiceImp();
     private final PassengerService passengerService = new PassengerServiceImp();
 
     public Flight generate(Integer airlineId, Integer flightId, String flightName, Date departureTime, Date fallTime, boolean isDelayed, Integer departureGate, String destWeather, String destCOVIDPolicy,
@@ -58,9 +58,9 @@ public class FlightController {
         return flight;
     }
 
-    public List<Flight> getByIdDocument(IdDocument idDocument){
+    public List<Flight> getByIdDocument(IdDocumentCard idDocumentCard){
         List<Flight> flightList = new ArrayList();
-        Passenger passenger= passengerService.searchByIdDocument(idDocument.getId());
+        Passenger passenger= passengerService.searchByIdDocument(idDocumentCard.getId());
         if(passenger==null){
             return null;
         }
@@ -76,5 +76,6 @@ public class FlightController {
         Flight flight = flightService.searchByFlightId(flightId);
         flight.setCurrent(true);
         flightService.change(flight);
+        flightService.toJSON();
     }
 }
