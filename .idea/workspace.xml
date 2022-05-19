@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="idDocumentCard update by Zihao Ye" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="idDocumentCard update by Zihao Ye">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -56,12 +61,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/idDocumentCard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../My PC/Desktop/大三下/Software Engineering/lab" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -84,7 +90,7 @@
       <recent name="boundary" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IdDocumentCardServiceImpTest.testCheckCard">
+  <component name="RunManager">
     <configuration name="AllFlightsPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.AllFlightsPage" />
       <module name="XXXManagementSystem" />
@@ -156,15 +162,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.IdDocumentCardServiceImpTest.testCheckCard" />
-        <item itemvalue="JUnit.IdDocumentCardMockTest.testToJSON" />
-        <item itemvalue="Application.Entrance" />
-        <item itemvalue="Application.SeatPanel" />
-        <item itemvalue="Application.AllFlightsPage" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -190,6 +187,8 @@
       <workItem from="1652685251365" duration="2894000" />
       <workItem from="1652775218331" duration="1255000" />
       <workItem from="1652792665386" duration="1433000" />
+      <workItem from="1652838058135" duration="12000" />
+      <workItem from="1652858833188" duration="25000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -380,25 +379,5 @@
     <MESSAGE value="等到idDocumentCard 服务层完成" />
     <MESSAGE value="idDocumentCard update by Zihao Ye" />
     <option name="LAST_COMMIT_MESSAGE" value="idDocumentCard update by Zihao Ye" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java</url>
-          <line>180</line>
-          <properties class="boundary.SeatPanel">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/service/imp/IdDocumentCardServiceImpTest.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
