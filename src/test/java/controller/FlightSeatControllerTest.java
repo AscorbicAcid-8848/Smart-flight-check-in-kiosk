@@ -1,7 +1,9 @@
 package controller;
 
+import junit.framework.TestCase;
 import model.Passenger;
 import model.Seat;
+import org.junit.Test;
 import service.FlightSeatService;
 import service.PassengerService;
 import service.imp.FlightSeatServiceImp;
@@ -14,16 +16,10 @@ import java.util.List;
  * @description: TODO
  * @date 2022/4/30 21:24
  */
-public class FlightSeatControllerTest {
-    private PassengerService passengerService = new PassengerServiceImp();
-    private FlightSeatService flightSeatService = new FlightSeatServiceImp();
-    //选座
-    public Passenger selectSeat(Integer idDocument, Integer flightId, Integer seatNumber){
-        return flightSeatService.update(idDocument, flightId, seatNumber);
-    }
-    //展示所有座位
-    public List<Seat> showSeats(Integer flightId){
-        List<Seat> seatList = flightSeatService.searchByFlightId(flightId).getSeatList();
-        return seatList;
+public class FlightSeatControllerTest extends TestCase {
+    private FlightSeatController flightSeatController = new FlightSeatController();
+    @Test
+    public void testSelect(){
+        flightSeatController.selectSeat(1111,100,1);
     }
 }

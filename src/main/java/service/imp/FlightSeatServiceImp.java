@@ -23,7 +23,7 @@ import java.util.List;
 public class FlightSeatServiceImp implements FlightSeatService {
 
     private List<FlightSeat> flightSeats = new ArrayList<>();
-    private PassengerService passengerService = new PassengerServiceImp();
+    private PassengerServiceImp passengerService = new PassengerServiceImp();
     ObjectMapper objectMapper = new ObjectMapper();
 
     public FlightSeatServiceImp(){
@@ -69,6 +69,7 @@ public class FlightSeatServiceImp implements FlightSeatService {
         passenger.setSeatLevel(seatLevel);
         passenger.setSeatNumber(seatNumber);
         passengerService.update(passenger);
+        passengerService.toJSON();
         return passenger;
     }
 

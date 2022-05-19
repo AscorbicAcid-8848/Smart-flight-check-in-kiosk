@@ -6,22 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="输入paying信息成功后的操作没有，meal和seat 完整, 脱敏有bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/idDocumentCard/idDocumentCard.json" beforeDir="false" afterPath="$PROJECT_DIR$/idDocumentCard/idDocumentCard.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByBookingNumPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByNameIdPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByNameIdPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/PayingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/PayingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByBookingNumPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByNameIdPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/PayingPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/PayingPage$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/PayingPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/PayingPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/flightSeatList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/flightSeatList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controller/FlightSeatControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/FlightSeatControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controller/FlightSeatControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controller/FlightSeatControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controller/PassengerControllerTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +82,7 @@
       <recent name="boundary" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Entrance">
+  <component name="RunManager" selected="JUnit.MockAllTest.testRefreshData">
     <configuration name="AllFlightsPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.AllFlightsPage" />
       <module name="XXXManagementSystem" />
@@ -133,7 +122,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightMockTest.toJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FlightSeatControllerTest.testSelect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.FlightSeatControllerTest" />
+      <option name="METHOD_NAME" value="testSelect" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MockAllTest.testRefreshData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="XXXManagementSystem" />
       <extension name="coverage">
         <pattern>
@@ -142,8 +147,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="mock" />
-      <option name="MAIN_CLASS_NAME" value="mock.FlightMockTest" />
-      <option name="METHOD_NAME" value="toJSON" />
+      <option name="MAIN_CLASS_NAME" value="mock.MockAllTest" />
+      <option name="METHOD_NAME" value="testRefreshData" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -151,10 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MockAllTest.testRefreshData" />
+        <item itemvalue="JUnit.FlightSeatControllerTest.testSelect" />
         <item itemvalue="Application.Entrance" />
         <item itemvalue="Application.AllFlightsPage" />
         <item itemvalue="Application.SeatPanel" />
-        <item itemvalue="JUnit.FlightMockTest.toJSON" />
       </list>
     </recent_temporary>
   </component>
@@ -181,6 +187,7 @@
       <workItem from="1652666283485" duration="3630000" />
       <workItem from="1652804936041" duration="177000" />
       <workItem from="1652944045617" duration="2626000" />
+      <workItem from="1652962080756" duration="321000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
