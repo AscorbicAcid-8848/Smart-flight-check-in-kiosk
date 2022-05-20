@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="selectMeal不工作，进程结束前无法写入json">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AirlineMealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AirlineMealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/flightList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/flightList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/passengerList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/passengerList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/AirlineMealController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/AirlineMealController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/FlightController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightSeatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/FlightSeatController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +92,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Entrance">
+    <configuration name="AllFlightsPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="boundary.AllFlightsPage" />
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="boundary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Entrance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.Entrance" />
       <module name="XXXManagementSystem" />
@@ -126,21 +148,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MockAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="XXXManagementSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mock.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mock" />
-      <option name="MAIN_CLASS_NAME" value="mock.MockAllTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MockAllTest.testRefreshData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="XXXManagementSystem" />
       <extension name="coverage">
@@ -160,10 +167,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Entrance" />
+        <item itemvalue="Application.AllFlightsPage" />
         <item itemvalue="JUnit.MockAllTest.testRefreshData" />
         <item itemvalue="JUnit.AirlineMealControllerTest" />
         <item itemvalue="JUnit.AirlineMealMockTest" />
-        <item itemvalue="JUnit.MockAllTest" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +199,8 @@
       <workItem from="1652944045617" duration="2626000" />
       <workItem from="1652962080756" duration="627000" />
       <workItem from="1652967543933" duration="3557000" />
-      <workItem from="1652971704469" duration="139000" />
+      <workItem from="1653017098744" duration="2405000" />
+      <workItem from="1653057369351" duration="3482000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>

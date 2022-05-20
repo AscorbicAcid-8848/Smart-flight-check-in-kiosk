@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import java.awt.*;
+import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.Iterator;
 import controller.FlightSeatController;
@@ -22,14 +23,14 @@ public class SeatPanel extends JPanel implements ActionListener{
     JPanel businessPanel;
     JPanel specialSeatPanel;
     JPanel controlPanel;
-
+    JPanel infoPanel;
+    JTextArea tex;
+    private int price = 0;
 
 
     JButton confirm;
     JButton withdraw;
     JButton back;
-
-    int i = 1;
 
     int lastSeatNum = -1;
     public SeatPanel(){
@@ -41,21 +42,25 @@ public class SeatPanel extends JPanel implements ActionListener{
         economicPanel = new JPanel();
         businessPanel = new JPanel();
         specialSeatPanel = new JPanel();
-        businessPanel.setBounds(400,0,200,350);
-        economicPanel.setBounds(0,0,350,600);
-        specialSeatPanel.setBounds(400,400,200,200);
+        infoPanel = new JPanel();
+        businessPanel.setBounds(350,0,200,350);
+        economicPanel.setBounds(550,0,350,600);
+        specialSeatPanel.setBounds(350,350,200,250);
         controlPanel.setBounds(250,600,400,100);
+        infoPanel.setBounds(0, 400, 350, 200);
         economicPanel.setBorder(BorderFactory.createTitledBorder("Economic Seat"));
         businessPanel.setBorder(BorderFactory.createTitledBorder("Business Seat"));
         specialSeatPanel.setBorder(BorderFactory.createTitledBorder("Special Seat"));
         economicPanel.setLayout(null);
         businessPanel.setLayout(null);
         specialSeatPanel.setLayout(null);
-
+        tex = new JTextArea();
+        infoPanel.add(tex);
         for(int j = 0; j < 2; j++){
             for(int i = 0; i < 5; i++) {
                 JButton button = new JButton("A" + count++);
                 button.setBounds(40 + 60 * j, 40 + 60 * i, 60, 40);
+                button.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
                 businessPanel.add(button);
                 bts.add(button);
                 button.addActionListener(this);
@@ -65,7 +70,8 @@ public class SeatPanel extends JPanel implements ActionListener{
         for(int j = 0; j < 2; j++){
             for(int i = 0; i < 3; i++) {
                 JButton button = new JButton("B" + count++);
-                button.setBounds(40 + 60 * j, 40 + 60 * i, 60, 40);
+                button.setBounds(40 + 60 * j, 10 + 40 + 60 * i, 60, 40);
+                button.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
                 specialSeatPanel.add(button);
                 bts.add(button);
                 button.addActionListener(this);
@@ -74,8 +80,9 @@ public class SeatPanel extends JPanel implements ActionListener{
 
         for(int j = 0; j < 2; j++){
             for(int i = 0; i < 9; i++) {
-                JButton button = new JButton("B" + count++);
+                JButton button = new JButton("C" + count++);
                 button.setBounds(40 + 60 * j, 40 + 60 * i, 60, 40);
+                button.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
                 economicPanel.add(button);
                 bts.add(button);
                 button.addActionListener(this);
@@ -84,8 +91,9 @@ public class SeatPanel extends JPanel implements ActionListener{
 
         for(int j = 0; j < 2; j++){
             for(int i = 0; i < 9; i++){
-                JButton button = new JButton("B" + count++);
+                JButton button = new JButton("C" + count++);
                 button.setBounds(200+60*j,40+60*i, 60, 40);
+                button.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
                 economicPanel.add(button);
                 bts.add(button);
                 button.addActionListener(this);
@@ -104,7 +112,6 @@ public class SeatPanel extends JPanel implements ActionListener{
                 if(e.getSource() == confirm){
                     if(passenger.getSeatLevel() == null || passenger.getSeatNumber() == null || passenger.getSeatNumber() < 0){
                         JOptionPane.showMessageDialog(null, "You haven't choose your seat yet.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
-                        i=0;
                         return;
                     }
                 }
@@ -121,23 +128,30 @@ public class SeatPanel extends JPanel implements ActionListener{
                         return;
                     }
                     seatList.get(lastSeatNum).setOccupied(false);
+                    bts.get(lastSeatNum).setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
                     lastSeatNum = -1;
                     selectedButton = null;
                     passenger.setSeatLevel(null);
                     passenger.setSeatNumber(-1);
+                    updateTex();
                 }
             }
         });
+
+
         back = new JButton("Back to meal choosing");
         back.setBounds(260,20,100,40);
         controlPanel.add(back);
         controlPanel.add(confirm);
         controlPanel.add(withdraw);
 
+
+
         this.add(businessPanel);
         this.add(economicPanel);
         this.add(specialSeatPanel);
         this.add(controlPanel);
+        this.add(infoPanel);
         this.setVisible(true);
     }
 
@@ -148,6 +162,8 @@ public class SeatPanel extends JPanel implements ActionListener{
     public JButton getBack(){
         return back;
     }
+
+    public int getPrice(){return price;}
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -172,7 +188,7 @@ public class SeatPanel extends JPanel implements ActionListener{
                     if(passenger.getSeatLevel() != null){
                         changeLevel = JOptionPane.showConfirmDialog(null, "Your current class is " + passenger.getSeatLevel() + " class, do you want to change the level to " + seatList.get(seatNum).getSeatLevel(), "Prompt", JOptionPane.YES_NO_CANCEL_OPTION);
                     }else{
-                        changeLevel = JOptionPane.showConfirmDialog(null, "Do you want to set your set level to " + seatList.get(seatNum).getSeatLevel() + " ?", "Prompt", JOptionPane.YES_NO_CANCEL_OPTION);
+                        changeLevel = JOptionPane.showConfirmDialog(null, "Do you want to set your set level to " + seatList.get(seatNum).getSeatLevel(), "Prompt", JOptionPane.YES_NO_CANCEL_OPTION);
                     }
 
                     if (changeLevel == JOptionPane.YES_OPTION)
@@ -186,6 +202,9 @@ public class SeatPanel extends JPanel implements ActionListener{
                 selectedButton = (JButton) e.getSource();
                 passenger.setSeatNumber(seatNum);
                 passenger.setSeatLevel(seatList.get(seatNum).getSeatLevel());
+                //price = seatList.get(seatNum).getSeatCost();
+                updateTex();
+                ((JButton) e.getSource()).setBorder(BorderFactory.createLineBorder(Color.GREEN ,1));
                 lastSeatNum = seatNum;
             }
         }
@@ -196,6 +215,7 @@ public class SeatPanel extends JPanel implements ActionListener{
             return;
         }else if(bts.get(lastSeatNum) != b){
             seatList.get(lastSeatNum).setOccupied(false);
+            bts.get(lastSeatNum).setBorder(BorderFactory.createLineBorder(Color.BLACK,1));
         }else if(bts.get(lastSeatNum) == b){
             return;
         }
@@ -204,6 +224,23 @@ public class SeatPanel extends JPanel implements ActionListener{
     public void render(ArrayList<Seat> s, Passenger p){
         seatList = s;
         passenger = p;
+        for(JButton b : bts){
+            if(seatList != null && seatList.get(bts.indexOf(b)).isOccupied())
+                b.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
+        }
+        infoPanel.setBorder(BorderFactory.createTitledBorder(passenger.getFirstname() + " " + passenger.getSurname()));
+        tex.setEditable(false);
+        updateTex();
+    }
+
+    public void updateTex(){
+        String seatLevel, seatNumber;
+        if(passenger.getSeatLevel() == null)   {seatLevel = "not Selected";}
+        else {seatLevel = passenger.getSeatLevel() + "";}
+        if(passenger.getSeatNumber() == -1) { seatNumber = "not Selected";}
+        else {seatNumber = passenger.getSeatNumber() + "";}
+        tex.setText("Your seat level: " + seatLevel + "\nYour seat number:" + seatNumber
+                + "\nYour price now:");
     }
 
     public int resultSeatNumber(){
@@ -215,7 +252,7 @@ public class SeatPanel extends JPanel implements ActionListener{
     }
 
 
-   /* public static void main(String[] args) {
+    public static void main(String[] args) {
         JFrame f = new JFrame();
         JPanel pl = new JPanel();
         pl.setLayout(new BorderLayout());
@@ -227,14 +264,21 @@ public class SeatPanel extends JPanel implements ActionListener{
         for(int i = 0; i < 10; i++){
             Seat s1 = new Seat();
             s1.setOccupied(false);
-            s1.setSeatLevel("A");
+            s1.setSeatLevel("Business");
             seats.add(s1);
         }
 
-        for(int i = 0; i < 42; i++){
+        for(int i = 0; i < 6; i++){
+            Seat s1 = new Seat();
+            s1.setOccupied(true);
+            s1.setSeatLevel("Special");
+            seats.add(s1);
+        }
+
+        for(int i = 0; i < 36; i++){
             Seat s1 = new Seat();
             s1.setOccupied(false);
-            s1.setSeatLevel("B");
+            s1.setSeatLevel("Economic");
             seats.add(s1);
         }
         int i = 0;
@@ -243,8 +287,10 @@ public class SeatPanel extends JPanel implements ActionListener{
             i = i + 1;
         }
         Passenger p = new Passenger();
-        p.setSeatLevel("B");
-
+        p.setSeatLevel("Special");
+        p.setFirstname("Kyo");
+        p.setSurname("KAUS");
+        p.setSeatNumber(-1);
         f.add(pl);
         pl.add(sp, BorderLayout.CENTER);
         sp.setVisible(true);
@@ -253,5 +299,5 @@ public class SeatPanel extends JPanel implements ActionListener{
         sp.render(seats, p);;
         f.setVisible(true);
 
-    }*/
+    }
 }
