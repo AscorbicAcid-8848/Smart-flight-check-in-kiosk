@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import java.awt.*;
+import model.Airline;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -26,8 +27,9 @@ public class SeatPanel extends JPanel implements ActionListener{
     JPanel infoPanel;
     JTextArea tex;
     private int price = 0;
-
-
+    int initPrice;
+    int currentPrice;
+    int airline;
     JButton confirm;
     JButton withdraw;
     JButton back;
@@ -106,17 +108,17 @@ public class SeatPanel extends JPanel implements ActionListener{
 
         confirm = new JButton("Confirm");
         confirm.setBounds(20,20,100,40);
-        confirm.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if(e.getSource() == confirm){
-                    if(passenger.getSeatLevel() == null || passenger.getSeatNumber() == null || passenger.getSeatNumber() < 0){
-                        JOptionPane.showMessageDialog(null, "You haven't choose your seat yet.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
-                        return;
-                    }
-                }
-            }
-        });
+//        confirm.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                if(e.getSource() == confirm){
+//                    if(passenger.getSeatLevel() == null || passenger.getSeatNumber() == null || passenger.getSeatNumber() < 0){
+//                        JOptionPane.showMessageDialog(null, "You haven't choose your seat yet.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
+//                        return;
+//                    }
+//                }
+//            }
+//        });
 
         withdraw= new JButton("Withdraw");
         withdraw.setBounds(140,20,100,40);
@@ -133,6 +135,7 @@ public class SeatPanel extends JPanel implements ActionListener{
                     selectedButton = null;
                     passenger.setSeatLevel(null);
                     passenger.setSeatNumber(-1);
+                    currentPrice = initPrice;
                     updateTex();
                 }
             }
@@ -168,10 +171,10 @@ public class SeatPanel extends JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         int seatNum = bts.indexOf(e.getSource());
-        System.out.println("passenger seat level: " + passenger.getSeatLevel());
+        /*System.out.println("passenger seat level: " + passenger.getSeatLevel());
         System.out.println("seat number: " + seatNum);
         System.out.println("seat level: " + seatList.get(seatNum).getSeatLevel());
-        System.out.println("seat occupied: " + seatList.get(seatNum).isOccupied());
+        System.out.println("seat occupied: " + seatList.get(seatNum).isOccupied());*/
         if(e.getSource() == selectedButton){
             JOptionPane.showMessageDialog(null, "You already selected this seat.", "Sorry", JOptionPane.WARNING_MESSAGE);
             return;
@@ -203,6 +206,7 @@ public class SeatPanel extends JPanel implements ActionListener{
                 passenger.setSeatNumber(seatNum);
                 passenger.setSeatLevel(seatList.get(seatNum).getSeatLevel());
                 //price = seatList.get(seatNum).getSeatCost();
+                currentPrice = initPrice + seatList.get(seatNum).getSeatCost();
                 updateTex();
                 ((JButton) e.getSource()).setBorder(BorderFactory.createLineBorder(Color.GREEN ,1));
                 lastSeatNum = seatNum;
@@ -221,9 +225,12 @@ public class SeatPanel extends JPanel implements ActionListener{
         }
     }
 
-    public void render(ArrayList<Seat> s, Passenger p){
+    public void render(ArrayList<Seat> s, Passenger p, int initPrice, int airline){
         seatList = s;
         passenger = p;
+        this.initPrice = initPrice;
+        this.airline = airline;
+        currentPrice = initPrice;
         for(JButton b : bts){
             if(seatList != null && seatList.get(bts.indexOf(b)).isOccupied())
                 b.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
@@ -240,7 +247,7 @@ public class SeatPanel extends JPanel implements ActionListener{
         if(passenger.getSeatNumber() == -1) { seatNumber = "not Selected";}
         else {seatNumber = passenger.getSeatNumber() + "";}
         tex.setText("Your seat level: " + seatLevel + "\nYour seat number:" + seatNumber
-                + "\nYour price now:");
+                + "\nYour price now:" + currentPrice);
     }
 
     public int resultSeatNumber(){
@@ -250,9 +257,12 @@ public class SeatPanel extends JPanel implements ActionListener{
     public String resultSeatLevel(){
         return passenger.getSeatLevel();
     }
+    public void NotChooseWarning(){
+        JOptionPane.showMessageDialog(this, "You haven't choose your seat yet", "Exception occurs",JOptionPane.WARNING_MESSAGE);
+    }
 
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         JFrame f = new JFrame();
         JPanel pl = new JPanel();
         pl.setLayout(new BorderLayout());
@@ -299,5 +309,5 @@ public class SeatPanel extends JPanel implements ActionListener{
         sp.render(seats, p);;
         f.setVisible(true);
 
-    }
+    }*/
 }

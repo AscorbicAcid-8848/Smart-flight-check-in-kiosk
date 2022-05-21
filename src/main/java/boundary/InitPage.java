@@ -238,6 +238,17 @@ public class InitPage extends JFrame implements ActionListener {
         button_chooseSeat_back = panel_chooseSeat.getBack();
         button_chooseSeat_back.addActionListener(this);
         button_chooseSeat_confirm.addActionListener(this);
+//        button_chooseSeat_confirm.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                if(e.getSource() == button_chooseSeat_confirm){
+//                    if(passenger.getSeatLevel() == null || passenger.getSeatNumber() == null || passenger.getSeatNumber() < 0){
+//                        JOptionPane.showMessageDialog(null, "You haven't choose your seat yet.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
+//                        return;
+//                    }
+//                }
+//            }
+//        });
 
         panel_payingPage = new PayingPage();
         button_paying_confirm = panel_payingPage.getButton_confirm();
@@ -466,7 +477,7 @@ public class InitPage extends JFrame implements ActionListener {
                 airlineMealController.selectMeal(passenger.getIdDocument(),flight.getAirlineId(),meal.getMealId());
 
                 seats = (ArrayList<Seat>)flightSeatController.showSeats(flight.getFlightId());
-                panel_chooseSeat.render(seats, passenger);
+                panel_chooseSeat.render(seats, passenger, meal.getMealCost(),flight.getAirlineId());
                 framePanel.removeAll();
                 framePanel.repaint();
                 framePanel.add(panel_chooseSeat, BorderLayout.CENTER);
@@ -483,6 +494,10 @@ public class InitPage extends JFrame implements ActionListener {
         if(e.getSource() == button_chooseSeat_confirm){
 
 //            if(panel_chooseSeat.i==1){
+            if(passenger.getSeatLevel() == null || passenger.getSeatNumber() == null || passenger.getSeatNumber() < 0){
+                panel_chooseSeat.NotChooseWarning();
+                return;
+            }
                 passenger.setSeatLevel(panel_chooseSeat.resultSeatLevel());
                 passenger.setSeatNumber(panel_chooseSeat.resultSeatNumber());
 
@@ -495,7 +510,7 @@ public class InitPage extends JFrame implements ActionListener {
         //belongs to paying page, back
         if(e.getSource() == button_paying_back){
             framePanel.setLayout(new BorderLayout());
-            panel_chooseSeat.render(seats, passenger);
+            panel_chooseSeat.render(seats, passenger,meal.getMealCost(),flight.getAirlineId());
             framePanel.removeAll();
             framePanel.repaint();
             framePanel.add(panel_chooseSeat, BorderLayout.CENTER);

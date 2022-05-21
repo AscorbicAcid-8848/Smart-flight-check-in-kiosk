@@ -19,10 +19,12 @@ public class AllFlightsPage extends JPanel{
     private JTextArea curTex;
     //private JPanel buttonPanel;
     //private JPanel labelPanel;
+    private JPanel buttonPanel  = new JPanel();
+    private ArrayList<JTextArea> texs = new ArrayList<>();
     private JButton currentButton = null;
     private JButton confirm = new JButton("confirm");
     private JButton back = new JButton("back");
-    private String[] title = {"FlightId", "Departure", "FallTime", "is delay", "COVID policy"};
+    //private String[] title = {"FlightId", "Departure", "FallTime", "is delay", "COVID policy"};
 
     private ArrayList<JButton> buttonList = new ArrayList<>();
     private JButton infoButton;
@@ -46,22 +48,6 @@ public class AllFlightsPage extends JPanel{
     public AllFlightsPage() {
     }
 
-    public static void main(String[] args){
-        JFrame Jf = new JFrame();
-        Jf.setSize(400, 300);
-
-        Jf.setLocation(200, 200);
-
-        Jf.setLayout(new BorderLayout());
-        AllFlightsPage f =  new AllFlightsPage();
-        ArrayList<Flight> flightArrayList = new ArrayList<>();
-        Flight flight = new Flight();
-        flightArrayList.add(flight);
-        Jf.add(f, BorderLayout.CENTER);
-        Jf.setVisible(true);
-        f.render(flightArrayList);
-    }
-
     /*public static void main(String[] agrs){
         ArrayList<Flight> flights = new ArrayList<Flight>();
         flights.add(new Flight());
@@ -77,7 +63,7 @@ public class AllFlightsPage extends JPanel{
     }*/
 
     public void render(ArrayList<Flight> flightList){
-        if (flightList == null) {
+        /*if (flightList == null) {
             JOptionPane.showMessageDialog(null, "Error", "No booked flight!", JOptionPane.ERROR_MESSAGE);
         }
         String[][] info = new String[flightList.size()][5];
@@ -91,27 +77,32 @@ public class AllFlightsPage extends JPanel{
 
         this.setLayout(new BorderLayout());
         this.setSize(400, 300);
-        this.add(confirm);
-        this.add(back);
+        this.add(buttonPanel, BorderLayout.SOUTH);
         confirm.setBounds(200,700,100,50);
         back.setBounds(350,700,100,50);
+        buttonPanel.setSize(400,400);
+        buttonPanel.setLayout(null);
+        buttonPanel.add(back);
+        buttonPanel.add(confirm);
+        buttonPanel.setVisible(true);
         JTable t = new JTable(info, title);
         JScrollPane sp = new JScrollPane(t);
+        t.setEnabled(false);
         t.getColumnModel().getColumn(0).setPreferredWidth(10);
         sp.setViewportView(t);
 
         this.add(sp, BorderLayout.CENTER);
-        this.setVisible(true);
+        this.setVisible(true);*/
 
 
 
-        /*this.setSize(new Dimension(1000, 900));
+        this.setSize(new Dimension(1000, 900));
         this.setLayout(null);
         /*init TextArea*/
-        //Flight curFlight;
-        //int x1 = 20, y1 = 20;
-        //int x2 = 250, y2 = 20;*/
-        /*for (Iterator<Flight> f = flightList.iterator(); f.hasNext(); ) {
+        Flight curFlight;
+        int x1 = 20, y1 = 20;
+        int x2 = 250, y2 = 20;
+        for (Iterator<Flight> f = flightList.iterator(); f.hasNext(); ) {
             curFlight = f.next();
             curTex = new JTextArea();
             infoButton = new JButton("More");
@@ -122,13 +113,6 @@ public class AllFlightsPage extends JPanel{
                     "\n Delay status: " + curFlight.isDelayed());
             texs.add(curTex);
             Flight finalCurFlight = curFlight;
-//            infoButton.addActionListener(new ActionListener() {
-//                @Override
-//                public void actionPerformed(ActionEvent e) {
-//                    currentButton = (JButton)e.getSource();
-//                    JOptionPane.showMessageDialog(null, finalCurFlight.toString(), "Information", JOptionPane.INFORMATION_MESSAGE);
-//                }
-//            });
             curTex.setBounds(x1, y1, 150, 70);
             curTex.setEditable(false);
             infoButton.setBounds(x2, y2, 100, 50);
@@ -142,7 +126,7 @@ public class AllFlightsPage extends JPanel{
         confirm.setBounds(350,700,100,50);
         this.add(back);
         this.add(confirm);
-        this.setVisible(true);*/
+        this.setVisible(true);
     }
 
 }
