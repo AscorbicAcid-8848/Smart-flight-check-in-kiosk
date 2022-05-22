@@ -1,15 +1,17 @@
 # Readme
 ## Important : 
-- Make sure your jdk version >= 11. You can check it by typing "java -version" on command line. 
+- Make sure your jdk version = 15. You can check it by typing "java -version" on command line. 
 If not, you can download newer jdk and configure it path with:https://www.liquidweb.com/kb/how-to-install-java-on-ubuntu-windows-and-macos/
-- Recommend environment: Windows 10. If your OS is linux or mac, you can try to run the program with method 2 or 3
+- Recommend environment: Windows 10 or 11.
 ## Start program
-PS: You can use the account with username "Jerry" and password "123456" to login in. You can also sign up a new account.
+PS: You can check in in three ways.
+1.Using booking number"10001","20001","10002","10102"......(You can check what you want at passengerList.json)
+2.Using surname "Ye" and passenger id "1" to check in.
+3.Scanning your id document, put the passenger's json file, in Passenger_IdCard folder, you want to check in and put the file into idDocumentCard folder.
 ### 1. Run with javac compile (__Recommend, Windows only__, no need for network to download jars)
 - Open a terminal and switch in the project folder.
 - type command "startup.bat" then press enter to start the program.
 
-if you want to use or test the file storage, when you close the program and the terminal ask you if you want to copy the files, you need to type "A" to the command line 
 
 ### 2. Run with maven 3 
 - Ensure you have a maven with version 3.x.x . You can check it by typing "mvn -version" on command line.

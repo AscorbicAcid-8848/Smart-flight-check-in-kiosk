@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="selectMeal不工作，进程结束前无法写入json">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/flightList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/flightList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/passengerList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/passengerList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/AirlineMealController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/AirlineMealController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/FlightController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/FlightSeatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/FlightSeatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PassengerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +62,9 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
@@ -201,6 +191,7 @@
       <workItem from="1652967543933" duration="3557000" />
       <workItem from="1653017098744" duration="2405000" />
       <workItem from="1653057369351" duration="3482000" />
+      <workItem from="1653188884793" duration="572000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
