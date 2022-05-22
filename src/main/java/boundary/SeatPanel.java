@@ -33,29 +33,33 @@ public class SeatPanel extends JPanel implements ActionListener{
     JButton confirm;
     JButton withdraw;
     JButton back;
+    JPanel iconPanel;
 
     int lastSeatNum = -1;
     public SeatPanel(){
         int count = 0;
         //this.setSize(new Dimension(400, 500));
-        this.setLayout(null);
         controlPanel = new JPanel();
         controlPanel.setLayout(null);
         economicPanel = new JPanel();
         businessPanel = new JPanel();
         specialSeatPanel = new JPanel();
+        iconPanel = new JPanel();
         infoPanel = new JPanel();
         businessPanel.setBounds(350,0,200,350);
         economicPanel.setBounds(550,0,350,600);
         specialSeatPanel.setBounds(350,350,200,250);
         controlPanel.setBounds(250,600,400,100);
         infoPanel.setBounds(0, 400, 350, 200);
+        iconPanel.setBounds(0,0,350,200);
         economicPanel.setBorder(BorderFactory.createTitledBorder("Economic Seat"));
         businessPanel.setBorder(BorderFactory.createTitledBorder("Business Seat"));
         specialSeatPanel.setBorder(BorderFactory.createTitledBorder("Special Seat"));
+        iconPanel.setBorder(BorderFactory.createTitledBorder("Airline"));
         economicPanel.setLayout(null);
         businessPanel.setLayout(null);
         specialSeatPanel.setLayout(null);
+        iconPanel.setLayout(new BorderLayout());
         tex = new JTextArea();
         infoPanel.add(tex);
         for(int j = 0; j < 2; j++){
@@ -104,7 +108,7 @@ public class SeatPanel extends JPanel implements ActionListener{
 
         businessPanel.setVisible(true);
         specialSeatPanel.setVisible(true);
-        economicPanel.setVisible(true);
+        iconPanel.setVisible(true);
 
         confirm = new JButton("Confirm");
         confirm.setBounds(20,20,100,40);
@@ -149,12 +153,13 @@ public class SeatPanel extends JPanel implements ActionListener{
         controlPanel.add(withdraw);
 
 
-
+        this.setLayout(new BorderLayout());
         this.add(businessPanel);
         this.add(economicPanel);
         this.add(specialSeatPanel);
         this.add(controlPanel);
         this.add(infoPanel);
+        this.add(iconPanel);
         this.setVisible(true);
     }
 
@@ -226,6 +231,16 @@ public class SeatPanel extends JPanel implements ActionListener{
     }
 
     public void render(ArrayList<Seat> s, Passenger p, int initPrice, int airline){
+        ImageIcon airlineImg = null;
+        JLabel welcome = new JLabel();
+        if(airline == 1){ airlineImg = new ImageIcon("src/main/java/boundary/images/airChina.png"); welcome.setText("Welcome to Air China!");}
+        if(airline == 2){ airlineImg = new ImageIcon("src/main/java/boundary/images/britishAirway.png" ); welcome.setText("Welcome to British Airway!");}
+        if(airline == 3){ airlineImg = new ImageIcon("src/main/java/boundary/images/chinaEastern.png" ); welcome.setText("Welcome to China Eastern!");}
+        if(airline == 4){ airlineImg = new ImageIcon("src/main/java/boundary/images/easternAirway.png"); welcome.setText("Welcome to Eastern Airline!");}
+        JLabel imgLabel = new JLabel();
+
+        airlineImg.setImage(airlineImg.getImage().getScaledInstance(iconPanel.getWidth(), iconPanel.getHeight(), Image.SCALE_DEFAULT)); //set size
+        imgLabel.setIcon(airlineImg);
         seatList = s;
         passenger = p;
         this.initPrice = initPrice;
@@ -235,8 +250,12 @@ public class SeatPanel extends JPanel implements ActionListener{
             if(seatList != null && seatList.get(bts.indexOf(b)).isOccupied())
                 b.setBorder(BorderFactory.createLineBorder(Color.RED, 1));
         }
+
         infoPanel.setBorder(BorderFactory.createTitledBorder(passenger.getFirstname() + " " + passenger.getSurname()));
         tex.setEditable(false);
+        iconPanel.add(imgLabel, BorderLayout.NORTH);
+        iconPanel.add(welcome, BorderLayout.SOUTH);
+        imgLabel.setBounds(0,0,350,200);
         updateTex();
     }
 
@@ -262,7 +281,7 @@ public class SeatPanel extends JPanel implements ActionListener{
     }
 
 
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         JFrame f = new JFrame();
         JPanel pl = new JPanel();
         pl.setLayout(new BorderLayout());
@@ -306,8 +325,8 @@ public class SeatPanel extends JPanel implements ActionListener{
         sp.setVisible(true);
         pl.setVisible(true);
         f.setBounds(200,200,917,717);
-        sp.render(seats, p);;
+        sp.render(seats, p, 0, 3);;
         f.setVisible(true);
 
-    }*/
+    }
 }
