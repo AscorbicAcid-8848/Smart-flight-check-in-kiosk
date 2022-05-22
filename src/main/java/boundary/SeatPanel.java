@@ -233,10 +233,10 @@ public class SeatPanel extends JPanel implements ActionListener{
     public void render(ArrayList<Seat> s, Passenger p, int initPrice, int airline){
         ImageIcon airlineImg = null;
         JLabel welcome = new JLabel();
-        if(airline == 1){ airlineImg = new ImageIcon("src/main/java/boundary/images/airChina.png"); welcome.setText("Welcome to Air China!");}
-        if(airline == 2){ airlineImg = new ImageIcon("src/main/java/boundary/images/britishAirway.png" ); welcome.setText("Welcome to British Airway!");}
-        if(airline == 3){ airlineImg = new ImageIcon("src/main/java/boundary/images/chinaEastern.png" ); welcome.setText("Welcome to China Eastern!");}
-        if(airline == 4){ airlineImg = new ImageIcon("src/main/java/boundary/images/easternAirway.png"); welcome.setText("Welcome to Eastern Airline!");}
+        if(airline == 1){ airlineImg = new ImageIcon("src/main/java/boundary/images/britishAirway.png"); welcome.setText("Welcome to Air China!");}
+        if(airline == 2){ airlineImg = new ImageIcon("src/main/java/boundary/images/easternAirway.png" ); welcome.setText("Welcome to British Airway!");}
+        if(airline == 3){ airlineImg = new ImageIcon("src/main/java/boundary/images/airChina.png" ); welcome.setText("Welcome to China Eastern!");}
+        if(airline == 4){ airlineImg = new ImageIcon("src/main/java/boundary/images/chinaEastern.png"); welcome.setText("Welcome to Eastern Airline!");}
         JLabel imgLabel = new JLabel();
 
         airlineImg.setImage(airlineImg.getImage().getScaledInstance(iconPanel.getWidth(), iconPanel.getHeight(), Image.SCALE_DEFAULT)); //set size
