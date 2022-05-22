@@ -4,9 +4,11 @@ import model.Passenger;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.URL;
 
-public class LoginByBookingNumPage extends JPanel{
+public class LoginByBookingNumPage extends JPanel {
 
     private JPanel panelTop;
     private JPanel panelMid;
@@ -29,6 +31,7 @@ public class LoginByBookingNumPage extends JPanel{
     private JButton button_withdraw;
 
     private JToggleButton see;
+    private int see_type =1;
 
     public LoginByBookingNumPage(){
         panelTop = new JPanel();
@@ -95,6 +98,18 @@ public class LoginByBookingNumPage extends JPanel{
         see.setBorderPainted(false);
         see.setFocusPainted(false);
         panel_id.add(see);
+        see.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == see){
+                    see_type = -see_type;
+                    if(see_type==-1)
+                        setId().setEchoChar('\0');
+                    else if(see_type ==1)
+                        setId().setEchoChar('*');
+                }
+            }
+        });
 
     }
 

@@ -2,6 +2,8 @@ package boundary;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.URL;
 
 public class LoginByNameIdPage extends JPanel {
@@ -18,6 +20,7 @@ public class LoginByNameIdPage extends JPanel {
 	private JButton CertBut;
 	private JToggleButton see;
 	private JButton withdraw;
+	private int see_type =1;
 	/**
 	 * Create the panel.
 	 */
@@ -108,6 +111,18 @@ public class LoginByNameIdPage extends JPanel {
 		see.setFocusPainted(false);
 		IDInput.add(textField_1);
 		IDInput.add(see);
+		see.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource() == see){
+					see_type = -see_type;
+					if(see_type==-1)
+						setId().setEchoChar('\0');
+					else if(see_type ==1)
+						setId().setEchoChar('*');
+				}
+			}
+		});
 
 		JPanel WestEdge = new JPanel();
 		FlowLayout fl_WestEdge = (FlowLayout) WestEdge.getLayout();

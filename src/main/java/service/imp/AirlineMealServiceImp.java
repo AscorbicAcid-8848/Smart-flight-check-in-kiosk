@@ -25,7 +25,7 @@ import java.util.List;
 public class AirlineMealServiceImp implements AirlineMealService {
 
     private List<AirLineMeal> airLineMeals = new ArrayList<>();
-    private PassengerService passengerService = new PassengerServiceImp();
+    private PassengerServiceImp passengerService = new PassengerServiceImp();
     ObjectMapper objectMapper = new ObjectMapper();
 
     public AirlineMealServiceImp(){
@@ -45,6 +45,10 @@ public class AirlineMealServiceImp implements AirlineMealService {
     public Passenger update(Integer idDocument, Integer airlineId, Integer mealId) {
         Passenger passenger = passengerService.searchByIdDocument(idDocument);
         passenger.setMeal(mealId);
+        Passenger passenger_update = passenger;
+        passenger_update.setMeal(mealId);
+        passengerService.update(passenger_update);
+        passengerService.toJSON();
         return passenger;
     }
 

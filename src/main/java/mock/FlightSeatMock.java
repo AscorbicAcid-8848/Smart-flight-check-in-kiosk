@@ -23,6 +23,11 @@ public class FlightSeatMock {
     FlightSeat flightSeat0 = new FlightSeat();
     FlightSeat flightSeat1 = new FlightSeat();
     FlightSeat flightSeat2 = new FlightSeat();
+    FlightSeat flightSeat3 = new FlightSeat();
+    FlightSeat flightSeat4 = new FlightSeat();
+    FlightSeat flightSeat5 = new FlightSeat();
+    FlightSeat flightSeat6 = new FlightSeat();
+
 //    private final int seatNum = 52; //100 seats for default
     private final int BusNum = 10; //10 seats for Business Seat
     private final int SpeNum = 6; //6 seats for Special Seat
@@ -35,8 +40,12 @@ public class FlightSeatMock {
     public FlightSeatMock(){
         //set flight id
         flightSeat0.setFlightId(100);
-        flightSeat1.setFlightId(101);
-        flightSeat2.setFlightId(200);
+        flightSeat1.setFlightId(200);
+        flightSeat2.setFlightId(101);
+        flightSeat3.setFlightId(300);
+        flightSeat4.setFlightId(400);
+        flightSeat5.setFlightId(201);
+        flightSeat6.setFlightId(401);
 
 
         //set seats for flight 0
@@ -79,11 +88,71 @@ public class FlightSeatMock {
         for(int j=0; j< EcoNum; j++){
             Seat seat = new Seat(j+BusNum+SpeNum, false, "Economic", EcoCost);
             flightSeat2.getSeatList().add(seat);
+        }
+
+        //set seats for flight 0
+        for(int j=0; j< BusNum; j++){
+            Seat seat = new Seat(j, false, "Business", BusCost);
+            flightSeat3.getSeatList().add(seat);
+        }
+        for(int j=0; j< SpeNum; j++){
+            Seat seat = new Seat(j+BusNum, false, "Special", SpeCost);
+            flightSeat3.getSeatList().add(seat);
+        }
+        for(int j=0; j< EcoNum; j++){
+            Seat seat = new Seat(j+BusNum+SpeNum, false, "Economic", EcoCost);
+            flightSeat3.getSeatList().add(seat);
+        }
+
+        //set seats for flight 0
+        for(int j=0; j< BusNum; j++){
+            Seat seat = new Seat(j, false, "Business", BusCost);
+            flightSeat4.getSeatList().add(seat);
+        }
+        for(int j=0; j< SpeNum; j++){
+            Seat seat = new Seat(j+BusNum, false, "Special", SpeCost);
+            flightSeat4.getSeatList().add(seat);
+        }
+        for(int j=0; j< EcoNum; j++){
+            Seat seat = new Seat(j+BusNum+SpeNum, false, "Economic", EcoCost);
+            flightSeat4.getSeatList().add(seat);
+        }
+
+        //set seats for flight 0
+        for(int j=0; j< BusNum; j++){
+            Seat seat = new Seat(j, false, "Business", BusCost);
+            flightSeat5.getSeatList().add(seat);
+        }
+        for(int j=0; j< SpeNum; j++){
+            Seat seat = new Seat(j+BusNum, false, "Special", SpeCost);
+            flightSeat5.getSeatList().add(seat);
+        }
+        for(int j=0; j< EcoNum; j++){
+            Seat seat = new Seat(j+BusNum+SpeNum, false, "Economic", EcoCost);
+            flightSeat5.getSeatList().add(seat);
+        }
+
+        //set seats for flight 0
+        for(int j=0; j< BusNum; j++){
+            Seat seat = new Seat(j, false, "Business", BusCost);
+            flightSeat6.getSeatList().add(seat);
+        }
+        for(int j=0; j< SpeNum; j++){
+            Seat seat = new Seat(j+BusNum, false, "Special", SpeCost);
+            flightSeat6.getSeatList().add(seat);
+        }
+        for(int j=0; j< EcoNum; j++){
+            Seat seat = new Seat(j+BusNum+SpeNum, false, "Economic", EcoCost);
+            flightSeat6.getSeatList().add(seat);
         }
 
         flightSeats.add(flightSeat0);
         flightSeats.add(flightSeat1);
         flightSeats.add(flightSeat2);
+        flightSeats.add(flightSeat3);
+        flightSeats.add(flightSeat4);
+        flightSeats.add(flightSeat5);
+        flightSeats.add(flightSeat6);
 
     }
 
