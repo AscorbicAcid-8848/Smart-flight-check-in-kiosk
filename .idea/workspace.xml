@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="数据更新已找到问题，下一步：一键更新+toJSON补全">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AirlineController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/BoardingPassService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/imp/BoardingPassServiceImp.java" afterDir="false" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="还差生成passengerlist">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/PassengerTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/PassengerTableList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/PassengerTableListService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/imp/PassengerTableListServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/AirlineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AirlineService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/AirlineServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/AirlineServiceImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +197,7 @@
       <workItem from="1653017098744" duration="2405000" />
       <workItem from="1653057369351" duration="3482000" />
       <workItem from="1653188884793" duration="572000" />
-      <workItem from="1653270688189" duration="1490000" />
+      <workItem from="1653270688189" duration="5766000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -390,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652971360647</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="还差生成passengerlist">
+      <created>1653272216550</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1653272216550</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +432,8 @@
     <MESSAGE value="输入paying信息成功后的操作没有，meal和seat 完整, 脱敏有bug" />
     <MESSAGE value="已更正" />
     <MESSAGE value="selectMeal不工作，进程结束前无法写入json" />
-    <option name="LAST_COMMIT_MESSAGE" value="selectMeal不工作，进程结束前无法写入json" />
+    <MESSAGE value="还差生成passengerlist" />
+    <option name="LAST_COMMIT_MESSAGE" value="还差生成passengerlist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

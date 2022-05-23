@@ -20,7 +20,6 @@ public class Passenger {
     private Integer IdDocument;
     private Integer visaId;
     private String visaPassword;
-    private Boolean isChecked;
 
     @Override
     public String toString() {
@@ -36,22 +35,13 @@ public class Passenger {
                 ", meal=" + meal +
                 ", IdDocument=" + IdDocument +
                 ", visaId=" + visaId +
-                ", visaPassword='" + visaPassword + '\'' +
-                ", isChecked=" + isChecked +
+                ", visaPassword='" + visaPassword +
                 '}';
     }
 
 
     //setter and getter
 
-
-    public Boolean getChecked() {
-        return isChecked;
-    }
-
-    public void setChecked(Boolean checked) {
-        isChecked = checked;
-    }
 
     public Integer getVisaId() {
         return visaId;
