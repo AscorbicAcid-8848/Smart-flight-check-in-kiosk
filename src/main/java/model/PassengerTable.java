@@ -1,5 +1,9 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.util.ArrayList;
+
 /**
  * @author YichenLiu
  * @description:
@@ -7,8 +11,9 @@ package model;
  */
 public class PassengerTable {
     private Integer flightId;
-    private Integer idDocument;
-    private Boolean isChecked;
+    private ArrayList<PassengerCheckInStatue> passengerCheckInStatueList = new ArrayList<>();
+
+    public PassengerTable() {}
 
     public Integer getFlightId() {
         return flightId;
@@ -18,19 +23,34 @@ public class PassengerTable {
         this.flightId = flightId;
     }
 
-    public Integer getIdDocument() {
-        return idDocument;
+    public ArrayList<PassengerCheckInStatue> getPassengerCheckInStatueList() {
+        return passengerCheckInStatueList;
     }
 
-    public void setIdDocument(Integer idDocument) {
-        this.idDocument = idDocument;
+    public void setPassengerCheckInStatueList(ArrayList<PassengerCheckInStatue> passengerCheckInStatueList) {
+        this.passengerCheckInStatueList = passengerCheckInStatueList;
     }
 
-    public Boolean getIsChecked() {
-        return isChecked;
+
+
+    public Boolean IsChecked(int index) {
+        return this.passengerCheckInStatueList.get(index).isChecked();
     }
 
-    public void setIsChecked(Boolean isChecked) {
-        this.isChecked = isChecked;
+
+    public void setChecked(Integer idDocument, Boolean checkStatus) {
+        for(int i = 0; i< this.passengerCheckInStatueList.size(); i++){
+            if(this.passengerCheckInStatueList.get(i).getIdDocument().equals(idDocument)){
+                this.passengerCheckInStatueList.get(i).setChecked(checkStatus);
+            }
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "PassengerTable{" +
+                "flightId=" + flightId +
+                ", passengerCheckInStatueList=" + passengerCheckInStatueList +
+                '}';
     }
 }

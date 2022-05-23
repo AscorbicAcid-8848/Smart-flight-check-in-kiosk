@@ -1,0 +1,17 @@
+mock\PassengerMockTest.class
+service\imp\PassengerServiceImpTest.class
+mock\AirlineMockTest.class
+service\imp\FlightSeatServiceImpTest.class
+mock\FlightMockTest.class
+mock\FlightSeatMockTest.class
+service\imp\IdDocumentCardServiceImpTest.class
+mock\MockAllTest.class
+controller\AirlineMealControllerTest.class
+mock\AirlineMealMockTest.class
+service\imp\AirlineServiceImpTest.class
+controller\FlightSeatControllerTest.class
+mock\IdDocumentCardMockTest.class
+controller\FlightControllerTest.class
+service\imp\AirlineMealServiceImpTest.class
+service\imp\PassengerTableServiceImpTest.class
+service\imp\FlightServiceImpTest.class
