@@ -15,4 +15,6 @@ public interface AirlineService {
      * @return
      */
     Airline update(Airline airline);
+
+    Airline search(Integer airlineId);
 }

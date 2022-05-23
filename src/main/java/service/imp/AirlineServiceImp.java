@@ -59,6 +59,12 @@ public class AirlineServiceImp implements AirlineService {
         }
     }
 
+
+    @Override
+    public Airline search(Integer airlineId) {
+        return null;
+    }
+
     /**
      * method to store data in service to json file
      */
