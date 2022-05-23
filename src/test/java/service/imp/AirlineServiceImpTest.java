@@ -15,15 +15,15 @@ public class AirlineServiceImpTest {
 
     @Test
     public void update() {
+        BUPT_test.setAirlineName("BUPT_test");
+        BUPT_test.setAirlineId(1);
+
+        System.out.println(airlineServiceImp.update(BUPT_test).toString());
     }
 
     @Test
     public void toJSON() {
 
-        BUPT_test.setAirlineName("BUPT_test");
-        BUPT_test.setAirlineId(1);
-
-        System.out.println(airlineServiceImp.update(BUPT_test).toString());
         airlineServiceImp.toJSON();
     }
 }

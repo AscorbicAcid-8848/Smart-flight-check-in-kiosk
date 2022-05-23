@@ -34,25 +34,25 @@ public class AirlineMealMock {
         airLineMeal3.setAirlineId(4);
 
         //create meal
-        Meal meal0_0 = new Meal(0,"Cascade Brisket Chili", 10);
-        Meal meal0_1 = new Meal(1,"Red Wine Braised Beef with Polenta", 90);
-        Meal meal0_2 = new Meal(2,"Chicken Cobb Salad", 30);
-        Meal meal0_3 = new Meal(3,"Hong Kong-style Curry Chicken", 50);
+        Meal meal0_0 = new Meal(0,"Cascade_Brisket_Chili", 10);
+        Meal meal0_1 = new Meal(1,"Red_Wine_Braised_Beef_with_Polenta", 90);
+        Meal meal0_2 = new Meal(2,"Chicken_Cobb_Salad", 30);
+        Meal meal0_3 = new Meal(3,"Hong_Kong-style_Curry_Chicken", 50);
 
-        Meal meal1_0 = new Meal(0,"Strawberry Frozen Yogurt Bars", 15);
-        Meal meal1_1 = new Meal(1,"Loco Moco", 55);
-        Meal meal1_2 = new Meal(2,"Kale Salad", 37);
-        Meal meal1_3 = new Meal(3,"Sirloin Sandwich", 57);
+        Meal meal1_0 = new Meal(0,"Strawberry_Frozen_Yogurt Bars", 15);
+        Meal meal1_1 = new Meal(1,"Loco_Moco", 55);
+        Meal meal1_2 = new Meal(2,"Kale_Salad", 37);
+        Meal meal1_3 = new Meal(3,"Sirloin_Sandwich", 57);
 
-        Meal meal2_0 = new Meal(0,"Hot Ham and Cheese Breakfast", 26);
-        Meal meal2_1 = new Meal(1,"Lasagna with Malbec and Flan", 70);
-        Meal meal2_2 = new Meal(2,"Classic Arabic Mezze", 64);
-        Meal meal2_3 = new Meal(3,"Flight Bites Tapas", 36);
+        Meal meal2_0 = new Meal(0,"Hot_Ham_and_Cheese_Breakfast", 26);
+        Meal meal2_1 = new Meal(1,"Lasagna_with_Malbec_and_Flan", 70);
+        Meal meal2_2 = new Meal(2,"Classic_Arabic_Mezze", 64);
+        Meal meal2_3 = new Meal(3,"Flight_Bites_Tapas", 36);
 
-        Meal meal3_0 = new Meal(0,"Marvellous Mac’N’Cheese Kids Meal", 120);
-        Meal meal3_1 = new Meal(1,"Hot Ham and Cheese Breakfast", 42);
-        Meal meal3_2 = new Meal(2,"Loco Moco", 25);
-        Meal meal3_3 = new Meal(3,"Chicken Cobb Salad", 75);
+        Meal meal3_0 = new Meal(0,"Marvellous_Mac’N’Cheese_Kids_Meal", 120);
+        Meal meal3_1 = new Meal(1,"Hot_Ham_and_Cheese_Breakfast", 42);
+        Meal meal3_2 = new Meal(2,"Loco_Moco", 25);
+        Meal meal3_3 = new Meal(3,"Chicken_Cobb_Salad", 75);
 
         airLineMeal0.getMeals().add(meal0_0);
         airLineMeal0.getMeals().add(meal0_1);
