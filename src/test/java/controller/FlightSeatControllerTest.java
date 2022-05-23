@@ -18,6 +18,10 @@ import java.util.List;
  */
 public class FlightSeatControllerTest extends TestCase {
     private FlightSeatController flightSeatController = new FlightSeatController();
+
+    /**
+     *
+     */
     @Test
     public void testSelect(){
         flightSeatController.selectSeat(1111,100,1);

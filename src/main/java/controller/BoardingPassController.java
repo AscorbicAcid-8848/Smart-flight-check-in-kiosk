@@ -23,6 +23,11 @@ import java.util.List;
 //这是我的登机牌controller
 public class BoardingPassController {
 
+    /**
+     *
+     * @param bookingNumber
+     * @return the boarding pass which been selected by booking number
+     */
     public BoardingPass checkPassenger(Integer bookingNumber){
         FlightController flightController = new FlightController();
         PassengerService passengerService = new PassengerServiceImp();
@@ -34,6 +39,13 @@ public class BoardingPassController {
         }
         return returnBoardingPass(currentFlight,passenger);
     }
+
+    /**
+     *
+     * @param surname
+     * @param passengerId
+     * @return the boarding pass which been selected by surname and passenger id.
+     */
     public BoardingPass checkPassenger(String surname, Integer passengerId){
         FlightController flightController = new FlightController();
         PassengerService passengerService = new PassengerServiceImp();
@@ -51,6 +63,11 @@ public class BoardingPassController {
         }
         return returnBoardingPass(currentFlight,passenger);
     }
+
+    /**
+     *
+     * @return the boarding pass which been selected by id document
+     */
     public BoardingPass checkPassenger(){
         FlightController flightController = new FlightController();
         PassengerService passengerService = new PassengerServiceImp();
@@ -82,16 +99,31 @@ public class BoardingPassController {
         return boardingPass;
     }
 
+    /**
+     *
+     * @param passenger
+     * @param flight
+     */
     public void printBoardingPass(Passenger passenger,Flight flight){
         BoardingPassService boardingPassService = new BoardingPassServiceImp();
         boardingPassService.printBoardingPass(passenger, flight);
     }
 
+    /**
+     *
+     * @param passenger
+     * @param flight
+     */
     public void printCarryOnBaggageTag(Passenger passenger,Flight flight){
         BoardingPassService boardingPassService = new BoardingPassServiceImp();
         boardingPassService.printCarryOnBaggageTag(passenger, flight);
     }
 
+    /**
+     *
+     * @param passenger
+     * @param flight
+     */
     public void printCheckinBaggageTicket(Passenger passenger,Flight flight){
         BoardingPassService boardingPassService = new BoardingPassServiceImp();
         boardingPassService.printCheckinBaggageTicket(passenger, flight);

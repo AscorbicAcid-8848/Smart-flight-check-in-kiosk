@@ -15,7 +15,13 @@ import java.util.List;
  * @date 2022/5/16 15:35
  */
 public class AirlineMealController {
-
+    /**
+     *
+     * @param idDocument
+     * @param airlineId
+     * @param mealId
+     * @return the updated passenger
+     */
     public Passenger selectMeal(Integer idDocument, Integer airlineId, Integer mealId){
         AirlineMealServiceImp airlineMealService = new AirlineMealServiceImp();
         Passenger passenger = airlineMealService.update(idDocument, airlineId, mealId);
@@ -23,6 +29,11 @@ public class AirlineMealController {
         return  passenger;
     }
 
+    /**
+     *
+     * @param airlineId
+     * @return the meal menu for selected airline
+     */
     public List<Meal> showMeals(Integer airlineId){
         AirlineMealServiceImp airlineMealService = new AirlineMealServiceImp();
         List<Meal> mealList = airlineMealService.searchByAirlineId(airlineId).getMeals();

@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="数据更新已找到问题，下一步：一键更新+toJSON补全">
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="还差生成passengerlist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/AirlineMealMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/AirlineMealMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/AirlineMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/AirlineMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/FlightMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/FlightMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/FlightSeatMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/FlightSeatMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/IdDocumentCardMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/IdDocumentCardMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/MockAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/MockAll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/PassengerMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/AirlineMealService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/AirlineMealService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/AirlineMealServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/AirlineMealServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/AirlineServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/AirlineServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/FlightSeatServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/FlightServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/FlightServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/IdDocumentCardServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/IdDocumentCardServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/PassengerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/PassengerServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AirlineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AirlineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AirlineMealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AirlineMealController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controller/FlightSeatControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/FlightSeatControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,6 +198,8 @@
       <workItem from="1653057369351" duration="3482000" />
       <workItem from="1653188884793" duration="572000" />
       <workItem from="1653269233591" duration="3129000" />
+      <workItem from="1653297946509" duration="504000" />
+      <workItem from="1653299444097" duration="2016000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
