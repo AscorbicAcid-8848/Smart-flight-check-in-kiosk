@@ -4,9 +4,11 @@ import model.BoardingPass;
 import model.Flight;
 import model.IdDocumentCard;
 import model.Passenger;
+import service.BoardingPassService;
 import service.FlightService;
 import service.IdDocumentCardService;
 import service.PassengerService;
+import service.imp.BoardingPassServiceImp;
 import service.imp.FlightServiceImp;
 import service.imp.IdDocumentCardServiceImp;
 import service.imp.PassengerServiceImp;
@@ -78,5 +80,20 @@ public class BoardingPassController {
         boardingPass.setFlight(flight);
         boardingPass.setPassenger(passenger);
         return boardingPass;
+    }
+
+    public void printBoardingPass(Passenger passenger,Flight flight){
+        BoardingPassService boardingPassService = new BoardingPassServiceImp();
+        boardingPassService.printBoardingPass(passenger, flight);
+    }
+
+    public void printCarryOnBaggageTag(Passenger passenger,Flight flight){
+        BoardingPassService boardingPassService = new BoardingPassServiceImp();
+        boardingPassService.printCarryOnBaggageTag(passenger, flight);
+    }
+
+    public void printCheckinBaggageTicket(Passenger passenger,Flight flight){
+        BoardingPassService boardingPassService = new BoardingPassServiceImp();
+        boardingPassService.printCheckinBaggageTicket(passenger, flight);
     }
 }

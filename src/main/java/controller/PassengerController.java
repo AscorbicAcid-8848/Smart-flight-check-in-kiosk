@@ -40,4 +40,18 @@ public class PassengerController {
         }
         return false;
     }
+
+    public void check(int passengerId, String surname){
+        PassengerServiceImp passengerService = new PassengerServiceImp();
+        Passenger passenger = passengerService.searchBySurnameAndPassengerId(surname, passengerId);
+        passenger.setChecked(true);
+        passengerService.toJSON();
+    }
+
+    public Boolean isChecked(int passengerId, String surname){
+        PassengerService passengerService = new PassengerServiceImp();
+        Passenger passenger = passengerService.searchBySurnameAndPassengerId(surname, passengerId);
+        return passenger.getChecked();
+    }
+
 }

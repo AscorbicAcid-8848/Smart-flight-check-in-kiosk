@@ -54,6 +54,11 @@ public class AirlineServiceImp implements AirlineService {
         }
     }
 
+    @Override
+    public Airline search(Integer airlineId) {
+        return null;
+    }
+
     public void toJSON(){
         AirlineMock airlineMock = new AirlineMock();
         try {
