@@ -22,6 +22,8 @@ public class ChooseMealPage extends JPanel {
     private JPanel mealImgPanel = new JPanel();
     private JComboBox chooseBox = new JComboBox();
     private Meal meal;
+    Integer airlineID;
+    AirlineMealController  airlineMealController = new AirlineMealController();
 
 
 
@@ -35,6 +37,8 @@ public class ChooseMealPage extends JPanel {
 
     JButton withdraw;
 
+    JButton viewFoodButton;
+
     public ChooseMealPage() {
 
         this.setLayout(null);
@@ -47,7 +51,6 @@ public class ChooseMealPage extends JPanel {
         controlPanel = new JPanel();
         mealPanel = new JPanel();
         priceLabel = new JLabel("Price: 0");
-
 
         pageIntro.setFont(new Font("Arial", Font.PLAIN, 15));
 
@@ -75,6 +78,8 @@ public class ChooseMealPage extends JPanel {
         confirm = new JButton("Confirm");
         back = new JButton("Back");
         withdraw = new JButton("Withdraw");
+        viewFoodButton = new JButton("Show picked food");
+        viewFoodButton.setBounds(50,100,300,30);
         back.setBounds(260,0,100,40);
         confirm.setBounds(20,0,100,40);
         withdraw.setBounds(140,0,100,40);
@@ -91,39 +96,72 @@ public class ChooseMealPage extends JPanel {
         airlinePanel.add(logoPanel);
         mealPanel.add(chooseBox);
         mealPanel.add(mealImgPanel);
+        mealPanel.add(viewFoodButton);
+
+
+        viewFoodButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                ImageIcon foodIcon = null;
+                JLabel mealImgLabel = null;
+                mealImgLabel = new JLabel();
+                try{meal = airlineMealController.showMeals(airlineID).get(getMeal()-1);}
+                catch (IndexOutOfBoundsException exception){
+                    mealNotChosenWarning();
+                    return;
+
+                }
+
+                foodIcon = new ImageIcon("src/main/java/boundary/images/"+meal.getMealName()+".png");
+                mealImgPanel.setLayout(new BorderLayout());
+                foodIcon.setImage(foodIcon.getImage().getScaledInstance(mealImgPanel.getWidth(),mealImgPanel.getHeight(),Image.SCALE_DEFAULT));
+                mealImgLabel.setIcon(foodIcon);
+                mealImgPanel.removeAll();
+                mealImgPanel.repaint();
+                mealImgPanel.add(mealImgLabel,BorderLayout.CENTER);
+                mealImgPanel.validate();
+            }
+        });
+
 //        chooseBox.addItemListener(new ItemListener() {
 //            @Override
 //            public void itemStateChanged(ItemEvent e) {
 //                ImageIcon foodIcon = null;
 //                JLabel mealImgLabel = null;
 //                mealImgLabel = new JLabel();
-//                foodIcon = new ImageIcon("src/main/java/boundary/images/Red Wine Braised Beef with Polenta.png");
+//                meal = airlineMealController.showMeals(airlineID).get(getMeal()-1);
+//                foodIcon = new ImageIcon("src/main/java/boundary/images/"+meal.getMealName()+".png");
 //                mealImgPanel.setLayout(new BorderLayout());
 //                foodIcon.setImage(foodIcon.getImage().getScaledInstance(mealImgPanel.getWidth(),mealImgPanel.getHeight(),Image.SCALE_DEFAULT));
 //                mealImgLabel.setIcon(foodIcon);
+//                mealImgPanel.removeAll();
+//                mealImgPanel.repaint();
 //                mealImgPanel.add(mealImgLabel,BorderLayout.CENTER);
-//                mealImgPanel.setVisible(true);
+//                mealImgPanel.validate();
 //            }
 //        });
-        chooseBox.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    ImageIcon foodIcon = null;
-                    JLabel mealImgLabel = null;
-                    mealImgLabel = new JLabel();
-                    foodIcon = new ImageIcon("src/main/java/boundary/images/Red Wine Braised Beef with Polenta.png");
-                    mealImgPanel.setLayout(new BorderLayout());
-                    foodIcon.setImage(foodIcon.getImage().getScaledInstance(mealImgPanel.getWidth(),mealImgPanel.getHeight(),Image.SCALE_DEFAULT));
-                    mealImgLabel.setIcon(foodIcon);
-                    mealImgPanel.add(mealImgLabel,BorderLayout.CENTER);
-                    mealImgPanel.setVisible(true);
-                }
-            });
+//        chooseBox.addActionListener(new ActionListener() {
+//                @Override
+//                public void actionPerformed(ActionEvent e) {
+//                    ImageIcon foodIcon = null;
+//                    JLabel mealImgLabel = null;
+//                    mealImgLabel = new JLabel();
+//                    meal = airlineMealController.showMeals(airlineID).get(getMeal()-1);
+//                    foodIcon = new ImageIcon("src/main/java/boundary/images/"+meal.getMealName()+".png");
+//                    mealImgPanel.setLayout(new BorderLayout());
+//                    foodIcon.setImage(foodIcon.getImage().getScaledInstance(mealImgPanel.getWidth(),mealImgPanel.getHeight(),Image.SCALE_DEFAULT));
+//                    mealImgLabel.setIcon(foodIcon);
+//                    mealImgPanel.add(mealImgLabel,BorderLayout.CENTER);
+//                    mealImgPanel.setVisible(true);
+//                }
+//            });
 
 
     }
 
     public void render(ArrayList<Meal> meals, Integer airlineID){
+        this.airlineID = airlineID;
         JLabel airlineLogoLabel= new JLabel();
         ImageIcon airlineIcon = null;
 
