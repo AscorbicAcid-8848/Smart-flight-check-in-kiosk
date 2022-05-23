@@ -1,5 +1,7 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.ArrayList;
 
 /**
@@ -9,12 +11,9 @@ import java.util.ArrayList;
  */
 public class PassengerTable {
     private Integer flightId;
-    private ArrayList<PassengerCheckInStatue> passengerCheckInStatueList;
+    private ArrayList<PassengerCheckInStatue> passengerCheckInStatueList = new ArrayList<>();
 
-    public PassengerTable() {
-        this.flightId = null;
-        this.passengerCheckInStatueList = new ArrayList<>();
-    }
+    public PassengerTable() {}
 
     public Integer getFlightId() {
         return flightId;
@@ -24,27 +23,34 @@ public class PassengerTable {
         this.flightId = flightId;
     }
 
-    public Integer getIdDocument(int index) {
-
-        return this.passengerCheckInStatueList.get(index).getIdDocument();
+    public ArrayList<PassengerCheckInStatue> getPassengerCheckInStatueList() {
+        return passengerCheckInStatueList;
     }
 
-    public void addIdDocument(Integer idDocument, Boolean checkStatus) {
-        PassengerCheckInStatue passengerCheckInStatue = new PassengerCheckInStatue();
-        passengerCheckInStatue.setIdDocument(idDocument);
-        passengerCheckInStatue.setChecked(checkStatus);
-        this.passengerCheckInStatueList.add(passengerCheckInStatue);
+    public void setPassengerCheckInStatueList(ArrayList<PassengerCheckInStatue> passengerCheckInStatueList) {
+        this.passengerCheckInStatueList = passengerCheckInStatueList;
     }
+
+
 
     public Boolean IsChecked(int index) {
         return this.passengerCheckInStatueList.get(index).isChecked();
     }
 
+
     public void setChecked(Integer idDocument, Boolean checkStatus) {
         for(int i = 0; i< this.passengerCheckInStatueList.size(); i++){
-            if(this.passengerCheckInStatueList.get(i).getIdDocument() == idDocument){
+            if(this.passengerCheckInStatueList.get(i).getIdDocument().equals(idDocument)){
                 this.passengerCheckInStatueList.get(i).setChecked(checkStatus);
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "PassengerTable{" +
+                "flightId=" + flightId +
+                ", passengerCheckInStatueList=" + passengerCheckInStatueList +
+                '}';
     }
 }

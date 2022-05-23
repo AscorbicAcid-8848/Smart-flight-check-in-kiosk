@@ -14,7 +14,9 @@ package model;/**
  */
 public class PassengerCheckInStatue {
     private Integer IdDocument;
-    private boolean isChecked;
+    private Boolean isChecked;
+
+    public PassengerCheckInStatue() {}
 
     public Integer getIdDocument() {
         return IdDocument;
@@ -30,5 +32,13 @@ public class PassengerCheckInStatue {
 
     public void setChecked(boolean checked) {
         isChecked = checked;
+    }
+
+    @Override
+    public String toString() {
+        return "PassengerCheckInStatue{" +
+                "IdDocument=" + IdDocument +
+                ", isChecked=" + isChecked +
+                '}';
     }
 }

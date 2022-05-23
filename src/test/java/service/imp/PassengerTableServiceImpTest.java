@@ -8,35 +8,21 @@ import org.junit.Test;
  * @version 1.0
  */
 public class PassengerTableServiceImpTest {
-
-
-
-    @Test
-    public void freshTable() {
-    }
+    PassengerTableServiceImp passengerTableServiceImp = new PassengerTableServiceImp();
 
     @Test
     public void checkPassengerCheckInStatus() {
-        PassengerTableServiceImp passengerTableServiceImp = new PassengerTableServiceImp();
+        System.out.println(passengerTableServiceImp.checkPassengerCheckInStatus(300).toString());
 
-        passengerTableServiceImp.freshTable();
+        passengerTableServiceImp.setChecked(100,1111,true);
+        System.out.println(passengerTableServiceImp.checkPassengerCheckInStatus(100).toString());
 
-        PassengerTable passengerTable = passengerTableServiceImp.checkPassengerCheckInStatus(100);
-
-        passengerTableServiceImp.setChecked(100,1111, true);
-
-        try {
-            passengerTableServiceImp.toJSON();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        passengerTableServiceImp.toJSON();
     }
 
     @Test
     public void setChecked() {
     }
-
-
 
     @Test
     public void toJSON() {

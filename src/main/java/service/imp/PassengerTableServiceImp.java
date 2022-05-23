@@ -4,7 +4,10 @@ import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import mock.FlightSeatMock;
+import mock.PassengerTableMock;
 import model.Flight;
+import model.FlightSeat;
 import model.Passenger;
 import model.PassengerTable;
 import service.PassengerTableListService;
@@ -16,17 +19,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author YichenLiu
+ * @author YichenLiu Zihao Ye
  * @description:
  * @date 2022/5/23 10:53
  */
 public class PassengerTableServiceImp implements PassengerTableListService {
     ArrayList<PassengerTable> passengerTables = new ArrayList<>();
+    ObjectMapper objectMapper = new ObjectMapper();
 
-    public PassengerTableServiceImp(){}
+    public PassengerTableServiceImp(){
+        File passengerTableList = new File("data\\passengerTableList.json");
 
+        try {
+            JavaType type = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, PassengerTable.class);
+            passengerTables = objectMapper.readValue(passengerTableList, type);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
 
-
+    /**
+     * get the passenger checkIn status by input corresponding flight id
+     * @param flightId: flight id
+     * @return: passenger table
+     */
+    @Override
     public PassengerTable checkPassengerCheckInStatus(Integer flightId){
         PassengerTable searchResult = new PassengerTable();
 
@@ -41,7 +58,13 @@ public class PassengerTableServiceImp implements PassengerTableListService {
         return searchResult;
     }
 
-
+    /**
+     * method set passenger check status with its flight id, idDocument and update statues isChecked
+     * @param flightId :flightId
+     * @param idDocument :idDocument
+     * @param isChecked :isChecked
+     */
+    @Override
     public void setChecked(Integer flightId, Integer idDocument, Boolean isChecked){
 
         for(int i=0; i<passengerTables.size(); i++){
@@ -54,75 +77,16 @@ public class PassengerTableServiceImp implements PassengerTableListService {
         }
     }
 
-    public void freshTable() {
-
-        //read file
-        ObjectMapper objectMapper = new ObjectMapper();
-        List<Passenger> passengers = new ArrayList<Passenger>();
-        List<Flight> flights = new ArrayList<Flight>();
-        File passengerList = new File("data\\passengerList.json");
-        File flightList = new File("data\\flightList.json");
-
+    /**
+     * method to store data in service to json file
+     */
+    public void toJSON(){
+        PassengerTableMock passengerTableMock = new PassengerTableMock();
         try {
-            JavaType passenger_type = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Passenger.class);
-            passengers = objectMapper.readValue(passengerList, passenger_type);
-            JavaType flight_type = objectMapper.getTypeFactory().constructCollectionType(ArrayList.class, Flight.class);
-            flights = objectMapper.readValue(flightList, flight_type);
+            passengerTableMock.toJSON((ArrayList<PassengerTable>) passengerTables, false);
         }catch (IOException e){
             e.printStackTrace();
         }
-
-
-        this.passengerTables = new ArrayList<>();
-
-        for(int i=0; i<flights.size(); i++){
-            PassengerTable passengerTable = new PassengerTable();
-            passengerTable.setFlightId(flights.get(i).getFlightId());
-            this.passengerTables.add(passengerTable);
-        }
-
-
-        for(int i=0; i<passengers.size(); i++){
-
-            for(int j=0; j<passengers.get(i).getFlightId().size(); j++){
-
-                for(int k=0; k<passengerTables.size(); k++){
-
-                    if(passengers.get(i).getFlightId().get(j).equals(this.passengerTables.get(k).getFlightId())){
-
-                        this.passengerTables.get(k).addIdDocument(passengers.get(i).getIdDocument(), false);
-
-                    }
-                }
-            }
-        }
-
-        System.out.println();
     }
 
-    /**
-     * a methed to transform data to json
-     * @throws JsonGenerationException
-     * @throws JsonMappingException
-     * @throws IOException
-     */
-    public void toJSON() throws JsonGenerationException, JsonMappingException, IOException{
-
-        ObjectMapper mapper = new ObjectMapper();
-        FileWriter file = new FileWriter("data\\passengerTableList.json",false);
-
-        try {
-            file.write("");
-        }catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        //write json data to json file
-        try {
-            mapper.writeValue(file, passengerTables);
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw e;
-        }
-    }
 }
