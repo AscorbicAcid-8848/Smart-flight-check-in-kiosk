@@ -33,6 +33,11 @@ public class AirlineServiceImp implements AirlineService {
 
     }
 
+    /**
+     * update an airline
+     * @param airline
+     * @return
+     */
     @Override
     public Airline update(Airline airline) {
         int result = -1;
@@ -54,11 +59,15 @@ public class AirlineServiceImp implements AirlineService {
         }
     }
 
+
     @Override
     public Airline search(Integer airlineId) {
         return null;
     }
 
+    /**
+     * method to store data in service to json file
+     */
     public void toJSON(){
         AirlineMock airlineMock = new AirlineMock();
         try {

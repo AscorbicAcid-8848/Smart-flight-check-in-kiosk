@@ -16,6 +16,12 @@ public class IdDocumentCardMock {
     public IdDocumentCardMock() {
     }
 
+    /**
+     * transform a IdDocumentid to json file
+     * @param IdDocumentid: data you want to transform to json
+     * @param name: name of person corresponding to this iddocument id
+     * @throws IOException
+     */
     public void toJSON(Integer IdDocumentid, String name) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         FileWriter file = new FileWriter("Passenger_IdCard\\"+ name + "\\idDocumentCard.json");

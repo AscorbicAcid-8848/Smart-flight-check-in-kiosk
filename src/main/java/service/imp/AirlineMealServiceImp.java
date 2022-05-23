@@ -41,6 +41,13 @@ public class AirlineMealServiceImp implements AirlineMealService {
 
     }
 
+    /**
+     * update a passenger's mealId, input idDocument and airline id to locate the passenger
+     * @param idDocument: idDocument corresponding to the passenger
+     * @param airlineId: airline id of the airline
+     * @param mealId: meal id of the meal that the passenger chooses
+     * @return
+     */
     @Override
     public Passenger update(Integer idDocument, Integer airlineId, Integer mealId) {
         Passenger passenger = passengerService.searchByIdDocument(idDocument);
@@ -52,6 +59,11 @@ public class AirlineMealServiceImp implements AirlineMealService {
         return passenger;
     }
 
+    /**
+     * method to get a AirlineMeal object by its airline id
+     * @param airlineId: airline id of the airline
+     * @return AirLineMeal
+     */
     @Override
     public AirLineMeal searchByAirlineId(Integer airlineId) {
 
@@ -80,6 +92,9 @@ public class AirlineMealServiceImp implements AirlineMealService {
 
     }
 
+    /**
+     * method to store data in service to json file
+     */
     public void toJSON(){
         AirlineMealMock airlineMealMock = new AirlineMealMock();
         try {

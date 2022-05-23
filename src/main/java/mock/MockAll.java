@@ -16,6 +16,9 @@ import java.io.IOException;
  */
 public class MockAll {
 
+    /**
+     * refresh all the data
+     */
     public void refreshData(){
 
         PassengerMock passengerMock = new PassengerMock();

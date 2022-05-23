@@ -8,12 +8,33 @@ import model.Passenger;
  * @date 2022/3/16 16:26
  */
 public interface PassengerService {
-    //通过订票号查询乘客信息
+
+    /**
+     * get a corresponding passenger by inputting its booking number
+     * @param bookingNumber
+     * @return Passenger
+     */
     Passenger searchByBookingNumber(Integer bookingNumber);
-    //通过乘客姓氏以及id查询
+
+    /**
+     * get a corresponding passenger by inputting its Surname and passenger id
+     * @param surname
+     * @param passengerId
+     * @return Passenger
+     */
     Passenger searchBySurnameAndPassengerId(String surname, Integer passengerId);
-    //通过乘客id document查询
+
+    /**
+     * get a corresponding passenger by inputting its idDocument
+     * @param idDocument
+     * @return Passenger
+     */
     Passenger searchByIdDocument(Integer idDocument);
-    //2.2中的自定义操作
+
+    /**
+     * update a passenger by inputting its changed version
+     * @param passenger
+     * @return Passenger
+     */
     Passenger update(Passenger passenger);//前排座位被选的情况
 }
