@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="还差生成passengerlist">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AirlineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AirlineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AirlineMealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AirlineMealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/FlightSeatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controller/FlightSeatControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/FlightSeatControllerTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="还差生成passengerlist" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +54,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/idDocumentCard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/boundary" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -74,9 +66,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\target\classes\boundary" />
       <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\idDocumentCard" />
       <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\target\classes\boundary" />
-      <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\target\classes\boundary" />
       <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\src\main\java\boundary" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -199,7 +191,7 @@
       <workItem from="1653188884793" duration="572000" />
       <workItem from="1653269233591" duration="3129000" />
       <workItem from="1653297946509" duration="504000" />
-      <workItem from="1653299444097" duration="2016000" />
+      <workItem from="1653299444097" duration="3462000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -390,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652971360647</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="还差生成passengerlist">
+      <created>1653304643302</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1653304643302</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,6 +426,7 @@
     <MESSAGE value="输入paying信息成功后的操作没有，meal和seat 完整, 脱敏有bug" />
     <MESSAGE value="已更正" />
     <MESSAGE value="selectMeal不工作，进程结束前无法写入json" />
-    <option name="LAST_COMMIT_MESSAGE" value="selectMeal不工作，进程结束前无法写入json" />
+    <MESSAGE value="还差生成passengerlist" />
+    <option name="LAST_COMMIT_MESSAGE" value="还差生成passengerlist" />
   </component>
 </project>

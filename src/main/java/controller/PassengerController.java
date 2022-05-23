@@ -49,11 +49,9 @@ public class PassengerController {
         String booknum = bookingNumber.toString();
         booknum = booknum.substring(0, 3);
         Integer flightId = Integer.parseInt(booknum);
-        passengerService.toJSON();
-    }
-
-    public void generatePassengerTable(){
-
+        Integer idDocument = passenger.getIdDocument();
+        passengerTableListService.setChecked(flightId,idDocument,true);
+        passengerTableListService.toJSON();
     }
 
 }

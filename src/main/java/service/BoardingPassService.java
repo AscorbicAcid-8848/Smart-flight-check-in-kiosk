@@ -1,5 +1,6 @@
 package service;
 
+import model.BoardingPassPrint;
 import model.Flight;
 import model.Passenger;
 
@@ -10,7 +11,7 @@ import model.Passenger;
  */
 public interface BoardingPassService {
 
-    void printBoardingPass(Passenger passenger, Flight flight);
+    void printBoardingPass(BoardingPassPrint boardingPassPrint);
 
     void printCarryOnBaggageTag(Passenger passenger, Flight flight);
 

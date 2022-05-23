@@ -8,13 +8,13 @@ import java.util.Date;
 /**
  * @projectName: workspace.xml
  * @package: model
- * @className: BoradingPassPrint
+ * @className: BoardingPassPrint
  * @author: Zihao YE
  * @description: TODO
  * @date: 2022/5/22 12:59
  * @version: 1.0
  */
-public class BoradingPassPrint {
+public class BoardingPassPrint {
     private String surname;
     private String firstname;
     private Date departureTime;
@@ -23,6 +23,17 @@ public class BoradingPassPrint {
     private Integer arrivalTerminal;
     private String arrivalAirport;
     private Integer departureGate;
+
+    public BoardingPassPrint(String surname, String firstname, Date departureTime, Date fallTime, String flightName, Integer arrivalTerminal, String arrivalAirport, Integer departureGate) {
+        this.surname = surname;
+        this.firstname = firstname;
+        this.departureTime = departureTime;
+        this.fallTime = fallTime;
+        this.flightName = flightName;
+        this.arrivalTerminal = arrivalTerminal;
+        this.arrivalAirport = arrivalAirport;
+        this.departureGate = departureGate;
+    }
 
     public String getSurname() {
         return surname;

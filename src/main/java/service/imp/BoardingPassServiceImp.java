@@ -1,5 +1,6 @@
 package service.imp;
 
+import model.BoardingPassPrint;
 import model.Flight;
 import model.Passenger;
 import service.BoardingPassService;
@@ -11,7 +12,7 @@ import service.BoardingPassService;
  */
 public class BoardingPassServiceImp implements BoardingPassService {
     @Override
-    public void printBoardingPass(Passenger passenger, Flight flight) {
+    public void printBoardingPass(BoardingPassPrint boardingPassPrint) {
 
     }
 
