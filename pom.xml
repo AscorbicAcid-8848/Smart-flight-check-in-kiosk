@@ -29,11 +29,29 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>groupId</groupId>
+            <artifactId>XXXManagementSystem</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--            <dependency>-->
+        <!--                <groupId>com.formdev</groupId>-->
+        <!--                <artifactId>flatlaf</artifactId>-->
+        <!--                <version>0.26</version>-->
+        <!--            </dependency>-->
+        <!-- https://mvnrepository.com/artifact/com.jtattoo/JTattoo -->
+        <dependency>
+            <groupId>com.jtattoo</groupId>
+            <artifactId>JTattoo</artifactId>
+            <version>1.6.7</version>
+        </dependency>
+
     </dependencies>
 
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
     </properties>
-    
+
 </project>
