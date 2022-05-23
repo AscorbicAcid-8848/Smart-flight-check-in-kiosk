@@ -1,9 +1,6 @@
 package controller;
 
-import model.BoardingPass;
-import model.Flight;
-import model.IdDocumentCard;
-import model.Passenger;
+import model.*;
 import service.BoardingPassService;
 import service.FlightService;
 import service.IdDocumentCardService;
@@ -106,7 +103,8 @@ public class BoardingPassController {
      */
     public void printBoardingPass(Passenger passenger,Flight flight){
         BoardingPassService boardingPassService = new BoardingPassServiceImp();
-        boardingPassService.printBoardingPass(passenger, flight);
+        BoardingPassPrint boardingPassPrint = new BoardingPassPrint(passenger.getSurname(), passenger.getFirstname(), flight.getDepartureTime(),flight.getFallTime(),flight.getFlightName(),flight.getArrivalTerminal(),flight.getArrivalAirport(), flight.getDepartureGate());
+        boardingPassService.printBoardingPass(boardingPassPrint);
     }
 
     /**

@@ -62,7 +62,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -191,7 +191,7 @@
       <workItem from="1653188884793" duration="572000" />
       <workItem from="1653269233591" duration="3129000" />
       <workItem from="1653297946509" duration="504000" />
-      <workItem from="1653299444097" duration="3462000" />
+      <workItem from="1653299444097" duration="3611000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
