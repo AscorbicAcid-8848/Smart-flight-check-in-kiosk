@@ -2,9 +2,8 @@ package controller;
 
 import model.Passenger;
 import service.PassengerService;
-import service.PassengerTableListService;
 import service.imp.PassengerServiceImp;
-import service.imp.PassengerTableListServiceImp;
+import service.imp.PassengerTableServiceImp;
 
 import java.util.Objects;
 
@@ -45,18 +44,12 @@ public class PassengerController {
 
     public void check(Integer passengerId, String surname, Integer bookingNumber){
         PassengerServiceImp passengerService = new PassengerServiceImp();
-        PassengerTableListServiceImp passengerTableListService = new PassengerTableListServiceImp();
+        PassengerTableServiceImp passengerTableListService = new PassengerTableServiceImp();
         Passenger passenger = passengerService.searchBySurnameAndPassengerId(surname, passengerId);
         String booknum = bookingNumber.toString();
         booknum = booknum.substring(0, 3);
         Integer flightId = Integer.parseInt(booknum);
         passengerService.toJSON();
-    }
-
-    public Boolean isChecked(int passengerId, String surname,Integer bookingNumber){
-        String booknum = bookingNumber.toString();
-        booknum = booknum.substring(0, 3);
-        Integer flightId = Integer.parseInt(booknum);
     }
 
     public void generatePassengerTable(){

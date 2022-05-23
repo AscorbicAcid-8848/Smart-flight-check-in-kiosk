@@ -54,7 +54,7 @@ public class AirlineServiceImp implements AirlineService {
         if (result != -1) {
             return airlines.get(result);
         } else {
-            System.out.println("no passenger found!");
+            System.out.println("no airline found!");
             return null;
         }
     }
@@ -62,7 +62,20 @@ public class AirlineServiceImp implements AirlineService {
 
     @Override
     public Airline search(Integer airlineId) {
-        return null;
+        int result = -1;
+
+        for (int i = 0; i < airlines.size(); i++) {
+            if (airlines.get(i).getAirlineId().equals(airlineId)) {
+                result = i;
+            }
+        }
+
+        if (result != -1) {
+            return airlines.get(result);
+        } else {
+            System.out.println("no airline found!");
+            return null;
+        }
     }
 
     /**

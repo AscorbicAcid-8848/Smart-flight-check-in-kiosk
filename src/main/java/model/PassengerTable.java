@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 /**
  * @author YichenLiu
  * @description:
@@ -7,8 +9,12 @@ package model;
  */
 public class PassengerTable {
     private Integer flightId;
-    private Integer idDocument;
-    private Boolean isChecked;
+    private ArrayList<PassengerCheckInStatue> passengerCheckInStatueList;
+
+    public PassengerTable() {
+        this.flightId = null;
+        this.passengerCheckInStatueList = new ArrayList<>();
+    }
 
     public Integer getFlightId() {
         return flightId;
@@ -18,19 +24,27 @@ public class PassengerTable {
         this.flightId = flightId;
     }
 
-    public Integer getIdDocument() {
-        return idDocument;
+    public Integer getIdDocument(int index) {
+
+        return this.passengerCheckInStatueList.get(index).getIdDocument();
     }
 
-    public void setIdDocument(Integer idDocument) {
-        this.idDocument = idDocument;
+    public void addIdDocument(Integer idDocument, Boolean checkStatus) {
+        PassengerCheckInStatue passengerCheckInStatue = new PassengerCheckInStatue();
+        passengerCheckInStatue.setIdDocument(idDocument);
+        passengerCheckInStatue.setChecked(checkStatus);
+        this.passengerCheckInStatueList.add(passengerCheckInStatue);
     }
 
-    public Boolean getIsChecked() {
-        return isChecked;
+    public Boolean IsChecked(int index) {
+        return this.passengerCheckInStatueList.get(index).isChecked();
     }
 
-    public void setIsChecked(Boolean isChecked) {
-        this.isChecked = isChecked;
+    public void setChecked(Integer idDocument, Boolean checkStatus) {
+        for(int i = 0; i< this.passengerCheckInStatueList.size(); i++){
+            if(this.passengerCheckInStatueList.get(i).getIdDocument() == idDocument){
+                this.passengerCheckInStatueList.get(i).setChecked(checkStatus);
+            }
+        }
     }
 }
