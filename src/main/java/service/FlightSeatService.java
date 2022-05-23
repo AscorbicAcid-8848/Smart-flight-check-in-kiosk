@@ -12,10 +12,22 @@ import java.util.List;
  * @date 2022/4/30 17:32
  */
 public interface FlightSeatService {
-    //更改指定座位的状态
+
+    /**
+     * update a flight seat by inputting idDocument of the passenger, flight id of the flight and the seat number
+     * passenger choose
+     * @param idDocument
+     * @param flightId
+     * @param seatNumber
+     * @return
+     */
     public Passenger update(Integer idDocument, Integer flightId, Integer seatNumber);
 
-    //展示所在flight的全部座位
+    /**
+     * get the flight seat list of a flight by inputting its flight id
+     * @param flightId
+     * @return FlightSeat
+     */
     public FlightSeat searchByFlightId(Integer flightId);
 }
 

@@ -156,6 +156,14 @@ public class FlightSeatMock {
 
     }
 
+    /**
+     * a methed to transform input to json file, or you can choose use mock data to create default json
+     * @param input: data you want to transform
+     * @param useMockData: whether you want to use mock data
+     * @throws JsonGenerationException
+     * @throws JsonMappingException
+     * @throws IOException
+     */
     public void toJSON(ArrayList<FlightSeat> input, Boolean useMockData) throws JsonGenerationException, JsonMappingException, IOException {
         //determine whether use mock data or not
         if(!useMockData){

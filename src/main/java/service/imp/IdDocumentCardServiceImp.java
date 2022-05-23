@@ -19,6 +19,10 @@ public class IdDocumentCardServiceImp implements IdDocumentCardService {
 
     public IdDocumentCardServiceImp() {}
 
+    /**
+     * read the json file and return an idDocumentCard object it corresponding to
+     * @return idDocumentCard
+     */
     @Override
     public IdDocumentCard checkCard() {
         ObjectMapper objectMapper = new ObjectMapper();

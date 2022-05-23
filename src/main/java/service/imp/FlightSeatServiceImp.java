@@ -39,6 +39,14 @@ public class FlightSeatServiceImp implements FlightSeatService {
 
     }
 
+    /**
+     * update a flight seat by inputting idDocument of the passenger, flight id of the flight and the seat number
+     * passenger choose
+     * @param idDocument
+     * @param flightId
+     * @param seatNumber
+     * @return
+     */
     @Override
     public Passenger update(Integer idDocument, Integer flightId, Integer seatNumber) {
 
@@ -73,6 +81,11 @@ public class FlightSeatServiceImp implements FlightSeatService {
         return passenger;
     }
 
+    /**
+     * get the flight seat list of a flight by inputting its flight id
+     * @param flightId
+     * @return FlightSeat
+     */
     @Override
     public FlightSeat searchByFlightId(Integer flightId) {
         int result = -1;
@@ -99,6 +112,9 @@ public class FlightSeatServiceImp implements FlightSeatService {
         }
     }
 
+    /**
+     * method to store data in service to json file
+     */
     public void toJSON(){
         FlightSeatMock flightSeatMock = new FlightSeatMock();
         try {

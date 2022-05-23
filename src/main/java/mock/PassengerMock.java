@@ -35,7 +35,7 @@ public class PassengerMock {
     public PassengerMock(){
 
 
-        //set flight id (three flight 100:BUPT2022 ,101:QM2022, 200:BUPT2021
+        //set flight id
         List<Integer> passenger0FlightIDs = new ArrayList<>();
         List<Integer> passenger1FlightIDs = new ArrayList<>();
         List<Integer> passenger2FlightIDs = new ArrayList<>();
@@ -319,6 +319,14 @@ public class PassengerMock {
         passengers.add(passenger11);
     }
 
+    /**
+     * a methed to transform input to json file, or you can choose use mock data to create default json
+     * @param input: data you want to transform
+     * @param useMockData: whether you want to use mock data
+     * @throws JsonGenerationException
+     * @throws JsonMappingException
+     * @throws IOException
+     */
     public void toJSON(ArrayList<Passenger> input, Boolean useMockData) throws JsonGenerationException, JsonMappingException, IOException {
         //determine whether use mock data or not
         if(!useMockData){

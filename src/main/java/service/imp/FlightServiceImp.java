@@ -36,6 +36,22 @@ public class FlightServiceImp implements FlightService {
 
     }
 
+    /**
+     * input attributes of a new flight and insert this flight into service
+     * @param airlineId
+     * @param flightId
+     * @param flightName
+     * @param departureTime
+     * @param fallTime
+     * @param isDelayed
+     * @param departureGate
+     * @param destWeather
+     * @param destCOVIDPolicy
+     * @param arrivalAirport
+     * @param arrivalTerminal
+     * @param isCurrent
+     * @return Flight
+     */
     @Override
     public Flight insert(Integer airlineId, Integer flightId, String flightName, Date departureTime, Date fallTime, boolean isDelayed,
                          Integer departureGate, String destWeather, String destCOVIDPolicy, String arrivalAirport, Integer arrivalTerminal,Boolean isCurrent) {
@@ -58,6 +74,11 @@ public class FlightServiceImp implements FlightService {
         return flight;
     }
 
+    /**
+     * get a certain flight by inputting its flight id
+     * @param flightId
+     * @return
+     */
     @Override
     public Flight searchByFlightId(Integer flightId) {
         int result = -1;
@@ -84,6 +105,11 @@ public class FlightServiceImp implements FlightService {
         }
     }
 
+    /**
+     * change a flight by inputting a changed flight
+     * @param flight
+     * @return
+     */
     @Override
     public Flight change(Flight flight){
         int result = -1;
@@ -115,6 +141,9 @@ public class FlightServiceImp implements FlightService {
         }
     }
 
+    /**
+     * method to store data in service to json file
+     */
     public void toJSON() {
         FlightMock flightMock = new FlightMock();
         try {

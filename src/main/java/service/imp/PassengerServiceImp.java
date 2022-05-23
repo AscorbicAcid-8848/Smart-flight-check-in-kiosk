@@ -36,6 +36,11 @@ public class PassengerServiceImp implements PassengerService {
 
     }
 
+    /**
+     * get a corresponding passenger by inputting its booking number
+     * @param bookingNumber
+     * @return Passenger
+     */
     @Override
     public Passenger searchByBookingNumber(Integer bookingNumber) {
         int result = -1;
@@ -64,6 +69,12 @@ public class PassengerServiceImp implements PassengerService {
         }
     }
 
+    /**
+     * get a corresponding passenger by inputting its Surname and passenger id
+     * @param surname
+     * @param passengerId
+     * @return Passenger
+     */
     @Override
     public Passenger searchBySurnameAndPassengerId(String surname, Integer passengerId) {
         int result = -1;
@@ -90,6 +101,11 @@ public class PassengerServiceImp implements PassengerService {
         }
     }
 
+    /**
+     * get a corresponding passenger by inputting its idDocument
+     * @param idDocument
+     * @return Passenger
+     */
     @Override
     public Passenger searchByIdDocument(Integer idDocument) {
         int result = -1;
@@ -116,6 +132,11 @@ public class PassengerServiceImp implements PassengerService {
         }
     }
 
+    /**
+     * update a passenger by inputting its changed version
+     * @param passenger
+     * @return Passenger
+     */
     @Override
     public Passenger update(Passenger passenger) {
 
@@ -146,6 +167,9 @@ public class PassengerServiceImp implements PassengerService {
         }
     }
 
+    /**
+     * method to store data in service to json file
+     */
     public void toJSON(){
         PassengerMock passengerMock = new PassengerMock();
         try {
