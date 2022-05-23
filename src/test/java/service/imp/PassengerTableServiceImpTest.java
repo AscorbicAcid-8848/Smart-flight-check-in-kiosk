@@ -13,18 +13,16 @@ public class PassengerTableServiceImpTest {
     @Test
     public void checkPassengerCheckInStatus() {
         System.out.println(passengerTableServiceImp.checkPassengerCheckInStatus(300).toString());
-
-        passengerTableServiceImp.setChecked(100,1111,true);
-        System.out.println(passengerTableServiceImp.checkPassengerCheckInStatus(100).toString());
-
-        passengerTableServiceImp.toJSON();
     }
 
     @Test
     public void setChecked() {
+        passengerTableServiceImp.setChecked(100,1111,true);
+        System.out.println(passengerTableServiceImp.checkPassengerCheckInStatus(100).toString());
     }
 
     @Test
     public void toJSON() {
+        passengerTableServiceImp.toJSON();
     }
 }
