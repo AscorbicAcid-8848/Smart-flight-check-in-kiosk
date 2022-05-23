@@ -1,8 +1,6 @@
 package service;
 
-import model.BoardingPassPrint;
-import model.Flight;
-import model.Passenger;
+import model.*;
 
 /**
  * @author YichenLiu
@@ -13,7 +11,7 @@ public interface BoardingPassService {
 
     void printBoardingPass(BoardingPassPrint boardingPassPrint);
 
-    void printCarryOnBaggageTag(Passenger passenger, Flight flight);
+    void printCarryOnBaggageTag(BagTag bagtag);
 
-    void printCheckinBaggageTicket(Passenger passenger, Flight flight);
+    void printCheckinBaggageTicket(BagTicket bagTicket);
 }

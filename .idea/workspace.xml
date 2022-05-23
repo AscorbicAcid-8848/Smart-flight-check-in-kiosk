@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="还差生成passengerlist" />
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="还差生成passengerlist">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/BagTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/BagTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardingPassController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/BoardingPassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BoardingPassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/BoardingPassServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/BoardingPassServiceImp.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,7 +198,7 @@
       <workItem from="1653188884793" duration="572000" />
       <workItem from="1653269233591" duration="3129000" />
       <workItem from="1653297946509" duration="504000" />
-      <workItem from="1653299444097" duration="3611000" />
+      <workItem from="1653299444097" duration="4624000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -389,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653304643302</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="还差生成passengerlist">
+      <created>1653306255221</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1653306255221</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

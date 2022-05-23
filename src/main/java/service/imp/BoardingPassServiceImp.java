@@ -1,8 +1,6 @@
 package service.imp;
 
-import model.BoardingPassPrint;
-import model.Flight;
-import model.Passenger;
+import model.*;
 import service.BoardingPassService;
 
 /**
@@ -17,12 +15,12 @@ public class BoardingPassServiceImp implements BoardingPassService {
     }
 
     @Override
-    public void printCarryOnBaggageTag(Passenger passenger, Flight flight) {
+    public void printCarryOnBaggageTag(BagTag bagtag) {
 
     }
 
     @Override
-    public void printCheckinBaggageTicket(Passenger passenger, Flight flight) {
+    public void printCheckinBaggageTicket(BagTicket bagTicket) {
 
     }
 }

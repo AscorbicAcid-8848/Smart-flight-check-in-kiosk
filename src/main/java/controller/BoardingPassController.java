@@ -114,7 +114,8 @@ public class BoardingPassController {
      */
     public void printCarryOnBaggageTag(Passenger passenger,Flight flight){
         BoardingPassService boardingPassService = new BoardingPassServiceImp();
-        boardingPassService.printCarryOnBaggageTag(passenger, flight);
+        BagTag bagTag = new BagTag(passenger.getSurname(), passenger.getFirstname(), flight.getDepartureTime(),flight.getFallTime(), flight.getFlightName());
+        boardingPassService.printCarryOnBaggageTag(bagTag);
     }
 
     /**
@@ -124,6 +125,23 @@ public class BoardingPassController {
      */
     public void printCheckinBaggageTicket(Passenger passenger,Flight flight){
         BoardingPassService boardingPassService = new BoardingPassServiceImp();
-        boardingPassService.printCheckinBaggageTicket(passenger, flight);
+        String letter = null;
+        switch (flight.getAirlineId()){
+            case 1:
+                letter = "A";
+                break;
+            case 2:
+                letter = "B";
+                break;
+            case 3:
+                letter = "C";
+                break;
+            case 4:
+                letter = "D";
+                break;
+        }
+        String dropCounter = letter + flight.getAirlineId().toString();
+        BagTicket bagTicket = new BagTicket(passenger.getSurname(), passenger.getFirstname(), flight.getDepartureTime(),flight.getFallTime(), flight.getFlightName(),dropCounter);
+        boardingPassService.printCheckinBaggageTicket(bagTicket);
     }
 }
