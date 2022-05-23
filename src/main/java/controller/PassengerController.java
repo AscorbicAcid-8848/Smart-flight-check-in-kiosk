@@ -3,6 +3,7 @@ package controller;
 import model.Passenger;
 import service.PassengerService;
 import service.imp.PassengerServiceImp;
+import service.imp.PassengerTableServiceImp;
 
 import java.util.Objects;
 
@@ -40,4 +41,17 @@ public class PassengerController {
         }
         return false;
     }
+
+    public void check(Integer passengerId, String surname, Integer bookingNumber){
+        PassengerServiceImp passengerService = new PassengerServiceImp();
+        PassengerTableServiceImp passengerTableListService = new PassengerTableServiceImp();
+        Passenger passenger = passengerService.searchBySurnameAndPassengerId(surname, passengerId);
+        String booknum = bookingNumber.toString();
+        booknum = booknum.substring(0, 3);
+        Integer flightId = Integer.parseInt(booknum);
+        Integer idDocument = passenger.getIdDocument();
+        passengerTableListService.setChecked(flightId,idDocument,true);
+        passengerTableListService.toJSON();
+    }
+
 }

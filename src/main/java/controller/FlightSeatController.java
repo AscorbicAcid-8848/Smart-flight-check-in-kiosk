@@ -16,13 +16,24 @@ import java.util.List;
  */
 public class FlightSeatController {
 
-    //选座
+    /**
+     * select the seat
+     * @param idDocument
+     * @param flightId
+     * @param seatNumber
+     * @return return the updated passenger
+     */
     public Passenger selectSeat(Integer idDocument, Integer flightId, Integer seatNumber){
         FlightSeatServiceImp flightSeatService = new FlightSeatServiceImp();
         Passenger passenger = flightSeatService.update(idDocument, flightId, seatNumber);
         return passenger;
     }
-    //展示所有座位
+
+    /**
+     * return all seat of same light
+     * @param flightId
+     * @return
+     */
     public List<Seat> showSeats(Integer flightId){
         FlightSeatServiceImp flightSeatService = new FlightSeatServiceImp();
         List<Seat> seatList = flightSeatService.searchByFlightId(flightId).getSeatList();

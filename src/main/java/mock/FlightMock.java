@@ -29,6 +29,7 @@ public class FlightMock {
     Flight flight5 = new Flight();
     Flight flight6 = new Flight();
 
+
     public FlightMock(){
         Date departureTime0;
         Date departureTime1;
@@ -180,6 +181,14 @@ public class FlightMock {
         flights.add(flight6);
     }
 
+    /**
+     * a methed to transform input to json file, or you can choose use mock data to create default json
+     * @param input: data you want to transform
+     * @param useMockData: whether you want to use mock data
+     * @throws JsonGenerationException
+     * @throws JsonMappingException
+     * @throws IOException
+     */
     public void toJSON(ArrayList<Flight> input, Boolean useMockData) throws JsonGenerationException, JsonMappingException, IOException{
         //determine whether use mock data or not
         if(!useMockData){

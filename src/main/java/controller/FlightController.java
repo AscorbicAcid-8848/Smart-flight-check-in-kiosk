@@ -19,6 +19,22 @@ import java.util.List;
 */
 public class FlightController {
 
+    /**
+     *
+     * @param airlineId
+     * @param flightId
+     * @param flightName
+     * @param departureTime
+     * @param fallTime
+     * @param isDelayed
+     * @param departureGate
+     * @param destWeather
+     * @param destCOVIDPolicy
+     * @param arrivalAirport
+     * @param arrivalTerminal
+     * @param isCurrent
+     * @return new flight
+     */
     public Flight generate(Integer airlineId, Integer flightId, String flightName, Date departureTime, Date fallTime, boolean isDelayed, Integer departureGate, String destWeather, String destCOVIDPolicy,
                          String arrivalAirport, Integer arrivalTerminal,Boolean isCurrent){
         FlightServiceImp flightService = new FlightServiceImp();
@@ -26,12 +42,23 @@ public class FlightController {
         return flight;
     }
 
+    /**
+     *
+     * @param flight
+     * @return update exist flight
+     */
     public Flight update(Flight flight){
         FlightServiceImp flightService = new FlightServiceImp();
         flight = flightService.change(flight);
         return flight;
     }
 
+    /**
+     *
+     * @param surname
+     * @param passengerId
+     * @return flight list of the selected passenger
+     */
     public List<Flight> getBySurnameAndPassengerId(String surname, Integer passengerId){
         FlightServiceImp flightService = new FlightServiceImp();
         PassengerService passengerService = new PassengerServiceImp();
@@ -48,6 +75,11 @@ public class FlightController {
         return flightList;
     }
 
+    /**
+     * choose current flight
+     * @param bookingNumber
+     * @return the current flight
+     */
     public Flight getByBookingNumber(Integer bookingNumber){
         FlightServiceImp flightService = new FlightServiceImp();
         PassengerService passengerService = new PassengerServiceImp();
@@ -62,6 +94,11 @@ public class FlightController {
         return flight;
     }
 
+    /**
+     *choose current flight
+     * @param idDocumentCard
+     * @return the current flight
+     */
     public List<Flight> getByIdDocument(IdDocumentCard idDocumentCard){
         FlightServiceImp flightService = new FlightServiceImp();
         PassengerService passengerService = new PassengerServiceImp();
@@ -77,7 +114,11 @@ public class FlightController {
         }
         return flightList;
     }
-    //乘客选择一个航班为当前航班
+
+    /**
+     * passenger choose their current flight
+     * @param flightId
+     */
     public void chooseFlight(Integer flightId){
         FlightServiceImp flightService = new FlightServiceImp();
         Flight flight = flightService.searchByFlightId(flightId);

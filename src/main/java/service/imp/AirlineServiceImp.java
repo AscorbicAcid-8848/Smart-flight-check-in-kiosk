@@ -33,6 +33,11 @@ public class AirlineServiceImp implements AirlineService {
 
     }
 
+    /**
+     * update an airline
+     * @param airline
+     * @return
+     */
     @Override
     public Airline update(Airline airline) {
         int result = -1;
@@ -49,11 +54,33 @@ public class AirlineServiceImp implements AirlineService {
         if (result != -1) {
             return airlines.get(result);
         } else {
-            System.out.println("no passenger found!");
+            System.out.println("no airline found!");
             return null;
         }
     }
 
+
+    @Override
+    public Airline search(Integer airlineId) {
+        int result = -1;
+
+        for (int i = 0; i < airlines.size(); i++) {
+            if (airlines.get(i).getAirlineId().equals(airlineId)) {
+                result = i;
+            }
+        }
+
+        if (result != -1) {
+            return airlines.get(result);
+        } else {
+            System.out.println("no airline found!");
+            return null;
+        }
+    }
+
+    /**
+     * method to store data in service to json file
+     */
     public void toJSON(){
         AirlineMock airlineMock = new AirlineMock();
         try {

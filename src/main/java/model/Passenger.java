@@ -21,8 +21,6 @@ public class Passenger {
     private Integer visaId;
     private String visaPassword;
 
-
-
     @Override
     public String toString() {
         return "Passenger{" +
@@ -37,9 +35,10 @@ public class Passenger {
                 ", meal=" + meal +
                 ", IdDocument=" + IdDocument +
                 ", visaId=" + visaId +
-                ", visaPassword=" + visaPassword +
+                ", visaPassword='" + visaPassword +
                 '}';
     }
+
 
     //setter and getter
 

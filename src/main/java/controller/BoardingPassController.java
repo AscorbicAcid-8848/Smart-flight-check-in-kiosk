@@ -1,12 +1,11 @@
 package controller;
 
-import model.BoardingPass;
-import model.Flight;
-import model.IdDocumentCard;
-import model.Passenger;
+import model.*;
+import service.BoardingPassService;
 import service.FlightService;
 import service.IdDocumentCardService;
 import service.PassengerService;
+import service.imp.BoardingPassServiceImp;
 import service.imp.FlightServiceImp;
 import service.imp.IdDocumentCardServiceImp;
 import service.imp.PassengerServiceImp;
@@ -21,6 +20,11 @@ import java.util.List;
 //这是我的登机牌controller
 public class BoardingPassController {
 
+    /**
+     *
+     * @param bookingNumber
+     * @return the boarding pass which been selected by booking number
+     */
     public BoardingPass checkPassenger(Integer bookingNumber){
         FlightController flightController = new FlightController();
         PassengerService passengerService = new PassengerServiceImp();
@@ -32,6 +36,13 @@ public class BoardingPassController {
         }
         return returnBoardingPass(currentFlight,passenger);
     }
+
+    /**
+     *
+     * @param surname
+     * @param passengerId
+     * @return the boarding pass which been selected by surname and passenger id.
+     */
     public BoardingPass checkPassenger(String surname, Integer passengerId){
         FlightController flightController = new FlightController();
         PassengerService passengerService = new PassengerServiceImp();
@@ -49,6 +60,11 @@ public class BoardingPassController {
         }
         return returnBoardingPass(currentFlight,passenger);
     }
+
+    /**
+     *
+     * @return the boarding pass which been selected by id document
+     */
     public BoardingPass checkPassenger(){
         FlightController flightController = new FlightController();
         PassengerService passengerService = new PassengerServiceImp();
@@ -78,5 +94,54 @@ public class BoardingPassController {
         boardingPass.setFlight(flight);
         boardingPass.setPassenger(passenger);
         return boardingPass;
+    }
+
+    /**
+     *
+     * @param passenger
+     * @param flight
+     */
+    public void printBoardingPass(Passenger passenger,Flight flight){
+        BoardingPassService boardingPassService = new BoardingPassServiceImp();
+        BoardingPassPrint boardingPassPrint = new BoardingPassPrint(passenger.getSurname(), passenger.getFirstname(), flight.getDepartureTime(),flight.getFallTime(),flight.getFlightName(),flight.getArrivalTerminal(),flight.getArrivalAirport(), flight.getDepartureGate());
+        boardingPassService.printBoardingPass(boardingPassPrint);
+    }
+
+    /**
+     *
+     * @param passenger
+     * @param flight
+     */
+    public void printCarryOnBaggageTag(Passenger passenger,Flight flight){
+        BoardingPassService boardingPassService = new BoardingPassServiceImp();
+        BagTag bagTag = new BagTag(passenger.getSurname(), passenger.getFirstname(), flight.getDepartureTime(),flight.getFallTime(), flight.getFlightName());
+        boardingPassService.printCarryOnBaggageTag(bagTag);
+    }
+
+    /**
+     *
+     * @param passenger
+     * @param flight
+     */
+    public void printCheckinBaggageTicket(Passenger passenger,Flight flight){
+        BoardingPassService boardingPassService = new BoardingPassServiceImp();
+        String letter = null;
+        switch (flight.getAirlineId()){
+            case 1:
+                letter = "A";
+                break;
+            case 2:
+                letter = "B";
+                break;
+            case 3:
+                letter = "C";
+                break;
+            case 4:
+                letter = "D";
+                break;
+        }
+        String dropCounter = letter + flight.getAirlineId().toString();
+        BagTicket bagTicket = new BagTicket(passenger.getSurname(), passenger.getFirstname(), flight.getDepartureTime(),flight.getFallTime(), flight.getFlightName(),dropCounter);
+        boardingPassService.printCheckinBaggageTicket(bagTicket);
     }
 }

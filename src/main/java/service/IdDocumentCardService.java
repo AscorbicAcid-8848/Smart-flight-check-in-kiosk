@@ -8,5 +8,10 @@ import model.IdDocumentCard;
  * @date 2022/5/17 16:17
  */
 public interface IdDocumentCardService {
+
+    /**
+     * read the json file and return an idDocumentCard object it corresponding to
+     * @return idDocumentCard
+     */
     IdDocumentCard checkCard();
 }
