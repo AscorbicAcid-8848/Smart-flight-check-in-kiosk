@@ -10,6 +10,8 @@ import static org.junit.Assert.*;
  * @version 1.0
  */
 public class AirlineServiceImpTest {
+    AirlineServiceImp airlineServiceImp = new AirlineServiceImp();
+    Airline BUPT_test = new Airline();
 
     @Test
     public void update() {
@@ -17,8 +19,6 @@ public class AirlineServiceImpTest {
 
     @Test
     public void toJSON() {
-        AirlineServiceImp airlineServiceImp = new AirlineServiceImp();
-        Airline BUPT_test = new Airline();
 
         BUPT_test.setAirlineName("BUPT_test");
         BUPT_test.setAirlineId(1);

@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="等待打印">
-      <change afterPath="$PROJECT_DIR$/src/test/java/service/imp/BoardingPassServiceImpTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/imp/BoardingPassServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/imp/BoardingPassServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/imp/AirlineMealServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/imp/AirlineMealServiceImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/imp/AirlineServiceImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/imp/AirlineServiceImpTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +200,7 @@
       <workItem from="1653297946509" duration="504000" />
       <workItem from="1653299444097" duration="4703000" />
       <workItem from="1653310629837" duration="752000" />
+      <workItem from="1653312025797" duration="1940000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>

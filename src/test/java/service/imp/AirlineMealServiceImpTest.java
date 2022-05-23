@@ -11,20 +11,19 @@ import model.Passenger;
  */
 public class AirlineMealServiceImpTest extends TestCase {
 
+    Passenger passenger = new Passenger();
+    AirlineMealServiceImp airlineMealServiceImp = new AirlineMealServiceImp();
+    AirLineMeal airLineMeal = new AirLineMeal();
+
     public void testUpdate() {
-        Passenger passenger = new Passenger();
-        AirlineMealServiceImp airlineMealServiceImp = new AirlineMealServiceImp();
-        AirLineMeal airLineMeal = new AirLineMeal();
 
         passenger = airlineMealServiceImp.update(1111,100,1);
         System.out.println(passenger.toString());
 
-
-        airLineMeal  = airlineMealServiceImp.searchByAirlineId(2);
-
-        System.out.println();
     }
 
     public void testSearchByAirlineId() {
+        airLineMeal  = airlineMealServiceImp.searchByAirlineId(2);
+        System.out.println(airLineMeal.toString());
     }
 }
