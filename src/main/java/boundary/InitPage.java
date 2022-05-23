@@ -401,7 +401,8 @@ public class InitPage extends JFrame implements ActionListener {
         try{
             if(flightButtons.contains((JButton) e.getSource())){
                 flight = flightController.getBySurnameAndPassengerId(passenger.getSurname(),passenger.getPassengerId()).get(flightButtons.indexOf(e.getSource()));
-                panel_flightDetailPage.render(passenger,flight,passenger.getBookingNumber().get(flightButtons.indexOf(e.getSource())));
+                bookingNum = passenger.getBookingNumber().get(flightButtons.indexOf(e.getSource()));
+                panel_flightDetailPage.render(passenger,flight,bookingNum);
                 flightController.chooseFlight(flight.getFlightId());
                 framePanel.setLayout(new FlowLayout());
                 pageChange(panel_flightDetailPage);
@@ -455,12 +456,18 @@ public class InitPage extends JFrame implements ActionListener {
 
         }//属于FlightDetailPage, to choosingMealPage
         if(e.getSource() == button_flightDetailPage_confirm){
-            panel_chooseMealPage.render((ArrayList<Meal>)airlineMealController.showMeals(flight.getAirlineId()), 1);
+            panel_chooseMealPage.render((ArrayList<Meal>)airlineMealController.showMeals(flight.getAirlineId()), flight.getAirlineId());
+            framePanel.setLayout(new BorderLayout());
+            framePanel.removeAll();
+            framePanel.repaint();
+            framePanel.add(panel_chooseMealPage, BorderLayout.CENTER);
+            framePanel.validate();
             pageChange(panel_chooseMealPage);
         }
-        //////////////belongs to chooseMealPage, to origin
+        //////////////belongs to chooseMealPage, to panel_flightDetailPage
         if(e.getSource() == button_chooseMealPage_back){
             panel_flightDetailPage.render(passenger,flight,bookingNum);
+            framePanel.setLayout(new FlowLayout());
             pageChange(panel_flightDetailPage);
         }//////belongs to chooseMealPage, withdraw
         if(e.getSource() == button_chooseMealPage_withdraw){
@@ -486,8 +493,11 @@ public class InitPage extends JFrame implements ActionListener {
         }
         ////////////////////////belongs to chooseSeatPage, back to chooseMealPage
         if(e.getSource() == button_chooseSeat_back){
-            framePanel.setLayout(new FlowLayout());
-            pageChange(panel_chooseMealPage);
+            panel_chooseMealPage.render((ArrayList<Meal>)airlineMealController.showMeals(flight.getAirlineId()), flight.getAirlineId());
+            framePanel.removeAll();
+            framePanel.repaint();
+            framePanel.add(panel_chooseMealPage, BorderLayout.CENTER);
+            framePanel.validate();
         }
 
         ///belongs to chooseSeatPage, to paying page

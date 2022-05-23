@@ -146,7 +146,7 @@ public class SeatPanel extends JPanel implements ActionListener{
         });
 
 
-        back = new JButton("Back to meal choosing");
+        back = new JButton("Back");
         back.setBounds(260,20,100,40);
         controlPanel.add(back);
         controlPanel.add(confirm);
