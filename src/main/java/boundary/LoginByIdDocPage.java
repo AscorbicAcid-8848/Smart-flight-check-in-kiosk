@@ -9,7 +9,8 @@ public class LoginByIdDocPage extends JPanel {
 	private JButton BTOBut;
 	private JButton back;
 	/**
-	 * Create the panel.
+	 * @author Ziyi Chen
+	 * Login by id document page
 	 */
 	public LoginByIdDocPage() {
 

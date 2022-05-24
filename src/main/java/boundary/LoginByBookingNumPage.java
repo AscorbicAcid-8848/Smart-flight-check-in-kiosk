@@ -9,6 +9,10 @@ import java.awt.event.ActionListener;
 import java.net.URL;
 
 public class LoginByBookingNumPage extends JPanel {
+    /**
+     * @author Ran Xu
+     * Login by booking number page
+     */
 
     private JPanel panelTop;
     private JPanel panelMid;
@@ -54,11 +58,8 @@ public class LoginByBookingNumPage extends JPanel {
         button_backToInit = new JButton("Go Back");
         button_next = new JButton("Next");
 
-
         this.setLayout(new GridLayout(3,1,0,50));
         panelMid.setLayout(new GridLayout(2,1,30,20));
-
-
 
         add(panelTop);
         add(panelMid);
@@ -90,7 +91,6 @@ public class LoginByBookingNumPage extends JPanel {
         ImageIcon eye_slashIcon = new ImageIcon(resource1);
         Image temp1 = eye_slashIcon.getImage().getScaledInstance(see.getWidth(), see.getHeight(), eye_slashIcon.getImage().SCALE_DEFAULT);
         eye_slashIcon = new ImageIcon(temp1);
-        // set the button without decorator
         see.setContentAreaFilled(false);
         see.setText("                                                ");
         see.setIcon(eye_slashIcon);
@@ -131,6 +131,10 @@ public class LoginByBookingNumPage extends JPanel {
 
     public JButton getButton_withdraw(){return button_withdraw;}
 
+    /**
+     *
+     * @return return the booking number user type in
+     */
     public String getBookingNum(){
         return passengerId.getText();
     }
@@ -138,6 +142,7 @@ public class LoginByBookingNumPage extends JPanel {
     public void refresh(){
         passengerId.setText("");
     }
+
     public void bookingNumWarning(){
         JOptionPane.showMessageDialog(this, "Please enter the booking number", "Exception occurs",JOptionPane.WARNING_MESSAGE);
 

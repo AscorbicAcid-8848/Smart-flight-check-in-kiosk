@@ -10,7 +10,7 @@ public class LoginByNameIdPage extends JPanel {
 
 	/**
 	 * The page of Inputing ID
-	 * author: Ziyi Chen
+	 * @author: Ziyi Chen
 	 */
 	private static final long serialVersionUID = 8463888530175832824L;
 	private JPanel contentPane;
@@ -135,7 +135,7 @@ public class LoginByNameIdPage extends JPanel {
 		CenterInput.add(EastEdge, BorderLayout.EAST);
 
 	}
-	//返回button给initpage
+
 	public JButton getButton_backToInit() {
 		return BTOBut;
 	}
@@ -150,7 +150,7 @@ public class LoginByNameIdPage extends JPanel {
 		return see;
 	}
 
-	//获取用户输入的名字,initPage调用这个方法以获取用户输入
+
 	public String getSurname(){
 		return textField.getText();
 	}
@@ -161,8 +161,6 @@ public class LoginByNameIdPage extends JPanel {
 		return textField_1;
 	}
 
-	//用户输入错误情况：1.没有输入姓名,此操作不会抛出exception
-	//2.没有输入id或者输入id含有特殊字符，抛出NumberFormatException
 	public void nameWarning(){
 		JOptionPane.showMessageDialog(this, "Enter your name please", "Exception occurs",JOptionPane.WARNING_MESSAGE);
 	}
