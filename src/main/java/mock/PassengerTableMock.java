@@ -31,6 +31,12 @@ public class PassengerTableMock {
         this.freshTable();
     }
 
+    /**
+     * add a new idDocument to Passenger Table and set its check status to checkStatus
+     * @param flightId: flightId
+     * @param idDocument: idDocument
+     * @param checkStatus: checkStatus
+     */
     public void addIdDocument(Integer flightId,Integer idDocument, Boolean checkStatus) {
 
         PassengerCheckInStatue passengerCheckInStatue = new PassengerCheckInStatue();
