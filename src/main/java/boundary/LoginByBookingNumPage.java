@@ -150,5 +150,9 @@ public class LoginByBookingNumPage extends JPanel {
         JOptionPane.showMessageDialog(this, "Booking Number does not exist, "+(5-invalidTimes)+" times remain", "Exception occurs",JOptionPane.WARNING_MESSAGE);
 
     }
+    public void alreadyCheckedWarning(){
+        JOptionPane.showMessageDialog(this, "You have already checked in this flight!", "Exception occurs",JOptionPane.WARNING_MESSAGE);
+
+    }
 
 }
