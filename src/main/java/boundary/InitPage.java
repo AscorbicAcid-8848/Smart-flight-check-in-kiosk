@@ -113,6 +113,7 @@ public class InitPage extends JFrame implements ActionListener {
     //all flights page
     private AllFlightsPage panel_allFlights;
     private ArrayList<JButton> flightButtons;
+    private JButton button_allFlights_back;
 
     //final confirm page
     private FinalConfirmPage panel_finalConfirm;
@@ -258,6 +259,7 @@ public class InitPage extends JFrame implements ActionListener {
 
 
         panel_allFlights = new AllFlightsPage();
+        button_allFlights_back = panel_allFlights.getBack();
 
 
         panel_finalConfirm = new FinalConfirmPage();
@@ -409,6 +411,12 @@ public class InitPage extends JFrame implements ActionListener {
             }
         }
         catch(NullPointerException ignored){
+        }
+        if(e.getSource() == button_allFlights_back){
+            panel_UserInfoPage.render(passenger);
+            framePanel.setLayout(new FlowLayout());
+            pageChange(panel_UserInfoPage);
+
         }
 
         ////////////////////////////去往 扫描界面
@@ -575,6 +583,10 @@ public class InitPage extends JFrame implements ActionListener {
         }//属于finalconfirm页面，点击后结束程序。
         if(e.getSource() == button_finalConfirm){
             panel_finalConfirm.FinishNotification();
+            passengerController.check(passenger.getPassengerId(),passenger.getSurname(),bookingNum);
+            boardingPassController.printBoardingPass(passenger,flight);
+            boardingPassController.printCarryOnBaggageTag(passenger,flight);
+            boardingPassController.printCheckinBaggageTicket(passenger,flight);
             System.exit(1);
         }
     }
