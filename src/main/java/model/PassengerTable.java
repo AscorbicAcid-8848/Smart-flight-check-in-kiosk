@@ -1,6 +1,7 @@
 package model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import java.util.ArrayList;
 
@@ -33,8 +34,22 @@ public class PassengerTable {
 
 
 
-    public Boolean IsChecked(int index) {
-        return this.passengerCheckInStatueList.get(index).isChecked();
+    public Boolean IsChecked(Integer idDocument) {
+        int result = -1;
+
+        for (int i=0; i<this.passengerCheckInStatueList.size(); i++){
+            if(this.passengerCheckInStatueList.get(i).getIdDocument().equals(idDocument)){
+                result = i;
+            }
+        }
+
+        if (result == -1){
+            System.out.println("the passenger not found");
+            return false;
+        }else {
+            return this.passengerCheckInStatueList.get(result).isChecked();
+        }
+
     }
 
 

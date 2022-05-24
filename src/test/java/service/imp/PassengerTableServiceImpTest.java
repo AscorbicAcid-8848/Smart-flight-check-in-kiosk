@@ -23,6 +23,10 @@ public class PassengerTableServiceImpTest {
 
     @Test
     public void toJSON() {
-        passengerTableServiceImp.toJSON();
+    }
+
+    @Test
+    public void IsChecked() {
+        System.out.println(passengerTableServiceImp.isChecked(100,1111));
     }
 }

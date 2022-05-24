@@ -77,6 +77,28 @@ public class PassengerTableServiceImp implements PassengerTableListService {
         }
     }
 
+    public Boolean isChecked(Integer flightId, Integer idDocument){
+        boolean findFlight = false;
+        boolean isCheckResult = false;
+
+        for(int i=0; i<passengerTables.size(); i++){
+
+            if( passengerTables.get(i).getFlightId().equals(flightId) ){
+
+                findFlight = true;
+                isCheckResult = passengerTables.get(i).IsChecked(idDocument);
+
+            }
+        }
+
+        if (!findFlight){
+            System.out.println("no flight found!");
+            return false;
+        }else {
+            return isCheckResult;
+        }
+    }
+
     /**
      * method to store data in service to json file
      */
