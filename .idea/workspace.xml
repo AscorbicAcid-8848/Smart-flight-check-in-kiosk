@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XXXManagementSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/XXXManagementSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/flightList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/flightList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/passengerList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/passengerList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/Entrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/Entrance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/Entrance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/Entrance.class" afterDir="false" />
-    </list>
+    <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="by Zihao" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +15,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -61,6 +54,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/boundary" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -69,14 +64,13 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\target\classes\boundary" />
-      <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\target\classes\boundary\images" />
-      <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\idDocumentCard" />
       <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\target\classes\boundary" />
+      <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\idDocumentCard" />
+      <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\target\classes\boundary" />
       <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\src\main\java\boundary" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -87,19 +81,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Entrance">
-    <configuration name="AllFlightsPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="boundary.AllFlightsPage" />
-      <module name="XXXManagementSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="boundary.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Entrance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.Entrance" />
       <module name="XXXManagementSystem" />
@@ -113,22 +94,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AirlineMealControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="XXXManagementSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.AirlineMealControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MockAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AirlineMealMockTest.testToJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="XXXManagementSystem" />
       <extension name="coverage">
         <pattern>
@@ -137,24 +103,55 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="mock" />
-      <option name="MAIN_CLASS_NAME" value="mock.MockAllTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MockAllTest.testRefreshData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="XXXManagementSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mock.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mock" />
-      <option name="MAIN_CLASS_NAME" value="mock.MockAllTest" />
-      <option name="METHOD_NAME" value="testRefreshData" />
+      <option name="MAIN_CLASS_NAME" value="mock.AirlineMealMockTest" />
+      <option name="METHOD_NAME" value="testToJSON" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AirlineMealServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.imp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service.imp" />
+      <option name="MAIN_CLASS_NAME" value="service.imp.AirlineMealServiceImpTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AirlineMealServiceImpTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.imp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service.imp" />
+      <option name="MAIN_CLASS_NAME" value="service.imp.AirlineMealServiceImpTest" />
+      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AirlineServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="XXXManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.imp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service.imp" />
+      <option name="MAIN_CLASS_NAME" value="service.imp.AirlineServiceImpTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,10 +159,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Entrance" />
-        <item itemvalue="JUnit.MockAllTest" />
-        <item itemvalue="JUnit.MockAllTest.testRefreshData" />
-        <item itemvalue="Application.AllFlightsPage" />
-        <item itemvalue="JUnit.AirlineMealControllerTest" />
+        <item itemvalue="JUnit.AirlineMealServiceImpTest.testUpdate" />
+        <item itemvalue="JUnit.AirlineMealMockTest.testToJSON" />
+        <item itemvalue="JUnit.AirlineServiceImpTest" />
+        <item itemvalue="JUnit.AirlineMealServiceImpTest" />
       </list>
     </recent_temporary>
   </component>
@@ -197,6 +194,13 @@
       <workItem from="1653017098744" duration="2405000" />
       <workItem from="1653057369351" duration="3482000" />
       <workItem from="1653188884793" duration="572000" />
+      <workItem from="1653269233591" duration="3129000" />
+      <workItem from="1653297946509" duration="504000" />
+      <workItem from="1653299444097" duration="4703000" />
+      <workItem from="1653310629837" duration="752000" />
+      <workItem from="1653312025797" duration="3495000" />
+      <workItem from="1653317755887" duration="82000" />
+      <workItem from="1653318126614" duration="178000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -387,28 +391,49 @@
       <option name="project" value="LOCAL" />
       <updated>1652971360647</updated>
     </task>
-    <task id="LOCAL-00028" summary="1">
-      <created>1653235341278</created>
+    <task id="LOCAL-00028" summary="还差生成passengerlist">
+      <created>1653304643302</created>
       <option name="number" value="00028" />
       <option name="presentableId" value="LOCAL-00028" />
       <option name="project" value="LOCAL" />
-      <updated>1653235341278</updated>
+      <updated>1653304643302</updated>
     </task>
-    <task id="LOCAL-00029" summary="1">
-      <created>1653289958703</created>
+    <task id="LOCAL-00029" summary="还差生成passengerlist">
+      <created>1653306255221</created>
       <option name="number" value="00029" />
       <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
-      <updated>1653289958703</updated>
+      <updated>1653306255221</updated>
     </task>
-    <task id="LOCAL-00030" summary="1">
-      <created>1653296234153</created>
+    <task id="LOCAL-00030" summary="等待打印">
+      <created>1653307272908</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1653296234153</updated>
+      <updated>1653307272908</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="by Zihao">
+      <created>1653313993903</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1653313993903</updated>
+    </task>
+    <task id="LOCAL-00032" summary="by Zihao">
+      <created>1653317823017</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1653317823017</updated>
+    </task>
+    <task id="LOCAL-00033" summary="by Zihao">
+      <created>1653318142779</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1653318142779</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,6 +452,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="1" />
     <MESSAGE value="运行版本" />
     <MESSAGE value="将航班与乘客的关系，由一对一改为多对一" />
     <MESSAGE value="小结" />
@@ -444,31 +470,23 @@
     <MESSAGE value="输入paying信息成功后的操作没有，meal和seat 完整, 脱敏有bug" />
     <MESSAGE value="已更正" />
     <MESSAGE value="selectMeal不工作，进程结束前无法写入json" />
-    <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="还差生成passengerlist" />
+    <MESSAGE value="等待打印" />
+    <MESSAGE value="by Zihao" />
+    <option name="LAST_COMMIT_MESSAGE" value="by Zihao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mock/PassengerMock.java</url>
-          <line>130</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mock/PassengerMock.java</url>
-          <line>131</line>
+          <url>file://$PROJECT_DIR$/src/test/java/service/imp/AirlineServiceImpTest.java</url>
+          <line>17</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mock/PassengerMock.java</url>
-          <line>133</line>
+          <url>file://$PROJECT_DIR$/src/test/java/service/imp/AirlineServiceImpTest.java</url>
+          <line>26</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mock/PassengerMock.java</url>
-          <line>180</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
