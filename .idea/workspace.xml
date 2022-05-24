@@ -5,28 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/BoardingPass_Tag_Ticket/bagTag.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoardingPass_Tag_Ticket/bagTicket.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoardingPass_Tag_Ticket/boardingPass.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/flightList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/flightList.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/passengerList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/passengerList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/passengerTableList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/passengerTableList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/idDocumentCard/idDocumentCard.json" beforeDir="false" afterPath="$PROJECT_DIR$/idDocumentCard/idDocumentCard.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/AllFlightsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/ChooseMealPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/ChooseMealPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/InitPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Cascade Brisket Chili.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Cascade_Brisket_Chili.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Chicken Cobb Salad.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Chicken_Cobb_Salad.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Classic Arabic Mezze.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Classic_Arabic_Mezze.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Flight Bites Tapas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Flight_Bites_Tapas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Hong Kong-style Curry Chicken.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Hong_Kong-style_Curry_Chicken.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Hot Ham and Cheese Breakfast.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Hot_Ham_and_Cheese_Breakfast.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Kale Salad.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Kale_Salad.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Lasagna with Malbec and Flan.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Lasagna_with_Malbec_and_Flan.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Loco Moco.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Loco_Moco.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Marvellous Mac’N’Cheese Kids Meal.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Marvellous_Mac’N’Cheese_Kids_Meal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Ravioli and Dulce de Leche Cake.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Ravioli_and_Dulce_de_Leche_Cake.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Red Wine Braised Beef with Polenta.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Red_Wine_Braised_Beef_with_Polenta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Sirloin Sandwich.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Sirloin_Sandwich.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Strawberry Frozen Yogurt Bars.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Strawberry_Frozen_Yogurt_Bars.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Viennese Schnitzel.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Viennese_Schnitzel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/AirlineMealMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/AirlineMealMock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mock/PassengerTableMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mock/PassengerTableMock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/FlightSeatServiceImpTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/service/imp/FlightSeatServiceImpTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/imp/PassengerTableServiceImpTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/service/imp/PassengerTableServiceImpTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/LoginByIdDocPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/LoginByIdDocPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/SeatPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/images/Strawberry_Frozen_Yogurt_Bars.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Strawberry_Frozen_Yogurt Bars.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/InitPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/LoginByIdDocPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +41,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -76,15 +75,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/boundary" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../SimpleUML-master/simpleUMLCE_8205.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -177,9 +176,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Entrance" />
+        <item itemvalue="Application.AllFlightsPage" />
         <item itemvalue="JUnit.MockAllTest" />
         <item itemvalue="JUnit.MockAllTest.testRefreshData" />
-        <item itemvalue="Application.AllFlightsPage" />
         <item itemvalue="JUnit.AirlineMealControllerTest" />
       </list>
     </recent_temporary>
@@ -212,6 +211,8 @@
       <workItem from="1653017098744" duration="2405000" />
       <workItem from="1653057369351" duration="3482000" />
       <workItem from="1653188884793" duration="572000" />
+      <workItem from="1653374787711" duration="217000" />
+      <workItem from="1653375020906" duration="5288000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
@@ -423,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653296234153</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="1">
+      <created>1653359925561</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1653359925561</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,21 +473,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mock/PassengerMock.java</url>
-          <line>130</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mock/PassengerMock.java</url>
-          <line>131</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mock/PassengerMock.java</url>
-          <line>133</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/mock/PassengerMock.java</url>
           <line>180</line>

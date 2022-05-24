@@ -50,7 +50,7 @@ public class SeatPanel extends JPanel implements ActionListener{
         economicPanel.setBounds(550,0,350,600);
         specialSeatPanel.setBounds(350,350,200,250);
         controlPanel.setBounds(250,600,400,100);
-        infoPanel.setBounds(0, 400, 350, 200);
+        infoPanel.setBounds(0, 200, 350, 400);
         iconPanel.setBounds(0,0,350,200);
         economicPanel.setBorder(BorderFactory.createTitledBorder("Economic Seat"));
         businessPanel.setBorder(BorderFactory.createTitledBorder("Business Seat"));
@@ -266,7 +266,8 @@ public class SeatPanel extends JPanel implements ActionListener{
         if(passenger.getSeatNumber() == -1) { seatNumber = "not Selected";}
         else {seatNumber = passenger.getSeatNumber() + "";}
         tex.setText("Your seat level: " + seatLevel + "\nYour seat number:" + seatNumber
-                + "\nYour price now:" + currentPrice);
+                + "\nYour seat price: " + seatList.get(passenger.getSeatNumber()).getSeatCost() + "\nYour price now:" + currentPrice);
+        tex.setFont(new Font("Arial",Font.PLAIN,15));
     }
 
     public int resultSeatNumber(){
@@ -280,53 +281,4 @@ public class SeatPanel extends JPanel implements ActionListener{
         JOptionPane.showMessageDialog(this, "You haven't choose your seat yet", "Exception occurs",JOptionPane.WARNING_MESSAGE);
     }
 
-
-    public static void main(String[] args) {
-        JFrame f = new JFrame();
-        JPanel pl = new JPanel();
-        pl.setLayout(new BorderLayout());
-        SeatPanel sp = new SeatPanel();
-
-
-        ArrayList<Seat> seats = new ArrayList<Seat>();
-
-        for(int i = 0; i < 10; i++){
-            Seat s1 = new Seat();
-            s1.setOccupied(false);
-            s1.setSeatLevel("Business");
-            seats.add(s1);
-        }
-
-        for(int i = 0; i < 6; i++){
-            Seat s1 = new Seat();
-            s1.setOccupied(true);
-            s1.setSeatLevel("Special");
-            seats.add(s1);
-        }
-
-        for(int i = 0; i < 36; i++){
-            Seat s1 = new Seat();
-            s1.setOccupied(false);
-            s1.setSeatLevel("Economic");
-            seats.add(s1);
-        }
-        int i = 0;
-        for(Iterator<Seat> s = seats.iterator(); s.hasNext();){
-            System.out.println(i + s.next().getSeatLevel() + s.next().isOccupied());
-            i = i + 1;
-        }
-        Passenger p = new Passenger();
-        p.setSeatLevel("Special");
-        p.setFirstname("Kyo");
-        p.setSurname("KAUS");
-        p.setSeatNumber(-1);
-        f.add(pl);
-        pl.add(sp, BorderLayout.CENTER);
-        sp.setVisible(true);
-        pl.setVisible(true);
-        f.setBounds(200,200,917,717);
-        sp.render(seats, p, 0, 3);;
-        f.setVisible(true);
-
-    }
 }

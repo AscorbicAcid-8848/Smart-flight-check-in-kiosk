@@ -239,17 +239,6 @@ public class InitPage extends JFrame implements ActionListener {
         button_chooseSeat_back = panel_chooseSeat.getBack();
         button_chooseSeat_back.addActionListener(this);
         button_chooseSeat_confirm.addActionListener(this);
-//        button_chooseSeat_confirm.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                if(e.getSource() == button_chooseSeat_confirm){
-//                    if(passenger.getSeatLevel() == null || passenger.getSeatNumber() == null || passenger.getSeatNumber() < 0){
-//                        JOptionPane.showMessageDialog(null, "You haven't choose your seat yet.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
-//                        return;
-//                    }
-//                }
-//            }
-//        });
 
         panel_payingPage = new PayingPage();
         button_paying_confirm = panel_payingPage.getButton_confirm();
@@ -257,10 +246,9 @@ public class InitPage extends JFrame implements ActionListener {
         button_paying_back.addActionListener(this);
         button_paying_confirm.addActionListener(this);
 
-
         panel_allFlights = new AllFlightsPage();
         button_allFlights_back = panel_allFlights.getBack();
-
+        button_allFlights_back.addActionListener(this);
 
         panel_finalConfirm = new FinalConfirmPage();
         button_finalConfirm = panel_finalConfirm.getButton_confirm();
@@ -464,7 +452,9 @@ public class InitPage extends JFrame implements ActionListener {
 
         }//属于FlightDetailPage, to choosingMealPage
         if(e.getSource() == button_flightDetailPage_confirm){
+//            panel_chooseMealPage.render((ArrayList<Meal>)airlineMealController.showMeals(flight.getAirlineId()), flight.getAirlineId());
             panel_chooseMealPage.render((ArrayList<Meal>)airlineMealController.showMeals(flight.getAirlineId()), flight.getAirlineId());
+
             framePanel.setLayout(new BorderLayout());
             framePanel.removeAll();
             framePanel.repaint();

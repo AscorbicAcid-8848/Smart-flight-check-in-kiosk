@@ -124,43 +124,11 @@ public class ChooseMealPage extends JPanel {
             }
         });
 
-//        chooseBox.addItemListener(new ItemListener() {
-//            @Override
-//            public void itemStateChanged(ItemEvent e) {
-//                ImageIcon foodIcon = null;
-//                JLabel mealImgLabel = null;
-//                mealImgLabel = new JLabel();
-//                meal = airlineMealController.showMeals(airlineID).get(getMeal()-1);
-//                foodIcon = new ImageIcon("src/main/java/boundary/images/"+meal.getMealName()+".png");
-//                mealImgPanel.setLayout(new BorderLayout());
-//                foodIcon.setImage(foodIcon.getImage().getScaledInstance(mealImgPanel.getWidth(),mealImgPanel.getHeight(),Image.SCALE_DEFAULT));
-//                mealImgLabel.setIcon(foodIcon);
-//                mealImgPanel.removeAll();
-//                mealImgPanel.repaint();
-//                mealImgPanel.add(mealImgLabel,BorderLayout.CENTER);
-//                mealImgPanel.validate();
-//            }
-//        });
-//        chooseBox.addActionListener(new ActionListener() {
-//                @Override
-//                public void actionPerformed(ActionEvent e) {
-//                    ImageIcon foodIcon = null;
-//                    JLabel mealImgLabel = null;
-//                    mealImgLabel = new JLabel();
-//                    meal = airlineMealController.showMeals(airlineID).get(getMeal()-1);
-//                    foodIcon = new ImageIcon("src/main/java/boundary/images/"+meal.getMealName()+".png");
-//                    mealImgPanel.setLayout(new BorderLayout());
-//                    foodIcon.setImage(foodIcon.getImage().getScaledInstance(mealImgPanel.getWidth(),mealImgPanel.getHeight(),Image.SCALE_DEFAULT));
-//                    mealImgLabel.setIcon(foodIcon);
-//                    mealImgPanel.add(mealImgLabel,BorderLayout.CENTER);
-//                    mealImgPanel.setVisible(true);
-//                }
-//            });
-
 
     }
 
     public void render(ArrayList<Meal> meals, Integer airlineID){
+        System.out.println(airlineID);
         this.airlineID = airlineID;
         JLabel airlineLogoLabel= new JLabel();
         ImageIcon airlineIcon = null;
@@ -181,7 +149,10 @@ public class ChooseMealPage extends JPanel {
 
         airlineIcon.setImage(airlineIcon.getImage().getScaledInstance(logoPanel.getWidth(),logoPanel.getHeight(),Image.SCALE_DEFAULT));
         airlineLogoLabel.setIcon(airlineIcon);
+        logoPanel.removeAll();
+        logoPanel.repaint();
         logoPanel.add(airlineLogoLabel,BorderLayout.CENTER);
+        logoPanel.validate();
         logoPanel.setVisible(true);
 
     }

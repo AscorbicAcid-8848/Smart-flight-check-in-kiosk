@@ -12,6 +12,7 @@ public class LoginByIdDocPage extends JPanel {
 	 * Create the panel.
 	 */
 	public LoginByIdDocPage() {
+
 		contentPane = new JPanel();
 		contentPane.setLayout(new BorderLayout(0, 0));
 		this.add(contentPane);
@@ -51,6 +52,7 @@ public class LoginByIdDocPage extends JPanel {
 	public JButton getButton_backToInit(){
 		return BTOBut;
 	}
+	public void makeSound(){}
 	public JButton getLogin(){return back;}
 	public void loginFailedWarning(){
 		JOptionPane.showMessageDialog(this, "Cannot find your ID document!", "Exception occurs",JOptionPane.WARNING_MESSAGE);
