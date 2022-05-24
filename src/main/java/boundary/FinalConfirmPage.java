@@ -84,9 +84,6 @@ public class FinalConfirmPage extends JPanel {
         seatLevel.setText("Seat Level: "+passenger.getSeatLevel());
         seatNumber.setText("Seat Number: "+passenger.getSeatNumber());
         meal.setText("Meal: "+mealName);
-        //destWeather.setText("Destination Weather: "+flight.getDestWeather());
-        //COVIDPolicy.setText("Destination COVID Policy: "+flight.getDestCOVIDPolicy());
-        //delayState.setText(flight.isDelayed() ? "Delay State: Delayed":"Delay State: No Delay");
     }
 
     /**

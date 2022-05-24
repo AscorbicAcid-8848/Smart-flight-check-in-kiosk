@@ -17,6 +17,10 @@ public class ChooseMealPage extends JPanel {
     /**
      * @author Ran Xu
      * Page used to choose meal.
+     * What meals the user can choose are determined by which airline the user blongs to.
+     * And user can view the image of picked meal.
+     * This page is customised for different airlines. The logo for different airlines are shown.
+     * and meal is provided by different airlines.
      */
 
     private JPanel airlinePanel;
@@ -116,8 +120,8 @@ public class ChooseMealPage extends JPanel {
 
     /**
      * @description: render method, invoked by init page.
-     * @param meals The list of meals to be choose
-     * @param airlineID
+     * @param meals The list of meals to be chosen
+     * @param airlineID Based on airlineID we show different logo.
      */
     public void render(ArrayList<Meal> meals, Integer airlineID){
         System.out.println(airlineID);
