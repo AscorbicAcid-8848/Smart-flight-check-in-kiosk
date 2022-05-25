@@ -1,6 +1,7 @@
 package boundary;
 
 import controller.*;
+import javazoom.jl.decoder.JavaLayerException;
 import model.*;
 
 import javax.swing.*;
@@ -8,8 +9,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Objects;
 
 public class InitPage extends JFrame implements ActionListener {
@@ -377,8 +380,19 @@ public class InitPage extends JFrame implements ActionListener {
         // userinfo page, click "check my flights" to check all flights.
 
         if(e.getSource()==button_userinfo_next){
+            ArrayList<Flight> filteredFlightList = (ArrayList<Flight>) flightController.getBySurnameAndPassengerId(passenger.getSurname(),passenger.getPassengerId());
+            for (int i = 0 ; i < filteredFlightList.size(); i++) {
+                if(passengerController.isChecked(passenger.getPassengerId(),passenger.getSurname(), passenger.getBookingNumber().get(i))){
+                    filteredFlightList.remove(filteredFlightList.get(i));
+                }
+            }
+            if(filteredFlightList.size() == 0){
+                panel_UserInfoPage.noFlightsWarning();
+                return;
+            }
+
             framePanel.setLayout(new BorderLayout());
-            panel_allFlights.render((ArrayList<Flight>) flightController.getBySurnameAndPassengerId(passenger.getSurname(),passenger.getPassengerId()));
+            panel_allFlights.render(filteredFlightList);
             flightButtons = panel_allFlights.getButtonList();
             for (JButton flightButton : flightButtons) flightButton.addActionListener(this);
 
@@ -407,6 +421,13 @@ public class InitPage extends JFrame implements ActionListener {
         }
         //to LoginByIdDocPage
         if(e.getSource()==button_Scan){
+            try {
+                panel_LoginByIdDocPage.detectedAudio();
+            } catch (FileNotFoundException ex) {
+                ex.printStackTrace();
+            } catch (JavaLayerException ex) {
+                ex.printStackTrace();
+            }
             pageChange(panel_LoginByIdDocPage);
         }
         //LoginByIdDocPage, to init
@@ -549,10 +570,11 @@ public class InitPage extends JFrame implements ActionListener {
 
             if(isValid){
                 if(passengerController.isCardPinCorrect(cardNum,passenger.getPassengerId(),passenger.getSurname(),pin)){
+
                     panel_payingPage.PayNotification(meal.getMealCost()+seats.get(panel_chooseSeat.resultSeatNumber()).getSeatCost());
                     panel_finalConfirm.render(passenger,flight,meal.getMealName());
                     pageChange(panel_finalConfirm);
-
+                    panel_finalConfirm.finalConfirmAudio();
                     invalidTimes = 0;
                 }
                 else{
@@ -570,6 +592,7 @@ public class InitPage extends JFrame implements ActionListener {
             }
         }//属于finalconfirm页面，点击后结束程序。
         if(e.getSource() == button_finalConfirm){
+
             panel_finalConfirm.FinishNotification();
             passengerController.check(passenger.getPassengerId(),passenger.getSurname(),bookingNum);
             boardingPassController.printBoardingPass(passenger,flight);

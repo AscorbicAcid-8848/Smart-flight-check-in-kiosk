@@ -12,6 +12,7 @@ public class PassengerTableServiceImpTest {
 
     @Test
     public void checkPassengerCheckInStatus() {
+//        System.out.println(passengerTableServiceImp.checkPassengerCheckInStatus(300).toString());
         System.out.println(passengerTableServiceImp.checkPassengerCheckInStatus(300).toString());
     }
 

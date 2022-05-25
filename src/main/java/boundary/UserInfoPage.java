@@ -85,5 +85,8 @@ public class UserInfoPage extends JPanel{
         passengerName.setText(passenger.getSurname());
         passengerId.setText(passenger.getPassengerId().toString());
     }
+    public void noFlightsWarning(){
+        JOptionPane.showMessageDialog(this, "You have no flights to check in !", "No flight",JOptionPane.WARNING_MESSAGE);
+    }
 
 }

@@ -1,10 +1,15 @@
 package boundary;
 
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 import model.Flight;
 import model.Passenger;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class FinalConfirmPage extends JPanel {
     /**
@@ -92,6 +97,31 @@ public class FinalConfirmPage extends JPanel {
     public void FinishNotification(){
         JOptionPane.showMessageDialog(this, "You have confirmed the check-in, your boarding pass, baggage tag and ticket will be printed", "Have a nice trip",JOptionPane.DEFAULT_OPTION);
 
+    }
+
+    public void finalConfirmAudio(){
+        new Thread(() -> {
+            Thread t = new Thread();
+            File file =new File("src/main/java/boundary/audio/finalConfirm.mp3");
+            FileInputStream stream = null;
+            try {
+                stream = new FileInputStream(file);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            Player player = null;
+            try {
+                player = new Player(stream);
+            } catch (JavaLayerException e) {
+                e.printStackTrace();
+            }
+            try {
+                player.play();
+            } catch (JavaLayerException e) {
+                e.printStackTrace();
+            }
+
+        }).start();
     }
 
 
