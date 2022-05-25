@@ -462,7 +462,13 @@ public class InitPage extends JFrame implements ActionListener {
 
             else{
                 framePanel.setLayout(new BorderLayout());
-                panel_allFlights.render((ArrayList<Flight>) flightController.getBySurnameAndPassengerId(passenger.getSurname(),passenger.getPassengerId()));
+                ArrayList<Flight> filteredFlightList = (ArrayList<Flight>) flightController.getBySurnameAndPassengerId(passenger.getSurname(),passenger.getPassengerId());
+                for (int i = 0 ; i < filteredFlightList.size(); i++) {
+                    if(passengerController.isChecked(passenger.getPassengerId(),passenger.getSurname(), passenger.getBookingNumber().get(i))){
+                        filteredFlightList.remove(filteredFlightList.get(i));
+                    }
+                }
+                panel_allFlights.render(filteredFlightList);
                 framePanel.removeAll();
                 framePanel.repaint();
                 framePanel.add(panel_allFlights, BorderLayout.CENTER);
