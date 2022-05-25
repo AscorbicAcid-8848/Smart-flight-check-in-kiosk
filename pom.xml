@@ -8,6 +8,7 @@
     <artifactId>XXXManagementSystem</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -46,6 +47,12 @@
             <artifactId>JTattoo</artifactId>
             <version>1.6.7</version>
         </dependency>
+        <dependency>
+            <groupId>com.googlecode.soundlibs</groupId>
+            <artifactId>mp3spi</artifactId>
+            <version>1.9.5.4</version>
+        </dependency>
+
 
     </dependencies>
 

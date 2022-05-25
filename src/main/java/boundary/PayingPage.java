@@ -9,8 +9,8 @@ import java.net.URL;
 public class PayingPage extends JPanel {
 
     /**
-     * The page of Inputing ID
-     * author: Ziyi Chen
+     * The page of Paying
+     * @author: Ran Xu
      */
     private static final long serialVersionUID = 8463888530175832824L;
     private JPanel contentPane;
@@ -21,9 +21,7 @@ public class PayingPage extends JPanel {
     private JButton withdraw;
     private JToggleButton see;
     private int see_type =1;
-    /**
-     * Create the panel.
-     */
+
     public PayingPage() {
         setBounds(100, 100, 685, 386);
 
@@ -107,7 +105,6 @@ public class PayingPage extends JPanel {
         ImageIcon eye_slashIcon = new ImageIcon(resource1);
         Image temp1 = eye_slashIcon.getImage().getScaledInstance(see.getWidth(), see.getHeight(), eye_slashIcon.getImage().SCALE_DEFAULT);
         eye_slashIcon = new ImageIcon(temp1);
-        // set the button without decorator
         see.setContentAreaFilled(false);
         see.setText("                                                ");
         see.setIcon(eye_slashIcon);
@@ -128,8 +125,6 @@ public class PayingPage extends JPanel {
                 }
             }
         });
-
-
         JPanel WestEdge = new JPanel();
         FlowLayout fl_WestEdge = (FlowLayout) WestEdge.getLayout();
         fl_WestEdge.setHgap(40);
@@ -140,7 +135,7 @@ public class PayingPage extends JPanel {
         fl_EastEdge.setHgap(40);
         CenterInput.add(EastEdge, BorderLayout.EAST);
     }
-    //返回button给initpage
+
     public JButton getButton_back() {
         return BTOBut;
     }
@@ -149,15 +144,7 @@ public class PayingPage extends JPanel {
         return CertBut;
     }
 
-    public JButton getWithdraw() {
-        return withdraw;
-    }
 
-    public JToggleButton getButton_see(){
-        return see;
-    }
-
-    //获取用户输入的名字,initPage调用这个方法以获取用户输入
     public String getCardNum(){
         return textField.getText();
     }
@@ -168,8 +155,6 @@ public class PayingPage extends JPanel {
         return textField_1;
     }
 
-    //用户输入错误情况：1.没有输入姓名,此操作不会抛出exception
-    //2.没有输入id或者输入id含有特殊字符，抛出NumberFormatException
     public void infoIncompleteWarning(){
         JOptionPane.showMessageDialog(this, "Fill in all information please!", "Exception occurs",JOptionPane.WARNING_MESSAGE);
     }

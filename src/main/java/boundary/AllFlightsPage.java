@@ -63,7 +63,7 @@ public class AllFlightsPage extends JPanel{
     }
 
     public void render(ArrayList<Flight> flightList){
-
+//isChecked(Integer passengerId, String surname, Integer bookingNumber)
         this.setSize(new Dimension(1000, 900));
         this.setLayout(null);
         /*init TextArea*/

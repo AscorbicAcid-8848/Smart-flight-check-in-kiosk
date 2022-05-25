@@ -7,45 +7,18 @@ import javax.swing.*;
 import java.awt.*;
 
 public class FlightDetailPage extends JPanel {
-//
-//    //旅客信息
-//    private Passenger passenger;
-//    //航班信息
-//    private Flight flight;
-
     /**
-     * 需要的数据：
-     * 由passenger对象提供：
-     * bookingNumber
-     * surName
-     *
-     * 由flight对象提供：
-     * String flightName
-     * Integer airlineId;
-     * Integer flightId;
-     * Date departureTime;
-     * Date fallTime;
-     *
-     * Boolean isDelayed
-     * Integer departureGate
-     * String destWeather
-     * String destCOVIDPolicy
-     * String arrivalAirport
-     * Integer arrivalTerminal
-     *
+     * @author Ran Xu
+     * flight detail page
      */
 
-    //panels：
     private JPanel panel_top;//用来显示标题
     private JPanel panel_mid;//显示各种航班的信息
     private JPanel panel_bot;//显示前进和后退按钮
 
-
-    //buttons
     private JButton button_back;
     private JButton button_confirm;
 
-    //labels
     JLabel label_top_first = new JLabel();
     JLabel label_top_second = new JLabel();
     JLabel departureTime = new JLabel();
@@ -91,7 +64,7 @@ public class FlightDetailPage extends JPanel {
 
 
     }
-//获取button，由initpage调用，在initpage实现监听
+
     public JButton getButton_back() {
         return button_back;
     }
@@ -99,7 +72,12 @@ public class FlightDetailPage extends JPanel {
         return button_confirm;
     }
 
-
+    /**
+     *
+     * @param passenger
+     * @param flight
+     * @param bookingNum
+     */
     public void render(Passenger passenger,Flight flight, Integer bookingNum){
         label_top_first.setText("Dear"+passenger.getSurname()+", with booking number "+bookingNum+",");
         label_top_second.setText("Here is the information for flight: "+flight.getFlightName());

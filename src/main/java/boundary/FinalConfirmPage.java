@@ -1,45 +1,26 @@
 package boundary;
 
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
 import model.Flight;
 import model.Passenger;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class FinalConfirmPage extends JPanel {
-//
-//    //旅客信息
-//    private Passenger passenger;
-//    //航班信息
-//    private Flight flight;
-
     /**
-     * 需要的数据：
-     * 由passenger对象提供：
-     * bookingNumber
-     * surName
-     *
-     * 由flight对象提供：
-     * String flightName
-     * Integer airlineId;
-     * Integer flightId;
-     * Date departureTime;
-     * Date fallTime;
-     *
-     * Boolean isDelayed
-     * Integer departureGate
-     * String destWeather
-     * String destCOVIDPolicy
-     * String arrivalAirport
-     * Integer arrivalTerminal
-     *
+     * @author Ran Xu
+     * Final confirm page
      */
 
     //panels：
-    private JPanel panel_top;//用来显示标题
-    private JPanel panel_mid;//显示各种航班的信息
-    private JPanel panel_bot;//显示前进和后退按钮
-
+    private JPanel panel_top;
+    private JPanel panel_mid;
+    private JPanel panel_bot;
 
     //buttons
     private JButton button_confirm;
@@ -88,12 +69,16 @@ public class FinalConfirmPage extends JPanel {
 
 
     }
-    //获取button，由initpage调用，在initpage实现监听
     public JButton getButton_confirm() {
         return button_confirm;
     }
 
-
+    /**
+     *
+     * @param passenger The passenger object displayed in this page.
+     * @param flight    The flight object displayed in this page.
+     * @param mealName  The meal displayed in this page.
+     */
     public void render(Passenger passenger,Flight flight,String mealName){
         label_top_first.setText("Dear"+passenger.getSurname()+",");
         label_top_second.setText("Please check your information of your flight: "+flight.getFlightName());
@@ -104,13 +89,39 @@ public class FinalConfirmPage extends JPanel {
         seatLevel.setText("Seat Level: "+passenger.getSeatLevel());
         seatNumber.setText("Seat Number: "+passenger.getSeatNumber());
         meal.setText("Meal: "+mealName);
-        //destWeather.setText("Destination Weather: "+flight.getDestWeather());
-        //COVIDPolicy.setText("Destination COVID Policy: "+flight.getDestCOVIDPolicy());
-        //delayState.setText(flight.isDelayed() ? "Delay State: Delayed":"Delay State: No Delay");
     }
+
+    /**
+     * @description: Notify user when system terminates.
+     */
     public void FinishNotification(){
         JOptionPane.showMessageDialog(this, "You have confirmed the check-in, your boarding pass, baggage tag and ticket will be printed", "Have a nice trip",JOptionPane.DEFAULT_OPTION);
 
+    }
+
+    public void finalConfirmAudio(){
+        new Thread(() -> {
+            Thread t = new Thread();
+            File file =new File("src/main/java/boundary/audio/finalConfirm.mp3");
+            FileInputStream stream = null;
+            try {
+                stream = new FileInputStream(file);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            Player player = null;
+            try {
+                player = new Player(stream);
+            } catch (JavaLayerException e) {
+                e.printStackTrace();
+            }
+            try {
+                player.play();
+            } catch (JavaLayerException e) {
+                e.printStackTrace();
+            }
+
+        }).start();
     }
 
 

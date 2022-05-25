@@ -1,7 +1,16 @@
 package boundary;
 
+import javazoom.jl.decoder.JavaLayerException;
+import javazoom.jl.player.Player;
+
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 
 public class LoginByIdDocPage extends JPanel {
 
@@ -9,7 +18,8 @@ public class LoginByIdDocPage extends JPanel {
 	private JButton BTOBut;
 	private JButton back;
 	/**
-	 * Create the panel.
+	 * @author Ziyi Chen
+	 * Login by id document page
 	 */
 	public LoginByIdDocPage() {
 
@@ -52,7 +62,6 @@ public class LoginByIdDocPage extends JPanel {
 	public JButton getButton_backToInit(){
 		return BTOBut;
 	}
-	public void makeSound(){}
 	public JButton getLogin(){return back;}
 	public void loginFailedWarning(){
 		JOptionPane.showMessageDialog(this, "Cannot find your ID document!", "Exception occurs",JOptionPane.WARNING_MESSAGE);
@@ -60,6 +69,47 @@ public class LoginByIdDocPage extends JPanel {
 	public void loginSuccessDialog(){
 		JOptionPane.showMessageDialog(this, "Login successful!", "Login",JOptionPane.DEFAULT_OPTION);
 	}
+	public void detectedAudio() throws FileNotFoundException, JavaLayerException {
+		new Thread(() -> {
+			Thread t = new Thread();
+			File file =new File("src/main/java/boundary/audio/scancode.mp3");
+			FileInputStream stream = null;
+			try {
+				stream = new FileInputStream(file);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			Player player = null;
+			try {
+				player = new Player(stream);
+			} catch (JavaLayerException e) {
+				e.printStackTrace();
+			}
+			try {
+				player.play();
+			} catch (JavaLayerException e) {
+				e.printStackTrace();
+			}
+			File file1 =new File("src/main/java/boundary/audio/detected.mp3");
+			FileInputStream stream1 = null;
+			try {
+				stream1 = new FileInputStream(file1);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			Player player1 = null;
+			try {
+				player1 = new Player(stream1);
+			} catch (JavaLayerException e) {
+				e.printStackTrace();
+			}
+			try {
+				player1.play();
+			} catch (JavaLayerException e) {
+				e.printStackTrace();
+			}
+		}).start();
 
+	}
 
 }

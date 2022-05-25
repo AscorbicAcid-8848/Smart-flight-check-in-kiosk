@@ -14,6 +14,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ChooseMealPage extends JPanel {
+    /**
+     * @author Ran Xu
+     * Page used to choose meal.
+     * What meals the user can choose are determined by which airline the user blongs to.
+     * And user can view the image of picked meal.
+     * This page is customised for different airlines. The logo for different airlines are shown.
+     * and meal is provided by different airlines.
+     */
 
     private JPanel airlinePanel;
     private JPanel mealPanel;
@@ -24,36 +32,21 @@ public class ChooseMealPage extends JPanel {
     private Meal meal;
     Integer airlineID;
     AirlineMealController  airlineMealController = new AirlineMealController();
-
-
-
     JLabel pageIntro = new JLabel();
     JPanel logoPanel = new JPanel();
-
-    
     JButton confirm;
-    
     JButton back;
-
     JButton withdraw;
-
     JButton viewFoodButton;
 
     public ChooseMealPage() {
 
         this.setLayout(null);
-
-//        panelTop = new JPanel();
-//        panelMid = new JPanel();
-//        panelBot = new JPanel();
-//        panelTop.setLayout(new BorderLayout());
         airlinePanel = new JPanel();
         controlPanel = new JPanel();
         mealPanel = new JPanel();
         priceLabel = new JLabel("Price: 0");
-
         pageIntro.setFont(new Font("Arial", Font.PLAIN, 15));
-
         mealPanel.setLayout(null);
         controlPanel.setLayout(null);
         airlinePanel.setLayout(null);
@@ -61,7 +54,6 @@ public class ChooseMealPage extends JPanel {
         controlPanel.setBounds(250,580,400,100);
         mealPanel.setBounds(460,0,400,500);
         pageIntro.setBounds(10,320,450,100);
-//        mealListPanel.setBounds(20,10,300,200);
         chooseBox.setBounds(40,45,330,20);
         priceLabel.setBounds(320,45,40,20);
         mealImgPanel.setBounds(10,180,380,300);
@@ -72,7 +64,6 @@ public class ChooseMealPage extends JPanel {
         controlPanel.setVisible(true);
         airlinePanel.setVisible(true);
         priceLabel.setVisible(true);
-//        mealListPanel.setVisible(true);
 
 
         confirm = new JButton("Confirm");
@@ -127,6 +118,11 @@ public class ChooseMealPage extends JPanel {
 
     }
 
+    /**
+     * @description: render method, invoked by init page.
+     * @param meals The list of meals to be chosen
+     * @param airlineID Based on airlineID we show different logo.
+     */
     public void render(ArrayList<Meal> meals, Integer airlineID){
         System.out.println(airlineID);
         this.airlineID = airlineID;
@@ -157,18 +153,24 @@ public class ChooseMealPage extends JPanel {
 
     }
 
+    /**
+     * @description: Invoked in render method to add item in combo box.
+     * @param item
+     * @return
+     */
     private Object makeObj(final String item)  {
         return new Object() { public String toString() { return item; } };
     }
 
-    private void updatePrice(int price){
-        priceLabel.setText("Price: "+price);
-    }
-
-
+    /**
+     * @description: Refresh page
+     */
     public void refresh(){
         chooseBox.removeAllItems();
     }
+    /**
+     * @description: Withdraw meal choice.
+     */
     public void withdraw(){
         chooseBox.setSelectedIndex(0);
     }
@@ -182,9 +184,18 @@ public class ChooseMealPage extends JPanel {
     public JButton getWithdraw() {
         return withdraw;
     }
+
+    /**
+     *
+     * @return return the index of meal with respect of airline.
+     */
     public int getMeal(){
         return chooseBox.getSelectedIndex();
     }
+
+    /**
+     * Invoked if no meals is chosen
+     */
     public void mealNotChosenWarning(){
         JOptionPane.showMessageDialog(this, "You haven't choose your meal yet.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
     }

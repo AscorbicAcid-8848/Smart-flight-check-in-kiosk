@@ -6,6 +6,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class UserInfoPage extends JPanel{
+    /**
+     * @author: Ran Xu
+     * User info page
+     */
 
     private JPanel panelTop;
     private JPanel panelMid;
@@ -73,10 +77,16 @@ public class UserInfoPage extends JPanel{
         return button_next;
     }
 
-    //所有需要显示数据库信息的页面都应该有render方法
+    /**
+     * Invoked in init page
+     * @param passenger The passenger object to display
+     */
     public void render(Passenger passenger){
         passengerName.setText(passenger.getSurname());
         passengerId.setText(passenger.getPassengerId().toString());
+    }
+    public void noFlightsWarning(){
+        JOptionPane.showMessageDialog(this, "You have no flights to check in !", "No flight",JOptionPane.WARNING_MESSAGE);
     }
 
 }
