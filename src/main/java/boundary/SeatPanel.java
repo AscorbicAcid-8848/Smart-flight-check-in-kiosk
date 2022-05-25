@@ -396,17 +396,7 @@ public class SeatPanel extends JPanel implements ActionListener{
 
         confirm = new JButton("Confirm");
         confirm.setBounds(20,20,100,40);
-//        confirm.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                if(e.getSource() == confirm){
-//                    if(passenger.getSeatLevel() == null || passenger.getSeatNumber() == null || passenger.getSeatNumber() < 0){
-//                        JOptionPane.showMessageDialog(null, "You haven't choose your seat yet.", "Exception occurs",JOptionPane.WARNING_MESSAGE);
-//                        return;
-//                    }
-//                }
-//            }
-//        });
+
 
         withdraw= new JButton("Withdraw");
         withdraw.setBounds(140,20,100,40);
@@ -460,10 +450,6 @@ public class SeatPanel extends JPanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         int seatNum = bts.indexOf(e.getSource());
-        /*System.out.println("passenger seat level: " + passenger.getSeatLevel());
-        System.out.println("seat number: " + seatNum);
-        System.out.println("seat level: " + seatList.get(seatNum).getSeatLevel());
-        System.out.println("seat occupied: " + seatList.get(seatNum).isOccupied());*/
         if(e.getSource() == selectedButton){
             JOptionPane.showMessageDialog(null, "You already selected this seat.", "Sorry", JOptionPane.WARNING_MESSAGE);
             return;

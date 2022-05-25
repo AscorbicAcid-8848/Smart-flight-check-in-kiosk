@@ -48,20 +48,6 @@ public class AllFlightsPage extends JPanel{
     public AllFlightsPage() {
     }
 
-    public static void main(String[] agrs){
-        ArrayList<Flight> flights = new ArrayList<Flight>();
-        flights.add(new Flight());
-        flights.add(new Flight());
-        flights.add(new Flight());
-        flights.add(new Flight());
-        JFrame f = new JFrame();
-        f.setSize(new Dimension(1000, 900));
-        AllFlightsPage a = new AllFlightsPage();
-        a.render(flights);
-        f.add(a);
-        f.setVisible(true);
-    }
-
     public void render(ArrayList<Flight> flightList){
 //isChecked(Integer passengerId, String surname, Integer bookingNumber)
         this.setSize(new Dimension(1000, 900));
