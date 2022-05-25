@@ -26,6 +26,7 @@ public class MockAll {
         FlightMock flightMock = new FlightMock();
         AirlineMock airlineMock = new AirlineMock();
         AirlineMealMock airlineMealMock = new AirlineMealMock();
+        PassengerTableMock passengerTableMock = new PassengerTableMock();
 
         try {
             //passenger
@@ -39,6 +40,9 @@ public class MockAll {
             airlineMock.toJSON(null,true);
             //meal
             airlineMealMock.toJSON(null,true);
+            //passenger table
+            passengerTableMock.freshTable();
+            passengerTableMock.toJSON(null,true);
         }catch (IOException e){
             e.printStackTrace();
         }

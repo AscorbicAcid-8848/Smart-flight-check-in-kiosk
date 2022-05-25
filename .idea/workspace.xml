@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PassengerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/airlineList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/airlineList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/airlineMealList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/airlineMealList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/flightList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/flightList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/flightSeatList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/flightSeatList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/passengerList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/passengerList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/passengerTableList.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/passengerTableList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mock/MockAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mock/MockAll.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +88,7 @@
       <recent name="boundary" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Entrance">
+  <component name="RunManager" selected="JUnit.MockAllTest.testRefreshData">
     <configuration name="AllFlightsPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.AllFlightsPage" />
       <module name="XXXManagementSystem" />
@@ -157,10 +163,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MockAllTest.testRefreshData" />
         <item itemvalue="Application.Entrance" />
         <item itemvalue="Application.AllFlightsPage" />
         <item itemvalue="JUnit.MockAllTest" />
-        <item itemvalue="JUnit.MockAllTest.testRefreshData" />
         <item itemvalue="JUnit.AirlineMealControllerTest" />
       </list>
     </recent_temporary>
@@ -196,6 +202,7 @@
       <workItem from="1653374787711" duration="217000" />
       <workItem from="1653375020906" duration="6093000" />
       <workItem from="1653382216816" duration="409000" />
+      <workItem from="1653443093365" duration="282000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
