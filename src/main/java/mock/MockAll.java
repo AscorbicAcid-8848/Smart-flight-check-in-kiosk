@@ -3,7 +3,6 @@ package mock;/**
  * @version 1.0
  */
 
-import java.io.File;
 import java.io.IOException;
 
 /**
@@ -44,15 +43,6 @@ public class MockAll {
             //passenger table
             passengerTableMock.freshTable();
             passengerTableMock.toJSON(null,true);
-
-            //delete file
-            File file1 = new File("BoardingPass_Tag_Ticket\\boardingPass.json");
-            File file2 = new File("BoardingPass_Tag_Ticket\\bagTag.json");
-            File file3 = new File("BoardingPass_Tag_Ticket\\bagTicket.json");
-            file1.delete();
-            file2.delete();
-            file3.delete();
-
         }catch (IOException e){
             e.printStackTrace();
         }
