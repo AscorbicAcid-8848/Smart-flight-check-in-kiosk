@@ -36,6 +36,7 @@ public class UserInfoPage extends JPanel{
 
         panel_name = new JPanel();
         panel_id = new JPanel();
+
         label_overall = new JLabel("Here is your account information");
 
         label_name = new JLabel("Name:");
@@ -67,6 +68,7 @@ public class UserInfoPage extends JPanel{
 
         panelBot.add(button_backToInit);
         panelBot.add(button_next);
+        label_overall.setFont(new Font("SimSun", Font.PLAIN, 24));
     }
 
     public JButton getButton_backToInit() {
@@ -82,7 +84,7 @@ public class UserInfoPage extends JPanel{
      * @param passenger The passenger object to display
      */
     public void render(Passenger passenger){
-        passengerName.setText(passenger.getSurname());
+        passengerName.setText(passenger.getFirstname()+" "+passenger.getSurname());
         passengerId.setText(passenger.getPassengerId().toString());
     }
     public void noFlightsWarning(){

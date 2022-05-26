@@ -52,9 +52,99 @@
             <artifactId>mp3spi</artifactId>
             <version>1.9.5.4</version>
         </dependency>
-
-
     </dependencies>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                <artifactId>appassembler-maven-plugin</artifactId>-->
+<!--                <version>1.1.1</version>-->
+<!--                <configuration>-->
+<!--                    <repositoryLayout>flat</repositoryLayout>-->
+<!--                    <repositoryName>lib</repositoryName>-->
+<!--                    <configurationSourceDirectory>src/main/resources/conf</configurationSourceDirectory>-->
+<!--                    &lt;!&ndash; Set the target configuration directory to be used in the bin scripts &ndash;&gt;-->
+<!--                    <configurationDirectory>conf</configurationDirectory>-->
+<!--                    &lt;!&ndash; Copy the contents from &quot;/src/main/config&quot; to the target configuration-->
+<!--                    directory in the assembled application &ndash;&gt;-->
+<!--                    <copyConfigurationDirectory>true</copyConfigurationDirectory>-->
+<!--                    &lt;!&ndash; Include the target configuration directory in the beginning of-->
+<!--                        the classpath declaration in the bin scripts &ndash;&gt;-->
+<!--                    <includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath>-->
+<!--                    &lt;!&ndash; prefix all bin files with &quot;mycompany&quot; &ndash;&gt;-->
+<!--                    <binPrefix>startup</binPrefix>-->
+<!--                    &lt;!&ndash; set alternative assemble directory &ndash;&gt;-->
+<!--                    <assembleDirectory>${project.build.directory}/server</assembleDirectory>-->
+<!--                    &lt;!&ndash; Extra JVM arguments that will be included in the bin scripts &ndash;&gt;-->
+<!--                    <extraJvmArguments>-Xms768m -Xmx768m -XX:PermSize=128m-->
+<!--                        -XX:MaxPermSize=256m -XX:NewSize=192m -XX:MaxNewSize=384m-->
+<!--                    </extraJvmArguments>-->
+<!--                    &lt;!&ndash; Generate bin scripts for windows and unix pr default &ndash;&gt;-->
+<!--                    <platforms>-->
+<!--                        <platform>windows</platform>-->
+<!--                        <platform>unix</platform>-->
+<!--                    </platforms>-->
+<!--                    <programs>-->
+<!--                        <program>-->
+<!--                            <mainClass>com.coderli.onecoder.server.HypervisorServer</mainClass>-->
+<!--                            <name>startup</name>-->
+<!--                        </program>-->
+<!--                    </programs>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+<!--        </plugins>-->
+
+
+<!--    </build>-->
+
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-assembly-plugin</artifactId>-->
+<!--                <version>2.2-beta-5</version>-->
+<!--                <configuration>-->
+<!--                    <archive>-->
+<!--                        <manifest>-->
+<!--                            <mainClass>com.src.main.java.boundary.Entrance</mainClass>-->
+<!--                        </manifest>-->
+<!--                    </archive>-->
+<!--                    <descriptorRefs>-->
+<!--                        <descriptorRef>jar-with-dependencies</descriptorRef>-->
+<!--                    </descriptorRefs>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
+
+
+
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-shade-plugin</artifactId>-->
+<!--                <version>1.2.1</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>shade</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <transformers>-->
+<!--                                <transformer-->
+<!--                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">-->
+<!--                                    <mainClass>com.src.main.java.boundary.Entrance</mainClass>-->
+<!--                                </transformer>-->
+<!--                            </transformers>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
     <properties>
         <maven.compiler.source>15</maven.compiler.source>

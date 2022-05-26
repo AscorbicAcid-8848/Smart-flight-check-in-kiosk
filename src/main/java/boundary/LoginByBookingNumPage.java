@@ -47,16 +47,21 @@ public class LoginByBookingNumPage extends JPanel {
         panel_name = new JPanel();
         panel_name.setLayout(new GridLayout(0,3,0,0));
         panel_id = new JPanel();
+
         label_overall = new JLabel("Login via booking number");
+        label_overall.setFont(new Font("SimSun", Font.PLAIN, 24));
         panel_id.setLayout(new GridLayout(0,3,0,0));
         label_name = new JLabel("                              ");
 
         passengerName = new JLabel();
         passengerId = new JPasswordField();
 
+
         label_IdNum = new JLabel("                             Booking Number:");
+        label_IdNum.setFont(new Font("SimSun", Font.PLAIN, 15));
         button_backToInit = new JButton("Go Back");
         button_next = new JButton("Next");
+
 
         this.setLayout(new GridLayout(3,1,0,50));
         panelMid.setLayout(new GridLayout(2,1,30,20));
@@ -110,7 +115,9 @@ public class LoginByBookingNumPage extends JPanel {
                 }
             }
         });
-
+        button_withdraw.setFont(new Font("SimSun", Font.PLAIN, 18));
+        button_backToInit.setFont(new Font("SimSun", Font.PLAIN, 18));
+        button_next.setFont(new Font("SimSun", Font.PLAIN, 18));
     }
 
     public JButton getButton_backToInit() {
