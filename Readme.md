@@ -4,9 +4,9 @@
 If not, you can download newer jdk and configure it path with:https://www.liquidweb.com/kb/how-to-install-java-on-ubuntu-windows-and-macos/
 - Recommend environment: Windows 10 or 11.
 ## Start program
-PS: You can check in in three ways.
+PS: You can check in three ways.
 1.Using booking number"10001","20001","10002","10102"......(You can check what you want at passengerList.json)
-2.Using surname "Ye" and passenger id "1" to check in.
+2.Using surname "**Ye" and passenger id "1" to check in.
 3.Scanning your id document, put the passenger's json file, in Passenger_IdCard folder, you want to check in and put the file into idDocumentCard folder.
 
 ### 1. Run with maven 3 
@@ -22,4 +22,4 @@ If you do not have maven, you can try to install with:https://www.baeldung.com/i
 ###3. Initialize the backend data
 - Please run the test/mocks/MockAllTest before starting the System to refresh the data.
 ## Test Files
-Test files are located at src/test/java
+Test files are located at src/test/java**
