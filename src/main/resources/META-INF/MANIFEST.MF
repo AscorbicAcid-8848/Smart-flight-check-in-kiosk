@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Main-Class: boundary.Entrance
+Class-Path: wagon-ssh-common-1.0-beta-2.jar JTattoo-1.6.7.jar wagon-ssh-
+ external-1.0-beta-2.jar maven-reporting-api-2.0.6.jar maven-artifact-2.
+ 0.4.jar xml-apis-1.0.b2.jar plexus-container-default-1.0-alpha-9-stable
+ -1.jar plexus-utils-2.0.1.jar jsch-0.1.27.jar plexus-interpolation-1.7.
+ jar maven-repository-builder-1.0-alpha-2.jar maven-plugin-descriptor-2.
+ 0.6.jar wagon-file-1.0-beta-2.jar maven-plugin-parameter-documenter-2.0
+ .6.jar wagon-provider-api-1.0-alpha-6.jar jackson-databind-2.12.2.jar m
+ aven-archiver-2.4.jar plexus-archiver-1.0-alpha-12.jar maven-repository
+ -metadata-2.0.2.jar maven-filtering-1.0-beta-2.jar jtidy-4aug2000r7-dev
+ .jar doxia-sink-api-1.0-alpha-7.jar jackson-core-2.12.2.jar maven-assem
+ bly-plugin-2.2-beta-5.jar maven-shared-io-1.1.jar mp3spi-1.9.5.4.jar wa
+ gon-http-shared-1.0-beta-2.jar jackson-annotations-2.12.2.jar maven-pro
+ file-2.0.4.jar maven-artifact-manager-2.0.2.jar maven-error-diagnostics
+ -2.0.6.jar commons-cli-1.0.jar plexus-io-1.0-alpha-4.jar maven-project-
+ 2.0.4.jar plexus-active-collections-1.0-beta-2.jar maven-plugin-testing
+ -harness-1.1.jar maven-plugin-api-2.0.4.jar maven-model-2.0.4.jar maven
+ -monitor-2.0.6.jar file-management-1.1.jar maven-settings-2.0.6.jar tri
+ tonus-share-0.3.7.4.jar maven-common-artifact-filters-1.1.jar wagon-htt
+ p-lightweight-1.0-beta-2.jar maven-core-2.0.6.jar jlayer-1.0.1.4.jar wa
+ gon-ssh-1.0-beta-2.jar plexus-interactivity-api-1.0-alpha-4.jar classwo
+ rlds-1.1-alpha-2.jar
+
