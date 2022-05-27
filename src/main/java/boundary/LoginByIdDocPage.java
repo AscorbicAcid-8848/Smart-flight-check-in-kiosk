@@ -64,7 +64,7 @@ public class LoginByIdDocPage extends JPanel {
 	}
 	public JButton getLogin(){return back;}
 	public void loginFailedWarning(){
-		JOptionPane.showMessageDialog(this, "Cannot find your ID document!", "Exception occurs",JOptionPane.WARNING_MESSAGE);
+		JOptionPane.showMessageDialog(this, "Cannot find your ID information in database!", "Exception occurs",JOptionPane.WARNING_MESSAGE);
 	}
 	public void loginSuccessDialog(){
 		JOptionPane.showMessageDialog(this, "Login successful!", "Login",JOptionPane.DEFAULT_OPTION);

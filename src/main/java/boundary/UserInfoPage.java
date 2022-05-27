@@ -1,9 +1,11 @@
 package boundary;
 
+import controller.PassengerController;
 import model.Passenger;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class UserInfoPage extends JPanel{
     /**
@@ -25,9 +27,11 @@ public class UserInfoPage extends JPanel{
 
     private JLabel label_IdNum;
     private JLabel passengerId;
+    private JLabel flights_number;
 
     private JButton button_backToInit;
     private JButton button_next;
+    private PassengerController passengerController = new PassengerController();
 
     public UserInfoPage(){
         panelTop = new JPanel();
@@ -36,6 +40,7 @@ public class UserInfoPage extends JPanel{
 
         panel_name = new JPanel();
         panel_id = new JPanel();
+        flights_number = new JLabel();
 
         label_overall = new JLabel("Here is your account information");
 
@@ -49,7 +54,7 @@ public class UserInfoPage extends JPanel{
         button_next = new JButton("Check My Flights");
 
         this.setLayout(new GridLayout(3,1,0,50));
-        panelMid.setLayout(new GridLayout(2,1,0,20));
+        panelMid.setLayout(new GridLayout(3,1,0,20));
         panelBot.setLayout(new GridLayout(1,2,100,0));
 
         add(panelTop);
@@ -60,6 +65,7 @@ public class UserInfoPage extends JPanel{
 
         panelMid.add(panel_name);
         panelMid.add(panel_id);
+        panelMid.add(flights_number);
 
         panel_name.add(label_name);
         panel_name.add(passengerName);
@@ -69,6 +75,7 @@ public class UserInfoPage extends JPanel{
         panelBot.add(button_backToInit);
         panelBot.add(button_next);
         label_overall.setFont(new Font("SimSun", Font.PLAIN, 24));
+
     }
 
     public JButton getButton_backToInit() {
@@ -86,6 +93,14 @@ public class UserInfoPage extends JPanel{
     public void render(Passenger passenger){
         passengerName.setText(passenger.getFirstname()+" "+passenger.getSurname());
         passengerId.setText(passenger.getPassengerId().toString());
+        ArrayList<Integer> bookingNums = (ArrayList<Integer>) passenger.getBookingNumber();
+        int num = bookingNums.size();
+        for(int i=0; i<bookingNums.size();i++){
+            if(passengerController.isChecked(passenger.getPassengerId(),passenger.getSurname(),passenger.getBookingNumber().get(i))){
+                num--;
+            }
+        }
+        flights_number.setText("                                        You have "+num+" booked flights");
     }
     public void noFlightsWarning(){
         JOptionPane.showMessageDialog(this, "You have no flights to check in !", "No flight",JOptionPane.WARNING_MESSAGE);

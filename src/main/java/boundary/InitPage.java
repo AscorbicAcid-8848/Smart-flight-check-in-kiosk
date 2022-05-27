@@ -112,6 +112,9 @@ public class InitPage extends JFrame implements ActionListener {
     private int invalidTimes = 0;
     private Integer bookingNum = null;
     private boolean loginViaBookingNum = false;
+    ArrayList<Flight> filteredFlightList;
+    //ArrayList<JButton> flightButtons;
+    ArrayList<JButton> originalFlightButtons;
 
     /**
      * Constructor of init page.
@@ -380,12 +383,18 @@ public class InitPage extends JFrame implements ActionListener {
         // userinfo page, click "check my flights" to check all flights.
 
         if(e.getSource()==button_userinfo_next){
-            ArrayList<Flight> filteredFlightList = (ArrayList<Flight>) flightController.getBySurnameAndPassengerId(passenger.getSurname(),passenger.getPassengerId());
+            filteredFlightList = (ArrayList<Flight>) flightController.getBySurnameAndPassengerId(passenger.getSurname(),passenger.getPassengerId());
+            ////////////////////////////////////////此处有bug
             for (int i = 0 ; i < filteredFlightList.size(); i++) {
-                if(passengerController.isChecked(passenger.getPassengerId(),passenger.getSurname(), passenger.getBookingNumber().get(i))){
+                if(passengerController.isChecked(passenger.getPassengerId(),passenger.getSurname(), filteredFlightList.get(i).getFlightId()*10+passenger.getPassengerId())){
+                    System.out.println("Remove: "+filteredFlightList.get(i).getFlightId()*10+passenger.getPassengerId());
                     filteredFlightList.remove(filteredFlightList.get(i));
                 }
             }
+//            for(Flight flight: filteredFlightList){
+//                if(passengerController.isChecked(passenger.getPassengerId(),passenger.getSurname(),))
+//            }
+            System.out.println("flights: "+filteredFlightList.size());
             if(filteredFlightList.size() == 0){
                 panel_UserInfoPage.noFlightsWarning();
                 return;
@@ -394,6 +403,16 @@ public class InitPage extends JFrame implements ActionListener {
             framePanel.setLayout(new BorderLayout());
             panel_allFlights.render(filteredFlightList);
             flightButtons = panel_allFlights.getButtonList();
+//            if(filteredFlightList.size()==passenger.getBookingNumber().size()){
+//                originalFlightButtons = flightButtons;
+//            }
+
+//            flightButtons = flightButtons;
+//            for (int i = 0 ; i < flightButtons.size(); i++) {
+//                if(passengerController.isChecked(passenger.getPassengerId(),passenger.getSurname(), passenger.getBookingNumber().get(i))){
+//                    flightButtons.remove(flightButtons.get(i));
+//                }
+//            }
             for (JButton flightButton : flightButtons) flightButton.addActionListener(this);
 
             framePanel.removeAll();
@@ -403,8 +422,11 @@ public class InitPage extends JFrame implements ActionListener {
         }//user clicks a flight button
         try{
             if(flightButtons.contains((JButton) e.getSource())){
-                flight = flightController.getBySurnameAndPassengerId(passenger.getSurname(),passenger.getPassengerId()).get(flightButtons.indexOf(e.getSource()));
-                bookingNum = passenger.getBookingNumber().get(flightButtons.indexOf(e.getSource()));
+                //flight = flightController.getBySurnameAndPassengerId(passenger.getSurname(),passenger.getPassengerId()).get(flightButtons.indexOf(e.getSource()));
+                flight = filteredFlightList.get(flightButtons.indexOf(e.getSource()));
+                ///////////////////////////////////////////////////////////此处有bug，booking number
+                bookingNum = flight.getFlightId()*100+passenger.getPassengerId();
+                //bookingNum = passenger.getBookingNumber().get(flightButtons.indexOf(e.getSource()));
                 panel_flightDetailPage.render(passenger,flight,bookingNum);
                 flightController.chooseFlight(flight.getFlightId());
                 framePanel.setLayout(new FlowLayout());
@@ -598,12 +620,12 @@ public class InitPage extends JFrame implements ActionListener {
             }
         }//属于finalconfirm页面，点击后结束程序。
         if(e.getSource() == button_finalConfirm){
-
-            panel_finalConfirm.FinishNotification();
             passengerController.check(passenger.getPassengerId(),passenger.getSurname(),bookingNum);
             boardingPassController.printBoardingPass(passenger,flight);
             boardingPassController.printCarryOnBaggageTag(passenger,flight);
             boardingPassController.printCheckinBaggageTicket(passenger,flight);
+            panel_finalConfirm.FinishNotification();
+
             System.exit(1);
         }
     }
@@ -632,6 +654,8 @@ public class InitPage extends JFrame implements ActionListener {
         flight = new Flight();
         meal = new Meal();
         seats = new ArrayList<Seat>();
+        filteredFlightList = null;
+        flightButtons = null;
 
         loginViaBookingNum = false;
     }

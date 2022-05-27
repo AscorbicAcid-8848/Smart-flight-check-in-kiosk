@@ -140,8 +140,8 @@ public class ChooseMealPage extends JPanel {
         logoPanel.setBounds(10,20,430,300);
         if(airlineID == 1){airlineIcon= new ImageIcon("src/main/java/boundary/images/britishAirway.png");pageIntro.setText("Welcome to British Airway! Best meals prepared!");}
         if(airlineID == 2){airlineIcon= new ImageIcon("src/main/java/boundary/images/easternAirway.png");pageIntro.setText("Welcome to Eastern Airway! You will never forget these meals!");}
-        if(airlineID == 3){airlineIcon= new ImageIcon("src/main/java/boundary/images/airChina.png");pageIntro.setText("Welcome to Air China! Good meals bring good travel!");}
-        if(airlineID == 4){airlineIcon= new ImageIcon("src/main/java/boundary/images/chinaEastern.png");pageIntro.setText("Welcome to China Eastern! The best flight kitchen here!");}
+        if(airlineID == 3){airlineIcon= new ImageIcon("src/main/java/boundary/images/chinaEastern.png");pageIntro.setText("Welcome to China Eastern! Good meals bring good travel!");}
+        if(airlineID == 4){airlineIcon= new ImageIcon("src/main/java/boundary/images/airChina.png");pageIntro.setText("Welcome to Air China! The best flight kitchen here!");}
 
         airlineIcon.setImage(airlineIcon.getImage().getScaledInstance(logoPanel.getWidth(),logoPanel.getHeight(),Image.SCALE_DEFAULT));
         airlineLogoLabel.setIcon(airlineIcon);
