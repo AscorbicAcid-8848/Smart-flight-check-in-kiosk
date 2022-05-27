@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: boundary.Entrance
-Class-Path: mp3spi-1.9.5.4.jar tritonus-share-0.3.7.4.jar jackson-databi
- nd-2.12.2.jar JTattoo-1.6.13.jar jackson-core-2.12.2.jar jackson-annota
- tions-2.12.2.jar jlayer-1.0.1.4.jar
-

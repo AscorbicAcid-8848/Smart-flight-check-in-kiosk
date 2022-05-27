@@ -54,5 +54,45 @@
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
     </properties>
+<!--    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java/boundary/audio</directory>
+                <includes>
+                    <include>**/*.mp3</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/java/boundary/images</directory>
+                <includes>
+                    <include>**/*.png</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>BoardingPass_Tag_Ticket</directory>
+                <includes>
+                    <include>**/*.json</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>data</directory>
+                <includes>
+                    <include>**/*.json</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>idDocumentCard</directory>
+                <includes>
+                    <include>**/*.json</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>Passenger_IdCard</directory>
+                <includes>
+                    <include>**/*.json</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>-->
 
 </project>

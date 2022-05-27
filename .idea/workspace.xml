@@ -10,7 +10,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e12f5f-5ab4-4403-8012-a7184581aa13" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XXXManagementSystem_jar/JTattoo-1.6.13.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XXXManagementSystem_jar/XXXManagementSystem.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XXXManagementSystem_jar/jackson-annotations-2.12.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XXXManagementSystem_jar/jackson-core-2.12.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XXXManagementSystem_jar/jackson-databind-2.12.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XXXManagementSystem_jar/jlayer-1.0.1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XXXManagementSystem_jar/mp3spi-1.9.5.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/XXXManagementSystem_jar/tritonus-share-0.3.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/audio/detected.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/audio/finalConfirm.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/audio/scanCode.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Cascade_Brisket_Chili.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Chicken_Cobb_Salad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Classic_Arabic_Mezze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Flight_Bites_Tapas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/HeathrowAirport.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Hong_Kong-style_Curry_Chicken.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Hot_Ham_and_Cheese_Breakfast.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Kale_Salad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Lasagna_with_Malbec_and_Flan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Loco_Moco.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Marvellous_Mac’N’Cheese_Kids_Meal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/QRcode.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Ravioli_and_Dulce_de_Leche_Cake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Red_Wine_Braised_Beef_with_Polenta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Sirloin_Sandwich.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Strawberry_Frozen_Yogurt Bars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/Viennese_Schnitzel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/airChina.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/britishAirway.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/chinaEastern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/easternAirway.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/eye slash-fill.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/eye-fill.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/boundary/AllFlightsPage.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/boundary/ChooseMealPage$1.class" beforeDir="false" />
@@ -31,32 +68,32 @@
       <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/boundary/SeatPanel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/boundary/UserInfoPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/audio/detected.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/audio/detected.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/audio/finalConfirm.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/audio/finalConfirm.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/audio/scanCode.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/audio/scanCode.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Cascade_Brisket_Chili.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Cascade_Brisket_Chili.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Chicken_Cobb_Salad.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Chicken_Cobb_Salad.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Classic_Arabic_Mezze.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Classic_Arabic_Mezze.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Flight_Bites_Tapas.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Flight_Bites_Tapas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/HeathrowAirport.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/HeathrowAirport.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Hong_Kong-style_Curry_Chicken.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Hong_Kong-style_Curry_Chicken.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Hot_Ham_and_Cheese_Breakfast.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Hot_Ham_and_Cheese_Breakfast.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Kale_Salad.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Kale_Salad.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Lasagna_with_Malbec_and_Flan.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Lasagna_with_Malbec_and_Flan.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Loco_Moco.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Loco_Moco.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Marvellous_Mac’N’Cheese_Kids_Meal.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Marvellous_Mac’N’Cheese_Kids_Meal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/QRcode.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/QRcode.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Ravioli_and_Dulce_de_Leche_Cake.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Ravioli_and_Dulce_de_Leche_Cake.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Red_Wine_Braised_Beef_with_Polenta.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Red_Wine_Braised_Beef_with_Polenta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Sirloin_Sandwich.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Sirloin_Sandwich.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Strawberry_Frozen_Yogurt Bars.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Strawberry_Frozen_Yogurt Bars.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Viennese_Schnitzel.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/Viennese_Schnitzel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/airChina.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/airChina.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/britishAirway.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/britishAirway.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/chinaEastern.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/chinaEastern.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/easternAirway.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/easternAirway.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/eye slash-fill.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/eye slash-fill.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/eye-fill.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/images/eye-fill.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/audio/detected.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/audio/finalConfirm.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/audio/scanCode.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Cascade_Brisket_Chili.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Chicken_Cobb_Salad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Classic_Arabic_Mezze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Flight_Bites_Tapas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/HeathrowAirport.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Hong_Kong-style_Curry_Chicken.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Hot_Ham_and_Cheese_Breakfast.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Kale_Salad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Lasagna_with_Malbec_and_Flan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Loco_Moco.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Marvellous_Mac’N’Cheese_Kids_Meal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/QRcode.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Ravioli_and_Dulce_de_Leche_Cake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Red_Wine_Braised_Beef_with_Polenta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Sirloin_Sandwich.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Strawberry_Frozen_Yogurt Bars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/Viennese_Schnitzel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/airChina.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/britishAirway.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/chinaEastern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/easternAirway.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/eye slash-fill.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boundary/images/eye-fill.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/AirlineController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/AirlineMealController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/BoardingPassController.class" beforeDir="false" />
@@ -101,27 +138,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/service/imp/IdDocumentCardServiceImp.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/imp/PassengerServiceImp.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/imp/PassengerTableServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controller.AirlineMealControllerTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controller.FlightControllerTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controller.FlightSeatControllerTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/mock.AirlineMealMockTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/mock.AirlineMockTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/mock.FlightMockTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/mock.FlightSeatMockTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/mock.IdDocumentCardMockTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/mock.MockAllTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/mock.PassengerMockTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.imp.AirlineMealServiceImpTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.imp.AirlineServiceImpTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.imp.FlightSeatServiceImpTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.imp.FlightServiceImpTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.imp.IdDocumentCardServiceImpTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.imp.PassengerServiceImpTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/service.imp.PassengerTableServiceImpTest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/controller/AirlineMealControllerTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/controller/FlightControllerTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/controller/FlightSeatControllerTest.class" beforeDir="false" />
@@ -217,9 +233,11 @@
       <recent name="D:\大三下学期\软件工程\project_workingspace\RanXu_latest_version\src\main\java\boundary\audio" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\target\classes\boundary" />
+      <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\src\main\java" />
+      <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\src\main" />
       <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\src\main\resources" />
       <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk\src\main\java\boundary" />
-      <recent name="C:\Users\16003\Documents\GitHub\Smart-flight-check-in-kiosk" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="boundary" />
@@ -230,7 +248,7 @@
       <command value="mvn " />
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.XXXManagementSystem.jar">
+  <component name="RunManager" selected="Application.Entrance">
     <configuration name="AllFlightsPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="boundary.AllFlightsPage" />
       <module name="XXXManagementSystem" />
@@ -294,8 +312,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.XXXManagementSystem.jar" />
         <item itemvalue="Application.Entrance" />
+        <item itemvalue="JAR Application.XXXManagementSystem.jar" />
         <item itemvalue="JUnit.MockAllTest" />
         <item itemvalue="Application.AllFlightsPage" />
         <item itemvalue="JUnit.MockAllTest.testRefreshData" />
@@ -347,6 +365,7 @@
       <workItem from="1653641787216" duration="128000" />
       <workItem from="1653642886526" duration="105000" />
       <workItem from="1653643224345" duration="1356000" />
+      <workItem from="1653644956244" duration="3013000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1651037305306</created>
