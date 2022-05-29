@@ -15,16 +15,12 @@ import java.util.ArrayList;
 
 public class AllFlightsPage extends JPanel{
 
-    //private JPanel infoPanel;
     private JTextArea curTex;
-    //private JPanel buttonPanel;
-    //private JPanel labelPanel;
     private JPanel buttonPanel  = new JPanel();
     private ArrayList<JTextArea> texs = new ArrayList<>();
     private JButton currentButton = null;
     private JButton confirm = new JButton("confirm");
     private JButton back = new JButton("back");
-    //private String[] title = {"FlightId", "Departure", "FallTime", "is delay", "COVID policy"};
 
     private ArrayList<JButton> buttonList = new ArrayList<>();
     private JButton infoButton;
@@ -49,7 +45,6 @@ public class AllFlightsPage extends JPanel{
     }
 
     public void render(ArrayList<Flight> flightList){
-//isChecked(Integer passengerId, String surname, Integer bookingNumber)
         this.setSize(new Dimension(1000, 900));
         this.setLayout(null);
         /*init TextArea*/
